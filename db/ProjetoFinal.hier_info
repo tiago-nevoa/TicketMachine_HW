@@ -1,0 +1,248 @@
+|SerialReceiver
+DX => ParityCheck:ParityCheck0.Data
+DX => ShiftRegister:ShiftRegister0.Sin
+MCLK => SerialControl:serialC.CLK
+CLK => Counter:Counter0.CLK
+CLK => ParityCheck:ParityCheck0.CLK
+CLK => ShiftRegister:ShiftRegister0.Clk
+NOT_SS => SerialControl:serialC.NOT_SS
+Accept => SerialControl:serialC.accept
+Reset => SerialControl:serialC.Reset
+Reset => ShiftRegister:ShiftRegister0.Reset
+DataOut[0] << ShiftRegister:ShiftRegister0.DataOut[0]
+DataOut[1] << ShiftRegister:ShiftRegister0.DataOut[1]
+DataOut[2] << ShiftRegister:ShiftRegister0.DataOut[2]
+DataOut[3] << ShiftRegister:ShiftRegister0.DataOut[3]
+DataOut[4] << ShiftRegister:ShiftRegister0.DataOut[4]
+DataOut[5] << ShiftRegister:ShiftRegister0.DataOut[5]
+DataOut[6] << ShiftRegister:ShiftRegister0.DataOut[6]
+DataOut[7] << ShiftRegister:ShiftRegister0.DataOut[7]
+DataOut[8] << ShiftRegister:ShiftRegister0.DataOut[8]
+DataOut[9] << ShiftRegister:ShiftRegister0.DataOut[9]
+Dxval << SerialControl:serialC.DXVal
+busy << SerialControl:serialC.Busy
+
+
+|SerialReceiver|SerialControl:serialC
+NOT_SS => NextState.OUTPUTSELECT
+NOT_SS => NextState.OUTPUTSELECT
+NOT_SS => NextState.OUTPUTSELECT
+NOT_SS => NextState.OUTPUTSELECT
+NOT_SS => NextState.OUTPUTSELECT
+NOT_SS => NextState.OUTPUTSELECT
+NOT_SS => Selector0.IN4
+NOT_SS => GenerateNextState.IN0
+NOT_SS => GenerateNextState.IN0
+NOT_SS => GenerateNextState.IN0
+NOT_SS => GenerateNextState.IN0
+NOT_SS => Selector1.IN1
+accept => NextState.STATE_DConfirm.DATAB
+accept => Selector0.IN3
+accept => Selector3.IN2
+pFlag => GenerateNextState.IN1
+pFlag => GenerateNextState.IN1
+dFlag => GenerateNextState.IN1
+dFlag => GenerateNextState.IN1
+RXError => GenerateNextState.IN1
+Reset => CurrentState~3.DATAIN
+CLK => CurrentState~1.DATAIN
+Wr <= Wr.DB_MAX_OUTPUT_PORT_TYPE
+Init <= Init.DB_MAX_OUTPUT_PORT_TYPE
+DXVal <= DXVal.DB_MAX_OUTPUT_PORT_TYPE
+Busy <= Busy.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SerialReceiver|Counter:Counter0
+CE => sD[0].IN1
+CE => sD.IN1
+CE => sD.IN1
+CE => sD.IN1
+CE => FFD:UFFD0.EN
+CE => FFD:UFFD1.EN
+CE => FFD:UFFD2.EN
+CE => FFD:UFFD3.EN
+CLK => FFD:UFFD0.CLK
+CLK => FFD:UFFD1.CLK
+CLK => FFD:UFFD2.CLK
+CLK => FFD:UFFD3.CLK
+Clr => FFD:UFFD0.RESET
+Clr => FFD:UFFD1.RESET
+Clr => FFD:UFFD2.RESET
+Clr => FFD:UFFD3.RESET
+Fcount[0] <= FFD:UFFD0.Q
+Fcount[1] <= FFD:UFFD1.Q
+Fcount[2] <= FFD:UFFD2.Q
+Fcount[3] <= FFD:UFFD3.Q
+
+
+|SerialReceiver|Counter:Counter0|FFD:UFFD0
+CLK => Q~reg0.CLK
+RESET => Q~reg0.ACLR
+EN => Q~reg0.ENA
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SerialReceiver|Counter:Counter0|FFD:UFFD1
+CLK => Q~reg0.CLK
+RESET => Q~reg0.ACLR
+EN => Q~reg0.ENA
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SerialReceiver|Counter:Counter0|FFD:UFFD2
+CLK => Q~reg0.CLK
+RESET => Q~reg0.ACLR
+EN => Q~reg0.ENA
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SerialReceiver|Counter:Counter0|FFD:UFFD3
+CLK => Q~reg0.CLK
+RESET => Q~reg0.ACLR
+EN => Q~reg0.ENA
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SerialReceiver|ParityCheck:ParityCheck0
+CLK => FFD:UFFD0.Clk
+Data => sD.IN1
+Init => FFD:UFFD0.Reset
+err <= FFD:UFFD0.Q
+
+
+|SerialReceiver|ParityCheck:ParityCheck0|FFD:UFFD0
+CLK => Q~reg0.CLK
+RESET => Q~reg0.ACLR
+EN => Q~reg0.ENA
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SerialReceiver|ShiftRegister:ShiftRegister0
+Sin => FFD:UFFD0.D
+EN => FFD:UFFD0.EN
+EN => FFD:UFFD1.EN
+EN => FFD:UFFD2.EN
+EN => FFD:UFFD3.EN
+EN => FFD:UFFD4.EN
+EN => FFD:UFFD5.EN
+EN => FFD:UFFD6.EN
+EN => FFD:UFFD7.EN
+EN => FFD:UFFD8.EN
+EN => FFD:UFFD9.EN
+Reset => FFD:UFFD0.Reset
+Reset => FFD:UFFD1.Reset
+Reset => FFD:UFFD2.Reset
+Reset => FFD:UFFD3.Reset
+Reset => FFD:UFFD4.Reset
+Reset => FFD:UFFD5.Reset
+Reset => FFD:UFFD6.Reset
+Reset => FFD:UFFD7.Reset
+Reset => FFD:UFFD8.Reset
+Reset => FFD:UFFD9.Reset
+Clk => FFD:UFFD0.Clk
+Clk => FFD:UFFD1.Clk
+Clk => FFD:UFFD2.Clk
+Clk => FFD:UFFD3.Clk
+Clk => FFD:UFFD4.Clk
+Clk => FFD:UFFD5.Clk
+Clk => FFD:UFFD6.Clk
+Clk => FFD:UFFD7.Clk
+Clk => FFD:UFFD8.Clk
+Clk => FFD:UFFD9.Clk
+DataOut[0] <= FFD:UFFD9.Q
+DataOut[1] <= FFD:UFFD8.Q
+DataOut[2] <= FFD:UFFD7.Q
+DataOut[3] <= FFD:UFFD6.Q
+DataOut[4] <= FFD:UFFD5.Q
+DataOut[5] <= FFD:UFFD4.Q
+DataOut[6] <= FFD:UFFD3.Q
+DataOut[7] <= FFD:UFFD2.Q
+DataOut[8] <= FFD:UFFD1.Q
+DataOut[9] <= FFD:UFFD0.Q
+
+
+|SerialReceiver|ShiftRegister:ShiftRegister0|FFD:UFFD0
+CLK => Q~reg0.CLK
+RESET => Q~reg0.ACLR
+EN => Q~reg0.ENA
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SerialReceiver|ShiftRegister:ShiftRegister0|FFD:UFFD1
+CLK => Q~reg0.CLK
+RESET => Q~reg0.ACLR
+EN => Q~reg0.ENA
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SerialReceiver|ShiftRegister:ShiftRegister0|FFD:UFFD2
+CLK => Q~reg0.CLK
+RESET => Q~reg0.ACLR
+EN => Q~reg0.ENA
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SerialReceiver|ShiftRegister:ShiftRegister0|FFD:UFFD3
+CLK => Q~reg0.CLK
+RESET => Q~reg0.ACLR
+EN => Q~reg0.ENA
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SerialReceiver|ShiftRegister:ShiftRegister0|FFD:UFFD4
+CLK => Q~reg0.CLK
+RESET => Q~reg0.ACLR
+EN => Q~reg0.ENA
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SerialReceiver|ShiftRegister:ShiftRegister0|FFD:UFFD5
+CLK => Q~reg0.CLK
+RESET => Q~reg0.ACLR
+EN => Q~reg0.ENA
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SerialReceiver|ShiftRegister:ShiftRegister0|FFD:UFFD6
+CLK => Q~reg0.CLK
+RESET => Q~reg0.ACLR
+EN => Q~reg0.ENA
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SerialReceiver|ShiftRegister:ShiftRegister0|FFD:UFFD7
+CLK => Q~reg0.CLK
+RESET => Q~reg0.ACLR
+EN => Q~reg0.ENA
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SerialReceiver|ShiftRegister:ShiftRegister0|FFD:UFFD8
+CLK => Q~reg0.CLK
+RESET => Q~reg0.ACLR
+EN => Q~reg0.ENA
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SerialReceiver|ShiftRegister:ShiftRegister0|FFD:UFFD9
+CLK => Q~reg0.CLK
+RESET => Q~reg0.ACLR
+EN => Q~reg0.ENA
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

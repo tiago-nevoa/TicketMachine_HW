@@ -1,0 +1,19 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+
+entity IOS is
+port(
+		SCLK, SDX, NOT_SS : in std_logic;
+		busy, Fn, WrT, WrL : out std_logic
+		);
+end IOS;
+
+architecture behavioral of IOS is
+
+
+signal done ;
+
+begin
+
+end behavioral;

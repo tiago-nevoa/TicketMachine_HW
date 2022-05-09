@@ -1,0 +1,11 @@
+library IEEE;
+
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity ShiftRegister is
+    Port (  Sin : in  STD_LOGIC;
+				EN : in  STD_LOGIC;
+				--Reset : in  STD_LOGIC;
+				Clk : in  STD_LOGIC;
+				DataOut : out  STD_LOGIC_VECTOR (10 downto 0));
+end ShiftRegister;

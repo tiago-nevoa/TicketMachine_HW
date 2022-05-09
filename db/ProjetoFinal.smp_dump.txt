@@ -1,0 +1,8 @@
+
+State Machine - |SerialReceiver|SerialControl:serialC|CurrentState
+Name CurrentState.STATE_DConfirm CurrentState.STATE_DEndReception CurrentState.STATE_PCheck CurrentState.STATE_DReceive CurrentState.STATE_Dwait 
+CurrentState.STATE_Dwait 0 0 0 0 0 
+CurrentState.STATE_DReceive 0 0 0 1 1 
+CurrentState.STATE_PCheck 0 0 1 0 1 
+CurrentState.STATE_DEndReception 0 1 0 0 1 
+CurrentState.STATE_DConfirm 1 0 0 0 1 

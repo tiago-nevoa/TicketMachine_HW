@@ -1,0 +1,12 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+
+entity Hardware is
+port(
+		NOT_SS, accept, pFlag, dFlag, RXError: in std_logic;
+		Reset: in std_logic; -- reset global ligado a todos os componentes, vem de fora
+		CLK: in std_logic; --
+		Wr, Init, DXVal, Busy: out std_logic
+		);
+end Hardware;

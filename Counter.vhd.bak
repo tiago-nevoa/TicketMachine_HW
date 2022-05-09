@@ -1,0 +1,69 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+
+ENTITY Counter IS
+	PORT(	CE, CLK, Clr: IN STD_LOGIC;
+			-- Flag10: OUT STD_LOGIC;
+			-- Flag11: OUT STD_LOGIC;
+			Fcount: OUT STD_LOGIC_VECTOR(3 downto 0);
+			TC: OUT STD_LOGIC
+			);
+END Counter;
+
+ARCHITECTURE Counter_LOGIC of Counter is
+
+
+COMPONENT FFD
+PORT(	CLK : in STD_LOGIC;
+		RESET : in STD_LOGIC;
+		EN : IN STD_LOGIC;
+		D : IN STD_LOGIC;
+		Q : out STD_LOGIC
+		);
+END COMPONENT;
+
+SIGNAL Qout: STD_LOGIC_VECTOR (3 downto 0);
+
+BEGIN
+
+UFFD0: FFD PORT MAP (
+	CLK => CLK,
+	EN => CE,
+	RESET => '0',
+	D => CE xor Qout(0),
+	Q => Qout(0));
+		
+UFFD1: FFD PORT MAP (
+	CLK => CLK,
+	EN => CE,
+	RESET => '0',
+	D => (Qout(0) and CE) xor Qout(1),
+	Q => Qout(1));
+	
+
+UFFD2: FFD PORT MAP (
+	CLK => CLK,
+	EN => CE,
+	RESET => '0',
+	D => (Qout(1) and (Qout(0) and CE)) xor Qout(2),
+	Q => Qout(2));
+	
+	
+UFFD3: FFD PORT MAP (
+	CLK => CLK,
+	EN => CE,
+	RESET => '0',
+	D => ((Qout(1) and (Qout(0) and CE)) and Qout(2)) xor Qout(3),
+	Q => Qout(3));
+	
+	
+	-- Flag10 <= Qout(3) and Qout(1);
+	
+	-- Flag11 <= Flag10 and Qout(0);
+	
+	Fcount <= Qout;
+	
+	TC <= Qout(0) and Qout(1) and Qout(2) and Qout(3);
+	
+END Counter_LOGIC;

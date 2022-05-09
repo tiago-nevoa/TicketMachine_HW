@@ -1,0 +1,24 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+
+entity VendingMachine is
+port(
+		SCLK, SDX, NOT_SS : in std_logic;
+		busy, Fn : out std_logic
+		);
+end VendingMachine;
+
+architecture behavioral of VendingMachine is
+
+signal signals
+
+begin
+
+
+
+
+
+
+
+end behavioral;

@@ -1,0 +1,83 @@
+# Reading pref.tcl
+# do ProjetoFinal_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/Users/ruiac/Desktop/ISEL/LIC/Projeto/ShiftRegister.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:43:24 on May 09,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/ruiac/Desktop/ISEL/LIC/Projeto/ShiftRegister.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity ShiftRegister
+# -- Compiling architecture ShiftRegister_logic of ShiftRegister
+# End time: 18:43:24 on May 09,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/ruiac/Desktop/ISEL/LIC/Projeto/SerialReceiver.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:43:24 on May 09,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/ruiac/Desktop/ISEL/LIC/Projeto/SerialReceiver.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity SerialReceiver
+# -- Compiling architecture Behavioral of SerialReceiver
+# End time: 18:43:24 on May 09,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/ruiac/Desktop/ISEL/LIC/Projeto/SerialControl.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:43:24 on May 09,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/ruiac/Desktop/ISEL/LIC/Projeto/SerialControl.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity SerialControl
+# -- Compiling architecture behavioral of SerialControl
+# End time: 18:43:24 on May 09,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/ruiac/Desktop/ISEL/LIC/Projeto/ParityCheck.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:43:24 on May 09,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/ruiac/Desktop/ISEL/LIC/Projeto/ParityCheck.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity ParityCheck
+# -- Compiling architecture Behavioral of ParityCheck
+# End time: 18:43:24 on May 09,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/ruiac/Desktop/ISEL/LIC/Projeto/FFD.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:43:24 on May 09,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/ruiac/Desktop/ISEL/LIC/Projeto/FFD.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity FFD
+# -- Compiling architecture Behavioral of FFD
+# End time: 18:43:25 on May 09,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/ruiac/Desktop/ISEL/LIC/Projeto/Counter.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:43:25 on May 09,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/ruiac/Desktop/ISEL/LIC/Projeto/Counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity Counter
+# -- Compiling architecture Counter_LOGIC of Counter
+# End time: 18:43:25 on May 09,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 

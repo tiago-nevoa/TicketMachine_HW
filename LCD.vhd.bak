@@ -1,0 +1,58 @@
+library IEEE;
+
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity TicketDispenser is
+    Port (  Prt : in  STD_LOGIC;
+				Din : in  STD_LOGIC_VECTOR (8 downto 0); -- vai ser dividido em 3 signals (RT, DI, OI)
+				Reset : in  STD_LOGIC;
+				Clk : in  STD_LOGIC;
+				Fn : out  STD_LOGIC);
+end TicketDispenser;
+
+architecture behavioral of TicketDispenser is
+
+type STATE_TYPE is (STATE_waitPrt, STATE_PrintTicket, STATE_PrintFinish, STATE_ProtocolFinish);
+
+signal CurrentState, NextState : STATE_TYPE;
+signal RT : std_logic;
+signal DI, OI : std_logic_vector (3 downto 0); -- DI destino ; OI origem
+
+begin
+
+-- Flip-Flop's
+CurrentState <= STATE_waitPrt when Reset = '1' else NextState when rising_edge(clk); 
+RT <= Din(0);
+--DI(0..3) <= Din(1..4);
+DI(0) <= Din(1);
+DI(1) <= Din(2);
+DI(2) <= Din(3);
+DI(3) <= Din(4);
+--OI(0..3) <= Din(5..8);
+OI(0) <= Din(5);
+OI(1) <= Din(6);
+OI(2) <= Din(7);
+OI(3) <= Din(8);
+
+-- Generate Next State
+GenerateNextState:
+process (CurrentState, Prt)
+	begin
+		case CurrentState is
+			when STATE_waitPrt	=> if (Prt = '1') then
+												NextState <= STATE_PrintTicket;								
+											else
+												NextState <= STATE_waitPrt;
+											end if;
+			when STATE_PrintTicket => NextState <= STATE_PrintFinish;
+										
+			when STATE_PrintFinish => NextState <= STATE_ProtocolFinish;
+									
+			when STATE_ProtocolFinish => NextState <= STATE_waitPrt;										
+		end case;
+end process;
+									
+-- Generate outputs
+Fn <= '1' when (CurrentState = STATE_PrintFinish) else '0';			
+
+end behavioral;

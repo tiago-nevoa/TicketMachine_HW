@@ -1,0 +1,19 @@
+library IEEE;
+
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity ParityCheck is
+	port(	CLK : in std_logic;
+		RESET : in std_logic;
+		EN : in std_logic;
+		D : in std_logic;
+		Q : out std_logic);
+end FFD;
+
+architecture Behavioral of ParityCheck is
+
+begin
+
+
+
+end Behavioral;

@@ -1,0 +1,81 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "DataOut[0]",
+					"strict" : false
+				},
+				{
+					"name" : "DataOut[1]",
+					"strict" : false
+				},
+				{
+					"name" : "DataOut[2]",
+					"strict" : false
+				},
+				{
+					"name" : "DataOut[3]",
+					"strict" : false
+				},
+				{
+					"name" : "DataOut[4]",
+					"strict" : false
+				},
+				{
+					"name" : "DataOut[5]",
+					"strict" : false
+				},
+				{
+					"name" : "DataOut[6]",
+					"strict" : false
+				},
+				{
+					"name" : "DataOut[7]",
+					"strict" : false
+				},
+				{
+					"name" : "DataOut[8]",
+					"strict" : false
+				},
+				{
+					"name" : "DataOut[9]",
+					"strict" : false
+				},
+				{
+					"name" : "Dxval",
+					"strict" : false
+				},
+				{
+					"name" : "busy",
+					"strict" : false
+				},
+				{
+					"name" : "CLK",
+					"strict" : false
+				},
+				{
+					"name" : "Reset",
+					"strict" : false
+				},
+				{
+					"name" : "DX",
+					"strict" : false
+				},
+				{
+					"name" : "Accept",
+					"strict" : false
+				},
+				{
+					"name" : "NOT_SS",
+					"strict" : false
+				},
+				{
+					"name" : "MCLK",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
