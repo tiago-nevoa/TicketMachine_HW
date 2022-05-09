@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ProjetoFinal
-Mon May 09 18:49:28 2022
+Mon May 09 19:57:44 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition
 
 
@@ -46,13 +46,13 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                                   ;
 +------------------------------------+-----------------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon May 09 18:49:28 2022                     ;
+; Analysis & Synthesis Status        ; Successful - Mon May 09 19:57:44 2022                     ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition ;
 ; Revision Name                      ; ProjetoFinal                                              ;
 ; Top-level Entity Name              ; SerialReceiver                                            ;
 ; Family                             ; MAX 10                                                    ;
-; Total logic elements               ; 28                                                        ;
-;     Total combinational functions  ; 18                                                        ;
+; Total logic elements               ; 29                                                        ;
+;     Total combinational functions  ; 19                                                        ;
 ;     Dedicated logic registers      ; 20                                                        ;
 ; Total registers                    ; 20                                                        ;
 ; Total pins                         ; 18                                                        ;
@@ -164,22 +164,23 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-16        ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-16        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                      ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                               ; Library ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------+---------+
-; ShiftRegister.vhd                ; yes             ; User VHDL File  ; C:/Users/ruiac/Desktop/ISEL/LIC/Projeto/ShiftRegister.vhd  ;         ;
-; SerialReceiver.vhd               ; yes             ; User VHDL File  ; C:/Users/ruiac/Desktop/ISEL/LIC/Projeto/SerialReceiver.vhd ;         ;
-; SerialControl.vhd                ; yes             ; User VHDL File  ; C:/Users/ruiac/Desktop/ISEL/LIC/Projeto/SerialControl.vhd  ;         ;
-; ParityCheck.vhd                  ; yes             ; User VHDL File  ; C:/Users/ruiac/Desktop/ISEL/LIC/Projeto/ParityCheck.vhd    ;         ;
-; FFD.vhd                          ; yes             ; User VHDL File  ; C:/Users/ruiac/Desktop/ISEL/LIC/Projeto/FFD.vhd            ;         ;
-; Counter.vhd                      ; yes             ; User VHDL File  ; C:/Users/ruiac/Desktop/ISEL/LIC/Projeto/Counter.vhd        ;         ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                               ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                        ; Library ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------+---------+
+; ShiftRegister.vhd                ; yes             ; User VHDL File  ; C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/ShiftRegister.vhd  ;         ;
+; SerialReceiver.vhd               ; yes             ; User VHDL File  ; C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/SerialReceiver.vhd ;         ;
+; SerialControl.vhd                ; yes             ; User VHDL File  ; C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/SerialControl.vhd  ;         ;
+; ParityCheck.vhd                  ; yes             ; User VHDL File  ; C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/ParityCheck.vhd    ;         ;
+; FFD.vhd                          ; yes             ; User VHDL File  ; C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/FFD.vhd            ;         ;
+; Counter.vhd                      ; yes             ; User VHDL File  ; C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Counter.vhd        ;         ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -187,16 +188,16 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 28        ;
+; Estimated Total logic elements              ; 29        ;
 ;                                             ;           ;
-; Total combinational functions               ; 18        ;
+; Total combinational functions               ; 19        ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 8         ;
-;     -- 3 input functions                    ; 3         ;
-;     -- <=2 input functions                  ; 7         ;
+;     -- 4 input functions                    ; 10        ;
+;     -- 3 input functions                    ; 5         ;
+;     -- <=2 input functions                  ; 4         ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 18        ;
+;     -- normal mode                          ; 19        ;
 ;     -- arithmetic mode                      ; 0         ;
 ;                                             ;           ;
 ; Total registers                             ; 20        ;
@@ -209,8 +210,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;           ;
 ; Maximum fan-out node                        ; CLK~input ;
 ; Maximum fan-out                             ; 15        ;
-; Total fan-out                               ; 154       ;
-; Average fan-out                             ; 2.08      ;
+; Total fan-out                               ; 162       ;
+; Average fan-out                             ; 2.16      ;
 +---------------------------------------------+-----------+
 
 
@@ -219,7 +220,7 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------+----------------+--------------+
 ; Compilation Hierarchy Node        ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                    ; Entity Name    ; Library Name ;
 +-----------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------+----------------+--------------+
-; |SerialReceiver                   ; 18 (1)              ; 20 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 18   ; 0            ; 0          ; |SerialReceiver                                        ; SerialReceiver ; work         ;
+; |SerialReceiver                   ; 19 (1)              ; 20 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 18   ; 0            ; 0          ; |SerialReceiver                                        ; SerialReceiver ; work         ;
 ;    |Counter:Counter0|             ; 4 (0)               ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SerialReceiver|Counter:Counter0                       ; Counter        ; work         ;
 ;       |FFD:UFFD0|                 ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SerialReceiver|Counter:Counter0|FFD:UFFD0             ; FFD            ; work         ;
 ;       |FFD:UFFD1|                 ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SerialReceiver|Counter:Counter0|FFD:UFFD1             ; FFD            ; work         ;
@@ -227,7 +228,7 @@ https://fpgasoftware.intel.com/eula.
 ;       |FFD:UFFD3|                 ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SerialReceiver|Counter:Counter0|FFD:UFFD3             ; FFD            ; work         ;
 ;    |ParityCheck:ParityCheck0|     ; 1 (0)               ; 1 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SerialReceiver|ParityCheck:ParityCheck0               ; ParityCheck    ; work         ;
 ;       |FFD:UFFD0|                 ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SerialReceiver|ParityCheck:ParityCheck0|FFD:UFFD0     ; FFD            ; work         ;
-;    |SerialControl:serialC|        ; 12 (12)             ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SerialReceiver|SerialControl:serialC                  ; SerialControl  ; work         ;
+;    |SerialControl:serialC|        ; 13 (13)             ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SerialReceiver|SerialControl:serialC                  ; SerialControl  ; work         ;
 ;    |ShiftRegister:ShiftRegister0| ; 0 (0)               ; 10 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SerialReceiver|ShiftRegister:ShiftRegister0           ; ShiftRegister  ; work         ;
 ;       |FFD:UFFD0|                 ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SerialReceiver|ShiftRegister:ShiftRegister0|FFD:UFFD0 ; FFD            ; work         ;
 ;       |FFD:UFFD1|                 ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SerialReceiver|ShiftRegister:ShiftRegister0|FFD:UFFD1 ; FFD            ; work         ;
@@ -299,15 +300,15 @@ Encoding Type:  One-Hot
 ; cycloneiii_ff         ; 20                          ;
 ;     CLR               ; 10                          ;
 ;     ENA CLR           ; 10                          ;
-; cycloneiii_lcell_comb ; 18                          ;
-;     normal            ; 18                          ;
+; cycloneiii_lcell_comb ; 19                          ;
+;     normal            ; 19                          ;
 ;         1 data inputs ; 1                           ;
-;         2 data inputs ; 6                           ;
-;         3 data inputs ; 3                           ;
-;         4 data inputs ; 8                           ;
+;         2 data inputs ; 3                           ;
+;         3 data inputs ; 5                           ;
+;         4 data inputs ; 10                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 3.00                        ;
-; Average LUT depth     ; 1.48                        ;
+; Average LUT depth     ; 1.38                        ;
 +-----------------------+-----------------------------+
 
 
@@ -326,75 +327,75 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition
-    Info: Processing started: Mon May 09 18:49:21 2022
+    Info: Processing started: Mon May 09 19:57:37 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ProjetoFinal -c ProjetoFinal
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file vendingmachine_tb.vhd
-    Info (12022): Found design unit 1: VendingMachine_tb-behavior File: C:/Users/ruiac/Desktop/ISEL/LIC/Projeto/VendingMachine_tb.vhd Line: 7
-    Info (12023): Found entity 1: VendingMachine_tb File: C:/Users/ruiac/Desktop/ISEL/LIC/Projeto/VendingMachine_tb.vhd Line: 4
+    Info (12022): Found design unit 1: VendingMachine_tb-behavior File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/VendingMachine_tb.vhd Line: 7
+    Info (12023): Found entity 1: VendingMachine_tb File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/VendingMachine_tb.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file vendingmachine.vhd
-    Info (12022): Found design unit 1: VendingMachine-behavioral File: C:/Users/ruiac/Desktop/ISEL/LIC/Projeto/VendingMachine.vhd Line: 13
-    Info (12023): Found entity 1: VendingMachine File: C:/Users/ruiac/Desktop/ISEL/LIC/Projeto/VendingMachine.vhd Line: 5
+    Info (12022): Found design unit 1: VendingMachine-behavioral File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/VendingMachine.vhd Line: 13
+    Info (12023): Found entity 1: VendingMachine File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/VendingMachine.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file usbport.vhd
-    Info (12022): Found design unit 1: UsbPort-bdf_type File: C:/Users/ruiac/Desktop/ISEL/LIC/Projeto/UsbPort.vhd Line: 33
-    Info (12023): Found entity 1: UsbPort File: C:/Users/ruiac/Desktop/ISEL/LIC/Projeto/UsbPort.vhd Line: 25
+    Info (12022): Found design unit 1: UsbPort-bdf_type File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/UsbPort.vhd Line: 33
+    Info (12023): Found entity 1: UsbPort File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/UsbPort.vhd Line: 25
 Info (12021): Found 2 design units, including 1 entities, in source file ticketdispenser.vhd
-    Info (12022): Found design unit 1: TicketDispenser-behavioral File: C:/Users/ruiac/Desktop/ISEL/LIC/Projeto/TicketDispenser.vhd Line: 21
-    Info (12023): Found entity 1: TicketDispenser File: C:/Users/ruiac/Desktop/ISEL/LIC/Projeto/TicketDispenser.vhd Line: 10
+    Info (12022): Found design unit 1: TicketDispenser-behavioral File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/TicketDispenser.vhd Line: 21
+    Info (12023): Found entity 1: TicketDispenser File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/TicketDispenser.vhd Line: 10
 Info (12021): Found 2 design units, including 1 entities, in source file shiftregister.vhd
-    Info (12022): Found design unit 1: ShiftRegister-ShiftRegister_logic File: C:/Users/ruiac/Desktop/ISEL/LIC/Projeto/ShiftRegister.vhd Line: 13
-    Info (12023): Found entity 1: ShiftRegister File: C:/Users/ruiac/Desktop/ISEL/LIC/Projeto/ShiftRegister.vhd Line: 5
+    Info (12022): Found design unit 1: ShiftRegister-ShiftRegister_logic File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/ShiftRegister.vhd Line: 13
+    Info (12023): Found entity 1: ShiftRegister File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/ShiftRegister.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file serialreceiver.vhd
-    Info (12022): Found design unit 1: SerialReceiver-Behavioral File: C:/Users/ruiac/Desktop/ISEL/LIC/Projeto/SerialReceiver.vhd Line: 16
-    Info (12023): Found entity 1: SerialReceiver File: C:/Users/ruiac/Desktop/ISEL/LIC/Projeto/SerialReceiver.vhd Line: 5
+    Info (12022): Found design unit 1: SerialReceiver-Behavioral File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/SerialReceiver.vhd Line: 16
+    Info (12023): Found entity 1: SerialReceiver File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/SerialReceiver.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file serialcontrol.vhd
-    Info (12022): Found design unit 1: SerialControl-behavioral File: C:/Users/ruiac/Desktop/ISEL/LIC/Projeto/SerialControl.vhd Line: 14
-    Info (12023): Found entity 1: SerialControl File: C:/Users/ruiac/Desktop/ISEL/LIC/Projeto/SerialControl.vhd Line: 5
+    Info (12022): Found design unit 1: SerialControl-behavioral File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/SerialControl.vhd Line: 14
+    Info (12023): Found entity 1: SerialControl File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/SerialControl.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file paritycheck.vhd
-    Info (12022): Found design unit 1: ParityCheck-Behavioral File: C:/Users/ruiac/Desktop/ISEL/LIC/Projeto/ParityCheck.vhd Line: 12
-    Info (12023): Found entity 1: ParityCheck File: C:/Users/ruiac/Desktop/ISEL/LIC/Projeto/ParityCheck.vhd Line: 5
+    Info (12022): Found design unit 1: ParityCheck-Behavioral File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/ParityCheck.vhd Line: 12
+    Info (12023): Found entity 1: ParityCheck File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/ParityCheck.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file lcd.vhd
-    Info (12022): Found design unit 1: LCD-behavioral File: C:/Users/ruiac/Desktop/ISEL/LIC/Projeto/LCD.vhd Line: 12
-    Info (12023): Found entity 1: LCD File: C:/Users/ruiac/Desktop/ISEL/LIC/Projeto/LCD.vhd Line: 5
+    Info (12022): Found design unit 1: LCD-behavioral File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/LCD.vhd Line: 12
+    Info (12023): Found entity 1: LCD File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/LCD.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file ios.vhd
-    Info (12022): Found design unit 1: IOS-behavioral File: C:/Users/ruiac/Desktop/ISEL/LIC/Projeto/IOS.vhd Line: 13
-    Info (12023): Found entity 1: IOS File: C:/Users/ruiac/Desktop/ISEL/LIC/Projeto/IOS.vhd Line: 5
+    Info (12022): Found design unit 1: IOS-behavioral File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/IOS.vhd Line: 13
+    Info (12023): Found entity 1: IOS File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/IOS.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file int7seg.vhd
-    Info (12022): Found design unit 1: int7seg-logicFunction File: C:/Users/ruiac/Desktop/ISEL/LIC/Projeto/int7seg.vhd Line: 10
-    Info (12023): Found entity 1: int7seg File: C:/Users/ruiac/Desktop/ISEL/LIC/Projeto/int7seg.vhd Line: 4
+    Info (12022): Found design unit 1: int7seg-logicFunction File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/int7seg.vhd Line: 10
+    Info (12023): Found entity 1: int7seg File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/int7seg.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file ffd.vhd
-    Info (12022): Found design unit 1: FFD-Behavioral File: C:/Users/ruiac/Desktop/ISEL/LIC/Projeto/FFD.vhd Line: 13
-    Info (12023): Found entity 1: FFD File: C:/Users/ruiac/Desktop/ISEL/LIC/Projeto/FFD.vhd Line: 5
+    Info (12022): Found design unit 1: FFD-Behavioral File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/FFD.vhd Line: 13
+    Info (12023): Found entity 1: FFD File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/FFD.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file dispatcher.vhd
-    Info (12022): Found design unit 1: Dispatcher-behavioral File: C:/Users/ruiac/Desktop/ISEL/LIC/Projeto/Dispatcher.vhd Line: 19
-    Info (12023): Found entity 1: Dispatcher File: C:/Users/ruiac/Desktop/ISEL/LIC/Projeto/Dispatcher.vhd Line: 5
+    Info (12022): Found design unit 1: Dispatcher-behavioral File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Dispatcher.vhd Line: 19
+    Info (12023): Found entity 1: Dispatcher File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Dispatcher.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file decoderhex.vhd
-    Info (12022): Found design unit 1: decoderHex-logicFuntion File: C:/Users/ruiac/Desktop/ISEL/LIC/Projeto/decoderHex.vhd Line: 10
-    Info (12023): Found entity 1: decoderHex File: C:/Users/ruiac/Desktop/ISEL/LIC/Projeto/decoderHex.vhd Line: 4
+    Info (12022): Found design unit 1: decoderHex-logicFuntion File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/decoderHex.vhd Line: 10
+    Info (12023): Found entity 1: decoderHex File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/decoderHex.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file counter.vhd
-    Info (12022): Found design unit 1: Counter-Counter_LOGIC File: C:/Users/ruiac/Desktop/ISEL/LIC/Projeto/Counter.vhd Line: 13
-    Info (12023): Found entity 1: Counter File: C:/Users/ruiac/Desktop/ISEL/LIC/Projeto/Counter.vhd Line: 5
+    Info (12022): Found design unit 1: Counter-Counter_LOGIC File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Counter.vhd Line: 13
+    Info (12023): Found entity 1: Counter File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Counter.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file control.vhd
-    Info (12022): Found design unit 1: Control-behavioral File: C:/Users/ruiac/Desktop/ISEL/LIC/Projeto/Control.vhd Line: 12
-    Info (12023): Found entity 1: Control File: C:/Users/ruiac/Desktop/ISEL/LIC/Projeto/Control.vhd Line: 5
+    Info (12022): Found design unit 1: Control-behavioral File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Control.vhd Line: 12
+    Info (12023): Found entity 1: Control File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Control.vhd Line: 5
 Info (12127): Elaborating entity "SerialReceiver" for the top level hierarchy
-Info (12128): Elaborating entity "SerialControl" for hierarchy "SerialControl:serialC" File: C:/Users/ruiac/Desktop/ISEL/LIC/Projeto/SerialReceiver.vhd Line: 66
-Info (12128): Elaborating entity "Counter" for hierarchy "Counter:Counter0" File: C:/Users/ruiac/Desktop/ISEL/LIC/Projeto/SerialReceiver.vhd Line: 79
-Info (12128): Elaborating entity "FFD" for hierarchy "Counter:Counter0|FFD:UFFD0" File: C:/Users/ruiac/Desktop/ISEL/LIC/Projeto/counter.vhd Line: 36
-Info (12128): Elaborating entity "ParityCheck" for hierarchy "ParityCheck:ParityCheck0" File: C:/Users/ruiac/Desktop/ISEL/LIC/Projeto/SerialReceiver.vhd Line: 85
-Info (12128): Elaborating entity "ShiftRegister" for hierarchy "ShiftRegister:ShiftRegister0" File: C:/Users/ruiac/Desktop/ISEL/LIC/Projeto/SerialReceiver.vhd Line: 91
+Info (12128): Elaborating entity "SerialControl" for hierarchy "SerialControl:serialC" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/SerialReceiver.vhd Line: 66
+Info (12128): Elaborating entity "Counter" for hierarchy "Counter:Counter0" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/SerialReceiver.vhd Line: 79
+Info (12128): Elaborating entity "FFD" for hierarchy "Counter:Counter0|FFD:UFFD0" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/counter.vhd Line: 36
+Info (12128): Elaborating entity "ParityCheck" for hierarchy "ParityCheck:ParityCheck0" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/SerialReceiver.vhd Line: 85
+Info (12128): Elaborating entity "ShiftRegister" for hierarchy "ShiftRegister:ShiftRegister0" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/SerialReceiver.vhd Line: 91
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 46 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 47 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 6 input pins
     Info (21059): Implemented 12 output pins
-    Info (21061): Implemented 28 logic cells
+    Info (21061): Implemented 29 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4851 megabytes
-    Info: Processing ended: Mon May 09 18:49:28 2022
+    Info: Peak virtual memory: 4852 megabytes
+    Info: Processing ended: Mon May 09 19:57:44 2022
     Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:15
+    Info: Total CPU time (on all processors): 00:00:17
 
 

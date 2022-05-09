@@ -23,7 +23,6 @@ signal nextD : std_logic;
 SIGNAL sD: std_logic;
 
 begin 
-
 sD <= Data xor nextD;
 
 UFFD0: FFD PORT MAP (
@@ -33,6 +32,6 @@ UFFD0: FFD PORT MAP (
 	D => sD,
 	Q => nextD);
 
-Err <= nextD;
+Err <= not (nextD and data); -- testar isto
 	
 end Behavioral;

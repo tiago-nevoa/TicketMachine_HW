@@ -110,8 +110,9 @@ Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 |SerialReceiver|ParityCheck:ParityCheck0
 CLK => FFD:UFFD0.Clk
 Data => sD.IN1
+Data => err.IN1
 Init => FFD:UFFD0.Reset
-err <= FFD:UFFD0.Q
+err <= err.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |SerialReceiver|ParityCheck:ParityCheck0|FFD:UFFD0

@@ -5,10 +5,10 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
-vcom -93 -work work {C:/Users/ruiac/Desktop/ISEL/LIC/Projeto/ShiftRegister.vhd}
-vcom -93 -work work {C:/Users/ruiac/Desktop/ISEL/LIC/Projeto/SerialReceiver.vhd}
-vcom -93 -work work {C:/Users/ruiac/Desktop/ISEL/LIC/Projeto/SerialControl.vhd}
-vcom -93 -work work {C:/Users/ruiac/Desktop/ISEL/LIC/Projeto/ParityCheck.vhd}
-vcom -93 -work work {C:/Users/ruiac/Desktop/ISEL/LIC/Projeto/FFD.vhd}
-vcom -93 -work work {C:/Users/ruiac/Desktop/ISEL/LIC/Projeto/Counter.vhd}
+vcom -93 -work work {C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/ShiftRegister.vhd}
+vcom -93 -work work {C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/SerialReceiver.vhd}
+vcom -93 -work work {C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/SerialControl.vhd}
+vcom -93 -work work {C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/ParityCheck.vhd}
+vcom -93 -work work {C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/FFD.vhd}
+vcom -93 -work work {C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Counter.vhd}
 
