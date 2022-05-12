@@ -8,31 +8,31 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/simulation/modelsim
+Z0 dC:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/simulation/modelsim
 Ecounter
-Z1 w1652374738
+Z1 w1652118852
 Z2 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
 Z3 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
 Z4 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z5 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
 !i122 7
 R0
-Z6 8C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/Counter.vhd
-Z7 FC:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/Counter.vhd
+Z6 8C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Counter.vhd
+Z7 FC:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Counter.vhd
 l0
 L5 1
 V1POBhii]EahnD2inIYMAG1
 !s100 f<LX91RIkYcA2;BPTm1`z1
 Z8 OV;C;2020.1;71
 31
-Z9 !s110 1652382672
+Z9 !s110 1652391562
 !i10b 1
-Z10 !s108 1652382672.000000
-Z11 !s90 -reportprogress|300|-93|-work|work|C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/Counter.vhd|
-!s107 C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/Counter.vhd|
+Z10 !s108 1652391562.000000
+Z11 !s90 -reportprogress|300|-93|-work|work|C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Counter.vhd|
+Z12 !s107 C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Counter.vhd|
 !i113 1
-Z12 o-93 -work work
-Z13 tExplicit 1 CvgOpt 0
+Z13 o-93 -work work
+Z14 tExplicit 1 CvgOpt 0
 Acounter_logic
 R2
 R3
@@ -50,10 +50,10 @@ R9
 !i10b 1
 R10
 R11
-Z14 !s107 C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/Counter.vhd|
-!i113 1
 R12
+!i113 1
 R13
+R14
 Edispatcher
 R1
 R2
@@ -62,8 +62,8 @@ R4
 R5
 !i122 6
 R0
-Z15 8C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/Dispatcher.vhd
-Z16 FC:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/Dispatcher.vhd
+Z15 8C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Dispatcher.vhd
+Z16 FC:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Dispatcher.vhd
 l0
 L5 1
 VPT?<Q9efMQz2G9Q3VPaM43
@@ -73,11 +73,11 @@ R8
 R9
 !i10b 1
 R10
-Z17 !s90 -reportprogress|300|-93|-work|work|C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/Dispatcher.vhd|
-Z18 !s107 C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/Dispatcher.vhd|
+Z17 !s90 -reportprogress|300|-93|-work|work|C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Dispatcher.vhd|
+Z18 !s107 C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Dispatcher.vhd|
 !i113 1
-R12
 R13
+R14
 Abehavioral
 R2
 R3
@@ -97,16 +97,16 @@ R10
 R17
 R18
 !i113 1
-R12
 R13
+R14
 Effd
 R1
 R4
 R5
 !i122 5
 R0
-Z19 8C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/FFD.vhd
-Z20 FC:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/FFD.vhd
+Z19 8C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/FFD.vhd
+Z20 FC:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/FFD.vhd
 l0
 L5 1
 V[=j<I;3z:oGoOX1QTZnI;0
@@ -116,11 +116,11 @@ R8
 R9
 !i10b 1
 R10
-Z21 !s90 -reportprogress|300|-93|-work|work|C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/FFD.vhd|
-Z22 !s107 C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/FFD.vhd|
+Z21 !s90 -reportprogress|300|-93|-work|work|C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/FFD.vhd|
+Z22 !s107 C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/FFD.vhd|
 !i113 1
-R12
 R13
+R14
 Abehavioral
 R4
 R5
@@ -138,18 +138,18 @@ R10
 R21
 R22
 !i113 1
-R12
 R13
+R14
 Eios
-Z23 w1652382614
+Z23 w1652391385
 R2
 R3
 R4
 R5
 !i122 4
 R0
-Z24 8C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/IOS.vhd
-Z25 FC:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/IOS.vhd
+Z24 8C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/IOS.vhd
+Z25 FC:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/IOS.vhd
 l0
 L5 1
 Vi0XWiDPIXW[j`0H_5bRd>1
@@ -159,11 +159,11 @@ R8
 R9
 !i10b 1
 R10
-Z26 !s90 -reportprogress|300|-93|-work|work|C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/IOS.vhd|
-Z27 !s107 C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/IOS.vhd|
+Z26 !s90 -reportprogress|300|-93|-work|work|C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/IOS.vhd|
+Z27 !s107 C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/IOS.vhd|
 !i113 1
-R12
 R13
+R14
 Abehavioral
 R2
 R3
@@ -183,30 +183,75 @@ R10
 R26
 R27
 !i113 1
-R12
 R13
+R14
+Eios_tb
+Z28 w1652392459
+R3
+R2
+R4
+R5
+!i122 12
+R0
+Z29 8C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/IOS_tb.vhd
+Z30 FC:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/IOS_tb.vhd
+l0
+L6 1
+VGSclAb4fR7eVYQYOo;Qcd2
+!s100 ?j2EPOPjE2E]k1T@3_QE01
+R8
+32
+Z31 !s110 1652392469
+!i10b 1
+Z32 !s108 1652392469.000000
+Z33 !s90 -reportprogress|300|-work|work|C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/IOS_tb.vhd|
+Z34 !s107 C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/IOS_tb.vhd|
+!i113 1
+Z35 o-work work
+R14
+Abehavior
+R3
+R2
+R4
+R5
+Z36 DEx4 work 6 ios_tb 0 22 GSclAb4fR7eVYQYOo;Qcd2
+!i122 12
+l29
+L9 156
+VQ?<fKEYRmZ@TAZC^_ghU80
+!s100 4ORQAZm3FLJ>JfTm>Pzo<2
+R8
+32
+R31
+!i10b 1
+R32
+R33
+R34
+!i113 1
+R35
+R14
 Eparitycheck
-R1
+Z37 w1652381732
 R4
 R5
 !i122 3
 R0
-Z28 8C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/ParityCheck.vhd
-Z29 FC:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/ParityCheck.vhd
+Z38 8C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/ParityCheck.vhd
+Z39 FC:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/ParityCheck.vhd
 l0
 L5 1
 VOoANTP;3nkh:=<Ta^2i1o1
 !s100 [zMaEXWkzlZ1lo;mkVn`F1
 R8
 31
-R9
+Z40 !s110 1652391561
 !i10b 1
-R10
-Z30 !s90 -reportprogress|300|-93|-work|work|C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/ParityCheck.vhd|
-Z31 !s107 C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/ParityCheck.vhd|
+Z41 !s108 1652391561.000000
+Z42 !s90 -reportprogress|300|-93|-work|work|C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/ParityCheck.vhd|
+Z43 !s107 C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/ParityCheck.vhd|
 !i113 1
-R12
 R13
+R14
 Abehavioral
 R4
 R5
@@ -218,14 +263,14 @@ V0`[gXWFlmC2@U1108=Tfo3
 !s100 99ATNm<hD[28P>S@dkI?k3
 R8
 31
-R9
+R40
 !i10b 1
-R10
-R30
-R31
+R41
+R42
+R43
 !i113 1
-R12
 R13
+R14
 Eserialcontrol
 R1
 R2
@@ -234,22 +279,22 @@ R4
 R5
 !i122 2
 R0
-Z32 8C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/SerialControl.vhd
-Z33 FC:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/SerialControl.vhd
+Z44 8C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/SerialControl.vhd
+Z45 FC:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/SerialControl.vhd
 l0
 L5 1
 VK4iohVz>oiZ3iKQ2DNXKH3
 !s100 INnk:iOVRT<`5S5QH[5803
 R8
 31
-R9
+R40
 !i10b 1
-R10
-Z34 !s90 -reportprogress|300|-93|-work|work|C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/SerialControl.vhd|
-Z35 !s107 C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/SerialControl.vhd|
+R41
+Z46 !s90 -reportprogress|300|-93|-work|work|C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/SerialControl.vhd|
+Z47 !s107 C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/SerialControl.vhd|
 !i113 1
-R12
 R13
+R14
 Abehavioral
 R2
 R3
@@ -263,36 +308,36 @@ Vg6RVO`>2M7@dCfJThNfSc2
 !s100 EXbjj[VG1Ym77ZCUmGeL50
 R8
 31
-R9
+R40
 !i10b 1
-R10
-R34
-R35
+R41
+R46
+R47
 !i113 1
-R12
 R13
+R14
 Eserialreceiver
 R1
 R4
 R5
 !i122 1
 R0
-Z36 8C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/SerialReceiver.vhd
-Z37 FC:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/SerialReceiver.vhd
+Z48 8C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/SerialReceiver.vhd
+Z49 FC:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/SerialReceiver.vhd
 l0
 L5 1
 VQ6lz@]0Oi8m=V[FRY2_M[0
 !s100 GbdJAb4=2lIaSW;QSoef91
 R8
 31
-R9
+R40
 !i10b 1
-R10
-Z38 !s90 -reportprogress|300|-93|-work|work|C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/SerialReceiver.vhd|
-Z39 !s107 C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/SerialReceiver.vhd|
+R41
+Z50 !s90 -reportprogress|300|-93|-work|work|C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/SerialReceiver.vhd|
+Z51 !s107 C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/SerialReceiver.vhd|
 !i113 1
-R12
 R13
+R14
 Abehavioral
 R4
 R5
@@ -304,36 +349,36 @@ V6oc]CHU?AcE?Y9U<U9S6o1
 !s100 WN>1J79ffYegKoH:45?IX2
 R8
 31
-R9
+R40
 !i10b 1
-R10
-R38
-R39
+R41
+R50
+R51
 !i113 1
-R12
 R13
+R14
 Eshiftregister
 R1
 R4
 R5
 !i122 0
 R0
-Z40 8C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/ShiftRegister.vhd
-Z41 FC:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/ShiftRegister.vhd
+Z52 8C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/ShiftRegister.vhd
+Z53 FC:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/ShiftRegister.vhd
 l0
 L5 1
 VASYGM:amTM>K6AYlMCha>0
 !s100 _hHHJD<`Z6_17JMH[V2Cc0
 R8
 31
-R9
+R40
 !i10b 1
-Z42 !s108 1652382671.000000
-Z43 !s90 -reportprogress|300|-93|-work|work|C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/ShiftRegister.vhd|
-Z44 !s107 C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/ShiftRegister.vhd|
+R41
+Z54 !s90 -reportprogress|300|-93|-work|work|C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/ShiftRegister.vhd|
+Z55 !s107 C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/ShiftRegister.vhd|
 !i113 1
-R12
 R13
+R14
 Ashiftregister_logic
 R4
 R5
@@ -345,11 +390,11 @@ V;dM7C:aBI5QRYXoJG0fUN2
 !s100 mZII;GFK7;iE829EW[TAC0
 R8
 31
-R9
+R40
 !i10b 1
-R42
-R43
-R44
+R41
+R54
+R55
 !i113 1
-R12
 R13
+R14
