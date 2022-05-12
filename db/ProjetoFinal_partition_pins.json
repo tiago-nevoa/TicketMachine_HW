@@ -4,67 +4,51 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "DataOut[0]",
-					"strict" : false
-				},
-				{
-					"name" : "DataOut[1]",
-					"strict" : false
-				},
-				{
-					"name" : "DataOut[2]",
-					"strict" : false
-				},
-				{
-					"name" : "DataOut[3]",
-					"strict" : false
-				},
-				{
-					"name" : "DataOut[4]",
-					"strict" : false
-				},
-				{
-					"name" : "DataOut[5]",
-					"strict" : false
-				},
-				{
-					"name" : "DataOut[6]",
-					"strict" : false
-				},
-				{
-					"name" : "DataOut[7]",
-					"strict" : false
-				},
-				{
-					"name" : "DataOut[8]",
-					"strict" : false
-				},
-				{
-					"name" : "DataOut[9]",
-					"strict" : false
-				},
-				{
-					"name" : "Dxval",
-					"strict" : false
-				},
-				{
 					"name" : "busy",
 					"strict" : false
 				},
 				{
-					"name" : "CLK",
+					"name" : "WrT",
 					"strict" : false
 				},
 				{
-					"name" : "Reset",
+					"name" : "WrL",
 					"strict" : false
 				},
 				{
-					"name" : "DX",
+					"name" : "Dout[0]",
 					"strict" : false
 				},
 				{
-					"name" : "Accept",
+					"name" : "Dout[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Dout[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Dout[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Dout[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Dout[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Dout[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Dout[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Dout[8]",
 					"strict" : false
 				},
 				{
@@ -73,6 +57,22 @@
 				},
 				{
 					"name" : "MCLK",
+					"strict" : false
+				},
+				{
+					"name" : "Reset",
+					"strict" : false
+				},
+				{
+					"name" : "Fsh",
+					"strict" : false
+				},
+				{
+					"name" : "SCLK",
+					"strict" : false
+				},
+				{
+					"name" : "SDX",
 					"strict" : false
 				}
 			]

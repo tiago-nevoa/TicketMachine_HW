@@ -6,6 +6,7 @@ entity IOS is
 port(
 		SCLK, SDX, NOT_SS, Fsh, Reset : in std_logic;
 		busy, WrT, WrL : out std_logic;
+		MCLK : in std_logic;
 		Dout: out STD_LOGIC_VECTOR (8 downto 0)
 		);
 end IOS;
@@ -15,6 +16,7 @@ architecture behavioral of IOS is
 COMPONENT SerialReceiver
 	port(	DX : in std_logic;
 		CLK : in std_logic;
+		MCLK : in std_logic;
 		NOT_SS : in std_logic;
 		Accept : in std_logic;
 		Reset : in std_logic;
@@ -46,6 +48,7 @@ signalCLK <= SCLK; -- signal para clock porque clock é partilhado com serial re
 serialR: SerialReceiver PORT MAP (
 	DX => SDX,
 	Reset => Reset,
+	MCLK => MCLK,
 	CLK => signalCLK,
 	NOT_SS => NOT_SS,
 	Accept => sDoneAccept,

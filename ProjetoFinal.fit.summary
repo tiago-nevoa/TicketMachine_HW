@@ -1,14 +1,14 @@
-Fitter Status : Successful - Thu May 12 16:26:00 2022
+Fitter Status : Successful - Thu May 12 20:10:35 2022
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : ProjetoFinal
-Top-level Entity Name : SerialReceiver
+Top-level Entity Name : IOS
 Family : MAX 10
 Device : 10M50DAF484C6GES
 Timing Models : Preliminary
-Total logic elements : 29 / 49,760 ( < 1 % )
-    Total combinational functions : 19 / 49,760 ( < 1 % )
-    Dedicated logic registers : 20 / 49,760 ( < 1 % )
-Total registers : 20
+Total logic elements : 36 / 49,760 ( < 1 % )
+    Total combinational functions : 25 / 49,760 ( < 1 % )
+    Dedicated logic registers : 25 / 49,760 ( < 1 % )
+Total registers : 25
 Total pins : 18 / 360 ( 5 % )
 Total virtual pins : 0
 Total memory bits : 0 / 1,677,312 ( 0 % )

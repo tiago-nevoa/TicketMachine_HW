@@ -1,4 +1,27 @@
-|SerialReceiver
+|IOS
+SCLK => SerialReceiver:serialR.CLK
+SCLK => Dispatcher:Disp.CLK
+SDX => SerialReceiver:serialR.DX
+NOT_SS => SerialReceiver:serialR.NOT_SS
+Fsh => Dispatcher:Disp.Fsh
+Reset => SerialReceiver:serialR.Reset
+Reset => Dispatcher:Disp.Reset
+busy <= SerialReceiver:serialR.busy
+WrT <= Dispatcher:Disp.WrT
+WrL <= Dispatcher:Disp.WrL
+MCLK => SerialReceiver:serialR.MCLK
+Dout[0] <= Dispatcher:Disp.Dout[0]
+Dout[1] <= Dispatcher:Disp.Dout[1]
+Dout[2] <= Dispatcher:Disp.Dout[2]
+Dout[3] <= Dispatcher:Disp.Dout[3]
+Dout[4] <= Dispatcher:Disp.Dout[4]
+Dout[5] <= Dispatcher:Disp.Dout[5]
+Dout[6] <= Dispatcher:Disp.Dout[6]
+Dout[7] <= Dispatcher:Disp.Dout[7]
+Dout[8] <= Dispatcher:Disp.Dout[8]
+
+
+|IOS|SerialReceiver:serialR
 DX => ParityCheck:ParityCheck0.Data
 DX => ShiftRegister:ShiftRegister0.Sin
 MCLK => SerialControl:serialC.CLK
@@ -23,7 +46,7 @@ Dxval <= SerialControl:serialC.DXVal
 busy <= SerialControl:serialC.Busy
 
 
-|SerialReceiver|SerialControl:serialC
+|IOS|SerialReceiver:serialR|SerialControl:serialC
 NOT_SS => NextState.OUTPUTSELECT
 NOT_SS => NextState.OUTPUTSELECT
 NOT_SS => NextState.OUTPUTSELECT
@@ -52,7 +75,7 @@ DXVal <= DXVal.DB_MAX_OUTPUT_PORT_TYPE
 Busy <= Busy.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|SerialReceiver|Counter:Counter0
+|IOS|SerialReceiver:serialR|Counter:Counter0
 CE => sD[0].IN1
 CE => sD.IN1
 CE => sD.IN1
@@ -75,7 +98,7 @@ Fcount[2] <= FFD:UFFD2.Q
 Fcount[3] <= FFD:UFFD3.Q
 
 
-|SerialReceiver|Counter:Counter0|FFD:UFFD0
+|IOS|SerialReceiver:serialR|Counter:Counter0|FFD:UFFD0
 CLK => Q~reg0.CLK
 RESET => Q~reg0.ACLR
 EN => Q~reg0.ENA
@@ -83,7 +106,7 @@ D => Q~reg0.DATAIN
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|SerialReceiver|Counter:Counter0|FFD:UFFD1
+|IOS|SerialReceiver:serialR|Counter:Counter0|FFD:UFFD1
 CLK => Q~reg0.CLK
 RESET => Q~reg0.ACLR
 EN => Q~reg0.ENA
@@ -91,7 +114,7 @@ D => Q~reg0.DATAIN
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|SerialReceiver|Counter:Counter0|FFD:UFFD2
+|IOS|SerialReceiver:serialR|Counter:Counter0|FFD:UFFD2
 CLK => Q~reg0.CLK
 RESET => Q~reg0.ACLR
 EN => Q~reg0.ENA
@@ -99,7 +122,7 @@ D => Q~reg0.DATAIN
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|SerialReceiver|Counter:Counter0|FFD:UFFD3
+|IOS|SerialReceiver:serialR|Counter:Counter0|FFD:UFFD3
 CLK => Q~reg0.CLK
 RESET => Q~reg0.ACLR
 EN => Q~reg0.ENA
@@ -107,14 +130,14 @@ D => Q~reg0.DATAIN
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|SerialReceiver|ParityCheck:ParityCheck0
+|IOS|SerialReceiver:serialR|ParityCheck:ParityCheck0
 CLK => FFD:UFFD0.Clk
 Data => sD.IN1
 Init => FFD:UFFD0.Reset
 err <= FFD:UFFD0.Q
 
 
-|SerialReceiver|ParityCheck:ParityCheck0|FFD:UFFD0
+|IOS|SerialReceiver:serialR|ParityCheck:ParityCheck0|FFD:UFFD0
 CLK => Q~reg0.CLK
 RESET => Q~reg0.ACLR
 EN => Q~reg0.ENA
@@ -122,7 +145,7 @@ D => Q~reg0.DATAIN
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|SerialReceiver|ShiftRegister:ShiftRegister0
+|IOS|SerialReceiver:serialR|ShiftRegister:ShiftRegister0
 Sin => FFD:UFFD0.D
 EN => FFD:UFFD0.EN
 EN => FFD:UFFD1.EN
@@ -166,7 +189,7 @@ DataOut[8] <= FFD:UFFD1.Q
 DataOut[9] <= FFD:UFFD0.Q
 
 
-|SerialReceiver|ShiftRegister:ShiftRegister0|FFD:UFFD0
+|IOS|SerialReceiver:serialR|ShiftRegister:ShiftRegister0|FFD:UFFD0
 CLK => Q~reg0.CLK
 RESET => Q~reg0.ACLR
 EN => Q~reg0.ENA
@@ -174,7 +197,7 @@ D => Q~reg0.DATAIN
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|SerialReceiver|ShiftRegister:ShiftRegister0|FFD:UFFD1
+|IOS|SerialReceiver:serialR|ShiftRegister:ShiftRegister0|FFD:UFFD1
 CLK => Q~reg0.CLK
 RESET => Q~reg0.ACLR
 EN => Q~reg0.ENA
@@ -182,7 +205,7 @@ D => Q~reg0.DATAIN
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|SerialReceiver|ShiftRegister:ShiftRegister0|FFD:UFFD2
+|IOS|SerialReceiver:serialR|ShiftRegister:ShiftRegister0|FFD:UFFD2
 CLK => Q~reg0.CLK
 RESET => Q~reg0.ACLR
 EN => Q~reg0.ENA
@@ -190,7 +213,7 @@ D => Q~reg0.DATAIN
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|SerialReceiver|ShiftRegister:ShiftRegister0|FFD:UFFD3
+|IOS|SerialReceiver:serialR|ShiftRegister:ShiftRegister0|FFD:UFFD3
 CLK => Q~reg0.CLK
 RESET => Q~reg0.ACLR
 EN => Q~reg0.ENA
@@ -198,7 +221,7 @@ D => Q~reg0.DATAIN
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|SerialReceiver|ShiftRegister:ShiftRegister0|FFD:UFFD4
+|IOS|SerialReceiver:serialR|ShiftRegister:ShiftRegister0|FFD:UFFD4
 CLK => Q~reg0.CLK
 RESET => Q~reg0.ACLR
 EN => Q~reg0.ENA
@@ -206,7 +229,7 @@ D => Q~reg0.DATAIN
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|SerialReceiver|ShiftRegister:ShiftRegister0|FFD:UFFD5
+|IOS|SerialReceiver:serialR|ShiftRegister:ShiftRegister0|FFD:UFFD5
 CLK => Q~reg0.CLK
 RESET => Q~reg0.ACLR
 EN => Q~reg0.ENA
@@ -214,7 +237,7 @@ D => Q~reg0.DATAIN
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|SerialReceiver|ShiftRegister:ShiftRegister0|FFD:UFFD6
+|IOS|SerialReceiver:serialR|ShiftRegister:ShiftRegister0|FFD:UFFD6
 CLK => Q~reg0.CLK
 RESET => Q~reg0.ACLR
 EN => Q~reg0.ENA
@@ -222,7 +245,7 @@ D => Q~reg0.DATAIN
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|SerialReceiver|ShiftRegister:ShiftRegister0|FFD:UFFD7
+|IOS|SerialReceiver:serialR|ShiftRegister:ShiftRegister0|FFD:UFFD7
 CLK => Q~reg0.CLK
 RESET => Q~reg0.ACLR
 EN => Q~reg0.ENA
@@ -230,7 +253,7 @@ D => Q~reg0.DATAIN
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|SerialReceiver|ShiftRegister:ShiftRegister0|FFD:UFFD8
+|IOS|SerialReceiver:serialR|ShiftRegister:ShiftRegister0|FFD:UFFD8
 CLK => Q~reg0.CLK
 RESET => Q~reg0.ACLR
 EN => Q~reg0.ENA
@@ -238,11 +261,44 @@ D => Q~reg0.DATAIN
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|SerialReceiver|ShiftRegister:ShiftRegister0|FFD:UFFD9
+|IOS|SerialReceiver:serialR|ShiftRegister:ShiftRegister0|FFD:UFFD9
 CLK => Q~reg0.CLK
 RESET => Q~reg0.ACLR
 EN => Q~reg0.ENA
 D => Q~reg0.DATAIN
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|IOS|Dispatcher:Disp
+Reset => CurrentState~3.DATAIN
+Fsh => NextState.STATE_prtProtocol.DATAB
+Fsh => Selector1.IN2
+Fsh => Selector2.IN2
+Dval => GenerateNextState.IN0
+Dval => GenerateNextState.IN0
+Din[0] => GenerateNextState.IN1
+Din[0] => GenerateNextState.IN1
+Din[1] => Dout[0].DATAIN
+Din[2] => Dout[1].DATAIN
+Din[3] => Dout[2].DATAIN
+Din[4] => Dout[3].DATAIN
+Din[5] => Dout[4].DATAIN
+Din[6] => Dout[5].DATAIN
+Din[7] => Dout[6].DATAIN
+Din[8] => Dout[7].DATAIN
+Din[9] => Dout[8].DATAIN
+WrT <= WrT.DB_MAX_OUTPUT_PORT_TYPE
+Dout[0] <= Din[1].DB_MAX_OUTPUT_PORT_TYPE
+Dout[1] <= Din[2].DB_MAX_OUTPUT_PORT_TYPE
+Dout[2] <= Din[3].DB_MAX_OUTPUT_PORT_TYPE
+Dout[3] <= Din[4].DB_MAX_OUTPUT_PORT_TYPE
+Dout[4] <= Din[5].DB_MAX_OUTPUT_PORT_TYPE
+Dout[5] <= Din[6].DB_MAX_OUTPUT_PORT_TYPE
+Dout[6] <= Din[7].DB_MAX_OUTPUT_PORT_TYPE
+Dout[7] <= Din[8].DB_MAX_OUTPUT_PORT_TYPE
+Dout[8] <= Din[9].DB_MAX_OUTPUT_PORT_TYPE
+WrL <= WrL.DB_MAX_OUTPUT_PORT_TYPE
+CLK => CurrentState~1.DATAIN
+done <= done.DB_MAX_OUTPUT_PORT_TYPE
 
 

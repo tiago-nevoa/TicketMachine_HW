@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ProjetoFinal
-Thu May 12 16:25:44 2022
+Thu May 12 20:10:24 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -13,13 +13,14 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |SerialReceiver|SerialControl:serialC|CurrentState
-  9. General Register Statistics
- 10. Port Connectivity Checks: "ParityCheck:ParityCheck0|FFD:UFFD0"
- 11. Port Connectivity Checks: "Counter:Counter0"
- 12. Post-Synthesis Netlist Statistics for Top Partition
- 13. Elapsed Time Per Partition
- 14. Analysis & Synthesis Messages
+  8. State Machine - |IOS|Dispatcher:Disp|CurrentState
+  9. State Machine - |IOS|SerialReceiver:serialR|SerialControl:serialC|CurrentState
+ 10. General Register Statistics
+ 11. Port Connectivity Checks: "SerialReceiver:serialR|ParityCheck:ParityCheck0|FFD:UFFD0"
+ 12. Port Connectivity Checks: "SerialReceiver:serialR|Counter:Counter0"
+ 13. Post-Synthesis Netlist Statistics for Top Partition
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
 
 
 
@@ -46,15 +47,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu May 12 16:25:44 2022       ;
+; Analysis & Synthesis Status        ; Successful - Thu May 12 20:10:24 2022       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; ProjetoFinal                                ;
-; Top-level Entity Name              ; SerialReceiver                              ;
+; Top-level Entity Name              ; IOS                                         ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 28                                          ;
-;     Total combinational functions  ; 18                                          ;
-;     Dedicated logic registers      ; 20                                          ;
-; Total registers                    ; 20                                          ;
+; Total logic elements               ; 34                                          ;
+;     Total combinational functions  ; 24                                          ;
+;     Dedicated logic registers      ; 25                                          ;
+; Total registers                    ; 25                                          ;
 ; Total pins                         ; 18                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -71,7 +72,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; 10M50DAF484C6GES   ;                    ;
-; Top-level entity name                                            ; SerialReceiver     ; ProjetoFinal       ;
+; Top-level entity name                                            ; IOS                ; ProjetoFinal       ;
 ; Family name                                                      ; MAX 10             ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -156,96 +157,114 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 2           ;
-; Maximum allowed            ; 2           ;
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 2           ;
+; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
+;     Processors 2-6         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                    ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                             ; Library ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------+---------+
-; ShiftRegister.vhd                ; yes             ; User VHDL File  ; C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/ShiftRegister.vhd  ;         ;
-; SerialReceiver.vhd               ; yes             ; User VHDL File  ; C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/SerialReceiver.vhd ;         ;
-; SerialControl.vhd                ; yes             ; User VHDL File  ; C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/SerialControl.vhd  ;         ;
-; ParityCheck.vhd                  ; yes             ; User VHDL File  ; C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/ParityCheck.vhd    ;         ;
-; FFD.vhd                          ; yes             ; User VHDL File  ; C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/FFD.vhd            ;         ;
-; Counter.vhd                      ; yes             ; User VHDL File  ; C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/Counter.vhd        ;         ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                             ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                      ; Library ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------+---------+
+; ShiftRegister.vhd                ; yes             ; User VHDL File  ; C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/ShiftRegister.vhd  ;         ;
+; SerialReceiver.vhd               ; yes             ; User VHDL File  ; C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/SerialReceiver.vhd ;         ;
+; SerialControl.vhd                ; yes             ; User VHDL File  ; C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/SerialControl.vhd  ;         ;
+; ParityCheck.vhd                  ; yes             ; User VHDL File  ; C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/ParityCheck.vhd    ;         ;
+; IOS.vhd                          ; yes             ; User VHDL File  ; C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/IOS.vhd            ;         ;
+; FFD.vhd                          ; yes             ; User VHDL File  ; C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/FFD.vhd            ;         ;
+; Dispatcher.vhd                   ; yes             ; User VHDL File  ; C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/Dispatcher.vhd     ;         ;
+; Counter.vhd                      ; yes             ; User VHDL File  ; C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/Counter.vhd        ;         ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 28        ;
-;                                             ;           ;
-; Total combinational functions               ; 18        ;
-; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 8         ;
-;     -- 3 input functions                    ; 3         ;
-;     -- <=2 input functions                  ; 7         ;
-;                                             ;           ;
-; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 18        ;
-;     -- arithmetic mode                      ; 0         ;
-;                                             ;           ;
-; Total registers                             ; 20        ;
-;     -- Dedicated logic registers            ; 20        ;
-;     -- I/O registers                        ; 0         ;
-;                                             ;           ;
-; I/O pins                                    ; 18        ;
-;                                             ;           ;
-; Embedded Multiplier 9-bit elements          ; 0         ;
-;                                             ;           ;
-; Maximum fan-out node                        ; CLK~input ;
-; Maximum fan-out                             ; 15        ;
-; Total fan-out                               ; 154       ;
-; Average fan-out                             ; 2.08      ;
-+---------------------------------------------+-----------+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimated Total logic elements              ; 34          ;
+;                                             ;             ;
+; Total combinational functions               ; 24          ;
+; Logic element usage by number of LUT inputs ;             ;
+;     -- 4 input functions                    ; 9           ;
+;     -- 3 input functions                    ; 7           ;
+;     -- <=2 input functions                  ; 8           ;
+;                                             ;             ;
+; Logic elements by mode                      ;             ;
+;     -- normal mode                          ; 24          ;
+;     -- arithmetic mode                      ; 0           ;
+;                                             ;             ;
+; Total registers                             ; 25          ;
+;     -- Dedicated logic registers            ; 25          ;
+;     -- I/O registers                        ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 18          ;
+;                                             ;             ;
+; Embedded Multiplier 9-bit elements          ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; Reset~input ;
+; Maximum fan-out                             ; 20          ;
+; Total fan-out                               ; 187         ;
+; Average fan-out                             ; 2.20        ;
++---------------------------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                             ;
-+-----------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------+----------------+--------------+
-; Compilation Hierarchy Node        ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                    ; Entity Name    ; Library Name ;
-+-----------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------+----------------+--------------+
-; |SerialReceiver                   ; 18 (1)              ; 20 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 18   ; 0            ; 0          ; |SerialReceiver                                        ; SerialReceiver ; work         ;
-;    |Counter:Counter0|             ; 4 (0)               ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SerialReceiver|Counter:Counter0                       ; Counter        ; work         ;
-;       |FFD:UFFD0|                 ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SerialReceiver|Counter:Counter0|FFD:UFFD0             ; FFD            ; work         ;
-;       |FFD:UFFD1|                 ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SerialReceiver|Counter:Counter0|FFD:UFFD1             ; FFD            ; work         ;
-;       |FFD:UFFD2|                 ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SerialReceiver|Counter:Counter0|FFD:UFFD2             ; FFD            ; work         ;
-;       |FFD:UFFD3|                 ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SerialReceiver|Counter:Counter0|FFD:UFFD3             ; FFD            ; work         ;
-;    |ParityCheck:ParityCheck0|     ; 1 (0)               ; 1 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SerialReceiver|ParityCheck:ParityCheck0               ; ParityCheck    ; work         ;
-;       |FFD:UFFD0|                 ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SerialReceiver|ParityCheck:ParityCheck0|FFD:UFFD0     ; FFD            ; work         ;
-;    |SerialControl:serialC|        ; 12 (12)             ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SerialReceiver|SerialControl:serialC                  ; SerialControl  ; work         ;
-;    |ShiftRegister:ShiftRegister0| ; 0 (0)               ; 10 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SerialReceiver|ShiftRegister:ShiftRegister0           ; ShiftRegister  ; work         ;
-;       |FFD:UFFD0|                 ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SerialReceiver|ShiftRegister:ShiftRegister0|FFD:UFFD0 ; FFD            ; work         ;
-;       |FFD:UFFD1|                 ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SerialReceiver|ShiftRegister:ShiftRegister0|FFD:UFFD1 ; FFD            ; work         ;
-;       |FFD:UFFD2|                 ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SerialReceiver|ShiftRegister:ShiftRegister0|FFD:UFFD2 ; FFD            ; work         ;
-;       |FFD:UFFD3|                 ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SerialReceiver|ShiftRegister:ShiftRegister0|FFD:UFFD3 ; FFD            ; work         ;
-;       |FFD:UFFD4|                 ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SerialReceiver|ShiftRegister:ShiftRegister0|FFD:UFFD4 ; FFD            ; work         ;
-;       |FFD:UFFD5|                 ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SerialReceiver|ShiftRegister:ShiftRegister0|FFD:UFFD5 ; FFD            ; work         ;
-;       |FFD:UFFD6|                 ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SerialReceiver|ShiftRegister:ShiftRegister0|FFD:UFFD6 ; FFD            ; work         ;
-;       |FFD:UFFD7|                 ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SerialReceiver|ShiftRegister:ShiftRegister0|FFD:UFFD7 ; FFD            ; work         ;
-;       |FFD:UFFD8|                 ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SerialReceiver|ShiftRegister:ShiftRegister0|FFD:UFFD8 ; FFD            ; work         ;
-;       |FFD:UFFD9|                 ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |SerialReceiver|ShiftRegister:ShiftRegister0|FFD:UFFD9 ; FFD            ; work         ;
-+-----------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------+----------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                            ;
++--------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------+----------------+--------------+
+; Compilation Hierarchy Node           ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                ; Entity Name    ; Library Name ;
++--------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------+----------------+--------------+
+; |IOS                                 ; 24 (0)              ; 25 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 18   ; 0            ; 0          ; |IOS                                                               ; IOS            ; work         ;
+;    |Dispatcher:Disp|                 ; 6 (6)               ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |IOS|Dispatcher:Disp                                               ; Dispatcher     ; work         ;
+;    |SerialReceiver:serialR|          ; 18 (1)              ; 20 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |IOS|SerialReceiver:serialR                                        ; SerialReceiver ; work         ;
+;       |Counter:Counter0|             ; 4 (0)               ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |IOS|SerialReceiver:serialR|Counter:Counter0                       ; Counter        ; work         ;
+;          |FFD:UFFD0|                 ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |IOS|SerialReceiver:serialR|Counter:Counter0|FFD:UFFD0             ; FFD            ; work         ;
+;          |FFD:UFFD1|                 ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |IOS|SerialReceiver:serialR|Counter:Counter0|FFD:UFFD1             ; FFD            ; work         ;
+;          |FFD:UFFD2|                 ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |IOS|SerialReceiver:serialR|Counter:Counter0|FFD:UFFD2             ; FFD            ; work         ;
+;          |FFD:UFFD3|                 ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |IOS|SerialReceiver:serialR|Counter:Counter0|FFD:UFFD3             ; FFD            ; work         ;
+;       |ParityCheck:ParityCheck0|     ; 1 (0)               ; 1 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |IOS|SerialReceiver:serialR|ParityCheck:ParityCheck0               ; ParityCheck    ; work         ;
+;          |FFD:UFFD0|                 ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |IOS|SerialReceiver:serialR|ParityCheck:ParityCheck0|FFD:UFFD0     ; FFD            ; work         ;
+;       |SerialControl:serialC|        ; 12 (12)             ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |IOS|SerialReceiver:serialR|SerialControl:serialC                  ; SerialControl  ; work         ;
+;       |ShiftRegister:ShiftRegister0| ; 0 (0)               ; 10 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |IOS|SerialReceiver:serialR|ShiftRegister:ShiftRegister0           ; ShiftRegister  ; work         ;
+;          |FFD:UFFD0|                 ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |IOS|SerialReceiver:serialR|ShiftRegister:ShiftRegister0|FFD:UFFD0 ; FFD            ; work         ;
+;          |FFD:UFFD1|                 ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |IOS|SerialReceiver:serialR|ShiftRegister:ShiftRegister0|FFD:UFFD1 ; FFD            ; work         ;
+;          |FFD:UFFD2|                 ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |IOS|SerialReceiver:serialR|ShiftRegister:ShiftRegister0|FFD:UFFD2 ; FFD            ; work         ;
+;          |FFD:UFFD3|                 ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |IOS|SerialReceiver:serialR|ShiftRegister:ShiftRegister0|FFD:UFFD3 ; FFD            ; work         ;
+;          |FFD:UFFD4|                 ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |IOS|SerialReceiver:serialR|ShiftRegister:ShiftRegister0|FFD:UFFD4 ; FFD            ; work         ;
+;          |FFD:UFFD5|                 ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |IOS|SerialReceiver:serialR|ShiftRegister:ShiftRegister0|FFD:UFFD5 ; FFD            ; work         ;
+;          |FFD:UFFD6|                 ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |IOS|SerialReceiver:serialR|ShiftRegister:ShiftRegister0|FFD:UFFD6 ; FFD            ; work         ;
+;          |FFD:UFFD7|                 ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |IOS|SerialReceiver:serialR|ShiftRegister:ShiftRegister0|FFD:UFFD7 ; FFD            ; work         ;
+;          |FFD:UFFD8|                 ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |IOS|SerialReceiver:serialR|ShiftRegister:ShiftRegister0|FFD:UFFD8 ; FFD            ; work         ;
+;          |FFD:UFFD9|                 ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |IOS|SerialReceiver:serialR|ShiftRegister:ShiftRegister0|FFD:UFFD9 ; FFD            ; work         ;
++--------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------+----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
 Encoding Type:  One-Hot
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |IOS|Dispatcher:Disp|CurrentState                                                                                                                                                    ;
++----------------------------------+----------------------------------+----------------------------+--------------------------------+-------------------------------+----------------------------------+
+; Name                             ; CurrentState.STATE_finishProcess ; CurrentState.STATE_sendLCD ; CurrentState.STATE_prtProtocol ; CurrentState.STATE_sendTicket ; CurrentState.STATE_waitValidData ;
++----------------------------------+----------------------------------+----------------------------+--------------------------------+-------------------------------+----------------------------------+
+; CurrentState.STATE_waitValidData ; 0                                ; 0                          ; 0                              ; 0                             ; 0                                ;
+; CurrentState.STATE_sendTicket    ; 0                                ; 0                          ; 0                              ; 1                             ; 1                                ;
+; CurrentState.STATE_prtProtocol   ; 0                                ; 0                          ; 1                              ; 0                             ; 1                                ;
+; CurrentState.STATE_sendLCD       ; 0                                ; 1                          ; 0                              ; 0                             ; 1                                ;
+; CurrentState.STATE_finishProcess ; 1                                ; 0                          ; 0                              ; 0                             ; 1                                ;
++----------------------------------+----------------------------------+----------------------------+--------------------------------+-------------------------------+----------------------------------+
+
+
+Encoding Type:  One-Hot
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |SerialReceiver|SerialControl:serialC|CurrentState                                                                                                                     ;
+; State Machine - |IOS|SerialReceiver:serialR|SerialControl:serialC|CurrentState                                                                                                         ;
 +----------------------------------+-----------------------------+----------------------------------+---------------------------+-----------------------------+--------------------------+
 ; Name                             ; CurrentState.STATE_DConfirm ; CurrentState.STATE_DEndReception ; CurrentState.STATE_PCheck ; CurrentState.STATE_DReceive ; CurrentState.STATE_Dwait ;
 +----------------------------------+-----------------------------+----------------------------------+---------------------------+-----------------------------+--------------------------+
@@ -262,32 +281,32 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 20    ;
+; Total registers                              ; 25    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 20    ;
+; Number of registers using Asynchronous Clear ; 25    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 10    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+----------------------------------------------------------------+
-; Port Connectivity Checks: "ParityCheck:ParityCheck0|FFD:UFFD0" ;
-+------+-------+----------+--------------------------------------+
-; Port ; Type  ; Severity ; Details                              ;
-+------+-------+----------+--------------------------------------+
-; en   ; Input ; Info     ; Stuck at VCC                         ;
-+------+-------+----------+--------------------------------------+
++---------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "SerialReceiver:serialR|ParityCheck:ParityCheck0|FFD:UFFD0" ;
++------+-------+----------+-------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                     ;
++------+-------+----------+-------------------------------------------------------------+
+; en   ; Input ; Info     ; Stuck at VCC                                                ;
++------+-------+----------+-------------------------------------------------------------+
 
 
-+----------------------------------------------+
-; Port Connectivity Checks: "Counter:Counter0" ;
-+------+-------+----------+--------------------+
-; Port ; Type  ; Severity ; Details            ;
-+------+-------+----------+--------------------+
-; ce   ; Input ; Info     ; Stuck at VCC       ;
-+------+-------+----------+--------------------+
++---------------------------------------------------------------------+
+; Port Connectivity Checks: "SerialReceiver:serialR|Counter:Counter0" ;
++------+-------+----------+-------------------------------------------+
+; Port ; Type  ; Severity ; Details                                   ;
++------+-------+----------+-------------------------------------------+
+; ce   ; Input ; Info     ; Stuck at VCC                              ;
++------+-------+----------+-------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -296,18 +315,18 @@ Encoding Type:  One-Hot
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 18                          ;
-; cycloneiii_ff         ; 20                          ;
-;     CLR               ; 10                          ;
+; cycloneiii_ff         ; 25                          ;
+;     CLR               ; 15                          ;
 ;     ENA CLR           ; 10                          ;
-; cycloneiii_lcell_comb ; 18                          ;
-;     normal            ; 18                          ;
+; cycloneiii_lcell_comb ; 24                          ;
+;     normal            ; 24                          ;
 ;         1 data inputs ; 1                           ;
-;         2 data inputs ; 6                           ;
-;         3 data inputs ; 3                           ;
-;         4 data inputs ; 8                           ;
+;         2 data inputs ; 7                           ;
+;         3 data inputs ; 7                           ;
+;         4 data inputs ; 9                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 3.00                        ;
-; Average LUT depth     ; 1.48                        ;
+; Average LUT depth     ; 1.47                        ;
 +-----------------------+-----------------------------+
 
 
@@ -326,75 +345,77 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu May 12 16:25:30 2022
+    Info: Processing started: Thu May 12 20:10:17 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ProjetoFinal -c ProjetoFinal
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file vendingmachine_tb.vhd
-    Info (12022): Found design unit 1: VendingMachine_tb-behavior File: C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/VendingMachine_tb.vhd Line: 7
-    Info (12023): Found entity 1: VendingMachine_tb File: C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/VendingMachine_tb.vhd Line: 4
+    Info (12022): Found design unit 1: VendingMachine_tb-behavior File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/VendingMachine_tb.vhd Line: 7
+    Info (12023): Found entity 1: VendingMachine_tb File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/VendingMachine_tb.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file vendingmachine.vhd
-    Info (12022): Found design unit 1: VendingMachine-behavioral File: C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/VendingMachine.vhd Line: 13
-    Info (12023): Found entity 1: VendingMachine File: C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/VendingMachine.vhd Line: 5
+    Info (12022): Found design unit 1: VendingMachine-behavioral File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/VendingMachine.vhd Line: 13
+    Info (12023): Found entity 1: VendingMachine File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/VendingMachine.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file usbport.vhd
-    Info (12022): Found design unit 1: UsbPort-bdf_type File: C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/UsbPort.vhd Line: 33
-    Info (12023): Found entity 1: UsbPort File: C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/UsbPort.vhd Line: 25
+    Info (12022): Found design unit 1: UsbPort-bdf_type File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/UsbPort.vhd Line: 33
+    Info (12023): Found entity 1: UsbPort File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/UsbPort.vhd Line: 25
 Info (12021): Found 2 design units, including 1 entities, in source file ticketdispenser.vhd
-    Info (12022): Found design unit 1: TicketDispenser-behavioral File: C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/TicketDispenser.vhd Line: 21
-    Info (12023): Found entity 1: TicketDispenser File: C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/TicketDispenser.vhd Line: 10
+    Info (12022): Found design unit 1: TicketDispenser-behavioral File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/TicketDispenser.vhd Line: 21
+    Info (12023): Found entity 1: TicketDispenser File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/TicketDispenser.vhd Line: 10
 Info (12021): Found 2 design units, including 1 entities, in source file shiftregister.vhd
-    Info (12022): Found design unit 1: ShiftRegister-ShiftRegister_logic File: C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/ShiftRegister.vhd Line: 13
-    Info (12023): Found entity 1: ShiftRegister File: C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/ShiftRegister.vhd Line: 5
+    Info (12022): Found design unit 1: ShiftRegister-ShiftRegister_logic File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/ShiftRegister.vhd Line: 13
+    Info (12023): Found entity 1: ShiftRegister File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/ShiftRegister.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file serialreceiver.vhd
-    Info (12022): Found design unit 1: SerialReceiver-Behavioral File: C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/SerialReceiver.vhd Line: 16
-    Info (12023): Found entity 1: SerialReceiver File: C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/SerialReceiver.vhd Line: 5
+    Info (12022): Found design unit 1: SerialReceiver-Behavioral File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/SerialReceiver.vhd Line: 16
+    Info (12023): Found entity 1: SerialReceiver File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/SerialReceiver.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file serialcontrol.vhd
-    Info (12022): Found design unit 1: SerialControl-behavioral File: C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/SerialControl.vhd Line: 14
-    Info (12023): Found entity 1: SerialControl File: C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/SerialControl.vhd Line: 5
+    Info (12022): Found design unit 1: SerialControl-behavioral File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/SerialControl.vhd Line: 14
+    Info (12023): Found entity 1: SerialControl File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/SerialControl.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file paritycheck.vhd
-    Info (12022): Found design unit 1: ParityCheck-Behavioral File: C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/ParityCheck.vhd Line: 12
-    Info (12023): Found entity 1: ParityCheck File: C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/ParityCheck.vhd Line: 5
+    Info (12022): Found design unit 1: ParityCheck-Behavioral File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/ParityCheck.vhd Line: 12
+    Info (12023): Found entity 1: ParityCheck File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/ParityCheck.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file lcd.vhd
-    Info (12022): Found design unit 1: LCD-behavioral File: C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/LCD.vhd Line: 12
-    Info (12023): Found entity 1: LCD File: C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/LCD.vhd Line: 5
+    Info (12022): Found design unit 1: LCD-behavioral File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/LCD.vhd Line: 12
+    Info (12023): Found entity 1: LCD File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/LCD.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file ios.vhd
-    Info (12022): Found design unit 1: IOS-behavioral File: C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/IOS.vhd Line: 13
-    Info (12023): Found entity 1: IOS File: C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/IOS.vhd Line: 5
+    Info (12022): Found design unit 1: IOS-behavioral File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/IOS.vhd Line: 14
+    Info (12023): Found entity 1: IOS File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/IOS.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file int7seg.vhd
-    Info (12022): Found design unit 1: int7seg-logicFunction File: C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/int7seg.vhd Line: 10
-    Info (12023): Found entity 1: int7seg File: C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/int7seg.vhd Line: 4
+    Info (12022): Found design unit 1: int7seg-logicFunction File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/int7seg.vhd Line: 10
+    Info (12023): Found entity 1: int7seg File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/int7seg.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file ffd.vhd
-    Info (12022): Found design unit 1: FFD-Behavioral File: C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/FFD.vhd Line: 13
-    Info (12023): Found entity 1: FFD File: C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/FFD.vhd Line: 5
+    Info (12022): Found design unit 1: FFD-Behavioral File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/FFD.vhd Line: 13
+    Info (12023): Found entity 1: FFD File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/FFD.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file dispatcher.vhd
-    Info (12022): Found design unit 1: Dispatcher-behavioral File: C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/Dispatcher.vhd Line: 19
-    Info (12023): Found entity 1: Dispatcher File: C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/Dispatcher.vhd Line: 5
+    Info (12022): Found design unit 1: Dispatcher-behavioral File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/Dispatcher.vhd Line: 19
+    Info (12023): Found entity 1: Dispatcher File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/Dispatcher.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file decoderhex.vhd
-    Info (12022): Found design unit 1: decoderHex-logicFuntion File: C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/decoderHex.vhd Line: 10
-    Info (12023): Found entity 1: decoderHex File: C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/decoderHex.vhd Line: 4
+    Info (12022): Found design unit 1: decoderHex-logicFuntion File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/decoderHex.vhd Line: 10
+    Info (12023): Found entity 1: decoderHex File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/decoderHex.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file counter.vhd
-    Info (12022): Found design unit 1: Counter-Counter_LOGIC File: C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/Counter.vhd Line: 13
-    Info (12023): Found entity 1: Counter File: C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/Counter.vhd Line: 5
+    Info (12022): Found design unit 1: Counter-Counter_LOGIC File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/Counter.vhd Line: 13
+    Info (12023): Found entity 1: Counter File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/Counter.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file control.vhd
-    Info (12022): Found design unit 1: Control-behavioral File: C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/Control.vhd Line: 12
-    Info (12023): Found entity 1: Control File: C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/Control.vhd Line: 5
-Info (12127): Elaborating entity "SerialReceiver" for the top level hierarchy
-Info (12128): Elaborating entity "SerialControl" for hierarchy "SerialControl:serialC" File: C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/SerialReceiver.vhd Line: 66
-Info (12128): Elaborating entity "Counter" for hierarchy "Counter:Counter0" File: C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/SerialReceiver.vhd Line: 79
-Info (12128): Elaborating entity "FFD" for hierarchy "Counter:Counter0|FFD:UFFD0" File: C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/Counter.vhd Line: 36
-Info (12128): Elaborating entity "ParityCheck" for hierarchy "ParityCheck:ParityCheck0" File: C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/SerialReceiver.vhd Line: 85
-Info (12128): Elaborating entity "ShiftRegister" for hierarchy "ShiftRegister:ShiftRegister0" File: C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/SerialReceiver.vhd Line: 91
+    Info (12022): Found design unit 1: Control-behavioral File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/Control.vhd Line: 12
+    Info (12023): Found entity 1: Control File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/Control.vhd Line: 5
+Info (12127): Elaborating entity "IOS" for the top level hierarchy
+Info (12128): Elaborating entity "SerialReceiver" for hierarchy "SerialReceiver:serialR" File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/IOS.vhd Line: 48
+Info (12128): Elaborating entity "SerialControl" for hierarchy "SerialReceiver:serialR|SerialControl:serialC" File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/SerialReceiver.vhd Line: 66
+Info (12128): Elaborating entity "Counter" for hierarchy "SerialReceiver:serialR|Counter:Counter0" File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/SerialReceiver.vhd Line: 79
+Info (12128): Elaborating entity "FFD" for hierarchy "SerialReceiver:serialR|Counter:Counter0|FFD:UFFD0" File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/Counter.vhd Line: 36
+Info (12128): Elaborating entity "ParityCheck" for hierarchy "SerialReceiver:serialR|ParityCheck:ParityCheck0" File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/SerialReceiver.vhd Line: 85
+Info (12128): Elaborating entity "ShiftRegister" for hierarchy "SerialReceiver:serialR|ShiftRegister:ShiftRegister0" File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/SerialReceiver.vhd Line: 91
+Info (12128): Elaborating entity "Dispatcher" for hierarchy "Dispatcher:Disp" File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/IOS.vhd Line: 59
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 46 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 52 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 6 input pins
     Info (21059): Implemented 12 output pins
-    Info (21061): Implemented 28 logic cells
+    Info (21061): Implemented 34 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4767 megabytes
-    Info: Processing ended: Thu May 12 16:25:44 2022
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:18
+    Info: Peak virtual memory: 4803 megabytes
+    Info: Processing ended: Thu May 12 20:10:24 2022
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:17
 
 

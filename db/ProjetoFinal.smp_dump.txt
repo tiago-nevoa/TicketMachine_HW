@@ -1,5 +1,13 @@
 
-State Machine - |SerialReceiver|SerialControl:serialC|CurrentState
+State Machine - |IOS|Dispatcher:Disp|CurrentState
+Name CurrentState.STATE_finishProcess CurrentState.STATE_sendLCD CurrentState.STATE_prtProtocol CurrentState.STATE_sendTicket CurrentState.STATE_waitValidData 
+CurrentState.STATE_waitValidData 0 0 0 0 0 
+CurrentState.STATE_sendTicket 0 0 0 1 1 
+CurrentState.STATE_prtProtocol 0 0 1 0 1 
+CurrentState.STATE_sendLCD 0 1 0 0 1 
+CurrentState.STATE_finishProcess 1 0 0 0 1 
+
+State Machine - |IOS|SerialReceiver:serialR|SerialControl:serialC|CurrentState
 Name CurrentState.STATE_DConfirm CurrentState.STATE_DEndReception CurrentState.STATE_PCheck CurrentState.STATE_DReceive CurrentState.STATE_Dwait 
 CurrentState.STATE_Dwait 0 0 0 0 0 
 CurrentState.STATE_DReceive 0 0 0 1 1 
