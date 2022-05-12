@@ -1,6 +1,6 @@
 Fitter report for ProjetoFinal
-Mon May 09 19:57:52 2022
-Quartus Prime Version 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition
+Thu May 12 16:26:00 2022
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
 ---------------------
@@ -66,28 +66,28 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+------------------------------------------------------------------------------------------------+
-; Fitter Summary                                                                                 ;
-+------------------------------------+-----------------------------------------------------------+
-; Fitter Status                      ; Successful - Mon May 09 19:57:52 2022                     ;
-; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition ;
-; Revision Name                      ; ProjetoFinal                                              ;
-; Top-level Entity Name              ; SerialReceiver                                            ;
-; Family                             ; MAX 10                                                    ;
-; Device                             ; 10M50DAF484C6GES                                          ;
-; Timing Models                      ; Preliminary                                               ;
-; Total logic elements               ; 31 / 49,760 ( < 1 % )                                     ;
-;     Total combinational functions  ; 20 / 49,760 ( < 1 % )                                     ;
-;     Dedicated logic registers      ; 20 / 49,760 ( < 1 % )                                     ;
-; Total registers                    ; 20                                                        ;
-; Total pins                         ; 18 / 360 ( 5 % )                                          ;
-; Total virtual pins                 ; 0                                                         ;
-; Total memory bits                  ; 0 / 1,677,312 ( 0 % )                                     ;
-; Embedded Multiplier 9-bit elements ; 0 / 288 ( 0 % )                                           ;
-; Total PLLs                         ; 0 / 4 ( 0 % )                                             ;
-; UFM blocks                         ; 0 / 1 ( 0 % )                                             ;
-; ADC blocks                         ; 0 / 2 ( 0 % )                                             ;
-+------------------------------------+-----------------------------------------------------------+
++----------------------------------------------------------------------------------+
+; Fitter Summary                                                                   ;
++------------------------------------+---------------------------------------------+
+; Fitter Status                      ; Successful - Thu May 12 16:26:00 2022       ;
+; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                      ; ProjetoFinal                                ;
+; Top-level Entity Name              ; SerialReceiver                              ;
+; Family                             ; MAX 10                                      ;
+; Device                             ; 10M50DAF484C6GES                            ;
+; Timing Models                      ; Preliminary                                 ;
+; Total logic elements               ; 29 / 49,760 ( < 1 % )                       ;
+;     Total combinational functions  ; 19 / 49,760 ( < 1 % )                       ;
+;     Dedicated logic registers      ; 20 / 49,760 ( < 1 % )                       ;
+; Total registers                    ; 20                                          ;
+; Total pins                         ; 18 / 360 ( 5 % )                            ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0 / 1,677,312 ( 0 % )                       ;
+; Embedded Multiplier 9-bit elements ; 0 / 288 ( 0 % )                             ;
+; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
+; UFM blocks                         ; 0 / 1 ( 0 % )                               ;
+; ADC blocks                         ; 0 / 2 ( 0 % )                               ;
++------------------------------------+---------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -152,16 +152,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 16          ;
-; Maximum allowed            ; 16          ;
+; Number detected on machine ; 2           ;
+; Maximum allowed            ; 2           ;
 ;                            ;             ;
-; Average used               ; 1.05        ;
-; Maximum used               ; 16          ;
+; Average used               ; 1.01        ;
+; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.3%      ;
-;     Processors 3-16        ;   0.3%      ;
+;     Processor 2            ;   0.5%      ;
 +----------------------------+-------------+
 
 
@@ -182,8 +181,8 @@ https://fpgasoftware.intel.com/eula.
 ; Type                ; Total [A + B]     ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+-------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                   ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 96 ) ; 0.00 % ( 0 / 96 )          ; 0.00 % ( 0 / 96 )        ;
-;     -- Achieved     ; 0.00 % ( 0 / 96 ) ; 0.00 % ( 0 / 96 )          ; 0.00 % ( 0 / 96 )        ;
+;     -- Requested    ; 0.00 % ( 0 / 95 ) ; 0.00 % ( 0 / 95 )          ; 0.00 % ( 0 / 95 )        ;
+;     -- Achieved     ; 0.00 % ( 0 / 95 ) ; 0.00 % ( 0 / 95 )          ; 0.00 % ( 0 / 95 )        ;
 ;                     ;                   ;                            ;                          ;
 ; Routing (by net)    ;                   ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )  ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -206,7 +205,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 80 )     ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 79 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 16 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -214,7 +213,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/ProjetoFinal.pin.
+The pin-out file can be found in C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/ProjetoFinal.pin.
 
 
 +---------------------------------------------------------------------+
@@ -222,26 +221,26 @@ The pin-out file can be found in C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_H
 +---------------------------------------------+-----------------------+
 ; Resource                                    ; Usage                 ;
 +---------------------------------------------+-----------------------+
-; Total logic elements                        ; 31 / 49,760 ( < 1 % ) ;
-;     -- Combinational with no register       ; 11                    ;
-;     -- Register only                        ; 11                    ;
-;     -- Combinational with a register        ; 9                     ;
+; Total logic elements                        ; 29 / 49,760 ( < 1 % ) ;
+;     -- Combinational with no register       ; 9                     ;
+;     -- Register only                        ; 10                    ;
+;     -- Combinational with a register        ; 10                    ;
 ;                                             ;                       ;
 ; Logic element usage by number of LUT inputs ;                       ;
-;     -- 4 input functions                    ; 10                    ;
-;     -- 3 input functions                    ; 5                     ;
-;     -- <=2 input functions                  ; 5                     ;
-;     -- Register only                        ; 11                    ;
+;     -- 4 input functions                    ; 8                     ;
+;     -- 3 input functions                    ; 3                     ;
+;     -- <=2 input functions                  ; 8                     ;
+;     -- Register only                        ; 10                    ;
 ;                                             ;                       ;
 ; Logic elements by mode                      ;                       ;
-;     -- normal mode                          ; 20                    ;
+;     -- normal mode                          ; 19                    ;
 ;     -- arithmetic mode                      ; 0                     ;
 ;                                             ;                       ;
 ; Total registers*                            ; 20 / 51,509 ( < 1 % ) ;
 ;     -- Dedicated logic registers            ; 20 / 49,760 ( < 1 % ) ;
 ;     -- I/O registers                        ; 0 / 1,749 ( 0 % )     ;
 ;                                             ;                       ;
-; Total LABs:  partially or completely used   ; 4 / 3,110 ( < 1 % )   ;
+; Total LABs:  partially or completely used   ; 3 / 3,110 ( < 1 % )   ;
 ; Virtual pins                                ; 0                     ;
 ; I/O pins                                    ; 18 / 360 ( 5 % )      ;
 ;     -- Clock pins                           ; 1 / 8 ( 13 % )        ;
@@ -262,11 +261,11 @@ The pin-out file can be found in C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_H
 ; Oscillator blocks                           ; 0 / 1 ( 0 % )         ;
 ; Impedance control blocks                    ; 0 / 1 ( 0 % )         ;
 ; Average interconnect usage (total/H/V)      ; 0.0% / 0.0% / 0.0%    ;
-; Peak interconnect usage (total/H/V)         ; 0.6% / 0.7% / 0.4%    ;
+; Peak interconnect usage (total/H/V)         ; 0.5% / 0.5% / 0.5%    ;
 ; Maximum fan-out                             ; 17                    ;
 ; Highest non-global fan-out                  ; 17                    ;
-; Total fan-out                               ; 185                   ;
-; Average fan-out                             ; 1.73                  ;
+; Total fan-out                               ; 176                   ;
+; Average fan-out                             ; 1.68                  ;
 +---------------------------------------------+-----------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -279,26 +278,26 @@ The pin-out file can be found in C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_H
 +---------------------------------------------+----------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                  ; Low                            ;
 ;                                             ;                      ;                                ;
-; Total logic elements                        ; 31 / 49760 ( < 1 % ) ; 0 / 49760 ( 0 % )              ;
-;     -- Combinational with no register       ; 11                   ; 0                              ;
-;     -- Register only                        ; 11                   ; 0                              ;
-;     -- Combinational with a register        ; 9                    ; 0                              ;
+; Total logic elements                        ; 29 / 49760 ( < 1 % ) ; 0 / 49760 ( 0 % )              ;
+;     -- Combinational with no register       ; 9                    ; 0                              ;
+;     -- Register only                        ; 10                   ; 0                              ;
+;     -- Combinational with a register        ; 10                   ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Logic element usage by number of LUT inputs ;                      ;                                ;
-;     -- 4 input functions                    ; 10                   ; 0                              ;
-;     -- 3 input functions                    ; 5                    ; 0                              ;
-;     -- <=2 input functions                  ; 5                    ; 0                              ;
-;     -- Register only                        ; 11                   ; 0                              ;
+;     -- 4 input functions                    ; 8                    ; 0                              ;
+;     -- 3 input functions                    ; 3                    ; 0                              ;
+;     -- <=2 input functions                  ; 8                    ; 0                              ;
+;     -- Register only                        ; 10                   ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Logic elements by mode                      ;                      ;                                ;
-;     -- normal mode                          ; 20                   ; 0                              ;
+;     -- normal mode                          ; 19                   ; 0                              ;
 ;     -- arithmetic mode                      ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Total registers                             ; 20                   ; 0                              ;
 ;     -- Dedicated logic registers            ; 20 / 49760 ( < 1 % ) ; 0 / 49760 ( 0 % )              ;
 ;     -- I/O registers                        ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
-; Total LABs:  partially or completely used   ; 4 / 3110 ( < 1 % )   ; 0 / 3110 ( 0 % )               ;
+; Total LABs:  partially or completely used   ; 3 / 3110 ( < 1 % )   ; 0 / 3110 ( 0 % )               ;
 ;                                             ;                      ;                                ;
 ; Virtual pins                                ; 0                    ; 0                              ;
 ; I/O pins                                    ; 18                   ; 0                              ;
@@ -316,8 +315,8 @@ The pin-out file can be found in C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_H
 ;     -- Registered Output Connections        ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Internal Connections                        ;                      ;                                ;
-;     -- Total Connections                    ; 191                  ; 8                              ;
-;     -- Registered Connections               ; 75                   ; 0                              ;
+;     -- Total Connections                    ; 182                  ; 8                              ;
+;     -- Registered Connections               ; 70                   ; 0                              ;
 ;                                             ;                      ;                                ;
 ; External Connections                        ;                      ;                                ;
 ;     -- Top                                  ; 0                    ; 0                              ;
@@ -351,9 +350,9 @@ The pin-out file can be found in C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_H
 +--------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
 ; Accept ; C12   ; 7        ; 54           ; 54           ; 28           ; 3                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; 0         ;
 ; CLK    ; C10   ; 7        ; 51           ; 54           ; 28           ; 15                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; 0         ;
-; DX     ; C11   ; 7        ; 51           ; 54           ; 21           ; 4                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; 0         ;
+; DX     ; C11   ; 7        ; 51           ; 54           ; 21           ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; 0         ;
 ; MCLK   ; P11   ; 3        ; 34           ; 0            ; 28           ; 5                     ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; 0         ;
-; NOT_SS ; D12   ; 7        ; 51           ; 54           ; 0            ; 6                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; 0         ;
+; NOT_SS ; D12   ; 7        ; 51           ; 54           ; 0            ; 4                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; 0         ;
 ; Reset  ; A12   ; 7        ; 54           ; 54           ; 21           ; 15                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; 0         ;
 +--------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
 
@@ -924,8 +923,8 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ; CLK        ; Incomplete set of assignments ;
 ; Reset      ; Incomplete set of assignments ;
 ; DX         ; Incomplete set of assignments ;
-; NOT_SS     ; Incomplete set of assignments ;
 ; Accept     ; Incomplete set of assignments ;
+; NOT_SS     ; Incomplete set of assignments ;
 ; MCLK       ; Incomplete set of assignments ;
 +------------+-------------------------------+
 
@@ -935,7 +934,7 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +-----------------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+--------------------------------------------------------+----------------+--------------+
 ; Compilation Hierarchy Node        ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; ADC blocks ; Full Hierarchy Name                                    ; Entity Name    ; Library Name ;
 +-----------------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+--------------------------------------------------------+----------------+--------------+
-; |SerialReceiver                   ; 31 (2)      ; 20 (0)                    ; 0 (0)         ; 0           ; 0    ; 1          ; 0            ; 0       ; 0         ; 18   ; 0            ; 11 (2)       ; 11 (0)            ; 9 (0)            ; 0          ; |SerialReceiver                                        ; SerialReceiver ; work         ;
+; |SerialReceiver                   ; 29 (2)      ; 20 (0)                    ; 0 (0)         ; 0           ; 0    ; 1          ; 0            ; 0       ; 0         ; 18   ; 0            ; 9 (2)        ; 10 (0)            ; 10 (0)           ; 0          ; |SerialReceiver                                        ; SerialReceiver ; work         ;
 ;    |Counter:Counter0|             ; 4 (0)       ; 4 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 4 (0)            ; 0          ; |SerialReceiver|Counter:Counter0                       ; Counter        ; work         ;
 ;       |FFD:UFFD0|                 ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0          ; |SerialReceiver|Counter:Counter0|FFD:UFFD0             ; FFD            ; work         ;
 ;       |FFD:UFFD1|                 ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0          ; |SerialReceiver|Counter:Counter0|FFD:UFFD1             ; FFD            ; work         ;
@@ -943,8 +942,8 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ;       |FFD:UFFD3|                 ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0          ; |SerialReceiver|Counter:Counter0|FFD:UFFD3             ; FFD            ; work         ;
 ;    |ParityCheck:ParityCheck0|     ; 1 (0)       ; 1 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (0)            ; 0          ; |SerialReceiver|ParityCheck:ParityCheck0               ; ParityCheck    ; work         ;
 ;       |FFD:UFFD0|                 ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0          ; |SerialReceiver|ParityCheck:ParityCheck0|FFD:UFFD0     ; FFD            ; work         ;
-;    |SerialControl:serialC|        ; 14 (14)     ; 5 (5)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 9 (9)        ; 1 (1)             ; 4 (4)            ; 0          ; |SerialReceiver|SerialControl:serialC                  ; SerialControl  ; work         ;
-;    |ShiftRegister:ShiftRegister0| ; 10 (0)      ; 10 (0)                    ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 10 (0)            ; 0 (0)            ; 0          ; |SerialReceiver|ShiftRegister:ShiftRegister0           ; ShiftRegister  ; work         ;
+;    |SerialControl:serialC|        ; 13 (13)     ; 5 (5)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 1 (1)             ; 5 (5)            ; 0          ; |SerialReceiver|SerialControl:serialC                  ; SerialControl  ; work         ;
+;    |ShiftRegister:ShiftRegister0| ; 10 (0)      ; 10 (0)                    ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 9 (0)             ; 1 (0)            ; 0          ; |SerialReceiver|ShiftRegister:ShiftRegister0           ; ShiftRegister  ; work         ;
 ;       |FFD:UFFD0|                 ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; 0          ; |SerialReceiver|ShiftRegister:ShiftRegister0|FFD:UFFD0 ; FFD            ; work         ;
 ;       |FFD:UFFD1|                 ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; 0          ; |SerialReceiver|ShiftRegister:ShiftRegister0|FFD:UFFD1 ; FFD            ; work         ;
 ;       |FFD:UFFD2|                 ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; 0          ; |SerialReceiver|ShiftRegister:ShiftRegister0|FFD:UFFD2 ; FFD            ; work         ;
@@ -954,7 +953,7 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ;       |FFD:UFFD6|                 ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; 0          ; |SerialReceiver|ShiftRegister:ShiftRegister0|FFD:UFFD6 ; FFD            ; work         ;
 ;       |FFD:UFFD7|                 ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; 0          ; |SerialReceiver|ShiftRegister:ShiftRegister0|FFD:UFFD7 ; FFD            ; work         ;
 ;       |FFD:UFFD8|                 ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; 0          ; |SerialReceiver|ShiftRegister:ShiftRegister0|FFD:UFFD8 ; FFD            ; work         ;
-;       |FFD:UFFD9|                 ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; 0          ; |SerialReceiver|ShiftRegister:ShiftRegister0|FFD:UFFD9 ; FFD            ; work         ;
+;       |FFD:UFFD9|                 ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0          ; |SerialReceiver|ShiftRegister:ShiftRegister0|FFD:UFFD9 ; FFD            ; work         ;
 +-----------------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+--------------------------------------------------------+----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -976,11 +975,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; DataOut[9] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; Dxval      ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; busy       ; Output   ; --            ; --            ; --                    ; --  ; --   ;
-; CLK        ; Input    ; (0) 0 ps      ; (0) 0 ps      ; --                    ; --  ; --   ;
+; CLK        ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
 ; Reset      ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
 ; DX         ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
-; NOT_SS     ; Input    ; (6) 868 ps    ; (6) 868 ps    ; --                    ; --  ; --   ;
 ; Accept     ; Input    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
+; NOT_SS     ; Input    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
 ; MCLK       ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
 +------------+----------+---------------+---------------+-----------------------+-----+------+
 
@@ -1001,11 +1000,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - ShiftRegister:ShiftRegister0|FFD:UFFD7|Q               ; 0                 ; 0       ;
 ;      - ShiftRegister:ShiftRegister0|FFD:UFFD8|Q               ; 0                 ; 0       ;
 ;      - ShiftRegister:ShiftRegister0|FFD:UFFD9|Q               ; 0                 ; 0       ;
-;      - Counter:Counter0|FFD:UFFD0|Q                           ; 1                 ; 0       ;
-;      - Counter:Counter0|FFD:UFFD1|Q                           ; 1                 ; 0       ;
-;      - Counter:Counter0|FFD:UFFD3|Q                           ; 1                 ; 0       ;
-;      - Counter:Counter0|FFD:UFFD2|Q                           ; 1                 ; 0       ;
-;      - ParityCheck:ParityCheck0|FFD:UFFD0|Q                   ; 1                 ; 0       ;
+;      - Counter:Counter0|FFD:UFFD0|Q                           ; 0                 ; 0       ;
+;      - Counter:Counter0|FFD:UFFD1|Q                           ; 0                 ; 0       ;
+;      - Counter:Counter0|FFD:UFFD3|Q                           ; 0                 ; 0       ;
+;      - Counter:Counter0|FFD:UFFD2|Q                           ; 0                 ; 0       ;
+;      - ParityCheck:ParityCheck0|FFD:UFFD0|Q                   ; 0                 ; 0       ;
 ; Reset                                                         ;                   ;         ;
 ;      - ShiftRegister:ShiftRegister0|FFD:UFFD0|Q               ; 0                 ; 6       ;
 ;      - ShiftRegister:ShiftRegister0|FFD:UFFD1|Q               ; 0                 ; 6       ;
@@ -1023,36 +1022,32 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - SerialControl:serialC|CurrentState.STATE_PCheck        ; 0                 ; 6       ;
 ;      - SerialControl:serialC|CurrentState.STATE_Dwait         ; 0                 ; 6       ;
 ; DX                                                            ;                   ;         ;
-;      - SerialControl:serialC|Selector3~1                      ; 0                 ; 6       ;
 ;      - ParityCheck:ParityCheck0|FFD:UFFD0|Q~0                 ; 0                 ; 6       ;
-;      - SerialControl:serialC|Selector0~2                      ; 0                 ; 6       ;
 ;      - ShiftRegister:ShiftRegister0|FFD:UFFD0|Q~feeder        ; 0                 ; 6       ;
-; NOT_SS                                                        ;                   ;         ;
-;      - SerialControl:serialC|Selector3~1                      ; 0                 ; 6       ;
-;      - SerialControl:serialC|Selector1~0                      ; 1                 ; 6       ;
-;      - SerialControl:serialC|Selector2~0                      ; 0                 ; 6       ;
-;      - SerialControl:serialC|Selector2~2                      ; 0                 ; 6       ;
-;      - SerialControl:serialC|Selector0~0                      ; 0                 ; 6       ;
-;      - SerialControl:serialC|Selector0~1                      ; 0                 ; 6       ;
 ; Accept                                                        ;                   ;         ;
-;      - SerialControl:serialC|Selector3~2                      ; 1                 ; 6       ;
+;      - SerialControl:serialC|Selector3~0                      ; 1                 ; 6       ;
 ;      - SerialControl:serialC|NextState.STATE_DConfirm~0       ; 1                 ; 6       ;
-;      - SerialControl:serialC|Selector0~0                      ; 1                 ; 6       ;
+;      - SerialControl:serialC|Selector0~2                      ; 1                 ; 6       ;
+; NOT_SS                                                        ;                   ;         ;
+;      - SerialControl:serialC|Selector2~0                      ; 1                 ; 6       ;
+;      - SerialControl:serialC|Selector2~1                      ; 1                 ; 6       ;
+;      - SerialControl:serialC|Selector0~1                      ; 1                 ; 6       ;
+;      - SerialControl:serialC|Selector1~2                      ; 1                 ; 6       ;
 ; MCLK                                                          ;                   ;         ;
 +---------------------------------------------------------------+-------------------+---------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                                           ;
-+---------------------------------------------------+---------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; Name                                              ; Location      ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+---------------------------------------------------+---------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; CLK                                               ; PIN_C10       ; 15      ; Clock        ; no     ; --                   ; --               ; --                        ;
-; MCLK                                              ; PIN_P11       ; 5       ; Clock        ; yes    ; Global Clock         ; GCLK19           ; --                        ;
-; Reset                                             ; PIN_A12       ; 15      ; Async. clear ; no     ; --                   ; --               ; --                        ;
-; SerialControl:serialC|CurrentState.STATE_DReceive ; FF_X51_Y53_N9 ; 13      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; SerialControl:serialC|CurrentState.STATE_Dwait    ; FF_X52_Y53_N5 ; 7       ; Async. clear ; no     ; --                   ; --               ; --                        ;
-+---------------------------------------------------+---------------+---------+--------------+--------+----------------------+------------------+---------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                                            ;
++---------------------------------------------------+----------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; Name                                              ; Location       ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++---------------------------------------------------+----------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; CLK                                               ; PIN_C10        ; 15      ; Clock        ; no     ; --                   ; --               ; --                        ;
+; MCLK                                              ; PIN_P11        ; 5       ; Clock        ; yes    ; Global Clock         ; GCLK19           ; --                        ;
+; Reset                                             ; PIN_A12        ; 15      ; Async. clear ; no     ; --                   ; --               ; --                        ;
+; SerialControl:serialC|CurrentState.STATE_DReceive ; FF_X51_Y53_N9  ; 13      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; SerialControl:serialC|CurrentState.STATE_Dwait    ; FF_X52_Y53_N25 ; 7       ; Async. clear ; no     ; --                   ; --               ; --                        ;
++---------------------------------------------------+----------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------+
@@ -1069,24 +1064,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+------------------------+
 ; Routing Resource Type ; Usage                  ;
 +-----------------------+------------------------+
-; Block interconnects   ; 50 / 148,641 ( < 1 % ) ;
-; C16 interconnects     ; 0 / 5,382 ( 0 % )      ;
+; Block interconnects   ; 47 / 148,641 ( < 1 % ) ;
+; C16 interconnects     ; 1 / 5,382 ( < 1 % )    ;
 ; C4 interconnects      ; 27 / 106,704 ( < 1 % ) ;
-; Direct links          ; 9 / 148,641 ( < 1 % )  ;
+; Direct links          ; 11 / 148,641 ( < 1 % ) ;
 ; Global clocks         ; 1 / 20 ( 5 % )         ;
-; Local interconnects   ; 21 / 49,760 ( < 1 % )  ;
+; Local interconnects   ; 20 / 49,760 ( < 1 % )  ;
 ; NSLEEPs               ; 0 / 500 ( 0 % )        ;
-; R24 interconnects     ; 2 / 5,406 ( < 1 % )    ;
-; R4 interconnects      ; 40 / 147,764 ( < 1 % ) ;
+; R24 interconnects     ; 1 / 5,406 ( < 1 % )    ;
+; R4 interconnects      ; 35 / 147,764 ( < 1 % ) ;
 +-----------------------+------------------------+
 
 
 +--------------------------------------------------------------------------+
 ; LAB Logic Elements                                                       ;
 +--------------------------------------------+-----------------------------+
-; Number of Logic Elements  (Average = 7.75) ; Number of LABs  (Total = 4) ;
+; Number of Logic Elements  (Average = 9.67) ; Number of LABs  (Total = 3) ;
 +--------------------------------------------+-----------------------------+
-; 1                                          ; 2                           ;
+; 1                                          ; 1                           ;
 ; 2                                          ; 0                           ;
 ; 3                                          ; 0                           ;
 ; 4                                          ; 0                           ;
@@ -1100,15 +1095,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 12                                         ; 0                           ;
 ; 13                                         ; 1                           ;
 ; 14                                         ; 0                           ;
-; 15                                         ; 0                           ;
-; 16                                         ; 1                           ;
+; 15                                         ; 1                           ;
+; 16                                         ; 0                           ;
 +--------------------------------------------+-----------------------------+
 
 
 +------------------------------------------------------------------+
 ; LAB-wide Signals                                                 ;
 +------------------------------------+-----------------------------+
-; LAB-wide Signals  (Average = 1.00) ; Number of LABs  (Total = 4) ;
+; LAB-wide Signals  (Average = 1.33) ; Number of LABs  (Total = 3) ;
 +------------------------------------+-----------------------------+
 ; 1 Async. clear                     ; 2                           ;
 ; 2 Clocks                           ; 2                           ;
@@ -1118,10 +1113,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                        ;
 +----------------------------------------------+-----------------------------+
-; Number of Signals Sourced  (Average = 12.75) ; Number of LABs  (Total = 4) ;
+; Number of Signals Sourced  (Average = 16.33) ; Number of LABs  (Total = 3) ;
 +----------------------------------------------+-----------------------------+
 ; 0                                            ; 0                           ;
-; 1                                            ; 2                           ;
+; 1                                            ; 1                           ;
 ; 2                                            ; 0                           ;
 ; 3                                            ; 0                           ;
 ; 4                                            ; 0                           ;
@@ -1141,50 +1136,53 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 18                                           ; 0                           ;
 ; 19                                           ; 0                           ;
 ; 20                                           ; 0                           ;
-; 21                                           ; 0                           ;
+; 21                                           ; 1                           ;
 ; 22                                           ; 0                           ;
 ; 23                                           ; 0                           ;
-; 24                                           ; 1                           ;
-; 25                                           ; 1                           ;
+; 24                                           ; 0                           ;
+; 25                                           ; 0                           ;
+; 26                                           ; 0                           ;
+; 27                                           ; 1                           ;
 +----------------------------------------------+-----------------------------+
 
 
 +-------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                       ;
 +-------------------------------------------------+-----------------------------+
-; Number of Signals Sourced Out  (Average = 5.00) ; Number of LABs  (Total = 4) ;
+; Number of Signals Sourced Out  (Average = 6.67) ; Number of LABs  (Total = 3) ;
 +-------------------------------------------------+-----------------------------+
 ; 0                                               ; 0                           ;
-; 1                                               ; 2                           ;
+; 1                                               ; 1                           ;
 ; 2                                               ; 0                           ;
 ; 3                                               ; 0                           ;
 ; 4                                               ; 0                           ;
 ; 5                                               ; 0                           ;
-; 6                                               ; 0                           ;
-; 7                                               ; 1                           ;
+; 6                                               ; 1                           ;
+; 7                                               ; 0                           ;
 ; 8                                               ; 0                           ;
 ; 9                                               ; 0                           ;
 ; 10                                              ; 0                           ;
-; 11                                              ; 1                           ;
+; 11                                              ; 0                           ;
+; 12                                              ; 0                           ;
+; 13                                              ; 1                           ;
 +-------------------------------------------------+-----------------------------+
 
 
 +---------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                       ;
 +---------------------------------------------+-----------------------------+
-; Number of Distinct Inputs  (Average = 4.75) ; Number of LABs  (Total = 4) ;
+; Number of Distinct Inputs  (Average = 6.00) ; Number of LABs  (Total = 3) ;
 +---------------------------------------------+-----------------------------+
 ; 0                                           ; 0                           ;
 ; 1                                           ; 0                           ;
-; 2                                           ; 1                           ;
+; 2                                           ; 0                           ;
 ; 3                                           ; 0                           ;
 ; 4                                           ; 0                           ;
 ; 5                                           ; 0                           ;
 ; 6                                           ; 0                           ;
-; 7                                           ; 1                           ;
+; 7                                           ; 0                           ;
 ; 8                                           ; 0                           ;
-; 9                                           ; 0                           ;
-; 10                                          ; 1                           ;
+; 9                                           ; 2                           ;
 +---------------------------------------------+-----------------------------+
 
 
@@ -1264,8 +1262,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; CLK                ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; Reset              ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; DX                 ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; NOT_SS             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; Accept             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; NOT_SS             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; MCLK               ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 +--------------------+-----------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
 
@@ -1312,8 +1310,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------+----------------------+-------------------+
 ; Source Clock(s) ; Destination Clock(s) ; Delay Added in ns ;
 +-----------------+----------------------+-------------------+
-; CLK             ; MCLK                 ; 11.0              ;
-; CLK,MCLK,I/O    ; MCLK                 ; 2.0               ;
+; CLK             ; MCLK                 ; 8.5               ;
 +-----------------+----------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the Timing Analyzer.
@@ -1324,25 +1321,24 @@ This will disable optimization of problematic paths and expose them for further 
 +---------------------------------------------------+--------------------------------------------------------+-------------------+
 ; Source Register                                   ; Destination Register                                   ; Delay Added in ns ;
 +---------------------------------------------------+--------------------------------------------------------+-------------------+
-; Counter:Counter0|FFD:UFFD3|Q                      ; SerialControl:serialC|CurrentState.STATE_PCheck        ; 1.669             ;
-; Counter:Counter0|FFD:UFFD1|Q                      ; SerialControl:serialC|CurrentState.STATE_DEndReception ; 1.624             ;
-; Counter:Counter0|FFD:UFFD0|Q                      ; SerialControl:serialC|CurrentState.STATE_DEndReception ; 1.614             ;
-; ParityCheck:ParityCheck0|FFD:UFFD0|Q              ; SerialControl:serialC|CurrentState.STATE_Dwait         ; 1.557             ;
-; Counter:Counter0|FFD:UFFD2|Q                      ; SerialControl:serialC|CurrentState.STATE_PCheck        ; 1.460             ;
-; NOT_SS                                            ; SerialControl:serialC|CurrentState.STATE_PCheck        ; 0.917             ;
-; DX                                                ; SerialControl:serialC|CurrentState.STATE_Dwait         ; 0.660             ;
-; SerialControl:serialC|CurrentState.STATE_PCheck   ; SerialControl:serialC|CurrentState.STATE_Dwait         ; 0.660             ;
-; SerialControl:serialC|CurrentState.STATE_DReceive ; SerialControl:serialC|CurrentState.STATE_PCheck        ; 0.508             ;
-; SerialControl:serialC|CurrentState.STATE_Dwait    ; SerialControl:serialC|CurrentState.STATE_DReceive      ; 0.238             ;
+; ParityCheck:ParityCheck0|FFD:UFFD0|Q              ; SerialControl:serialC|CurrentState.STATE_DEndReception ; 1.803             ;
+; Counter:Counter0|FFD:UFFD1|Q                      ; SerialControl:serialC|CurrentState.STATE_DEndReception ; 1.573             ;
+; Counter:Counter0|FFD:UFFD0|Q                      ; SerialControl:serialC|CurrentState.STATE_DEndReception ; 1.562             ;
+; Counter:Counter0|FFD:UFFD3|Q                      ; SerialControl:serialC|CurrentState.STATE_DEndReception ; 1.528             ;
+; Counter:Counter0|FFD:UFFD2|Q                      ; SerialControl:serialC|CurrentState.STATE_DEndReception ; 1.415             ;
+; SerialControl:serialC|CurrentState.STATE_PCheck   ; SerialControl:serialC|CurrentState.STATE_Dwait         ; 0.500             ;
+; SerialControl:serialC|CurrentState.STATE_Dwait    ; SerialControl:serialC|CurrentState.STATE_Dwait         ; 0.500             ;
+; SerialControl:serialC|CurrentState.STATE_DReceive ; SerialControl:serialC|CurrentState.STATE_Dwait         ; 0.500             ;
+; NOT_SS                                            ; SerialControl:serialC|CurrentState.STATE_Dwait         ; 0.275             ;
 +---------------------------------------------------+--------------------------------------------------------+-------------------+
-Note: This table only shows the top 10 path(s) that have the largest delay added for hold.
+Note: This table only shows the top 9 path(s) that have the largest delay added for hold.
 
 
 +-----------------+
 ; Fitter Messages ;
 +-----------------+
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (119006): Selected device 10M50DAF484C6GES for design "ProjetoFinal"
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
@@ -1368,7 +1364,7 @@ Info (332144): No user constrained base clocks found in the design
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
-Info (176353): Automatically promoted node MCLK~input (placed in PIN P11 (CLK7p, DIFFIO_TX_RX_B20p, DIFFOUT_B20p, High_Speed)) File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/SerialReceiver.vhd Line: 7
+Info (176353): Automatically promoted node MCLK~input (placed in PIN P11 (CLK7p, DIFFIO_TX_RX_B20p, DIFFOUT_B20p, High_Speed)) File: C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/SerialReceiver.vhd Line: 7
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G19
 Info (176233): Starting register packing
 Info (176235): Finished register packing
@@ -1377,39 +1373,39 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "inputPort[5]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "inputPort[6]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "inputPort[7]" is assigned to location or region, but does not exist in design
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:02
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:03
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:02
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
     Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X45_Y44 to location X55_Y54
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
-Info (11888): Total time spent on timing analysis during the Fitter is 0.11 seconds.
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
+Info (11888): Total time spent on timing analysis during the Fitter is 0.14 seconds.
 Info (334003): Started post-fitting delay annotation
 Warning (334000): Timing characteristics of device 10M50DAF484C6GES are preliminary
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Warning (334000): Timing characteristics of device 10M50DAF484C6GES are preliminary
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
-Info (144001): Generated suppressed messages file C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/ProjetoFinal.fit.smsg
+Info (144001): Generated suppressed messages file C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/ProjetoFinal.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 11 warnings
-    Info: Peak virtual memory: 6606 megabytes
-    Info: Processing ended: Mon May 09 19:57:53 2022
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:12
+    Info: Peak virtual memory: 5374 megabytes
+    Info: Processing ended: Thu May 12 16:26:01 2022
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:14
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/ProjetoFinal.fit.smsg.
+The suppressed messages can be found in C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/ProjetoFinal.fit.smsg.
 
 

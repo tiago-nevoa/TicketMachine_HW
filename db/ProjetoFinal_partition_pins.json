@@ -64,11 +64,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "NOT_SS",
+					"name" : "Accept",
 					"strict" : false
 				},
 				{
-					"name" : "Accept",
+					"name" : "NOT_SS",
 					"strict" : false
 				},
 				{

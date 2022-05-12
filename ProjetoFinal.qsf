@@ -25,7 +25,7 @@ set_location_assignment PIN_A11 -to DataOut[8]
 set_location_assignment PIN_B11 -to DataOut[9]
 set_location_assignment PIN_C14 -to busy
 set_location_assignment PIN_C18 -to Dxval
-set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 SP1.02i Lite Edition"
+set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
 set_global_assignment -name VHDL_FILE VendingMachine_tb.vhd
 set_global_assignment -name VHDL_FILE VendingMachine.vhd
 set_global_assignment -name VHDL_FILE UsbPort.vhd

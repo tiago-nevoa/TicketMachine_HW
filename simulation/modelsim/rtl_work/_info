@@ -8,28 +8,28 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/simulation/modelsim
+Z0 dC:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/simulation/modelsim
 Ecounter
-Z1 w1652118852
+Z1 w1652216523
 Z2 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
 Z3 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
 Z4 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z5 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
 !i122 5
 R0
-Z6 8C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Counter.vhd
-Z7 FC:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Counter.vhd
+Z6 8C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/Counter.vhd
+Z7 FC:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/Counter.vhd
 l0
 L5 1
 V1POBhii]EahnD2inIYMAG1
 !s100 f<LX91RIkYcA2;BPTm1`z1
 Z8 OV;C;2020.1;71
 31
-Z9 !s110 1652121057
+Z9 !s110 1652370032
 !i10b 1
-Z10 !s108 1652121057.000000
-Z11 !s90 -reportprogress|300|-93|-work|work|C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Counter.vhd|
-!s107 C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Counter.vhd|
+Z10 !s108 1652370032.000000
+Z11 !s90 -reportprogress|300|-93|-work|work|C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/Counter.vhd|
+!s107 C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/Counter.vhd|
 !i113 1
 Z12 o-93 -work work
 Z13 tExplicit 1 CvgOpt 0
@@ -50,7 +50,7 @@ R9
 !i10b 1
 R10
 R11
-Z14 !s107 C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Counter.vhd|
+Z14 !s107 C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/Counter.vhd|
 !i113 1
 R12
 R13
@@ -60,8 +60,8 @@ R4
 R5
 !i122 4
 R0
-Z15 8C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/FFD.vhd
-Z16 FC:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/FFD.vhd
+Z15 8C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/FFD.vhd
+Z16 FC:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/FFD.vhd
 l0
 L5 1
 V[=j<I;3z:oGoOX1QTZnI;0
@@ -71,8 +71,8 @@ R8
 R9
 !i10b 1
 R10
-Z17 !s90 -reportprogress|300|-93|-work|work|C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/FFD.vhd|
-Z18 !s107 C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/FFD.vhd|
+Z17 !s90 -reportprogress|300|-93|-work|work|C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/FFD.vhd|
+Z18 !s107 C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/FFD.vhd|
 !i113 1
 R12
 R13
@@ -96,13 +96,13 @@ R18
 R12
 R13
 Eparitycheck
-Z19 w1652121024
+Z19 w1652369126
 R4
 R5
 !i122 3
 R0
-Z20 8C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/ParityCheck.vhd
-Z21 FC:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/ParityCheck.vhd
+Z20 8C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/ParityCheck.vhd
+Z21 FC:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/ParityCheck.vhd
 l0
 L5 1
 VOoANTP;3nkh:=<Ta^2i1o1
@@ -112,8 +112,8 @@ R8
 R9
 !i10b 1
 R10
-Z22 !s90 -reportprogress|300|-93|-work|work|C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/ParityCheck.vhd|
-Z23 !s107 C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/ParityCheck.vhd|
+Z22 !s90 -reportprogress|300|-93|-work|work|C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/ParityCheck.vhd|
+Z23 !s107 C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/ParityCheck.vhd|
 !i113 1
 R12
 R13
@@ -144,8 +144,8 @@ R4
 R5
 !i122 2
 R0
-Z24 8C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/SerialControl.vhd
-Z25 FC:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/SerialControl.vhd
+Z24 8C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/SerialControl.vhd
+Z25 FC:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/SerialControl.vhd
 l0
 L5 1
 VK4iohVz>oiZ3iKQ2DNXKH3
@@ -154,9 +154,9 @@ R8
 31
 R9
 !i10b 1
-R10
-Z26 !s90 -reportprogress|300|-93|-work|work|C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/SerialControl.vhd|
-Z27 !s107 C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/SerialControl.vhd|
+Z26 !s108 1652370031.000000
+Z27 !s90 -reportprogress|300|-93|-work|work|C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/SerialControl.vhd|
+Z28 !s107 C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/SerialControl.vhd|
 !i113 1
 R12
 R13
@@ -175,9 +175,9 @@ R8
 31
 R9
 !i10b 1
-R10
 R26
 R27
+R28
 !i113 1
 R12
 R13
@@ -187,19 +187,19 @@ R4
 R5
 !i122 1
 R0
-Z28 8C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/SerialReceiver.vhd
-Z29 FC:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/SerialReceiver.vhd
+Z29 8C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/SerialReceiver.vhd
+Z30 FC:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/SerialReceiver.vhd
 l0
 L5 1
 VQ6lz@]0Oi8m=V[FRY2_M[0
 !s100 GbdJAb4=2lIaSW;QSoef91
 R8
 31
-R9
+Z31 !s110 1652370031
 !i10b 1
-R10
-Z30 !s90 -reportprogress|300|-93|-work|work|C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/SerialReceiver.vhd|
-Z31 !s107 C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/SerialReceiver.vhd|
+R26
+Z32 !s90 -reportprogress|300|-93|-work|work|C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/SerialReceiver.vhd|
+Z33 !s107 C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/SerialReceiver.vhd|
 !i113 1
 R12
 R13
@@ -214,11 +214,11 @@ V6oc]CHU?AcE?Y9U<U9S6o1
 !s100 WN>1J79ffYegKoH:45?IX2
 R8
 31
-R9
-!i10b 1
-R10
-R30
 R31
+!i10b 1
+R26
+R32
+R33
 !i113 1
 R12
 R13
@@ -228,19 +228,19 @@ R4
 R5
 !i122 0
 R0
-Z32 8C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/ShiftRegister.vhd
-Z33 FC:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/ShiftRegister.vhd
+Z34 8C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/ShiftRegister.vhd
+Z35 FC:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/ShiftRegister.vhd
 l0
 L5 1
 VASYGM:amTM>K6AYlMCha>0
 !s100 _hHHJD<`Z6_17JMH[V2Cc0
 R8
 31
-R9
+R31
 !i10b 1
-R10
-Z34 !s90 -reportprogress|300|-93|-work|work|C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/ShiftRegister.vhd|
-Z35 !s107 C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/ShiftRegister.vhd|
+R26
+Z36 !s90 -reportprogress|300|-93|-work|work|C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/ShiftRegister.vhd|
+Z37 !s107 C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/ShiftRegister.vhd|
 !i113 1
 R12
 R13
@@ -255,11 +255,11 @@ V;dM7C:aBI5QRYXoJG0fUN2
 !s100 mZII;GFK7;iE829EW[TAC0
 R8
 31
-R9
+R31
 !i10b 1
-R10
-R34
-R35
+R26
+R36
+R37
 !i113 1
 R12
 R13

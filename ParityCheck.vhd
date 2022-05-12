@@ -32,6 +32,6 @@ UFFD0: FFD PORT MAP (
 	D => sD,
 	Q => nextD);
 
-Err <= not (nextD and data); -- testar isto
+Err <= nextD;
 	
 end Behavioral;

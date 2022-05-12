@@ -9,18 +9,18 @@ NOT_SS => SerialControl:serialC.NOT_SS
 Accept => SerialControl:serialC.accept
 Reset => SerialControl:serialC.Reset
 Reset => ShiftRegister:ShiftRegister0.Reset
-DataOut[0] << ShiftRegister:ShiftRegister0.DataOut[0]
-DataOut[1] << ShiftRegister:ShiftRegister0.DataOut[1]
-DataOut[2] << ShiftRegister:ShiftRegister0.DataOut[2]
-DataOut[3] << ShiftRegister:ShiftRegister0.DataOut[3]
-DataOut[4] << ShiftRegister:ShiftRegister0.DataOut[4]
-DataOut[5] << ShiftRegister:ShiftRegister0.DataOut[5]
-DataOut[6] << ShiftRegister:ShiftRegister0.DataOut[6]
-DataOut[7] << ShiftRegister:ShiftRegister0.DataOut[7]
-DataOut[8] << ShiftRegister:ShiftRegister0.DataOut[8]
-DataOut[9] << ShiftRegister:ShiftRegister0.DataOut[9]
-Dxval << SerialControl:serialC.DXVal
-busy << SerialControl:serialC.Busy
+DataOut[0] <= ShiftRegister:ShiftRegister0.DataOut[0]
+DataOut[1] <= ShiftRegister:ShiftRegister0.DataOut[1]
+DataOut[2] <= ShiftRegister:ShiftRegister0.DataOut[2]
+DataOut[3] <= ShiftRegister:ShiftRegister0.DataOut[3]
+DataOut[4] <= ShiftRegister:ShiftRegister0.DataOut[4]
+DataOut[5] <= ShiftRegister:ShiftRegister0.DataOut[5]
+DataOut[6] <= ShiftRegister:ShiftRegister0.DataOut[6]
+DataOut[7] <= ShiftRegister:ShiftRegister0.DataOut[7]
+DataOut[8] <= ShiftRegister:ShiftRegister0.DataOut[8]
+DataOut[9] <= ShiftRegister:ShiftRegister0.DataOut[9]
+Dxval <= SerialControl:serialC.DXVal
+busy <= SerialControl:serialC.Busy
 
 
 |SerialReceiver|SerialControl:serialC
@@ -110,9 +110,8 @@ Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 |SerialReceiver|ParityCheck:ParityCheck0
 CLK => FFD:UFFD0.Clk
 Data => sD.IN1
-Data => err.IN1
 Init => FFD:UFFD0.Reset
-err <= err.DB_MAX_OUTPUT_PORT_TYPE
+err <= FFD:UFFD0.Q
 
 
 |SerialReceiver|ParityCheck:ParityCheck0|FFD:UFFD0

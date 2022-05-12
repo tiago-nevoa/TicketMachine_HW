@@ -10,32 +10,32 @@
 # Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vcom -93 -work work {C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/ShiftRegister.vhd}
+# vcom -93 -work work {C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/ShiftRegister.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:30:57 on May 09,2022
-# vcom -reportprogress 300 -93 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/ShiftRegister.vhd 
+# Start time: 16:40:31 on May 12,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/ShiftRegister.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity ShiftRegister
 # -- Compiling architecture ShiftRegister_logic of ShiftRegister
-# End time: 19:30:57 on May 09,2022, Elapsed time: 0:00:00
+# End time: 16:40:31 on May 12,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/SerialReceiver.vhd}
+# vcom -93 -work work {C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/SerialReceiver.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:30:57 on May 09,2022
-# vcom -reportprogress 300 -93 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/SerialReceiver.vhd 
+# Start time: 16:40:31 on May 12,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/SerialReceiver.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity SerialReceiver
 # -- Compiling architecture Behavioral of SerialReceiver
-# End time: 19:30:57 on May 09,2022, Elapsed time: 0:00:00
+# End time: 16:40:31 on May 12,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/SerialControl.vhd}
+# vcom -93 -work work {C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/SerialControl.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:30:57 on May 09,2022
-# vcom -reportprogress 300 -93 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/SerialControl.vhd 
+# Start time: 16:40:31 on May 12,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/SerialControl.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -43,34 +43,34 @@
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity SerialControl
 # -- Compiling architecture behavioral of SerialControl
-# End time: 19:30:57 on May 09,2022, Elapsed time: 0:00:00
+# End time: 16:40:32 on May 12,2022, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/ParityCheck.vhd}
+# vcom -93 -work work {C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/ParityCheck.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:30:57 on May 09,2022
-# vcom -reportprogress 300 -93 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/ParityCheck.vhd 
+# Start time: 16:40:32 on May 12,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/ParityCheck.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity ParityCheck
 # -- Compiling architecture Behavioral of ParityCheck
-# End time: 19:30:57 on May 09,2022, Elapsed time: 0:00:00
+# End time: 16:40:32 on May 12,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/FFD.vhd}
+# vcom -93 -work work {C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/FFD.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:30:57 on May 09,2022
-# vcom -reportprogress 300 -93 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/FFD.vhd 
+# Start time: 16:40:32 on May 12,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/FFD.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity FFD
 # -- Compiling architecture Behavioral of FFD
-# End time: 19:30:57 on May 09,2022, Elapsed time: 0:00:00
+# End time: 16:40:32 on May 12,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Counter.vhd}
+# vcom -93 -work work {C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/Counter.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:30:57 on May 09,2022
-# vcom -reportprogress 300 -93 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Counter.vhd 
+# Start time: 16:40:32 on May 12,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/tiago_nevoa/QuartusProjects/TicketMachine_HW/Counter.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -78,12 +78,12 @@
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity Counter
 # -- Compiling architecture Counter_LOGIC of Counter
-# End time: 19:30:57 on May 09,2022, Elapsed time: 0:00:00
+# End time: 16:40:32 on May 12,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 vsim work.serialreceiver
 # vsim work.serialreceiver 
-# Start time: 19:31:05 on May 09,2022
+# Start time: 16:40:54 on May 12,2022
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -95,6 +95,16 @@ vsim work.serialreceiver
 # Loading work.ffd(behavioral)
 # Loading work.paritycheck(behavioral)
 # Loading work.shiftregister(shiftregister_logic)
+# BKMARK_ERROR: Unknown client: .main_pane.source
+add wave -position insertpoint  \
+sim:/serialreceiver/DX \
+sim:/serialreceiver/MCLK \
+sim:/serialreceiver/CLK \
+sim:/serialreceiver/NOT_SS \
+sim:/serialreceiver/Accept \
+sim:/serialreceiver/Reset
+add wave -position insertpoint  \
+sim:/serialreceiver/SCLK
 add wave -position insertpoint  \
 sim:/serialreceiver/DX \
 sim:/serialreceiver/MCLK \
@@ -114,40 +124,33 @@ sim:/serialreceiver/sDFlag \
 sim:/serialreceiver/sRXerror \
 sim:/serialreceiver/sFCount \
 sim:/serialreceiver/sReset
-add wave -position insertpoint sim:/serialreceiver/serialC/GenerateNextState/*
-# ** UI-Msg: (vish-4014) No objects found matching '/serialreceiver/serialC/GenerateNextState/*'.
-add wave -position end sim:/serialreceiver/serialC/GenerateNextState/*
-# ** UI-Msg: (vish-4014) No objects found matching '/serialreceiver/serialC/GenerateNextState/*'.
-add wave -position end sim:/serialreceiver/serialC/GenerateNextState/*
-# ** UI-Msg: (vish-4014) No objects found matching '/serialreceiver/serialC/GenerateNextState/*'.
+add wave -position insertpoint  \
+sim:/serialreceiver/ParityCheck0/err \
+sim:/serialreceiver/ParityCheck0/nextD \
+sim:/serialreceiver/ParityCheck0/sD
+add wave -position insertpoint sim:/serialreceiver/Counter0/*
 add wave -position insertpoint  \
 sim:/serialreceiver/serialC/CurrentState \
 sim:/serialreceiver/serialC/NextState
-force -freeze sim:/serialreceiver/NOT_SS 1 0
+force -freeze sim:/serialreceiver/DX 1 0
 force -freeze sim:/serialreceiver/MCLK 1 0, 0 {50 ps} -r 100
-force -freeze sim:/serialreceiver/CLK 0 0
+force -freeze sim:/serialreceiver/CLK 1 0
+force -freeze sim:/serialreceiver/NOT_SS 1 0
 force -freeze sim:/serialreceiver/Accept 0 0
-noforce sim:/serialreceiver/Reset
-force -freeze sim:/serialreceiver/Reset 0 0
-force -freeze sim:/serialreceiver/DX 0 0
-force -freeze sim:/serialreceiver/DX 1 0
-force -freeze sim:/serialreceiver/DX 1 0
-run
 force -freeze sim:/serialreceiver/Reset 1 0
 run
-force -freeze sim:/serialreceiver/Reset 0 0
+force -freeze sim:/serialreceiver/CLK 0 0
+run
 force -freeze sim:/serialreceiver/CLK 1 0
 run
+force -freeze sim:/serialreceiver/Reset 0 0
+run
 force -freeze sim:/serialreceiver/CLK 0 0
+run
+force -freeze sim:/serialreceiver/CLK 1 0
 run
 force -freeze sim:/serialreceiver/NOT_SS 0 0
-force -freeze sim:/serialreceiver/CLK 1 0
 run
-force -freeze sim:/serialreceiver/CLK 0 0
-run
-force -freeze sim:/serialreceiver/CLK 1 0
-run
-add wave -position insertpoint sim:/serialreceiver/ParityCheck0/UFFD0/*
 force -freeze sim:/serialreceiver/CLK 0 0
 run
 force -freeze sim:/serialreceiver/CLK 1 0
@@ -188,5 +191,77 @@ force -freeze sim:/serialreceiver/CLK 0 0
 run
 force -freeze sim:/serialreceiver/CLK 1 0
 run
-# End time: 20:00:11 on May 09,2022, Elapsed time: 0:29:06
+force -freeze sim:/serialreceiver/CLK 0 0
+run
+force -freeze sim:/serialreceiver/CLK 1 0
+run
+restart
+force -freeze sim:/serialreceiver/DX 1 0
+force -freeze sim:/serialreceiver/MCLK 1 0, 0 {50 ps} -r 100
+force -freeze sim:/serialreceiver/CLK 1 0
+force -freeze sim:/serialreceiver/NOT_SS 0 0
+force -freeze sim:/serialreceiver/Accept 1 0
+force -freeze sim:/serialreceiver/Accept 0 0
+force -freeze sim:/serialreceiver/Reset 1 0
+run
+run
+run
+run
+run
+force -freeze sim:/serialreceiver/CLK 0 0
+run
+force -freeze sim:/serialreceiver/CLK 1 0
+run
+force -freeze sim:/serialreceiver/Reset 0 0
+run
+force -freeze sim:/serialreceiver/CLK 0 0
+run
+force -freeze sim:/serialreceiver/CLK 1 0
+run
+force -freeze sim:/serialreceiver/CLK 0 0
+run
+force -freeze sim:/serialreceiver/CLK 1 0
+run
+force -freeze sim:/serialreceiver/CLK 0 0
+run
+force -freeze sim:/serialreceiver/CLK 1 0
+run
+force -freeze sim:/serialreceiver/CLK 0 0
+run
+run
+run
+force -freeze sim:/serialreceiver/CLK 1 0
+run
+force -freeze sim:/serialreceiver/CLK 0 0
+run
+force -freeze sim:/serialreceiver/CLK 1 0
+run
+force -freeze sim:/serialreceiver/CLK 0 0
+run
+force -freeze sim:/serialreceiver/CLK 1 0
+run
+force -freeze sim:/serialreceiver/CLK 0 0
+run
+force -freeze sim:/serialreceiver/CLK 1 0
+run
+force -freeze sim:/serialreceiver/CLK 0 0
+run
+force -freeze sim:/serialreceiver/CLK 1 0
+run
+force -freeze sim:/serialreceiver/CLK 0 0
+run
+force -freeze sim:/serialreceiver/CLK 1 0
+run
+run
+force -freeze sim:/serialreceiver/CLK 0 0
+run
+force -freeze sim:/serialreceiver/CLK 1 0
+run
+force -freeze sim:/serialreceiver/DX 0 0
+run
+force -freeze sim:/serialreceiver/CLK 0 0
+run
+force -freeze sim:/serialreceiver/CLK 1 0
+run
+# End time: 17:06:53 on May 12,2022, Elapsed time: 0:25:59
 # Errors: 0, Warnings: 0
