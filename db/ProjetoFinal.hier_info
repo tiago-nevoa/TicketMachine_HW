@@ -1,6 +1,5 @@
 |IOS
 SCLK => SerialReceiver:serialR.CLK
-SCLK => Dispatcher:Disp.CLK
 SDX => SerialReceiver:serialR.DX
 NOT_SS => SerialReceiver:serialR.NOT_SS
 Fsh => Dispatcher:Disp.Fsh
@@ -10,6 +9,7 @@ busy <= SerialReceiver:serialR.busy
 WrT <= Dispatcher:Disp.WrT
 WrL <= Dispatcher:Disp.WrL
 MCLK => SerialReceiver:serialR.MCLK
+MCLK => Dispatcher:Disp.MCLK
 Dout[0] <= Dispatcher:Disp.Dout[0]
 Dout[1] <= Dispatcher:Disp.Dout[1]
 Dout[2] <= Dispatcher:Disp.Dout[2]
@@ -298,7 +298,7 @@ Dout[6] <= Din[7].DB_MAX_OUTPUT_PORT_TYPE
 Dout[7] <= Din[8].DB_MAX_OUTPUT_PORT_TYPE
 Dout[8] <= Din[9].DB_MAX_OUTPUT_PORT_TYPE
 WrL <= WrL.DB_MAX_OUTPUT_PORT_TYPE
-CLK => CurrentState~1.DATAIN
+MCLK => CurrentState~1.DATAIN
 done <= done.DB_MAX_OUTPUT_PORT_TYPE
 
 

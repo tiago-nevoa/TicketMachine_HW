@@ -33,7 +33,7 @@ port(
 		WrT: out std_logic;
 		Dout: out STD_LOGIC_VECTOR (8 downto 0);
 		WrL: out std_logic;
-		CLK: in std_logic;
+		MCLK: in std_logic;
 		done: out std_logic		
 );
 END COMPONENT;
@@ -57,7 +57,7 @@ serialR: SerialReceiver PORT MAP (
 	DataOut => sD);
 		
 Disp: Dispatcher PORT MAP (
-	CLK => signalCLK,
+	MCLK => MCLK,
 	Reset => Reset,
 	Fsh => Fsh,
 	Dval => sDXval,

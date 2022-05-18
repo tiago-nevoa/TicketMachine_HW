@@ -1,6 +1,6 @@
 Flow report for ProjetoFinal
-Thu May 12 20:10:44 2022
-Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Tue May 17 21:37:31 2022
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition
 
 
 ---------------------
@@ -38,28 +38,28 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+----------------------------------------------------------------------------------+
-; Flow Summary                                                                     ;
-+------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Thu May 12 20:10:44 2022       ;
-; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
-; Revision Name                      ; ProjetoFinal                                ;
-; Top-level Entity Name              ; IOS                                         ;
-; Family                             ; MAX 10                                      ;
-; Device                             ; 10M50DAF484C6GES                            ;
-; Timing Models                      ; Preliminary                                 ;
-; Total logic elements               ; 36 / 49,760 ( < 1 % )                       ;
-;     Total combinational functions  ; 25 / 49,760 ( < 1 % )                       ;
-;     Dedicated logic registers      ; 25 / 49,760 ( < 1 % )                       ;
-; Total registers                    ; 25                                          ;
-; Total pins                         ; 18 / 360 ( 5 % )                            ;
-; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0 / 1,677,312 ( 0 % )                       ;
-; Embedded Multiplier 9-bit elements ; 0 / 288 ( 0 % )                             ;
-; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
-; UFM blocks                         ; 0 / 1 ( 0 % )                               ;
-; ADC blocks                         ; 0 / 2 ( 0 % )                               ;
-+------------------------------------+---------------------------------------------+
++------------------------------------------------------------------------------------------------+
+; Flow Summary                                                                                   ;
++------------------------------------+-----------------------------------------------------------+
+; Flow Status                        ; Successful - Tue May 17 21:37:31 2022                     ;
+; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition ;
+; Revision Name                      ; ProjetoFinal                                              ;
+; Top-level Entity Name              ; IOS                                                       ;
+; Family                             ; MAX 10                                                    ;
+; Device                             ; 10M50DAF484C6GES                                          ;
+; Timing Models                      ; Preliminary                                               ;
+; Total logic elements               ; 35 / 49,760 ( < 1 % )                                     ;
+;     Total combinational functions  ; 25 / 49,760 ( < 1 % )                                     ;
+;     Dedicated logic registers      ; 25 / 49,760 ( < 1 % )                                     ;
+; Total registers                    ; 25                                                        ;
+; Total pins                         ; 18 / 360 ( 5 % )                                          ;
+; Total virtual pins                 ; 0                                                         ;
+; Total memory bits                  ; 0 / 1,677,312 ( 0 % )                                     ;
+; Embedded Multiplier 9-bit elements ; 0 / 288 ( 0 % )                                           ;
+; Total PLLs                         ; 0 / 4 ( 0 % )                                             ;
+; UFM blocks                         ; 0 / 1 ( 0 % )                                             ;
+; ADC blocks                         ; 0 / 2 ( 0 % )                                             ;
++------------------------------------+-----------------------------------------------------------+
 
 
 +-----------------------------------------+
@@ -67,7 +67,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/12/2022 20:10:17 ;
+; Start date & time ; 05/17/2022 21:37:09 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; ProjetoFinal        ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 5311869412755.165238261705380          ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 79846616240706.165281982817332         ; --            ; --          ; --         ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                 ; <None>        ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
@@ -96,12 +96,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:07     ; 1.0                     ; 4803 MB             ; 00:00:17                           ;
-; Fitter               ; 00:00:10     ; 1.0                     ; 5777 MB             ; 00:00:14                           ;
-; Assembler            ; 00:00:03     ; 1.0                     ; 4690 MB             ; 00:00:02                           ;
-; Timing Analyzer      ; 00:00:02     ; 1.0                     ; 4841 MB             ; 00:00:03                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4648 MB             ; 00:00:00                           ;
-; Total                ; 00:00:23     ; --                      ; --                  ; 00:00:36                           ;
+; Analysis & Synthesis ; 00:00:07     ; 1.0                     ; 4851 MB             ; 00:00:16                           ;
+; Fitter               ; 00:00:08     ; 1.0                     ; 6603 MB             ; 00:00:12                           ;
+; Assembler            ; 00:00:02     ; 1.0                     ; 4692 MB             ; 00:00:02                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.1                     ; 4962 MB             ; 00:00:02                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4651 MB             ; 00:00:00                           ;
+; Total                ; 00:00:20     ; --                      ; --                  ; 00:00:32                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -110,11 +110,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; LAPTOP-ICT9IG3C  ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; LAPTOP-ICT9IG3C  ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; LAPTOP-ICT9IG3C  ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; LAPTOP-ICT9IG3C  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; LAPTOP-ICT9IG3C  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; LAPTOP-880RMKM3  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; LAPTOP-880RMKM3  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; LAPTOP-880RMKM3  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; LAPTOP-880RMKM3  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; LAPTOP-880RMKM3  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 

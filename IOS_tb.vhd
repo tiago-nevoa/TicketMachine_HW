@@ -64,7 +64,7 @@ BEGIN
             Reset_tb <= '0';
             notSS_tb <= '1';
             SCLK_tb <= '0';
-            SDX_tb <= '0';
+            SDX_tb <= '1';
             wait for MCLK_PERIOD * 2;
 
             SCLK_tb <= '1';
@@ -75,7 +75,7 @@ BEGIN
 			Reset_tb <= '0';
 			notSS_tb <= '0';
             SCLK_tb <= '0';
-			SDX_tb <= '0';
+			SDX_tb <= '1';
             wait for MCLK_PERIOD;
             SCLK_tb <= '1';
             wait for MCLK_PERIOD;
@@ -140,12 +140,12 @@ BEGIN
 
             -- Parity
             SCLK_tb <= '0';
-            SDX_tb <= '1';
+            SDX_tb <= '0';
             wait for MCLK_PERIOD;
             SCLK_tb <= '1';
 
 
-            notSS_tb <= '1';
+            notSS_tb <= '0';
             wait for MCLK_PERIOD;
             SCLK_tb <= '0';
 

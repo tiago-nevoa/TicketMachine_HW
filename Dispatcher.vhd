@@ -11,7 +11,7 @@ port(
 		WrT: out std_logic;
 		Dout: out STD_LOGIC_VECTOR (8 downto 0);
 		WrL: out std_logic;
-		CLK: in std_logic;
+		MCLK: in std_logic;
 		done: out std_logic		
 );
 end Dispatcher;
@@ -26,7 +26,7 @@ signal CurrentState, NextState : STATE_TYPE;
 begin
 
 -- Flip-Flop's
-CurrentState <= STATE_waitValidData when Reset = '1' else NextState when rising_edge(clk); 
+CurrentState <= STATE_waitValidData when Reset = '1' else NextState when rising_edge(MCLK); 
 
 -- Generate Next State
 GenerateNextState:
