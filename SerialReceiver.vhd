@@ -60,10 +60,10 @@ begin
 sReset <= Reset;
 sDX <= DX;
 sCLK <= CLK;
---sDFlag <= sFCount(3) and not sFCount(2) and sFCount(1) and not sFCount(0);
-sDFlag <= sFCount(3) and not sFCount(2) and not sFCount(1) and sFCount(0); -- Dflag = 9
---sPFlag <= sFCount(3) and not sFCount(2) and sFCount(1) and sFCount(0);
-sPFlag <= sFCount(3) and not sFCount(2) and sFCount(1) and not sFCount(0); -- Pflag = 10
+sDFlag <= sFCount(3) and not sFCount(2) and sFCount(1) and not sFCount(0); --Dflag = 10
+--sDFlag <= sFCount(3) and not sFCount(2) and not sFCount(1) and sFCount(0); -- Dflag = 9
+sPFlag <= sFCount(3) and not sFCount(2) and sFCount(1) and sFCount(0); --Dflag = 11
+--sPFlag <= sFCount(3) and not sFCount(2) and sFCount(1) and not sFCount(0); -- Pflag = 10
 
 serialC: SerialControl PORT MAP (
 	NOT_SS => NOT_SS,

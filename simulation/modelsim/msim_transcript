@@ -12,29 +12,29 @@
 # 
 # vcom -93 -work work {C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/ShiftRegister.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:58:27 on May 17,2022
+# Start time: 20:53:45 on May 19,2022
 # vcom -reportprogress 300 -93 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/ShiftRegister.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity ShiftRegister
 # -- Compiling architecture ShiftRegister_logic of ShiftRegister
-# End time: 21:58:27 on May 17,2022, Elapsed time: 0:00:00
+# End time: 20:53:45 on May 19,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/SerialReceiver.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:58:27 on May 17,2022
+# Start time: 20:53:45 on May 19,2022
 # vcom -reportprogress 300 -93 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/SerialReceiver.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity SerialReceiver
 # -- Compiling architecture Behavioral of SerialReceiver
-# End time: 21:58:27 on May 17,2022, Elapsed time: 0:00:00
+# End time: 20:53:45 on May 19,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/SerialControl.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:58:27 on May 17,2022
+# Start time: 20:53:45 on May 19,2022
 # vcom -reportprogress 300 -93 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/SerialControl.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -43,22 +43,22 @@
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity SerialControl
 # -- Compiling architecture behavioral of SerialControl
-# End time: 21:58:27 on May 17,2022, Elapsed time: 0:00:00
+# End time: 20:53:45 on May 19,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/ParityCheck.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:58:27 on May 17,2022
+# Start time: 20:53:45 on May 19,2022
 # vcom -reportprogress 300 -93 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/ParityCheck.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity ParityCheck
 # -- Compiling architecture Behavioral of ParityCheck
-# End time: 21:58:27 on May 17,2022, Elapsed time: 0:00:00
+# End time: 20:53:45 on May 19,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/IOS.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:58:27 on May 17,2022
+# Start time: 20:53:45 on May 19,2022
 # vcom -reportprogress 300 -93 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/IOS.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -67,22 +67,22 @@
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity IOS
 # -- Compiling architecture behavioral of IOS
-# End time: 21:58:27 on May 17,2022, Elapsed time: 0:00:00
+# End time: 20:53:45 on May 19,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/FFD.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:58:27 on May 17,2022
+# Start time: 20:53:45 on May 19,2022
 # vcom -reportprogress 300 -93 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/FFD.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity FFD
 # -- Compiling architecture Behavioral of FFD
-# End time: 21:58:27 on May 17,2022, Elapsed time: 0:00:00
+# End time: 20:53:46 on May 19,2022, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Dispatcher.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:58:27 on May 17,2022
+# Start time: 20:53:46 on May 19,2022
 # vcom -reportprogress 300 -93 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Dispatcher.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -91,11 +91,11 @@
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity Dispatcher
 # -- Compiling architecture behavioral of Dispatcher
-# End time: 21:58:28 on May 17,2022, Elapsed time: 0:00:01
+# End time: 20:53:46 on May 19,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Counter.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:58:28 on May 17,2022
+# Start time: 20:53:46 on May 19,2022
 # vcom -reportprogress 300 -93 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Counter.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -104,12 +104,12 @@
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity Counter
 # -- Compiling architecture Counter_LOGIC of Counter
-# End time: 21:58:28 on May 17,2022, Elapsed time: 0:00:00
+# End time: 20:53:46 on May 19,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 vcom -reportprogress 300 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/IOS_tb.vhd
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:58:34 on May 17,2022
+# Start time: 20:53:54 on May 19,2022
 # vcom -reportprogress 300 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/IOS_tb.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -118,74 +118,11 @@ vcom -reportprogress 300 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachin
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity IOS_tb
 # -- Compiling architecture behavior of IOS_tb
-# End time: 21:58:34 on May 17,2022, Elapsed time: 0:00:00
+# End time: 20:53:54 on May 19,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vsim work.ios_tb
 # vsim work.ios_tb 
-# Start time: 21:58:40 on May 17,2022
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading work.ios_tb(behavior)
-# Loading work.ios(behavioral)
-# Loading work.serialreceiver(behavioral)
-# Loading work.serialcontrol(behavioral)
-# Loading work.counter(counter_logic)
-# Loading work.ffd(behavioral)
-# Loading work.paritycheck(behavioral)
-# Loading work.shiftregister(shiftregister_logic)
-# Loading work.dispatcher(behavioral)
-add wave -position insertpoint  \
-sim:/ios_tb/MCLK_tb \
-sim:/ios_tb/SCLK_tb \
-sim:/ios_tb/SDX_tb
-add wave -position insertpoint  \
-sim:/ios_tb/uut/Disp/Fsh \
-sim:/ios_tb/uut/Disp/Dval \
-sim:/ios_tb/uut/Disp/Din \
-sim:/ios_tb/uut/Disp/Dout \
-sim:/ios_tb/uut/Disp/done \
-sim:/ios_tb/uut/Disp/CurrentState \
-sim:/ios_tb/uut/Disp/NextState
-run
-add wave -position insertpoint  \
-sim:/ios_tb/uut/serialR/serialC/CurrentState \
-sim:/ios_tb/uut/serialR/serialC/NextState
-restart
-run
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-add wave -position insertpoint  \
-sim:/ios_tb/uut/serialR/serialC/pFlag \
-sim:/ios_tb/uut/serialR/serialC/dFlag \
-sim:/ios_tb/uut/serialR/serialC/RXError
-run
-restart
-run
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-vcom -reportprogress 300 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/IOS_tb.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:02:32 on May 17,2022
-# vcom -reportprogress 300 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/IOS_tb.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package STD_LOGIC_UNSIGNED
-# -- Compiling entity IOS_tb
-# -- Compiling architecture behavior of IOS_tb
-# End time: 22:02:32 on May 17,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vsim work.ios_tb
-# End time: 22:02:36 on May 17,2022, Elapsed time: 0:03:56
-# Errors: 0, Warnings: 0
-# vsim work.ios_tb 
-# Start time: 22:02:36 on May 17,2022
+# Start time: 20:54:02 on May 19,2022
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -204,63 +141,19 @@ add wave -position insertpoint  \
 sim:/ios_tb/MCLK_tb \
 sim:/ios_tb/SCLK_tb \
 sim:/ios_tb/SDX_tb \
-sim:/ios_tb/notSS_tb \
-sim:/ios_tb/Reset_tb \
-sim:/ios_tb/Fsh_tb \
-sim:/ios_tb/busy_tb \
-sim:/ios_tb/wrt_tb \
-sim:/ios_tb/wrl_tb \
-sim:/ios_tb/Dout_tb \
-sim:/ios_tb/MCLK_PERIOD \
-sim:/ios_tb/MCLK_HALF_PERIOD
+sim:/ios_tb/notSS_tb
 add wave -position insertpoint  \
-sim:/ios_tb/uut/serialR/serialC/NOT_SS \
-sim:/ios_tb/uut/serialR/serialC/accept \
-sim:/ios_tb/uut/serialR/serialC/pFlag \
-sim:/ios_tb/uut/serialR/serialC/dFlag \
-sim:/ios_tb/uut/serialR/serialC/RXError \
-sim:/ios_tb/uut/serialR/serialC/Reset \
-sim:/ios_tb/uut/serialR/serialC/CLK \
-sim:/ios_tb/uut/serialR/serialC/Wr \
-sim:/ios_tb/uut/serialR/serialC/Init \
-sim:/ios_tb/uut/serialR/serialC/DXVal \
-sim:/ios_tb/uut/serialR/serialC/Busy \
-sim:/ios_tb/uut/serialR/serialC/CurrentState \
-sim:/ios_tb/uut/serialR/serialC/NextState
-run
-add wave -position insertpoint  \
-sim:/ios_tb/uut/Disp/Fsh \
-sim:/ios_tb/uut/Disp/Dval \
 sim:/ios_tb/uut/Disp/Din \
 sim:/ios_tb/uut/Disp/Dout \
-sim:/ios_tb/uut/Disp/done \
 sim:/ios_tb/uut/Disp/CurrentState \
 sim:/ios_tb/uut/Disp/NextState
+run
+add wave -position insertpoint  \
+sim:/ios_tb/Fsh_tb
 restart
 run
 # GetModuleFileName: The specified module could not be found.
 # 
 # 
-add wave -position insertpoint  \
-sim:/ios_tb/uut/serialR/DX
-add wave -position insertpoint  \
-sim:/ios_tb/uut/serialR/DX \
-sim:/ios_tb/uut/serialR/MCLK \
-sim:/ios_tb/uut/serialR/CLK \
-sim:/ios_tb/uut/serialR/NOT_SS \
-sim:/ios_tb/uut/serialR/Accept \
-sim:/ios_tb/uut/serialR/Reset \
-sim:/ios_tb/uut/serialR/DataOut \
-sim:/ios_tb/uut/serialR/Dxval \
-sim:/ios_tb/uut/serialR/busy \
-sim:/ios_tb/uut/serialR/SDX \
-sim:/ios_tb/uut/serialR/SCLK \
-sim:/ios_tb/uut/serialR/sWr \
-sim:/ios_tb/uut/serialR/sInit \
-sim:/ios_tb/uut/serialR/sPFlag \
-sim:/ios_tb/uut/serialR/sDFlag \
-sim:/ios_tb/uut/serialR/sRXerror \
-sim:/ios_tb/uut/serialR/sFCount \
-sim:/ios_tb/uut/serialR/sReset
-# End time: 22:07:30 on May 17,2022, Elapsed time: 0:04:54
+# End time: 20:56:46 on May 19,2022, Elapsed time: 0:02:44
 # Errors: 0, Warnings: 0

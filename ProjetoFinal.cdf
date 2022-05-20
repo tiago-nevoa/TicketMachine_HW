@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(10M50DAF484ES) Path("C:/Users/ruiac/Desktop/ISEL/LIC/Projeto/") File("ProjetoFinal.sof") MfrSpec(OpMask(1));
+		Device PartName(10M50DAF484ES) Path("C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/") File("ProjetoFinal.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

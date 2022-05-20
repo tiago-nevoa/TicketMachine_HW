@@ -4,9 +4,9 @@ use ieee.std_logic_unsigned.all;
 
 entity IOS is
 port(
-		SCLK, SDX, NOT_SS, Fsh, Reset : in std_logic;
+		MCLK, Fsh, Reset : in std_logic;  -- MCLK usa clock da placa. Reset é switch. Fsh é um switch
+		SCLK, SDX, NOT_SS : in std_logic;  -- vem do software
 		busy, WrT, WrL : out std_logic;
-		MCLK : in std_logic;
 		Dout: out STD_LOGIC_VECTOR (8 downto 0)
 		);
 end IOS;

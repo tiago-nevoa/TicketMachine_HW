@@ -149,6 +149,15 @@ BEGIN
             wait for MCLK_PERIOD;
             SCLK_tb <= '0';
 
+            wait for MCLK_PERIOD; -- CLOCK EXTRA 13º
+            SCLK_tb <= '1';
+            wait for MCLK_PERIOD;
+			SCLK_tb <= '0';
+			wait for MCLK_PERIOD; -- CLOCK EXTRA 14º
+            SCLK_tb <= '1';
+            wait for MCLK_PERIOD;
+			SCLK_tb <= '0';
+			
 			wait for MCLK_PERIOD * 25;
 
 			Fsh_tb <= '1';
