@@ -6,7 +6,9 @@ entity LCD is
     Port (  Din : in  STD_LOGIC_VECTOR (8 downto 0);
 				Reset : in  STD_LOGIC;
 				Clk : in  STD_LOGIC;
-				E : in  STD_LOGIC);
+				E : in  STD_LOGIC;
+				LCD_DATA : out STD_LOGIC_VECTOR (8 downto 0)
+				);
 end LCD;
 
 architecture behavioral of LCD is
@@ -25,5 +27,7 @@ D(4) <= Din(5);
 D(5) <= Din(6);
 D(6) <= Din(7);
 D(7) <= Din(8);
+-- enable
+LCD_DATA <= Din;
 
 end behavioral;

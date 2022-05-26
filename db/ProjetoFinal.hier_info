@@ -1,8 +1,10 @@
 |VendingMachine
 MCLK => IOS:IOScomp.MCLK
+MCLK => LCD:LCD0.Clk
 FnSwitch => IOS:IOScomp.Fsh
+Reset => LCD:LCD0.Reset
 Reset => IOS:IOScomp.Reset
-WrL <= comb.DB_MAX_OUTPUT_PORT_TYPE
+WrL <= IOS:IOScomp.WrL
 HEX0[0] <= TicketDispenser:Dispenser.HEX0[0]
 HEX0[1] <= TicketDispenser:Dispenser.HEX0[1]
 HEX0[2] <= TicketDispenser:Dispenser.HEX0[2]
@@ -27,6 +29,15 @@ HEX2[4] <= TicketDispenser:Dispenser.HEX2[4]
 HEX2[5] <= TicketDispenser:Dispenser.HEX2[5]
 HEX2[6] <= TicketDispenser:Dispenser.HEX2[6]
 HEX2[7] <= TicketDispenser:Dispenser.HEX2[7]
+LCD_DATA[0] <= LCD:LCD0.LCD_DATA[0]
+LCD_DATA[1] <= LCD:LCD0.LCD_DATA[1]
+LCD_DATA[2] <= LCD:LCD0.LCD_DATA[2]
+LCD_DATA[3] <= LCD:LCD0.LCD_DATA[3]
+LCD_DATA[4] <= LCD:LCD0.LCD_DATA[4]
+LCD_DATA[5] <= LCD:LCD0.LCD_DATA[5]
+LCD_DATA[6] <= LCD:LCD0.LCD_DATA[6]
+LCD_DATA[7] <= LCD:LCD0.LCD_DATA[7]
+LCD_DATA[8] <= LCD:LCD0.LCD_DATA[8]
 
 
 |VendingMachine|UsbPort:USBconn
@@ -395,8 +406,8 @@ adapted_ir_out[7] => ir_out[7].DATAIN
 
 
 |VendingMachine|IOS:IOScomp
+MCLK => clkDIV:clkDIV0.clk_in
 MCLK => SerialReceiver:serialR.MCLK
-MCLK => Dispatcher:Disp.MCLK
 Fsh => Dispatcher:Disp.Fsh
 Reset => SerialReceiver:serialR.Reset
 Reset => Dispatcher:Disp.Reset
@@ -415,6 +426,43 @@ Dout[5] <= Dispatcher:Disp.Dout[5]
 Dout[6] <= Dispatcher:Disp.Dout[6]
 Dout[7] <= Dispatcher:Disp.Dout[7]
 Dout[8] <= Dispatcher:Disp.Dout[8]
+
+
+|VendingMachine|IOS:IOScomp|CLKDIV:clkDIV0
+clk_in => tmp.CLK
+clk_in => count[0].CLK
+clk_in => count[1].CLK
+clk_in => count[2].CLK
+clk_in => count[3].CLK
+clk_in => count[4].CLK
+clk_in => count[5].CLK
+clk_in => count[6].CLK
+clk_in => count[7].CLK
+clk_in => count[8].CLK
+clk_in => count[9].CLK
+clk_in => count[10].CLK
+clk_in => count[11].CLK
+clk_in => count[12].CLK
+clk_in => count[13].CLK
+clk_in => count[14].CLK
+clk_in => count[15].CLK
+clk_in => count[16].CLK
+clk_in => count[17].CLK
+clk_in => count[18].CLK
+clk_in => count[19].CLK
+clk_in => count[20].CLK
+clk_in => count[21].CLK
+clk_in => count[22].CLK
+clk_in => count[23].CLK
+clk_in => count[24].CLK
+clk_in => count[25].CLK
+clk_in => count[26].CLK
+clk_in => count[27].CLK
+clk_in => count[28].CLK
+clk_in => count[29].CLK
+clk_in => count[30].CLK
+clk_in => count[31].CLK
+clk_out <= tmp.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |VendingMachine|IOS:IOScomp|SerialReceiver:serialR
@@ -1017,5 +1065,29 @@ dOut[4] <= dOut.DB_MAX_OUTPUT_PORT_TYPE
 dOut[5] <= dOut.DB_MAX_OUTPUT_PORT_TYPE
 dOut[6] <= dOut.DB_MAX_OUTPUT_PORT_TYPE
 dOut[7] <= <VCC>
+
+
+|VendingMachine|LCD:LCD0
+Din[0] => LCD_DATA[0].DATAIN
+Din[1] => LCD_DATA[1].DATAIN
+Din[2] => LCD_DATA[2].DATAIN
+Din[3] => LCD_DATA[3].DATAIN
+Din[4] => LCD_DATA[4].DATAIN
+Din[5] => LCD_DATA[5].DATAIN
+Din[6] => LCD_DATA[6].DATAIN
+Din[7] => LCD_DATA[7].DATAIN
+Din[8] => LCD_DATA[8].DATAIN
+Reset => ~NO_FANOUT~
+Clk => ~NO_FANOUT~
+E => ~NO_FANOUT~
+LCD_DATA[0] <= Din[0].DB_MAX_OUTPUT_PORT_TYPE
+LCD_DATA[1] <= Din[1].DB_MAX_OUTPUT_PORT_TYPE
+LCD_DATA[2] <= Din[2].DB_MAX_OUTPUT_PORT_TYPE
+LCD_DATA[3] <= Din[3].DB_MAX_OUTPUT_PORT_TYPE
+LCD_DATA[4] <= Din[4].DB_MAX_OUTPUT_PORT_TYPE
+LCD_DATA[5] <= Din[5].DB_MAX_OUTPUT_PORT_TYPE
+LCD_DATA[6] <= Din[6].DB_MAX_OUTPUT_PORT_TYPE
+LCD_DATA[7] <= Din[7].DB_MAX_OUTPUT_PORT_TYPE
+LCD_DATA[8] <= Din[8].DB_MAX_OUTPUT_PORT_TYPE
 
 

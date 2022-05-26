@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ProjetoFinal
-Thu May 19 22:56:12 2022
+Thu May 26 21:11:38 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition
 
 
@@ -19,10 +19,10 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition
  11. General Register Statistics
  12. Inverted Register Statistics
  13. Parameter Settings for User Entity Instance: UsbPort:USBconn|sld_virtual_jtag:b2v_inst
- 14. Port Connectivity Checks: "TicketDispenser:Dispenser|decoderHex:decoder2"
- 15. Port Connectivity Checks: "IOS:IOScomp|SerialReceiver:serialR|ParityCheck:ParityCheck0|FFD:UFFD0"
- 16. Port Connectivity Checks: "IOS:IOScomp|SerialReceiver:serialR|Counter:Counter0"
- 17. Port Connectivity Checks: "IOS:IOScomp"
+ 14. Parameter Settings for User Entity Instance: IOS:IOScomp|CLKDIV:clkDIV0
+ 15. Port Connectivity Checks: "TicketDispenser:Dispenser|decoderHex:decoder2"
+ 16. Port Connectivity Checks: "IOS:IOScomp|SerialReceiver:serialR|ParityCheck:ParityCheck0|FFD:UFFD0"
+ 17. Port Connectivity Checks: "IOS:IOScomp|SerialReceiver:serialR|Counter:Counter0"
  18. Port Connectivity Checks: "UsbPort:USBconn"
  19. Virtual JTAG Settings
  20. Post-Synthesis Netlist Statistics for Top Partition
@@ -54,16 +54,16 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                                   ;
 +------------------------------------+-----------------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu May 19 22:56:12 2022                     ;
+; Analysis & Synthesis Status        ; Successful - Thu May 26 21:11:38 2022                     ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition ;
 ; Revision Name                      ; ProjetoFinal                                              ;
 ; Top-level Entity Name              ; VendingMachine                                            ;
 ; Family                             ; MAX 10                                                    ;
-; Total logic elements               ; 212                                                       ;
-;     Total combinational functions  ; 178                                                       ;
-;     Dedicated logic registers      ; 111                                                       ;
-; Total registers                    ; 111                                                       ;
-; Total pins                         ; 28                                                        ;
+; Total logic elements               ; 266                                                       ;
+;     Total combinational functions  ; 232                                                       ;
+;     Dedicated logic registers      ; 144                                                       ;
+; Total registers                    ; 144                                                       ;
+; Total pins                         ; 37                                                        ;
 ; Total virtual pins                 ; 0                                                         ;
 ; Total memory bits                  ; 0                                                         ;
 ; Embedded Multiplier 9-bit elements ; 0                                                         ;
@@ -172,7 +172,8 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-16        ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-16        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -188,12 +189,14 @@ https://fpgasoftware.intel.com/eula.
 ; SerialReceiver.vhd                                                 ; yes             ; User VHDL File                               ; C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/SerialReceiver.vhd                                                 ;             ;
 ; SerialControl.vhd                                                  ; yes             ; User VHDL File                               ; C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/SerialControl.vhd                                                  ;             ;
 ; ParityCheck.vhd                                                    ; yes             ; User VHDL File                               ; C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/ParityCheck.vhd                                                    ;             ;
+; LCD.vhd                                                            ; yes             ; User VHDL File                               ; C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/LCD.vhd                                                            ;             ;
 ; IOS.vhd                                                            ; yes             ; User VHDL File                               ; C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/IOS.vhd                                                            ;             ;
 ; int7seg.vhd                                                        ; yes             ; User VHDL File                               ; C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/int7seg.vhd                                                        ;             ;
 ; FFD.vhd                                                            ; yes             ; User VHDL File                               ; C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/FFD.vhd                                                            ;             ;
 ; Dispatcher.vhd                                                     ; yes             ; User VHDL File                               ; C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Dispatcher.vhd                                                     ;             ;
 ; decoderHex.vhd                                                     ; yes             ; User VHDL File                               ; C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/decoderHex.vhd                                                     ;             ;
 ; Counter.vhd                                                        ; yes             ; User VHDL File                               ; C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Counter.vhd                                                        ;             ;
+; clkDIV.vhd                                                         ; yes             ; User VHDL File                               ; C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/clkDIV.vhd                                                         ;             ;
 ; sld_virtual_jtag.v                                                 ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_virtual_jtag.v                                           ;             ;
 ; sld_virtual_jtag_basic.v                                           ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_virtual_jtag_basic.v                                     ;             ;
 ; sld_jtag_endpoint_adapter.vhd                                      ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd                                ;             ;
@@ -215,30 +218,30 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+--------------------------+
 ; Resource                                    ; Usage                    ;
 +---------------------------------------------+--------------------------+
-; Estimated Total logic elements              ; 212                      ;
+; Estimated Total logic elements              ; 266                      ;
 ;                                             ;                          ;
-; Total combinational functions               ; 178                      ;
+; Total combinational functions               ; 232                      ;
 ; Logic element usage by number of LUT inputs ;                          ;
-;     -- 4 input functions                    ; 77                       ;
-;     -- 3 input functions                    ; 45                       ;
-;     -- <=2 input functions                  ; 56                       ;
+;     -- 4 input functions                    ; 85                       ;
+;     -- 3 input functions                    ; 57                       ;
+;     -- <=2 input functions                  ; 90                       ;
 ;                                             ;                          ;
 ; Logic elements by mode                      ;                          ;
-;     -- normal mode                          ; 170                      ;
-;     -- arithmetic mode                      ; 8                        ;
+;     -- normal mode                          ; 193                      ;
+;     -- arithmetic mode                      ; 39                       ;
 ;                                             ;                          ;
-; Total registers                             ; 111                      ;
-;     -- Dedicated logic registers            ; 111                      ;
+; Total registers                             ; 144                      ;
+;     -- Dedicated logic registers            ; 144                      ;
 ;     -- I/O registers                        ; 0                        ;
 ;                                             ;                          ;
-; I/O pins                                    ; 28                       ;
+; I/O pins                                    ; 37                       ;
 ;                                             ;                          ;
 ; Embedded Multiplier 9-bit elements          ; 0                        ;
 ;                                             ;                          ;
 ; Maximum fan-out node                        ; altera_internal_jtag~TDO ;
 ; Maximum fan-out                             ; 107                      ;
-; Total fan-out                               ; 963                      ;
-; Average fan-out                             ; 2.72                     ;
+; Total fan-out                               ; 1182                     ;
+; Average fan-out                             ; 2.58                     ;
 +---------------------------------------------+--------------------------+
 
 
@@ -247,10 +250,11 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                        ; Entity Name                       ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
-; |VendingMachine                                                                                                                         ; 178 (2)             ; 111 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 28   ; 0            ; 0          ; |VendingMachine                                                                                                                                                                                                                                                                                                                                            ; VendingMachine                    ; work         ;
-;    |IOS:IOScomp|                                                                                                                        ; 24 (0)              ; 25 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|IOS:IOScomp                                                                                                                                                                                                                                                                                                                                ; IOS                               ; work         ;
+; |VendingMachine                                                                                                                         ; 232 (2)             ; 144 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 37   ; 0            ; 0          ; |VendingMachine                                                                                                                                                                                                                                                                                                                                            ; VendingMachine                    ; work         ;
+;    |IOS:IOScomp|                                                                                                                        ; 79 (0)              ; 58 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|IOS:IOScomp                                                                                                                                                                                                                                                                                                                                ; IOS                               ; work         ;
+;       |CLKDIV:clkDIV0|                                                                                                                  ; 56 (56)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|IOS:IOScomp|CLKDIV:clkDIV0                                                                                                                                                                                                                                                                                                                 ; CLKDIV                            ; work         ;
 ;       |Dispatcher:Disp|                                                                                                                 ; 6 (6)               ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|IOS:IOScomp|Dispatcher:Disp                                                                                                                                                                                                                                                                                                                ; Dispatcher                        ; work         ;
-;       |SerialReceiver:serialR|                                                                                                          ; 18 (1)              ; 20 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|IOS:IOScomp|SerialReceiver:serialR                                                                                                                                                                                                                                                                                                         ; SerialReceiver                    ; work         ;
+;       |SerialReceiver:serialR|                                                                                                          ; 17 (1)              ; 20 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|IOS:IOScomp|SerialReceiver:serialR                                                                                                                                                                                                                                                                                                         ; SerialReceiver                    ; work         ;
 ;          |Counter:Counter0|                                                                                                             ; 4 (0)               ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|IOS:IOScomp|SerialReceiver:serialR|Counter:Counter0                                                                                                                                                                                                                                                                                        ; Counter                           ; work         ;
 ;             |FFD:UFFD0|                                                                                                                 ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|IOS:IOScomp|SerialReceiver:serialR|Counter:Counter0|FFD:UFFD0                                                                                                                                                                                                                                                                              ; FFD                               ; work         ;
 ;             |FFD:UFFD1|                                                                                                                 ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|IOS:IOScomp|SerialReceiver:serialR|Counter:Counter0|FFD:UFFD1                                                                                                                                                                                                                                                                              ; FFD                               ; work         ;
@@ -258,7 +262,7 @@ https://fpgasoftware.intel.com/eula.
 ;             |FFD:UFFD3|                                                                                                                 ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|IOS:IOScomp|SerialReceiver:serialR|Counter:Counter0|FFD:UFFD3                                                                                                                                                                                                                                                                              ; FFD                               ; work         ;
 ;          |ParityCheck:ParityCheck0|                                                                                                     ; 1 (0)               ; 1 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|IOS:IOScomp|SerialReceiver:serialR|ParityCheck:ParityCheck0                                                                                                                                                                                                                                                                                ; ParityCheck                       ; work         ;
 ;             |FFD:UFFD0|                                                                                                                 ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|IOS:IOScomp|SerialReceiver:serialR|ParityCheck:ParityCheck0|FFD:UFFD0                                                                                                                                                                                                                                                                      ; FFD                               ; work         ;
-;          |SerialControl:serialC|                                                                                                        ; 12 (12)             ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|IOS:IOScomp|SerialReceiver:serialR|SerialControl:serialC                                                                                                                                                                                                                                                                                   ; SerialControl                     ; work         ;
+;          |SerialControl:serialC|                                                                                                        ; 11 (11)             ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|IOS:IOScomp|SerialReceiver:serialR|SerialControl:serialC                                                                                                                                                                                                                                                                                   ; SerialControl                     ; work         ;
 ;          |ShiftRegister:ShiftRegister0|                                                                                                 ; 0 (0)               ; 10 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|IOS:IOScomp|SerialReceiver:serialR|ShiftRegister:ShiftRegister0                                                                                                                                                                                                                                                                            ; ShiftRegister                     ; work         ;
 ;             |FFD:UFFD0|                                                                                                                 ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|IOS:IOScomp|SerialReceiver:serialR|ShiftRegister:ShiftRegister0|FFD:UFFD0                                                                                                                                                                                                                                                                  ; FFD                               ; work         ;
 ;             |FFD:UFFD1|                                                                                                                 ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|IOS:IOScomp|SerialReceiver:serialR|ShiftRegister:ShiftRegister0|FFD:UFFD1                                                                                                                                                                                                                                                                  ; FFD                               ; work         ;
@@ -270,11 +274,11 @@ https://fpgasoftware.intel.com/eula.
 ;             |FFD:UFFD7|                                                                                                                 ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|IOS:IOScomp|SerialReceiver:serialR|ShiftRegister:ShiftRegister0|FFD:UFFD7                                                                                                                                                                                                                                                                  ; FFD                               ; work         ;
 ;             |FFD:UFFD8|                                                                                                                 ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|IOS:IOScomp|SerialReceiver:serialR|ShiftRegister:ShiftRegister0|FFD:UFFD8                                                                                                                                                                                                                                                                  ; FFD                               ; work         ;
 ;             |FFD:UFFD9|                                                                                                                 ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|IOS:IOScomp|SerialReceiver:serialR|ShiftRegister:ShiftRegister0|FFD:UFFD9                                                                                                                                                                                                                                                                  ; FFD                               ; work         ;
-;    |TicketDispenser:Dispenser|                                                                                                          ; 30 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|TicketDispenser:Dispenser                                                                                                                                                                                                                                                                                                                  ; TicketDispenser                   ; work         ;
-;       |decoderHex:decoder0|                                                                                                             ; 14 (10)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|TicketDispenser:Dispenser|decoderHex:decoder0                                                                                                                                                                                                                                                                                              ; decoderHex                        ; work         ;
-;          |int7seg:U0|                                                                                                                   ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|TicketDispenser:Dispenser|decoderHex:decoder0|int7seg:U0                                                                                                                                                                                                                                                                                   ; int7seg                           ; work         ;
-;       |decoderHex:decoder1|                                                                                                             ; 15 (11)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|TicketDispenser:Dispenser|decoderHex:decoder1                                                                                                                                                                                                                                                                                              ; decoderHex                        ; work         ;
-;          |int7seg:U0|                                                                                                                   ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|TicketDispenser:Dispenser|decoderHex:decoder1|int7seg:U0                                                                                                                                                                                                                                                                                   ; int7seg                           ; work         ;
+;    |TicketDispenser:Dispenser|                                                                                                          ; 29 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|TicketDispenser:Dispenser                                                                                                                                                                                                                                                                                                                  ; TicketDispenser                   ; work         ;
+;       |decoderHex:decoder0|                                                                                                             ; 14 (11)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|TicketDispenser:Dispenser|decoderHex:decoder0                                                                                                                                                                                                                                                                                              ; decoderHex                        ; work         ;
+;          |int7seg:U0|                                                                                                                   ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|TicketDispenser:Dispenser|decoderHex:decoder0|int7seg:U0                                                                                                                                                                                                                                                                                   ; int7seg                           ; work         ;
+;       |decoderHex:decoder1|                                                                                                             ; 14 (11)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|TicketDispenser:Dispenser|decoderHex:decoder1                                                                                                                                                                                                                                                                                              ; decoderHex                        ; work         ;
+;          |int7seg:U0|                                                                                                                   ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|TicketDispenser:Dispenser|decoderHex:decoder1|int7seg:U0                                                                                                                                                                                                                                                                                   ; int7seg                           ; work         ;
 ;       |decoderHex:decoder2|                                                                                                             ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|TicketDispenser:Dispenser|decoderHex:decoder2                                                                                                                                                                                                                                                                                              ; decoderHex                        ; work         ;
 ;    |sld_hub:auto_hub|                                                                                                                   ; 122 (1)             ; 86 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|sld_hub:auto_hub                                                                                                                                                                                                                                                                                                                           ; sld_hub                           ; altera_sld   ;
 ;       |alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric| ; 121 (0)             ; 86 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric                                                                                                                                                                                           ; alt_sld_fab_with_jtag_input       ; altera_sld   ;
@@ -334,7 +338,7 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 111   ;
+; Total registers                              ; 144   ;
 ; Number of registers using Synchronous Clear  ; 12    ;
 ; Number of registers using Synchronous Load   ; 10    ;
 ; Number of registers using Asynchronous Clear ; 58    ;
@@ -349,9 +353,10 @@ Encoding Type:  One-Hot
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 ; Inverted Register                                                                                                                                                                                                                                                                                                               ; Fan out ;
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; IOS:IOScomp|CLKDIV:clkDIV0|count[0]                                                                                                                                                                                                                                                                                             ; 2       ;
 ; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|jtag_ir_reg[2] ; 2       ;
 ; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|jtag_ir_reg[1] ; 3       ;
-; Total number of inverted registers = 2                                                                                                                                                                                                                                                                                          ;         ;
+; Total number of inverted registers = 3                                                                                                                                                                                                                                                                                          ;         ;
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
@@ -369,6 +374,16 @@ Encoding Type:  One-Hot
 ; lpm_type                ; sld_virtual_jtag ; String                                    ;
 ; lpm_hint                ; UNUSED           ; String                                    ;
 +-------------------------+------------------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: IOS:IOScomp|CLKDIV:clkDIV0 ;
++----------------+----------+---------------------------------------------+
+; Parameter Name ; Value    ; Type                                        ;
++----------------+----------+---------------------------------------------+
+; div            ; 50000000 ; Signed Integer                              ;
++----------------+----------+---------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -399,15 +414,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+-------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "IOS:IOScomp"                                                                        ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; wrl  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
 +----------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "UsbPort:USBconn"                                                                                ;
 +------------------+--------+----------+-------------------------------------------------------------------------------------+
@@ -432,20 +438,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 67                          ;
-; cycloneiii_ff         ; 25                          ;
+; boundary_port         ; 76                          ;
+; cycloneiii_ff         ; 58                          ;
 ;     CLR               ; 15                          ;
 ;     ENA CLR           ; 10                          ;
-; cycloneiii_lcell_comb ; 57                          ;
-;     normal            ; 57                          ;
+;     plain             ; 33                          ;
+; cycloneiii_lcell_comb ; 111                         ;
+;     arith             ; 31                          ;
+;         2 data inputs ; 31                          ;
+;     normal            ; 80                          ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 2                           ;
-;         2 data inputs ; 15                          ;
-;         3 data inputs ; 13                          ;
-;         4 data inputs ; 25                          ;
+;         1 data inputs ; 4                           ;
+;         2 data inputs ; 16                          ;
+;         3 data inputs ; 25                          ;
+;         4 data inputs ; 33                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 3.00                        ;
-; Average LUT depth     ; 1.80                        ;
+; Max LUT depth         ; 4.40                        ;
+; Average LUT depth     ; 2.76                        ;
 +-----------------------+-----------------------------+
 
 
@@ -464,7 +473,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition
-    Info: Processing started: Thu May 19 22:55:56 2022
+    Info: Processing started: Thu May 26 21:11:22 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ProjetoFinal -c ProjetoFinal
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -472,7 +481,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file vending
     Info (12022): Found design unit 1: VendingMachine_tb-behavior File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/VendingMachine_tb.vhd Line: 7
     Info (12023): Found entity 1: VendingMachine_tb File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/VendingMachine_tb.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file vendingmachine.vhd
-    Info (12022): Found design unit 1: VendingMachine-behavioral File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/VendingMachine.vhd Line: 17
+    Info (12022): Found design unit 1: VendingMachine-behavioral File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/VendingMachine.vhd Line: 18
     Info (12023): Found entity 1: VendingMachine File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/VendingMachine.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file usbport.vhd
     Info (12022): Found design unit 1: UsbPort-bdf_type File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/UsbPort.vhd Line: 33
@@ -493,7 +502,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file parityc
     Info (12022): Found design unit 1: ParityCheck-Behavioral File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/ParityCheck.vhd Line: 12
     Info (12023): Found entity 1: ParityCheck File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/ParityCheck.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file lcd.vhd
-    Info (12022): Found design unit 1: LCD-behavioral File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/LCD.vhd Line: 12
+    Info (12022): Found design unit 1: LCD-behavioral File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/LCD.vhd Line: 14
     Info (12023): Found entity 1: LCD File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/LCD.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file ios.vhd
     Info (12022): Found design unit 1: IOS-behavioral File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/IOS.vhd Line: 14
@@ -516,11 +525,12 @@ Info (12021): Found 2 design units, including 1 entities, in source file counter
 Info (12021): Found 2 design units, including 1 entities, in source file control.vhd
     Info (12022): Found design unit 1: Control-behavioral File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Control.vhd Line: 12
     Info (12023): Found entity 1: Control File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Control.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file clkdiv.vhd
+    Info (12022): Found design unit 1: CLKDIV-bhv File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/clkDIV.vhd Line: 11
+    Info (12023): Found entity 1: CLKDIV File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/clkDIV.vhd Line: 5
 Info (12127): Elaborating entity "VendingMachine" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at VendingMachine.vhd(10): used implicit default value for signal "WrL" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/VendingMachine.vhd Line: 10
-Warning (10036): Verilog HDL or VHDL warning at VendingMachine.vhd(48): object "sWrL" assigned a value but never read File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/VendingMachine.vhd Line: 48
-Warning (10873): Using initial value X (don't care) for net "sUsbInput[6..0]" at VendingMachine.vhd(47) File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/VendingMachine.vhd Line: 47
-Info (12128): Elaborating entity "UsbPort" for hierarchy "UsbPort:USBconn" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/VendingMachine.vhd Line: 55
+Warning (10873): Using initial value X (don't care) for net "sUsbInput[6..0]" at VendingMachine.vhd(57) File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/VendingMachine.vhd Line: 57
+Info (12128): Elaborating entity "UsbPort" for hierarchy "UsbPort:USBconn" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/VendingMachine.vhd Line: 65
 Info (12128): Elaborating entity "sld_virtual_jtag" for hierarchy "UsbPort:USBconn|sld_virtual_jtag:b2v_inst" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/UsbPort.vhd Line: 80
 Info (12130): Elaborated megafunction instantiation "UsbPort:USBconn|sld_virtual_jtag:b2v_inst" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/UsbPort.vhd Line: 80
 Info (12133): Instantiated megafunction "UsbPort:USBconn|sld_virtual_jtag:b2v_inst" with the following parameter: File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/UsbPort.vhd Line: 80
@@ -537,19 +547,23 @@ Info (12128): Elaborating entity "sld_virtual_jtag_impl" for hierarchy "UsbPort:
 Info (12131): Elaborated megafunction instantiation "UsbPort:USBconn|sld_virtual_jtag:b2v_inst|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst", which is child of megafunction instantiation "UsbPort:USBconn|sld_virtual_jtag:b2v_inst" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_virtual_jtag_basic.v Line: 152
 Info (12128): Elaborating entity "sld_jtag_endpoint_adapter" for hierarchy "UsbPort:USBconn|sld_virtual_jtag:b2v_inst|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst|sld_jtag_endpoint_adapter:jtag_signal_adapter" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_virtual_jtag_basic.v Line: 415
 Info (12128): Elaborating entity "sld_jtag_endpoint_adapter_impl" for hierarchy "UsbPort:USBconn|sld_virtual_jtag:b2v_inst|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst|sld_jtag_endpoint_adapter:jtag_signal_adapter|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd Line: 232
-Info (12128): Elaborating entity "IOS" for hierarchy "IOS:IOScomp" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/VendingMachine.vhd Line: 60
-Info (12128): Elaborating entity "SerialReceiver" for hierarchy "IOS:IOScomp|SerialReceiver:serialR" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/IOS.vhd Line: 48
+Info (12128): Elaborating entity "IOS" for hierarchy "IOS:IOScomp" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/VendingMachine.vhd Line: 70
+Info (12128): Elaborating entity "CLKDIV" for hierarchy "IOS:IOScomp|CLKDIV:clkDIV0" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/IOS.vhd Line: 54
+Info (12128): Elaborating entity "SerialReceiver" for hierarchy "IOS:IOScomp|SerialReceiver:serialR" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/IOS.vhd Line: 59
 Info (12128): Elaborating entity "SerialControl" for hierarchy "IOS:IOScomp|SerialReceiver:serialR|SerialControl:serialC" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/SerialReceiver.vhd Line: 68
 Info (12128): Elaborating entity "Counter" for hierarchy "IOS:IOScomp|SerialReceiver:serialR|Counter:Counter0" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/SerialReceiver.vhd Line: 81
 Info (12128): Elaborating entity "FFD" for hierarchy "IOS:IOScomp|SerialReceiver:serialR|Counter:Counter0|FFD:UFFD0" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Counter.vhd Line: 36
 Info (12128): Elaborating entity "ParityCheck" for hierarchy "IOS:IOScomp|SerialReceiver:serialR|ParityCheck:ParityCheck0" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/SerialReceiver.vhd Line: 87
 Info (12128): Elaborating entity "ShiftRegister" for hierarchy "IOS:IOScomp|SerialReceiver:serialR|ShiftRegister:ShiftRegister0" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/SerialReceiver.vhd Line: 93
-Info (12128): Elaborating entity "Dispatcher" for hierarchy "IOS:IOScomp|Dispatcher:Disp" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/IOS.vhd Line: 59
-Info (12128): Elaborating entity "TicketDispenser" for hierarchy "TicketDispenser:Dispenser" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/VendingMachine.vhd Line: 73
+Info (12128): Elaborating entity "Dispatcher" for hierarchy "IOS:IOScomp|Dispatcher:Disp" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/IOS.vhd Line: 70
+Info (12128): Elaborating entity "TicketDispenser" for hierarchy "TicketDispenser:Dispenser" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/VendingMachine.vhd Line: 83
 Info (12128): Elaborating entity "decoderHex" for hierarchy "TicketDispenser:Dispenser|decoderHex:decoder0" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/TicketDispenser.vhd Line: 52
 Info (12128): Elaborating entity "int7seg" for hierarchy "TicketDispenser:Dispenser|decoderHex:decoder0|int7seg:U0" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/decoderHex.vhd Line: 26
+Info (12128): Elaborating entity "LCD" for hierarchy "LCD:LCD0" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/VendingMachine.vhd Line: 93
+Warning (10036): Verilog HDL or VHDL warning at LCD.vhd(16): object "RS" assigned a value but never read File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/LCD.vhd Line: 16
+Warning (10036): Verilog HDL or VHDL warning at LCD.vhd(17): object "D" assigned a value but never read File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/LCD.vhd Line: 17
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2022.05.19.22:56:05 Progress: Loading sld632c1620/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2022.05.26.21:11:31 Progress: Loading sld632c1620/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -573,7 +587,6 @@ Info (12021): Found 2 design units, including 1 entities, in source file db/ip/s
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld632c1620/submodules/alt_sld_fab_alt_sld_fab_splitter.sv
     Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/db/ip/sld632c1620/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "WrL" is stuck at GND File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/VendingMachine.vhd Line: 10
     Warning (13410): Pin "HEX0[7]" is stuck at VCC File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/VendingMachine.vhd Line: 11
     Warning (13410): Pin "HEX1[7]" is stuck at VCC File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/VendingMachine.vhd Line: 12
     Warning (13410): Pin "HEX2[6]" is stuck at VCC File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/VendingMachine.vhd Line: 13
@@ -581,13 +594,13 @@ Warning (13024): Output pins are stuck at VCC or GND
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 249 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 312 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 6 input pins
-    Info (21059): Implemented 26 output pins
-    Info (21061): Implemented 216 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 10 warnings
-    Info: Peak virtual memory: 4869 megabytes
-    Info: Processing ended: Thu May 19 22:56:12 2022
+    Info (21059): Implemented 35 output pins
+    Info (21061): Implemented 270 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
+    Info: Peak virtual memory: 4864 megabytes
+    Info: Processing ended: Thu May 26 21:11:38 2022
     Info: Elapsed time: 00:00:16
     Info: Total CPU time (on all processors): 00:00:35
 

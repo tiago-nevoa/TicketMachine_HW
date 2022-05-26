@@ -7,10 +7,11 @@ port(
 		MCLK : in std_logic; --pino especifico da placa
 		FnSwitch : in std_logic;
 		Reset : in std_logic; --Reset é PIN botao da FPGA. vem de fora. e é 1 quando nao pressionado (temos de negar)
-		WrL : out std_logic; --Enable LCD
+		WrL : out std_logic; --Enable LCD (LCD_EN)
 		HEX0 : out  STD_LOGIC_VECTOR (7 downto 0);
 		HEX1 : out  STD_LOGIC_VECTOR (7 downto 0);
-		HEX2 : out  STD_LOGIC_VECTOR (7 downto 0)
+		HEX2 : out  STD_LOGIC_VECTOR (7 downto 0);
+		LCD_DATA : out STD_LOGIC_VECTOR (8 downto 0) -- + LCD_RS, LCD_DATA[0..7]
 		);
 end VendingMachine;
 
@@ -39,6 +40,15 @@ COMPONENT TicketDispenser
 				HEX0 : out  STD_LOGIC_VECTOR (7 downto 0); -- 3 HEXs para origem destino e ida e volta (cada um 8 bits)
 				HEX1 : out  STD_LOGIC_VECTOR (7 downto 0);
 				HEX2 : out  STD_LOGIC_VECTOR (7 downto 0)				
+				);
+END COMPONENT;
+
+COMPONENT LCD
+    Port (  Din : in  STD_LOGIC_VECTOR (8 downto 0);
+				Reset : in  STD_LOGIC;
+				Clk : in  STD_LOGIC;
+				E : in  STD_LOGIC;
+				LCD_DATA : out STD_LOGIC_VECTOR (8 downto 0)
 				);
 END COMPONENT;
 
@@ -78,6 +88,16 @@ Dispenser: TicketDispenser PORT MAP (
 	HEX1 => HEX1,
 	HEX2 => HEX2
 	);
+	
 
+LCD0: LCD PORT MAP (
+	Din => sDout,
+	Reset => Reset,
+	Clk => MCLK,
+	E => sWrL,
+	LCD_DATA => LCD_DATA
+);
+
+Wrl <= sWrL; --METER SAIDA NO LCD
 
 end behavioral;

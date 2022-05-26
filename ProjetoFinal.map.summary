@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Thu May 19 22:56:12 2022
+Analysis & Synthesis Status : Successful - Thu May 26 21:11:38 2022
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition
 Revision Name : ProjetoFinal
 Top-level Entity Name : VendingMachine
 Family : MAX 10
-Total logic elements : 212
-    Total combinational functions : 178
-    Dedicated logic registers : 111
-Total registers : 111
-Total pins : 28
+Total logic elements : 266
+    Total combinational functions : 232
+    Dedicated logic registers : 144
+Total registers : 144
+Total pins : 37
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

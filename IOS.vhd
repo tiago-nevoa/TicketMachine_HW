@@ -38,17 +38,28 @@ port(
 );
 END COMPONENT;
 
-signal sDoneAccept, sDXval, signalCLK : std_logic;
+COMPONENT clkDIV
+port ( clk_in: in std_logic;
+		 clk_out: out std_logic	
+);
+END COMPONENT;
+
+signal sDoneAccept, sDXval, signalCLK, signalMCLK, signalClkDiv : std_logic;
 signal sD : STD_LOGIC_VECTOR (9 downto 0);
 
 begin
-
+signalMCLK <= MCLK;
 signalCLK <= SCLK; -- signal para clock porque clock é partilhado com serial receiver e dispatcher
+
+clkDIV0: clkDIV PORT MAP (
+	clk_in => signalMCLK,
+	clk_out => signalClkDiv);
+
 
 serialR: SerialReceiver PORT MAP (
 	DX => SDX,
 	Reset => Reset,
-	MCLK => MCLK,
+	MCLK => signalMCLK,
 	CLK => signalCLK,
 	NOT_SS => NOT_SS,
 	Accept => sDoneAccept,
@@ -57,7 +68,7 @@ serialR: SerialReceiver PORT MAP (
 	DataOut => sD);
 		
 Disp: Dispatcher PORT MAP (
-	MCLK => MCLK,
+	MCLK => signalClkDiv,
 	Reset => Reset,
 	Fsh => Fsh,
 	Dval => sDXval,
