@@ -1,0 +1,17 @@
+library IEEE;
+
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity KeyScan is
+    Port (  Kscan : in  STD_LOGIC;
+				Kpress : in  STD_LOGIC;
+				K : out STD_LOGIC_VECTOR (3 downto 0)
+				);
+end KeyScan;
+
+architecture behavioral of KeyScan is
+
+begin
+
+
+end behavioral;
