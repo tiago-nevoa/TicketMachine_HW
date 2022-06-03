@@ -1,0 +1,4 @@
+entity Priority_Encoder_A is
+    Port ( INPUT : in STD_LOGIC_VECTOR (3 downto 0);
+           OUTPUT : out STD_LOGIC_VECTOR (2 downto 0));
+end Priority_Encoder_A;
