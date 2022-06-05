@@ -4,7 +4,19 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "Kval",
+					"name" : "K[0]",
+					"strict" : false
+				},
+				{
+					"name" : "K[1]",
+					"strict" : false
+				},
+				{
+					"name" : "K[2]",
+					"strict" : false
+				},
+				{
+					"name" : "K[3]",
 					"strict" : false
 				},
 				{
@@ -12,23 +24,23 @@
 					"strict" : false
 				},
 				{
-					"name" : "Ksave",
+					"name" : "MCLK",
 					"strict" : false
 				},
 				{
-					"name" : "Kack",
+					"name" : "Clr",
 					"strict" : false
 				},
 				{
-					"name" : "CLK",
+					"name" : "KeyLines[2]",
 					"strict" : false
 				},
 				{
-					"name" : "Reset",
+					"name" : "KeyLines[1]",
 					"strict" : false
 				},
 				{
-					"name" : "Kpress",
+					"name" : "KeyLines[3]",
 					"strict" : false
 				}
 			]

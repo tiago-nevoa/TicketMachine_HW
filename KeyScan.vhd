@@ -49,7 +49,7 @@ begin
 
 Cont: Counter2bits PORT MAP (
 	CE => Kscan,
-	CLK => not MCLK,
+	CLK => not MCLK, -- falling edge
 	Clr => Clr,
 	Fcount => sFCount);	
 	
@@ -63,7 +63,7 @@ PENC0: PENC PORT MAP (
 
 REG: REG2bits PORT MAP (
 	Clr => Clr,
-	CLK => not MCLK,
+	CLK => not MCLK, -- falling edge
 	INPUT => sPENCOut,
    OUTPUT => sREG);	
 	

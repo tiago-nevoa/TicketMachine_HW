@@ -4,7 +4,7 @@ use ieee.std_logic_unsigned.all;
 
 ENTITY REG4bits IS
 	PORT(	
-			Clr, CLK, Enable IN STD_LOGIC; -- quando enable true (ou seja quando tem DAV -> data available), aceita alterações
+			Clr, CLK, Enable : IN STD_LOGIC; -- quando enable true (ou seja quando tem DAV -> data available), aceita alterações
 			Input: IN STD_LOGIC_VECTOR(3 downto 0);
 			Output: OUT STD_LOGIC_VECTOR(3 downto 0)
 			);

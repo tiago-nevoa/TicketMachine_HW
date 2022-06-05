@@ -14,6 +14,7 @@ process(S)
 begin
 case S is
 when "00" => decoderOut <= "110"; when "01" => decoderOut <= "101"; when "10" => decoderOut <= "011"; when "11" => decoderOut <= "111"; -- active low!!
+--- when "00" => decoderOut <= "001"; when "01" => decoderOut <= "010"; when "10" => decoderOut <= "100"; when "11" => decoderOut <= "000"; -- confirmar pois temos dupla negação
 end case;
 end process;
  

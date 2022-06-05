@@ -5,7 +5,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity KeyTransmitter is
     Port (  DAV, TXclk, MCLK, Clr : in  STD_LOGIC;
 				Data_In : in STD_LOGIC_VECTOR (3 downto 0); 
-				DAC, TXD : out  STD_LOGIC;);
+				DAC, TXD : out  STD_LOGIC);
 end KeyTransmitter;
 
 architecture behavioral of KeyTransmitter is
@@ -19,7 +19,7 @@ END COMPONENT;
 
 COMPONENT REG4bits
    PORT(	
-			Clr, CLK, Enable IN STD_LOGIC; 
+			Clr, CLK, Enable : IN STD_LOGIC; 
 			Input: IN STD_LOGIC_VECTOR(3 downto 0);
 			Output: OUT STD_LOGIC_VECTOR(3 downto 0)
 			);
