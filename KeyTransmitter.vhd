@@ -41,14 +41,14 @@ signal sData_In : std_logic_vector(7 downto 0);
 
 begin
 
-sData_In(0) <= EnTXD,
-sData_In(1) <= '1',
-sData_In(2) <= sREG(0),
-sData_In(3) <= sREG(1),
-sData_In(4) <= sREG(2),
-sData_In(5) <= sREG(3),
-sData_In(6) <= '0',
-sData_In(7) <= '1',
+sData_In(0) <= '1';--EnTXD
+sData_In(1) <= '1';
+sData_In(2) <= sREG(0);
+sData_In(3) <= sREG(1);
+sData_In(4) <= sREG(2);
+sData_In(5) <= sREG(3);
+sData_In(6) <= '0';
+sData_In(7) <= '1';
 
 
 REG: REG4bits PORT MAP (

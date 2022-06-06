@@ -1,0 +1,7 @@
+
+State Machine - |KeyTransmitterControl|CurrentState
+Name CurrentState.STATE_RESET_COUNTER CurrentState.STATE_TRANSMIT_DATA CurrentState.STATE_DATA_ACCEPTED CurrentState.STATE_WAIT_DATA 
+CurrentState.STATE_WAIT_DATA 0 0 0 0 
+CurrentState.STATE_DATA_ACCEPTED 0 0 1 1 
+CurrentState.STATE_TRANSMIT_DATA 0 1 0 1 
+CurrentState.STATE_RESET_COUNTER 1 0 0 1 

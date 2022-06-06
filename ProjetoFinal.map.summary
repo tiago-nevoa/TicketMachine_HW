@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Mon Jun 06 16:26:15 2022
-Quartus Prime Version : 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition
+Analysis & Synthesis Status : Successful - Mon Jun 06 22:00:22 2022
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : ProjetoFinal
-Top-level Entity Name : KeyDecode
+Top-level Entity Name : KeyTransmitterControl
 Family : MAX 10
-Total logic elements : 12
-    Total combinational functions : 12
-    Dedicated logic registers : 8
-Total registers : 8
-Total pins : 15
+Total logic elements : 5
+    Total combinational functions : 5
+    Dedicated logic registers : 4
+Total registers : 4
+Total pins : 9
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

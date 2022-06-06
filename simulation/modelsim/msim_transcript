@@ -10,197 +10,49 @@
 # Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vcom -93 -work work {C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/FFD.vhd}
+# vcom -93 -work work {C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/KeyTransmitterControl.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:26:43 on Jun 06,2022
-# vcom -reportprogress 300 -93 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/FFD.vhd 
+# Start time: 22:00:53 on Jun 06,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/KeyTransmitterControl.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity FFD
-# -- Compiling architecture Behavioral of FFD
-# End time: 16:26:43 on Jun 06,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyScan.vhd}
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:26:43 on Jun 06,2022
-# vcom -reportprogress 300 -93 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyScan.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity KeyScan
-# -- Compiling architecture behavioral of KeyScan
-# End time: 16:26:43 on Jun 06,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/decoder2x4.vhd}
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:26:43 on Jun 06,2022
-# vcom -reportprogress 300 -93 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/decoder2x4.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity decoder2x4
-# -- Compiling architecture behavioral of decoder2x4
-# End time: 16:26:43 on Jun 06,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyControl.vhd}
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:26:43 on Jun 06,2022
-# vcom -reportprogress 300 -93 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyControl.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity KeyControl
-# -- Compiling architecture behaviour of KeyControl
-# End time: 16:26:43 on Jun 06,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Counter2bits.vhd}
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:26:43 on Jun 06,2022
-# vcom -reportprogress 300 -93 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Counter2bits.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package STD_LOGIC_UNSIGNED
-# -- Compiling entity Counter2bits
-# -- Compiling architecture Counter_LOGIC of Counter2bits
-# End time: 16:26:43 on Jun 06,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/PENC.vhd}
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:26:43 on Jun 06,2022
-# vcom -reportprogress 300 -93 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/PENC.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity PENC
-# -- Compiling architecture Behavioral of PENC
-# End time: 16:26:43 on Jun 06,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/REG2bits.vhd}
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:26:43 on Jun 06,2022
-# vcom -reportprogress 300 -93 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/REG2bits.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package STD_LOGIC_UNSIGNED
-# -- Compiling entity REG2bits
-# -- Compiling architecture REG2bits_LOGIC of REG2bits
-# End time: 16:26:43 on Jun 06,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyDecode.vhd}
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:26:43 on Jun 06,2022
-# vcom -reportprogress 300 -93 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyDecode.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity KeyDecode
-# -- Compiling architecture behavioral of KeyDecode
-# End time: 16:26:44 on Jun 06,2022, Elapsed time: 0:00:01
+# -- Compiling entity KeyTransmitterControl
+# -- Compiling architecture behaviour of KeyTransmitterControl
+# End time: 22:00:53 on Jun 06,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-vcom -reportprogress 300 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Testbench/KeyDecode_tb.vhd
+vcom -reportprogress 300 -work work C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/KeyTransmitterControl.vhd C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/KeyTransmitterControl_tb.vhd
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:26:59 on Jun 06,2022
-# vcom -reportprogress 300 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Testbench/KeyDecode_tb.vhd 
+# Start time: 22:01:14 on Jun 06,2022
+# vcom -reportprogress 300 -work work C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/KeyTransmitterControl.vhd C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/KeyTransmitterControl_tb.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity KeyDecode_tb
-# -- Compiling architecture behavior of KeyDecode_tb
-# End time: 16:26:59 on Jun 06,2022, Elapsed time: 0:00:00
+# -- Compiling entity KeyTransmitterControl
+# -- Compiling architecture behaviour of KeyTransmitterControl
+# -- Compiling entity KeyTransmitterControl_tb
+# -- Compiling architecture behavior of KeyTransmitterControl_tb
+# End time: 22:01:14 on Jun 06,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-vsim work.keydecode_tb
-# vsim work.keydecode_tb 
-# Start time: 16:27:04 on Jun 06,2022
+vsim -gui -l msim_transcript work.keytransmittercontrol_tb
+# vsim -gui -l msim_transcript work.keytransmittercontrol_tb 
+# Start time: 22:01:30 on Jun 06,2022
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading work.keydecode_tb(behavior)
-# Loading work.keydecode(behavioral)
-# Loading work.keyscan(behavioral)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading work.counter2bits(counter_logic)
-# Loading work.ffd(behavioral)
-# Loading work.decoder2x4(behavioral)
-# Loading work.penc(behavioral)
-# Loading work.reg2bits(reg2bits_logic)
-# Loading work.keycontrol(behaviour)
-add wave -position insertpoint  \
-sim:/keydecode_tb/MCLK \
-sim:/keydecode_tb/Kack \
-sim:/keydecode_tb/Clr \
-sim:/keydecode_tb/KEYPAD_LIN \
-sim:/keydecode_tb/Kval \
-sim:/keydecode_tb/K \
-sim:/keydecode_tb/KEYPAD_COL \
-sim:/keydecode_tb/clk_period
+# Loading work.keytransmittercontrol_tb(behavior)
+# Loading work.keytransmittercontrol(behaviour)
+add wave -position end  sim:/keytransmittercontrol_tb/vm/CurrentState
+add wave -position end  sim:/keytransmittercontrol_tb/vm/DAV
+add wave -position end  sim:/keytransmittercontrol_tb/vm/TCount
+add wave -position end  sim:/keytransmittercontrol_tb/vm/CLK
+add wave -position end  sim:/keytransmittercontrol_tb/vm/Reset
+add wave -position end  sim:/keytransmittercontrol_tb/vm/DAC
+add wave -position end  sim:/keytransmittercontrol_tb/vm/EnTXD
+add wave -position end  sim:/keytransmittercontrol_tb/vm/EnReg
+add wave -position end  sim:/keytransmittercontrol_tb/vm/EnCounter
+add wave -position end  sim:/keytransmittercontrol_tb/vm/RstCounter
 run
-add wave -position insertpoint  \
-sim:/keydecode_tb/vm/kcontrol/CurrentState \
-sim:/keydecode_tb/vm/kcontrol/NextState
-restart
-run
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-add wave -position insertpoint  \
-sim:/keydecode_tb/vm/kscan/Kpress
-restart
-run
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-vcom -reportprogress 300 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Testbench/KeyDecode_tb.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:45:20 on Jun 06,2022
-# vcom -reportprogress 300 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Testbench/KeyDecode_tb.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity KeyDecode_tb
-# -- Compiling architecture behavior of KeyDecode_tb
-# End time: 16:45:20 on Jun 06,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vsim work.keydecode_tb
-# End time: 16:45:25 on Jun 06,2022, Elapsed time: 0:18:21
-# Errors: 0, Warnings: 0
-# vsim work.keydecode_tb 
-# Start time: 16:45:25 on Jun 06,2022
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading work.keydecode_tb(behavior)
-# Loading work.keydecode(behavioral)
-# Loading work.keyscan(behavioral)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading work.counter2bits(counter_logic)
-# Loading work.ffd(behavioral)
-# Loading work.decoder2x4(behavioral)
-# Loading work.penc(behavioral)
-# Loading work.reg2bits(reg2bits_logic)
-# Loading work.keycontrol(behaviour)
-add wave -position insertpoint  \
-sim:/keydecode_tb/MCLK \
-sim:/keydecode_tb/Kack \
-sim:/keydecode_tb/Clr \
-sim:/keydecode_tb/KEYPAD_LIN \
-sim:/keydecode_tb/Kval \
-sim:/keydecode_tb/K \
-sim:/keydecode_tb/KEYPAD_COL \
-sim:/keydecode_tb/clk_period
-add wave -position insertpoint  \
-sim:/keydecode_tb/vm/kcontrol/CurrentState
-add wave -position insertpoint  \
-sim:/keydecode_tb/vm/kscan/Kpress
-run
-add wave -position insertpoint  \
-sim:/keydecode_tb/vm/kscan/PENC0/GS
-# End time: 17:18:12 on Jun 06,2022, Elapsed time: 0:32:47
+# End time: 22:05:24 on Jun 06,2022, Elapsed time: 0:03:54
 # Errors: 0, Warnings: 0
