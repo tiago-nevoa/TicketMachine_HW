@@ -51,7 +51,7 @@ set_location_assignment PIN_Y7 -to LCD_DATA[8]
 #set_location_assignment PIN_AA9    -to	KEYPAD_COL[2]
 #set_location_assignment PIN_AA8    -to	KEYPAD_COL[3]
 
-set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 SP1.02i Lite Edition"
+set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
 set_global_assignment -name VHDL_FILE VendingMachine_tb.vhd
 set_global_assignment -name VHDL_FILE VendingMachine.vhd
 set_global_assignment -name VHDL_FILE UsbPort.vhd

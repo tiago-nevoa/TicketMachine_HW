@@ -12,12 +12,12 @@ architecture behavioral of KeyTransmitter is
 
 COMPONENT Counter3bits
 	PORT(CE, CLK, Clr: IN STD_LOGIC;
-			Fcount: OUT STD_LOGIC_VECTOR(2 downto 0)
+			Tcount: OUT STD_LOGIC_VECTOR(2 downto 0)
 			);
 END COMPONENT;
 
 
-COMPONENT REG4bits
+COMPONENT REG4bits -- vamos armazenar/ transmitir uma palavra de 4 bits
    PORT(	
 			Clr, CLK, Enable : IN STD_LOGIC; 
 			Input: IN STD_LOGIC_VECTOR(3 downto 0);
@@ -34,11 +34,21 @@ COMPONENT MUX_8x1
 			);
 END COMPONENT;
 
-signal sFCount : std_logic_vector(2 downto 0); -- saída do Counter3bits
+signal sTCount : std_logic_vector(2 downto 0); -- saída do Counter3bits
 signal sREG : std_logic_vector(3 downto 0);
 signal sMUX : std_logic;
+signal sData_In : std_logic_vector(7 downto 0);
 
 begin
+
+sData_In(0) <= EnTXD,
+sData_In(1) <= '1',
+sData_In(2) <= sREG(0),
+sData_In(3) <= sREG(1),
+sData_In(4) <= sREG(2),
+sData_In(5) <= sREG(3),
+sData_In(6) <= '0',
+sData_In(7) <= '1',
 
 
 REG: REG4bits PORT MAP (
@@ -52,21 +62,13 @@ Cont: Counter3bits PORT MAP (
 	CE => '1', --- verificar como damos CE
 	CLK => TXclk,
 	Clr => Clr,
-	Fcount => sFCount);	
+	Tcount => sTCount);	
 
 MUX: MUX_8x1 PORT MAP ( --- pedir para me explicarem melhor mais tarde (protocolo comunicação)
-	Data_In(0) => '0',
-	Data_In(1) => '1',
-	Data_In(2) => sREG(0),
-	Data_In(3) => sREG(1),
-	Data_In(4) => sREG(2),
-	Data_In(5) => sREG(3),
-	Data_In(6) => '0',
-	Data_In(7) => '1',
-	S => sFCount,
+	Data_In => sData_In,
+	S => sTCount,
    Data_Out => sMUX);		
 	
-TXD <= sMUX OR '0'; --- possivelmente o enable do clock (necessita estar a 1 quando não está a transmitir: protocolo comunicação)
----- criar condição de paragem do contador bloco == 6 ?
+TXD <= sMUX; 
 
 end behavioral;

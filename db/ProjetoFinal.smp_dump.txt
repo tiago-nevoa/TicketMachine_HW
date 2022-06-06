@@ -1,7 +1,0 @@
-
-State Machine - |KeyDecode|KeyControl:kcontrol|CurrentState
-Name CurrentState.STATE_SAVE_CHECKED CurrentState.STATE_SAVED CurrentState.STATE_SAVING CurrentState.STATE_WAIT 
-CurrentState.STATE_WAIT 0 0 0 0 
-CurrentState.STATE_SAVING 0 0 1 1 
-CurrentState.STATE_SAVED 0 1 0 1 
-CurrentState.STATE_SAVE_CHECKED 1 0 0 1 
