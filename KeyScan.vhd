@@ -5,10 +5,9 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity KeyScan is
     Port (  Kscan, Clr, MCLK, Ksave : in  STD_LOGIC;
 				KEYPAD_LIN : in STD_LOGIC_VECTOR (3 downto 0); --- 4 linhas a entrar no PENC
-				KEYPAD_COL : in STD_LOGIC_VECTOR (3 downto 0); --- 4 colunas
+				KEYPAD_COL : out STD_LOGIC_VECTOR (2 downto 0); --- 4 colunas
 				Kpress : out  STD_LOGIC;
 				K : out STD_LOGIC_VECTOR (3 downto 0)); -- código da tecla premida 
-				-- 3 colunas são saídas
 end KeyScan;
 
 architecture behavioral of KeyScan is
@@ -42,7 +41,7 @@ COMPONENT REG2bits
 END COMPONENT;
 
 signal sFCount : std_logic_vector(1 downto 0); -- saída do Counter2bits
-signal sdecoderOut : std_logic_vector(2 downto 0);
+--signal sdecoderOut : std_logic_vector(2 downto 0);
 signal sPENCOut : std_logic_vector(1 downto 0);
 signal sREG : std_logic_vector(1 downto 0);
 
@@ -50,17 +49,18 @@ begin
 
 Cont: Counter2bits PORT MAP (
 	CE => Kscan,
-	CLK => not MCLK, -- falling edge
+	CLK => MCLK, -- falling edge
 	Clr => Clr,
 	Fcount => sFCount);	
 	
 Dec: decoder2x4 PORT MAP (
 	S => sFCount,
-	decoderOut => sdecoderOut);
+	decoderOut => KEYPAD_COL);
 	
 PENC0: PENC PORT MAP (
 	INPUT => KEYPAD_LIN, --- Data keys
-   OUTPUT => sPENCOut);	
+   OUTPUT => sPENCOut,
+	GS => Kpress);	
 
 REG: REG2bits PORT MAP (
 	Clr => Clr,

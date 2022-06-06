@@ -1,5 +1,5 @@
 Flow report for ProjetoFinal
-Mon Jun 06 12:58:57 2022
+Mon Jun 06 16:26:31 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition
 
 
@@ -41,18 +41,18 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------------------------------------+
 ; Flow Summary                                                                                   ;
 +------------------------------------+-----------------------------------------------------------+
-; Flow Status                        ; Successful - Mon Jun 06 12:58:57 2022                     ;
+; Flow Status                        ; Successful - Mon Jun 06 16:26:31 2022                     ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition ;
 ; Revision Name                      ; ProjetoFinal                                              ;
-; Top-level Entity Name              ; KeyControl                                                ;
+; Top-level Entity Name              ; KeyDecode                                                 ;
 ; Family                             ; MAX 10                                                    ;
 ; Device                             ; 10M50DAF484C6GES                                          ;
 ; Timing Models                      ; Preliminary                                               ;
-; Total logic elements               ; 5 / 49,760 ( < 1 % )                                      ;
-;     Total combinational functions  ; 5 / 49,760 ( < 1 % )                                      ;
-;     Dedicated logic registers      ; 4 / 49,760 ( < 1 % )                                      ;
-; Total registers                    ; 4                                                         ;
-; Total pins                         ; 7 / 360 ( 2 % )                                           ;
+; Total logic elements               ; 14 / 49,760 ( < 1 % )                                     ;
+;     Total combinational functions  ; 13 / 49,760 ( < 1 % )                                     ;
+;     Dedicated logic registers      ; 8 / 49,760 ( < 1 % )                                      ;
+; Total registers                    ; 8                                                         ;
+; Total pins                         ; 15 / 360 ( 4 % )                                          ;
 ; Total virtual pins                 ; 0                                                         ;
 ; Total memory bits                  ; 0 / 1,677,312 ( 0 % )                                     ;
 ; Embedded Multiplier 9-bit elements ; 0 / 288 ( 0 % )                                           ;
@@ -67,7 +67,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/06/2022 12:58:14 ;
+; Start date & time ; 06/06/2022 16:26:09 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; ProjetoFinal        ;
 +-------------------+---------------------+
@@ -78,16 +78,16 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 1097160266733.165451669407328          ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 79846616240706.165452916916952         ; --            ; --          ; --         ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                 ; <None>        ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; KeyControl  ; Top        ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; KeyControl  ; Top        ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; KeyControl  ; Top        ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; KeyDecode   ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; KeyDecode   ; Top        ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; KeyDecode   ; Top        ;
 ; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --          ; --         ;
 ; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --         ;
-; TOP_LEVEL_ENTITY                    ; KeyControl                             ; ProjetoFinal  ; --          ; --         ;
+; TOP_LEVEL_ENTITY                    ; KeyDecode                              ; ProjetoFinal  ; --          ; --         ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 
 
@@ -96,12 +96,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:14     ; 1.0                     ; 4855 MB             ; 00:00:37                           ;
-; Fitter               ; 00:00:15     ; 1.0                     ; 6597 MB             ; 00:00:23                           ;
-; Assembler            ; 00:00:05     ; 1.0                     ; 4687 MB             ; 00:00:05                           ;
-; Timing Analyzer      ; 00:00:03     ; 1.1                     ; 4967 MB             ; 00:00:03                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4651 MB             ; 00:00:01                           ;
-; Total                ; 00:00:38     ; --                      ; --                  ; 00:01:09                           ;
+; Analysis & Synthesis ; 00:00:06     ; 1.0                     ; 4857 MB             ; 00:00:16                           ;
+; Fitter               ; 00:00:08     ; 1.0                     ; 6596 MB             ; 00:00:13                           ;
+; Assembler            ; 00:00:03     ; 1.0                     ; 4690 MB             ; 00:00:02                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.1                     ; 4917 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4650 MB             ; 00:00:00                           ;
+; Total                ; 00:00:19     ; --                      ; --                  ; 00:00:32                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

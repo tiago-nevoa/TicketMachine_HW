@@ -6,7 +6,7 @@ entity PENC is --- priority encoder
 --- se houverem duas saídas ativas, dá prioridade ao bit mais alto
     Port ( INPUT : in STD_LOGIC_VECTOR (3 downto 0);
            OUTPUT : out STD_LOGIC_VECTOR (1 downto 0);
-			  GS : out STD_LOGIC); -- confirmar (k press)
+			  GS : out STD_LOGIC); -- Kpress
 end PENC;
 
 architecture Behavioral of PENC is

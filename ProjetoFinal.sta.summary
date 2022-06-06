@@ -2,40 +2,52 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1200mV 85C Model Setup 'CLK'
-Slack : 0.215
-TNS   : 0.000
+Type  : Slow 1200mV 85C Model Setup 'MCLK'
+Slack : -1.518
+TNS   : -1.767
 
-Type  : Slow 1200mV 85C Model Hold 'CLK'
+Type  : Slow 1200mV 85C Model Hold 'MCLK'
 Slack : 0.331
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLK'
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'MCLK'
 Slack : -3.000
-TNS   : -7.888
+TNS   : -10.332
 
-Type  : Slow 1200mV 0C Model Setup 'CLK'
-Slack : 0.281
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'KeyControl:kcontrol|CurrentState.STATE_SAVING'
+Slack : -1.222
+TNS   : -2.444
+
+Type  : Slow 1200mV 0C Model Setup 'MCLK'
+Slack : -1.238
+TNS   : -1.419
+
+Type  : Slow 1200mV 0C Model Hold 'MCLK'
+Slack : 0.299
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'CLK'
-Slack : 0.300
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLK'
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'MCLK'
 Slack : -3.000
-TNS   : -7.888
+TNS   : -10.332
 
-Type  : Fast 1200mV 0C Model Setup 'CLK'
-Slack : 0.630
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'KeyControl:kcontrol|CurrentState.STATE_SAVING'
+Slack : -1.222
+TNS   : -2.444
+
+Type  : Fast 1200mV 0C Model Setup 'MCLK'
+Slack : -0.553
+TNS   : -0.553
+
+Type  : Fast 1200mV 0C Model Hold 'MCLK'
+Slack : 0.151
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'CLK'
-Slack : 0.152
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLK'
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'MCLK'
 Slack : -3.000
-TNS   : -7.108
+TNS   : -9.250
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'KeyControl:kcontrol|CurrentState.STATE_SAVING'
+Slack : -1.000
+TNS   : -2.000
 
 ------------------------------------------------------------
