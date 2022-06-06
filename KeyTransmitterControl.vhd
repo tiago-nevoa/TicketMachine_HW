@@ -3,7 +3,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity KeyTransmitterControl is
 	port(
-		DAV, TCount, MCLK : in STD_LOGIC;
+		DAV, TCount, CLK, Reset : in STD_LOGIC;
 		DAC, EnTXD, EnReg, EnCounter, RstCounter : out STD_LOGIC
 	);
 end KeyTransmitterControl;
@@ -38,12 +38,11 @@ architecture behaviour of KeyTransmitterControl is
 														NextState <= STATE_TRANSMIT_DATA;
 													end if;
 					when STATE_RESET_COUNTER =>  NextState <= STATE_WAIT_DATA;
-													end if;
 
 				end case;				
 		end process;
 				
-	EnTXD <= '1' when (CurrentState = STATE_WAIT_DATA or CurrentState = STATE_RESET_COUNTER) else '0';
+	EnTXD <= '1' when (CurrentState = STATE_WAIT_DATA or CurrentState = STATE_DATA_ACCEPTED or CurrentState = STATE_RESET_COUNTER) else '0';
 	EnReg <= '1' when CurrentState = STATE_DATA_ACCEPTED else '0';
 	DAC <= '1' when CurrentState = STATE_DATA_ACCEPTED else '0';
 	EnCounter <= '1' when CurrentState = STATE_TRANSMIT_DATA else '0';
