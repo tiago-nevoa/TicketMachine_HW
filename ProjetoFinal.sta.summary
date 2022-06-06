@@ -2,40 +2,88 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1200mV 85C Model Setup 'CLK'
-Slack : 0.203
-TNS   : 0.000
+Type  : Slow 1200mV 85C Model Setup 'MCLK'
+Slack : -1.176
+TNS   : -3.494
 
-Type  : Slow 1200mV 85C Model Hold 'CLK'
+Type  : Slow 1200mV 85C Model Setup 'RXclk'
+Slack : -0.046
+TNS   : -0.046
+
+Type  : Slow 1200mV 85C Model Hold 'RXclk'
 Slack : 0.324
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLK'
-Slack : -3.000
-TNS   : -7.888
-
-Type  : Slow 1200mV 0C Model Setup 'CLK'
-Slack : 0.268
+Type  : Slow 1200mV 85C Model Hold 'MCLK'
+Slack : 0.325
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'CLK'
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'MCLK'
+Slack : -3.000
+TNS   : -13.998
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'RXclk'
+Slack : -3.000
+TNS   : -6.666
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'KeyDecode:kdecode|KeyControl:kcontrol|CurrentState.STATE_SAVING'
+Slack : -1.222
+TNS   : -2.444
+
+Type  : Slow 1200mV 0C Model Setup 'MCLK'
+Slack : -0.937
+TNS   : -2.599
+
+Type  : Slow 1200mV 0C Model Setup 'RXclk'
+Slack : 0.046
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'MCLK'
+Slack : 0.293
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'RXclk'
 Slack : 0.294
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLK'
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'MCLK'
 Slack : -3.000
-TNS   : -7.888
+TNS   : -13.998
 
-Type  : Fast 1200mV 0C Model Setup 'CLK'
-Slack : 0.622
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'RXclk'
+Slack : -3.000
+TNS   : -6.666
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'KeyDecode:kdecode|KeyControl:kcontrol|CurrentState.STATE_SAVING'
+Slack : -1.222
+TNS   : -2.444
+
+Type  : Fast 1200mV 0C Model Setup 'MCLK'
+Slack : -0.468
+TNS   : -0.802
+
+Type  : Fast 1200mV 0C Model Setup 'RXclk'
+Slack : 0.499
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'CLK'
+Type  : Fast 1200mV 0C Model Hold 'MCLK'
+Slack : 0.146
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'RXclk'
 Slack : 0.148
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLK'
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'MCLK'
 Slack : -3.000
-TNS   : -7.116
+TNS   : -12.405
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'RXclk'
+Slack : -3.000
+TNS   : -6.108
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'KeyDecode:kdecode|KeyControl:kcontrol|CurrentState.STATE_SAVING'
+Slack : -1.000
+TNS   : -2.000
 
 ------------------------------------------------------------

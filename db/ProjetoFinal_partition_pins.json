@@ -4,39 +4,47 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "DAC",
+					"name" : "KEYPAD_COL[0]",
 					"strict" : false
 				},
 				{
-					"name" : "EnTXD",
+					"name" : "KEYPAD_COL[1]",
 					"strict" : false
 				},
 				{
-					"name" : "EnReg",
+					"name" : "KEYPAD_COL[2]",
 					"strict" : false
 				},
 				{
-					"name" : "EnCounter",
+					"name" : "TXD",
 					"strict" : false
 				},
 				{
-					"name" : "RstCounter",
+					"name" : "MCLK",
 					"strict" : false
 				},
 				{
-					"name" : "DAV",
+					"name" : "Clr",
 					"strict" : false
 				},
 				{
-					"name" : "CLK",
+					"name" : "RXclk",
 					"strict" : false
 				},
 				{
-					"name" : "Reset",
+					"name" : "KEYPAD_LIN[2]",
 					"strict" : false
 				},
 				{
-					"name" : "TCount",
+					"name" : "KEYPAD_LIN[3]",
+					"strict" : false
+				},
+				{
+					"name" : "KEYPAD_LIN[0]",
+					"strict" : false
+				},
+				{
+					"name" : "KEYPAD_LIN[1]",
 					"strict" : false
 				}
 			]

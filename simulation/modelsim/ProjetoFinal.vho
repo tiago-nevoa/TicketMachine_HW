@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
 
--- DATE "06/06/2022 22:00:40"
+-- DATE "06/06/2022 22:45:22"
 
 -- 
 -- Device: Altera 10M50DAF484C6GES Package FBGA484
@@ -88,33 +88,32 @@ USE ALTERA.ALTERA_PRIMITIVES_COMPONENTS.ALL;
 USE FIFTYFIVENM.FIFTYFIVENM_COMPONENTS.ALL;
 USE IEEE.STD_LOGIC_1164.ALL;
 
-ENTITY 	KeyTransmitterControl IS
+ENTITY 	KeyboardReader IS
     PORT (
-	DAV : IN std_logic;
-	TCount : IN std_logic;
-	CLK : IN std_logic;
-	Reset : IN std_logic;
-	DAC : OUT std_logic;
-	EnTXD : OUT std_logic;
-	EnReg : OUT std_logic;
-	EnCounter : OUT std_logic;
-	RstCounter : OUT std_logic
+	RXclk : IN std_logic;
+	MCLK : IN std_logic;
+	Clr : IN std_logic;
+	KEYPAD_LIN : IN std_logic_vector(3 DOWNTO 0);
+	KEYPAD_COL : OUT std_logic_vector(2 DOWNTO 0);
+	TXD : OUT std_logic
 	);
-END KeyTransmitterControl;
+END KeyboardReader;
 
 -- Design Ports Information
--- DAC	=>  Location: PIN_Y13,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- EnTXD	=>  Location: PIN_AB14,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- EnReg	=>  Location: PIN_AB15,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- EnCounter	=>  Location: PIN_V13,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- RstCounter	=>  Location: PIN_R13,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- DAV	=>  Location: PIN_W14,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- CLK	=>  Location: PIN_M8,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- Reset	=>  Location: PIN_A7,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- TCount	=>  Location: PIN_AA13,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- KEYPAD_COL[0]	=>  Location: PIN_L19,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- KEYPAD_COL[1]	=>  Location: PIN_L15,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- KEYPAD_COL[2]	=>  Location: PIN_L18,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- TXD	=>  Location: PIN_D21,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- MCLK	=>  Location: PIN_P11,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- Clr	=>  Location: PIN_V10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- RXclk	=>  Location: PIN_R11,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- KEYPAD_LIN[2]	=>  Location: PIN_C21,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- KEYPAD_LIN[3]	=>  Location: PIN_L14,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- KEYPAD_LIN[0]	=>  Location: PIN_M18,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- KEYPAD_LIN[1]	=>  Location: PIN_L20,	 I/O Standard: 2.5 V,	 Current Strength: Default
 
 
-ARCHITECTURE structure OF KeyTransmitterControl IS
+ARCHITECTURE structure OF KeyboardReader IS
 SIGNAL gnd : std_logic := '0';
 SIGNAL vcc : std_logic := '1';
 SIGNAL unknown : std_logic := 'X';
@@ -124,42 +123,72 @@ SIGNAL devpor : std_logic := '1';
 SIGNAL ww_devoe : std_logic;
 SIGNAL ww_devclrn : std_logic;
 SIGNAL ww_devpor : std_logic;
-SIGNAL ww_DAV : std_logic;
-SIGNAL ww_TCount : std_logic;
-SIGNAL ww_CLK : std_logic;
-SIGNAL ww_Reset : std_logic;
-SIGNAL ww_DAC : std_logic;
-SIGNAL ww_EnTXD : std_logic;
-SIGNAL ww_EnReg : std_logic;
-SIGNAL ww_EnCounter : std_logic;
-SIGNAL ww_RstCounter : std_logic;
+SIGNAL ww_RXclk : std_logic;
+SIGNAL ww_MCLK : std_logic;
+SIGNAL ww_Clr : std_logic;
+SIGNAL ww_KEYPAD_LIN : std_logic_vector(3 DOWNTO 0);
+SIGNAL ww_KEYPAD_COL : std_logic_vector(2 DOWNTO 0);
+SIGNAL ww_TXD : std_logic;
 SIGNAL \~QUARTUS_CREATED_ADC1~_CHSEL_bus\ : std_logic_vector(4 DOWNTO 0);
 SIGNAL \~QUARTUS_CREATED_ADC2~_CHSEL_bus\ : std_logic_vector(4 DOWNTO 0);
-SIGNAL \CLK~inputclkctrl_INCLK_bus\ : std_logic_vector(3 DOWNTO 0);
+SIGNAL \kdecode|kcontrol|CurrentState.STATE_SAVING~clkctrl_INCLK_bus\ : std_logic_vector(3 DOWNTO 0);
+SIGNAL \RXclk~inputclkctrl_INCLK_bus\ : std_logic_vector(3 DOWNTO 0);
+SIGNAL \MCLK~inputclkctrl_INCLK_bus\ : std_logic_vector(3 DOWNTO 0);
+SIGNAL \Clr~inputclkctrl_INCLK_bus\ : std_logic_vector(3 DOWNTO 0);
 SIGNAL \~QUARTUS_CREATED_GND~I_combout\ : std_logic;
 SIGNAL \~QUARTUS_CREATED_UNVM~~busy\ : std_logic;
 SIGNAL \~QUARTUS_CREATED_ADC1~~eoc\ : std_logic;
 SIGNAL \~QUARTUS_CREATED_ADC2~~eoc\ : std_logic;
-SIGNAL \DAC~output_o\ : std_logic;
-SIGNAL \EnTXD~output_o\ : std_logic;
-SIGNAL \EnReg~output_o\ : std_logic;
-SIGNAL \EnCounter~output_o\ : std_logic;
-SIGNAL \RstCounter~output_o\ : std_logic;
-SIGNAL \CLK~input_o\ : std_logic;
-SIGNAL \CLK~inputclkctrl_outclk\ : std_logic;
-SIGNAL \DAV~input_o\ : std_logic;
-SIGNAL \TCount~input_o\ : std_logic;
-SIGNAL \Selector1~0_combout\ : std_logic;
-SIGNAL \Reset~input_o\ : std_logic;
-SIGNAL \CurrentState.STATE_TRANSMIT_DATA~q\ : std_logic;
-SIGNAL \NextState.STATE_RESET_COUNTER~0_combout\ : std_logic;
-SIGNAL \CurrentState.STATE_RESET_COUNTER~q\ : std_logic;
-SIGNAL \Selector0~0_combout\ : std_logic;
-SIGNAL \CurrentState.STATE_WAIT_DATA~q\ : std_logic;
-SIGNAL \NextState.STATE_DATA_ACCEPTED~0_combout\ : std_logic;
-SIGNAL \CurrentState.STATE_DATA_ACCEPTED~q\ : std_logic;
-SIGNAL \EnTXD~0_combout\ : std_logic;
-SIGNAL \ALT_INV_Reset~input_o\ : std_logic;
+SIGNAL \KEYPAD_COL[0]~output_o\ : std_logic;
+SIGNAL \KEYPAD_COL[1]~output_o\ : std_logic;
+SIGNAL \KEYPAD_COL[2]~output_o\ : std_logic;
+SIGNAL \TXD~output_o\ : std_logic;
+SIGNAL \MCLK~input_o\ : std_logic;
+SIGNAL \MCLK~inputclkctrl_outclk\ : std_logic;
+SIGNAL \KEYPAD_LIN[3]~input_o\ : std_logic;
+SIGNAL \KEYPAD_LIN[2]~input_o\ : std_logic;
+SIGNAL \kdecode|kscan|PENC0|OUTPUT[1]~0_combout\ : std_logic;
+SIGNAL \KEYPAD_LIN[1]~input_o\ : std_logic;
+SIGNAL \KEYPAD_LIN[0]~input_o\ : std_logic;
+SIGNAL \kdecode|kcontrol|CurrentState.STATE_WAIT~0_combout\ : std_logic;
+SIGNAL \Clr~input_o\ : std_logic;
+SIGNAL \Clr~inputclkctrl_outclk\ : std_logic;
+SIGNAL \kdecode|kcontrol|CurrentState.STATE_WAIT~q\ : std_logic;
+SIGNAL \kdecode|kscan|Cont|UFFD0|Q~0_combout\ : std_logic;
+SIGNAL \kdecode|kscan|Cont|UFFD0|Q~q\ : std_logic;
+SIGNAL \kdecode|kscan|Cont|UFFD1|Q~0_combout\ : std_logic;
+SIGNAL \kdecode|kscan|Cont|UFFD1|Q~q\ : std_logic;
+SIGNAL \kdecode|kscan|Dec|Mux2~0_combout\ : std_logic;
+SIGNAL \kdecode|kscan|Dec|Mux1~0_combout\ : std_logic;
+SIGNAL \kdecode|kscan|Dec|Mux0~0_combout\ : std_logic;
+SIGNAL \RXclk~input_o\ : std_logic;
+SIGNAL \RXclk~inputclkctrl_outclk\ : std_logic;
+SIGNAL \ktransmitter|Cont|UFFD0|Q~0_combout\ : std_logic;
+SIGNAL \ktransmitter|Cont|UFFD0|Q~q\ : std_logic;
+SIGNAL \ktransmitter|Cont|UFFD1|Q~0_combout\ : std_logic;
+SIGNAL \ktransmitter|Cont|UFFD1|Q~q\ : std_logic;
+SIGNAL \kdecode|kcontrol|NextState.STATE_SAVING~0_combout\ : std_logic;
+SIGNAL \kdecode|kcontrol|CurrentState.STATE_SAVING~q\ : std_logic;
+SIGNAL \kdecode|kcontrol|CurrentState.STATE_SAVING~clkctrl_outclk\ : std_logic;
+SIGNAL \kdecode|kscan|REG|UFFD1|Q~feeder_combout\ : std_logic;
+SIGNAL \kdecode|kscan|REG|UFFD1|Q~q\ : std_logic;
+SIGNAL \ktransmitter|REG|UFFD3|Q~feeder_combout\ : std_logic;
+SIGNAL \kdecode|kcontrol|CurrentState.STATE_SAVED~feeder_combout\ : std_logic;
+SIGNAL \kdecode|kcontrol|CurrentState.STATE_SAVED~q\ : std_logic;
+SIGNAL \ktransmitter|REG|UFFD3|Q~q\ : std_logic;
+SIGNAL \kdecode|kscan|PENC0|OUTPUT[0]~1_combout\ : std_logic;
+SIGNAL \kdecode|kscan|REG|UFFD0|Q~q\ : std_logic;
+SIGNAL \ktransmitter|REG|UFFD2|Q~q\ : std_logic;
+SIGNAL \ktransmitter|REG|UFFD1|Q~feeder_combout\ : std_logic;
+SIGNAL \ktransmitter|REG|UFFD1|Q~q\ : std_logic;
+SIGNAL \ktransmitter|REG|UFFD0|Q~q\ : std_logic;
+SIGNAL \ktransmitter|Cont|UFFD2|Q~0_combout\ : std_logic;
+SIGNAL \ktransmitter|Cont|UFFD2|Q~q\ : std_logic;
+SIGNAL \ktransmitter|MUX|Mux0~0_combout\ : std_logic;
+SIGNAL \ktransmitter|MUX|Mux0~1_combout\ : std_logic;
+SIGNAL \ktransmitter|MUX|Mux0~2_combout\ : std_logic;
+SIGNAL \ALT_INV_Clr~inputclkctrl_outclk\ : std_logic;
+SIGNAL \ALT_INV_MCLK~inputclkctrl_outclk\ : std_logic;
 
 COMPONENT hard_block
     PORT (
@@ -170,15 +199,12 @@ END COMPONENT;
 
 BEGIN
 
-ww_DAV <= DAV;
-ww_TCount <= TCount;
-ww_CLK <= CLK;
-ww_Reset <= Reset;
-DAC <= ww_DAC;
-EnTXD <= ww_EnTXD;
-EnReg <= ww_EnReg;
-EnCounter <= ww_EnCounter;
-RstCounter <= ww_RstCounter;
+ww_RXclk <= RXclk;
+ww_MCLK <= MCLK;
+ww_Clr <= Clr;
+ww_KEYPAD_LIN <= KEYPAD_LIN;
+KEYPAD_COL <= ww_KEYPAD_COL;
+TXD <= ww_TXD;
 ww_devoe <= devoe;
 ww_devclrn <= devclrn;
 ww_devpor <= devpor;
@@ -187,15 +213,22 @@ ww_devpor <= devpor;
 
 \~QUARTUS_CREATED_ADC2~_CHSEL_bus\ <= (\~QUARTUS_CREATED_GND~I_combout\ & \~QUARTUS_CREATED_GND~I_combout\ & \~QUARTUS_CREATED_GND~I_combout\ & \~QUARTUS_CREATED_GND~I_combout\ & \~QUARTUS_CREATED_GND~I_combout\);
 
-\CLK~inputclkctrl_INCLK_bus\ <= (vcc & vcc & vcc & \CLK~input_o\);
-\ALT_INV_Reset~input_o\ <= NOT \Reset~input_o\;
+\kdecode|kcontrol|CurrentState.STATE_SAVING~clkctrl_INCLK_bus\ <= (vcc & vcc & vcc & \kdecode|kcontrol|CurrentState.STATE_SAVING~q\);
+
+\RXclk~inputclkctrl_INCLK_bus\ <= (vcc & vcc & vcc & \RXclk~input_o\);
+
+\MCLK~inputclkctrl_INCLK_bus\ <= (vcc & vcc & vcc & \MCLK~input_o\);
+
+\Clr~inputclkctrl_INCLK_bus\ <= (vcc & vcc & vcc & \Clr~input_o\);
+\ALT_INV_Clr~inputclkctrl_outclk\ <= NOT \Clr~inputclkctrl_outclk\;
+\ALT_INV_MCLK~inputclkctrl_outclk\ <= NOT \MCLK~inputclkctrl_outclk\;
 auto_generated_inst : hard_block
 PORT MAP (
 	devoe => ww_devoe,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor);
 
--- Location: LCCOMB_X44_Y41_N16
+-- Location: LCCOMB_X44_Y52_N4
 \~QUARTUS_CREATED_GND~I\ : fiftyfivenm_lcell_comb
 -- Equation(s):
 -- \~QUARTUS_CREATED_GND~I_combout\ = GND
@@ -208,68 +241,56 @@ GENERIC MAP (
 PORT MAP (
 	combout => \~QUARTUS_CREATED_GND~I_combout\);
 
--- Location: IOOBUF_X51_Y0_N9
-\DAC~output\ : fiftyfivenm_io_obuf
+-- Location: IOOBUF_X78_Y37_N9
+\KEYPAD_COL[0]~output\ : fiftyfivenm_io_obuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
 	open_drain_output => "false")
 -- pragma translate_on
 PORT MAP (
-	i => \CurrentState.STATE_DATA_ACCEPTED~q\,
+	i => \kdecode|kscan|Dec|Mux2~0_combout\,
 	devoe => ww_devoe,
-	o => \DAC~output_o\);
+	o => \KEYPAD_COL[0]~output_o\);
 
--- Location: IOOBUF_X49_Y0_N9
-\EnTXD~output\ : fiftyfivenm_io_obuf
+-- Location: IOOBUF_X78_Y36_N16
+\KEYPAD_COL[1]~output\ : fiftyfivenm_io_obuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
 	open_drain_output => "false")
 -- pragma translate_on
 PORT MAP (
-	i => \EnTXD~0_combout\,
+	i => \kdecode|kscan|Dec|Mux1~0_combout\,
 	devoe => ww_devoe,
-	o => \EnTXD~output_o\);
+	o => \KEYPAD_COL[1]~output_o\);
 
--- Location: IOOBUF_X51_Y0_N16
-\EnReg~output\ : fiftyfivenm_io_obuf
+-- Location: IOOBUF_X78_Y37_N16
+\KEYPAD_COL[2]~output\ : fiftyfivenm_io_obuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
 	open_drain_output => "false")
 -- pragma translate_on
 PORT MAP (
-	i => \CurrentState.STATE_DATA_ACCEPTED~q\,
+	i => \kdecode|kscan|Dec|Mux0~0_combout\,
 	devoe => ww_devoe,
-	o => \EnReg~output_o\);
+	o => \KEYPAD_COL[2]~output_o\);
 
--- Location: IOOBUF_X49_Y0_N30
-\EnCounter~output\ : fiftyfivenm_io_obuf
+-- Location: IOOBUF_X78_Y36_N9
+\TXD~output\ : fiftyfivenm_io_obuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
 	open_drain_output => "false")
 -- pragma translate_on
 PORT MAP (
-	i => \CurrentState.STATE_TRANSMIT_DATA~q\,
+	i => \ktransmitter|MUX|Mux0~2_combout\,
 	devoe => ww_devoe,
-	o => \EnCounter~output_o\);
+	o => \TXD~output_o\);
 
--- Location: IOOBUF_X49_Y0_N2
-\RstCounter~output\ : fiftyfivenm_io_obuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	open_drain_output => "false")
--- pragma translate_on
-PORT MAP (
-	i => \CurrentState.STATE_RESET_COUNTER~q\,
-	devoe => ww_devoe,
-	o => \RstCounter~output_o\);
-
--- Location: IOIBUF_X0_Y18_N15
-\CLK~input\ : fiftyfivenm_io_ibuf
+-- Location: IOIBUF_X34_Y0_N29
+\MCLK~input\ : fiftyfivenm_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
@@ -277,24 +298,24 @@ GENERIC MAP (
 	simulate_z_as => "z")
 -- pragma translate_on
 PORT MAP (
-	i => ww_CLK,
-	o => \CLK~input_o\);
+	i => ww_MCLK,
+	o => \MCLK~input_o\);
 
--- Location: CLKCTRL_G3
-\CLK~inputclkctrl\ : fiftyfivenm_clkctrl
+-- Location: CLKCTRL_G19
+\MCLK~inputclkctrl\ : fiftyfivenm_clkctrl
 -- pragma translate_off
 GENERIC MAP (
 	clock_type => "global clock",
 	ena_register_mode => "none")
 -- pragma translate_on
 PORT MAP (
-	inclk => \CLK~inputclkctrl_INCLK_bus\,
+	inclk => \MCLK~inputclkctrl_INCLK_bus\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	outclk => \CLK~inputclkctrl_outclk\);
+	outclk => \MCLK~inputclkctrl_outclk\);
 
--- Location: IOIBUF_X49_Y0_N22
-\DAV~input\ : fiftyfivenm_io_ibuf
+-- Location: IOIBUF_X78_Y36_N23
+\KEYPAD_LIN[3]~input\ : fiftyfivenm_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
@@ -302,11 +323,11 @@ GENERIC MAP (
 	simulate_z_as => "z")
 -- pragma translate_on
 PORT MAP (
-	i => ww_DAV,
-	o => \DAV~input_o\);
+	i => ww_KEYPAD_LIN(3),
+	o => \KEYPAD_LIN[3]~input_o\);
 
--- Location: IOIBUF_X49_Y0_N15
-\TCount~input\ : fiftyfivenm_io_ibuf
+-- Location: IOIBUF_X78_Y36_N1
+\KEYPAD_LIN[2]~input\ : fiftyfivenm_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
@@ -314,28 +335,26 @@ GENERIC MAP (
 	simulate_z_as => "z")
 -- pragma translate_on
 PORT MAP (
-	i => ww_TCount,
-	o => \TCount~input_o\);
+	i => ww_KEYPAD_LIN(2),
+	o => \KEYPAD_LIN[2]~input_o\);
 
--- Location: LCCOMB_X49_Y1_N12
-\Selector1~0\ : fiftyfivenm_lcell_comb
+-- Location: LCCOMB_X75_Y37_N16
+\kdecode|kscan|PENC0|OUTPUT[1]~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Selector1~0_combout\ = (\DAV~input_o\ & (!\TCount~input_o\ & (\CurrentState.STATE_TRANSMIT_DATA~q\))) # (!\DAV~input_o\ & ((\CurrentState.STATE_DATA_ACCEPTED~q\) # ((!\TCount~input_o\ & \CurrentState.STATE_TRANSMIT_DATA~q\))))
+-- \kdecode|kscan|PENC0|OUTPUT[1]~0_combout\ = (!\KEYPAD_LIN[2]~input_o\) # (!\KEYPAD_LIN[3]~input_o\)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0111010100110000",
+	lut_mask => "0011111100111111",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \DAV~input_o\,
-	datab => \TCount~input_o\,
-	datac => \CurrentState.STATE_TRANSMIT_DATA~q\,
-	datad => \CurrentState.STATE_DATA_ACCEPTED~q\,
-	combout => \Selector1~0_combout\);
+	datab => \KEYPAD_LIN[3]~input_o\,
+	datac => \KEYPAD_LIN[2]~input_o\,
+	combout => \kdecode|kscan|PENC0|OUTPUT[1]~0_combout\);
 
--- Location: IOIBUF_X49_Y54_N29
-\Reset~input\ : fiftyfivenm_io_ibuf
+-- Location: IOIBUF_X78_Y37_N1
+\KEYPAD_LIN[1]~input\ : fiftyfivenm_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
@@ -343,131 +362,576 @@ GENERIC MAP (
 	simulate_z_as => "z")
 -- pragma translate_on
 PORT MAP (
-	i => ww_Reset,
-	o => \Reset~input_o\);
+	i => ww_KEYPAD_LIN(1),
+	o => \KEYPAD_LIN[1]~input_o\);
 
--- Location: FF_X49_Y1_N13
-\CurrentState.STATE_TRANSMIT_DATA\ : dffeas
+-- Location: IOIBUF_X78_Y37_N22
+\KEYPAD_LIN[0]~input\ : fiftyfivenm_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	listen_to_nsleep_signal => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_KEYPAD_LIN(0),
+	o => \KEYPAD_LIN[0]~input_o\);
+
+-- Location: LCCOMB_X77_Y37_N24
+\kdecode|kcontrol|CurrentState.STATE_WAIT~0\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \kdecode|kcontrol|CurrentState.STATE_WAIT~0_combout\ = (\kdecode|kscan|PENC0|OUTPUT[1]~0_combout\) # (((\kdecode|kcontrol|CurrentState.STATE_WAIT~q\) # (!\KEYPAD_LIN[0]~input_o\)) # (!\KEYPAD_LIN[1]~input_o\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111101111111111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \kdecode|kscan|PENC0|OUTPUT[1]~0_combout\,
+	datab => \KEYPAD_LIN[1]~input_o\,
+	datac => \kdecode|kcontrol|CurrentState.STATE_WAIT~q\,
+	datad => \KEYPAD_LIN[0]~input_o\,
+	combout => \kdecode|kcontrol|CurrentState.STATE_WAIT~0_combout\);
+
+-- Location: IOIBUF_X31_Y0_N22
+\Clr~input\ : fiftyfivenm_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	listen_to_nsleep_signal => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_Clr,
+	o => \Clr~input_o\);
+
+-- Location: CLKCTRL_G17
+\Clr~inputclkctrl\ : fiftyfivenm_clkctrl
+-- pragma translate_off
+GENERIC MAP (
+	clock_type => "global clock",
+	ena_register_mode => "none")
+-- pragma translate_on
+PORT MAP (
+	inclk => \Clr~inputclkctrl_INCLK_bus\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	outclk => \Clr~inputclkctrl_outclk\);
+
+-- Location: FF_X77_Y37_N25
+\kdecode|kcontrol|CurrentState.STATE_WAIT\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
 	power_up => "low")
 -- pragma translate_on
 PORT MAP (
-	clk => \CLK~inputclkctrl_outclk\,
-	d => \Selector1~0_combout\,
-	clrn => \ALT_INV_Reset~input_o\,
+	clk => \MCLK~inputclkctrl_outclk\,
+	d => \kdecode|kcontrol|CurrentState.STATE_WAIT~0_combout\,
+	clrn => \ALT_INV_Clr~inputclkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \CurrentState.STATE_TRANSMIT_DATA~q\);
+	q => \kdecode|kcontrol|CurrentState.STATE_WAIT~q\);
 
--- Location: LCCOMB_X49_Y1_N18
-\NextState.STATE_RESET_COUNTER~0\ : fiftyfivenm_lcell_comb
+-- Location: LCCOMB_X77_Y37_N12
+\kdecode|kscan|Cont|UFFD0|Q~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \NextState.STATE_RESET_COUNTER~0_combout\ = (\TCount~input_o\ & \CurrentState.STATE_TRANSMIT_DATA~q\)
+-- \kdecode|kscan|Cont|UFFD0|Q~0_combout\ = \kdecode|kscan|Cont|UFFD0|Q~q\ $ (!\kdecode|kcontrol|CurrentState.STATE_WAIT~q\)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1010101000000000",
+	lut_mask => "1111000000001111",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \TCount~input_o\,
-	datad => \CurrentState.STATE_TRANSMIT_DATA~q\,
-	combout => \NextState.STATE_RESET_COUNTER~0_combout\);
+	datac => \kdecode|kscan|Cont|UFFD0|Q~q\,
+	datad => \kdecode|kcontrol|CurrentState.STATE_WAIT~q\,
+	combout => \kdecode|kscan|Cont|UFFD0|Q~0_combout\);
 
--- Location: FF_X49_Y1_N19
-\CurrentState.STATE_RESET_COUNTER\ : dffeas
+-- Location: FF_X77_Y37_N13
+\kdecode|kscan|Cont|UFFD0|Q\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
 	power_up => "low")
 -- pragma translate_on
 PORT MAP (
-	clk => \CLK~inputclkctrl_outclk\,
-	d => \NextState.STATE_RESET_COUNTER~0_combout\,
-	clrn => \ALT_INV_Reset~input_o\,
+	clk => \ALT_INV_MCLK~inputclkctrl_outclk\,
+	d => \kdecode|kscan|Cont|UFFD0|Q~0_combout\,
+	clrn => \ALT_INV_Clr~inputclkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \CurrentState.STATE_RESET_COUNTER~q\);
+	q => \kdecode|kscan|Cont|UFFD0|Q~q\);
 
--- Location: LCCOMB_X49_Y1_N28
-\Selector0~0\ : fiftyfivenm_lcell_comb
+-- Location: LCCOMB_X77_Y37_N28
+\kdecode|kscan|Cont|UFFD1|Q~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \Selector0~0_combout\ = (!\CurrentState.STATE_RESET_COUNTER~q\ & ((\DAV~input_o\) # (\CurrentState.STATE_WAIT_DATA~q\)))
+-- \kdecode|kscan|Cont|UFFD1|Q~0_combout\ = \kdecode|kscan|Cont|UFFD1|Q~q\ $ (((!\kdecode|kcontrol|CurrentState.STATE_WAIT~q\ & \kdecode|kscan|Cont|UFFD0|Q~q\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000000011111010",
+	lut_mask => "1100001111110000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \DAV~input_o\,
-	datac => \CurrentState.STATE_WAIT_DATA~q\,
-	datad => \CurrentState.STATE_RESET_COUNTER~q\,
-	combout => \Selector0~0_combout\);
+	datab => \kdecode|kcontrol|CurrentState.STATE_WAIT~q\,
+	datac => \kdecode|kscan|Cont|UFFD1|Q~q\,
+	datad => \kdecode|kscan|Cont|UFFD0|Q~q\,
+	combout => \kdecode|kscan|Cont|UFFD1|Q~0_combout\);
 
--- Location: FF_X49_Y1_N29
-\CurrentState.STATE_WAIT_DATA\ : dffeas
+-- Location: FF_X77_Y37_N29
+\kdecode|kscan|Cont|UFFD1|Q\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
 	power_up => "low")
 -- pragma translate_on
 PORT MAP (
-	clk => \CLK~inputclkctrl_outclk\,
-	d => \Selector0~0_combout\,
-	clrn => \ALT_INV_Reset~input_o\,
+	clk => \ALT_INV_MCLK~inputclkctrl_outclk\,
+	d => \kdecode|kscan|Cont|UFFD1|Q~0_combout\,
+	clrn => \ALT_INV_Clr~inputclkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \CurrentState.STATE_WAIT_DATA~q\);
+	q => \kdecode|kscan|Cont|UFFD1|Q~q\);
 
--- Location: LCCOMB_X49_Y1_N0
-\NextState.STATE_DATA_ACCEPTED~0\ : fiftyfivenm_lcell_comb
+-- Location: LCCOMB_X77_Y37_N14
+\kdecode|kscan|Dec|Mux2~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \NextState.STATE_DATA_ACCEPTED~0_combout\ = (\DAV~input_o\ & ((\CurrentState.STATE_DATA_ACCEPTED~q\) # (!\CurrentState.STATE_WAIT_DATA~q\)))
+-- \kdecode|kscan|Dec|Mux2~0_combout\ = (\kdecode|kscan|Cont|UFFD0|Q~q\) # (\kdecode|kscan|Cont|UFFD1|Q~q\)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1010000010101010",
+	lut_mask => "1111111110101010",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \DAV~input_o\,
-	datac => \CurrentState.STATE_DATA_ACCEPTED~q\,
-	datad => \CurrentState.STATE_WAIT_DATA~q\,
-	combout => \NextState.STATE_DATA_ACCEPTED~0_combout\);
+	dataa => \kdecode|kscan|Cont|UFFD0|Q~q\,
+	datad => \kdecode|kscan|Cont|UFFD1|Q~q\,
+	combout => \kdecode|kscan|Dec|Mux2~0_combout\);
 
--- Location: FF_X49_Y1_N1
-\CurrentState.STATE_DATA_ACCEPTED\ : dffeas
+-- Location: LCCOMB_X77_Y37_N30
+\kdecode|kscan|Dec|Mux1~0\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \kdecode|kscan|Dec|Mux1~0_combout\ = (\kdecode|kscan|Cont|UFFD1|Q~q\) # (!\kdecode|kscan|Cont|UFFD0|Q~q\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111111101010101",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \kdecode|kscan|Cont|UFFD0|Q~q\,
+	datad => \kdecode|kscan|Cont|UFFD1|Q~q\,
+	combout => \kdecode|kscan|Dec|Mux1~0_combout\);
+
+-- Location: LCCOMB_X77_Y37_N18
+\kdecode|kscan|Dec|Mux0~0\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \kdecode|kscan|Dec|Mux0~0_combout\ = (\kdecode|kscan|Cont|UFFD0|Q~q\) # (!\kdecode|kscan|Cont|UFFD1|Q~q\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1010101011111111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \kdecode|kscan|Cont|UFFD0|Q~q\,
+	datad => \kdecode|kscan|Cont|UFFD1|Q~q\,
+	combout => \kdecode|kscan|Dec|Mux0~0_combout\);
+
+-- Location: IOIBUF_X31_Y0_N1
+\RXclk~input\ : fiftyfivenm_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	listen_to_nsleep_signal => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_RXclk,
+	o => \RXclk~input_o\);
+
+-- Location: CLKCTRL_G18
+\RXclk~inputclkctrl\ : fiftyfivenm_clkctrl
+-- pragma translate_off
+GENERIC MAP (
+	clock_type => "global clock",
+	ena_register_mode => "none")
+-- pragma translate_on
+PORT MAP (
+	inclk => \RXclk~inputclkctrl_INCLK_bus\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	outclk => \RXclk~inputclkctrl_outclk\);
+
+-- Location: LCCOMB_X76_Y37_N28
+\ktransmitter|Cont|UFFD0|Q~0\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \ktransmitter|Cont|UFFD0|Q~0_combout\ = !\ktransmitter|Cont|UFFD0|Q~q\
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000111100001111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datac => \ktransmitter|Cont|UFFD0|Q~q\,
+	combout => \ktransmitter|Cont|UFFD0|Q~0_combout\);
+
+-- Location: FF_X76_Y37_N29
+\ktransmitter|Cont|UFFD0|Q\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
 	power_up => "low")
 -- pragma translate_on
 PORT MAP (
-	clk => \CLK~inputclkctrl_outclk\,
-	d => \NextState.STATE_DATA_ACCEPTED~0_combout\,
-	clrn => \ALT_INV_Reset~input_o\,
+	clk => \RXclk~inputclkctrl_outclk\,
+	d => \ktransmitter|Cont|UFFD0|Q~0_combout\,
+	clrn => \ALT_INV_Clr~inputclkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \CurrentState.STATE_DATA_ACCEPTED~q\);
+	q => \ktransmitter|Cont|UFFD0|Q~q\);
 
--- Location: LCCOMB_X49_Y1_N22
-\EnTXD~0\ : fiftyfivenm_lcell_comb
+-- Location: LCCOMB_X76_Y37_N0
+\ktransmitter|Cont|UFFD1|Q~0\ : fiftyfivenm_lcell_comb
 -- Equation(s):
--- \EnTXD~0_combout\ = ((\CurrentState.STATE_DATA_ACCEPTED~q\) # (\CurrentState.STATE_RESET_COUNTER~q\)) # (!\CurrentState.STATE_WAIT_DATA~q\)
+-- \ktransmitter|Cont|UFFD1|Q~0_combout\ = \ktransmitter|Cont|UFFD1|Q~q\ $ (\ktransmitter|Cont|UFFD0|Q~q\)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111110111111101",
+	lut_mask => "0000111111110000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \CurrentState.STATE_WAIT_DATA~q\,
-	datab => \CurrentState.STATE_DATA_ACCEPTED~q\,
-	datac => \CurrentState.STATE_RESET_COUNTER~q\,
-	combout => \EnTXD~0_combout\);
+	datac => \ktransmitter|Cont|UFFD1|Q~q\,
+	datad => \ktransmitter|Cont|UFFD0|Q~q\,
+	combout => \ktransmitter|Cont|UFFD1|Q~0_combout\);
+
+-- Location: FF_X76_Y37_N1
+\ktransmitter|Cont|UFFD1|Q\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \RXclk~inputclkctrl_outclk\,
+	d => \ktransmitter|Cont|UFFD1|Q~0_combout\,
+	clrn => \ALT_INV_Clr~inputclkctrl_outclk\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \ktransmitter|Cont|UFFD1|Q~q\);
+
+-- Location: LCCOMB_X77_Y37_N26
+\kdecode|kcontrol|NextState.STATE_SAVING~0\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \kdecode|kcontrol|NextState.STATE_SAVING~0_combout\ = (!\kdecode|kcontrol|CurrentState.STATE_WAIT~q\ & ((\kdecode|kscan|PENC0|OUTPUT[1]~0_combout\) # ((!\KEYPAD_LIN[0]~input_o\) # (!\KEYPAD_LIN[1]~input_o\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0010001100110011",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \kdecode|kscan|PENC0|OUTPUT[1]~0_combout\,
+	datab => \kdecode|kcontrol|CurrentState.STATE_WAIT~q\,
+	datac => \KEYPAD_LIN[1]~input_o\,
+	datad => \KEYPAD_LIN[0]~input_o\,
+	combout => \kdecode|kcontrol|NextState.STATE_SAVING~0_combout\);
+
+-- Location: FF_X77_Y37_N27
+\kdecode|kcontrol|CurrentState.STATE_SAVING\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \MCLK~inputclkctrl_outclk\,
+	d => \kdecode|kcontrol|NextState.STATE_SAVING~0_combout\,
+	clrn => \ALT_INV_Clr~inputclkctrl_outclk\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \kdecode|kcontrol|CurrentState.STATE_SAVING~q\);
+
+-- Location: CLKCTRL_G5
+\kdecode|kcontrol|CurrentState.STATE_SAVING~clkctrl\ : fiftyfivenm_clkctrl
+-- pragma translate_off
+GENERIC MAP (
+	clock_type => "global clock",
+	ena_register_mode => "none")
+-- pragma translate_on
+PORT MAP (
+	inclk => \kdecode|kcontrol|CurrentState.STATE_SAVING~clkctrl_INCLK_bus\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	outclk => \kdecode|kcontrol|CurrentState.STATE_SAVING~clkctrl_outclk\);
+
+-- Location: LCCOMB_X75_Y37_N12
+\kdecode|kscan|REG|UFFD1|Q~feeder\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \kdecode|kscan|REG|UFFD1|Q~feeder_combout\ = \kdecode|kscan|PENC0|OUTPUT[1]~0_combout\
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111111100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datad => \kdecode|kscan|PENC0|OUTPUT[1]~0_combout\,
+	combout => \kdecode|kscan|REG|UFFD1|Q~feeder_combout\);
+
+-- Location: FF_X75_Y37_N13
+\kdecode|kscan|REG|UFFD1|Q\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \kdecode|kcontrol|CurrentState.STATE_SAVING~clkctrl_outclk\,
+	d => \kdecode|kscan|REG|UFFD1|Q~feeder_combout\,
+	clrn => \ALT_INV_Clr~inputclkctrl_outclk\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \kdecode|kscan|REG|UFFD1|Q~q\);
+
+-- Location: LCCOMB_X75_Y37_N28
+\ktransmitter|REG|UFFD3|Q~feeder\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \ktransmitter|REG|UFFD3|Q~feeder_combout\ = \kdecode|kscan|REG|UFFD1|Q~q\
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100110011001100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \kdecode|kscan|REG|UFFD1|Q~q\,
+	combout => \ktransmitter|REG|UFFD3|Q~feeder_combout\);
+
+-- Location: LCCOMB_X77_Y37_N20
+\kdecode|kcontrol|CurrentState.STATE_SAVED~feeder\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \kdecode|kcontrol|CurrentState.STATE_SAVED~feeder_combout\ = \kdecode|kcontrol|CurrentState.STATE_SAVING~q\
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100110011001100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \kdecode|kcontrol|CurrentState.STATE_SAVING~q\,
+	combout => \kdecode|kcontrol|CurrentState.STATE_SAVED~feeder_combout\);
+
+-- Location: FF_X77_Y37_N21
+\kdecode|kcontrol|CurrentState.STATE_SAVED\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \MCLK~inputclkctrl_outclk\,
+	d => \kdecode|kcontrol|CurrentState.STATE_SAVED~feeder_combout\,
+	clrn => \ALT_INV_Clr~inputclkctrl_outclk\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \kdecode|kcontrol|CurrentState.STATE_SAVED~q\);
+
+-- Location: FF_X75_Y37_N29
+\ktransmitter|REG|UFFD3|Q\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \MCLK~inputclkctrl_outclk\,
+	d => \ktransmitter|REG|UFFD3|Q~feeder_combout\,
+	clrn => \ALT_INV_Clr~inputclkctrl_outclk\,
+	ena => \kdecode|kcontrol|CurrentState.STATE_SAVED~q\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \ktransmitter|REG|UFFD3|Q~q\);
+
+-- Location: LCCOMB_X75_Y37_N6
+\kdecode|kscan|PENC0|OUTPUT[0]~1\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \kdecode|kscan|PENC0|OUTPUT[0]~1_combout\ = ((\KEYPAD_LIN[2]~input_o\ & !\KEYPAD_LIN[1]~input_o\)) # (!\KEYPAD_LIN[3]~input_o\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011001111110011",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \KEYPAD_LIN[3]~input_o\,
+	datac => \KEYPAD_LIN[2]~input_o\,
+	datad => \KEYPAD_LIN[1]~input_o\,
+	combout => \kdecode|kscan|PENC0|OUTPUT[0]~1_combout\);
+
+-- Location: FF_X75_Y37_N7
+\kdecode|kscan|REG|UFFD0|Q\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \kdecode|kcontrol|CurrentState.STATE_SAVING~clkctrl_outclk\,
+	d => \kdecode|kscan|PENC0|OUTPUT[0]~1_combout\,
+	clrn => \ALT_INV_Clr~inputclkctrl_outclk\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \kdecode|kscan|REG|UFFD0|Q~q\);
+
+-- Location: FF_X75_Y37_N23
+\ktransmitter|REG|UFFD2|Q\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \MCLK~inputclkctrl_outclk\,
+	asdata => \kdecode|kscan|REG|UFFD0|Q~q\,
+	clrn => \ALT_INV_Clr~inputclkctrl_outclk\,
+	sload => VCC,
+	ena => \kdecode|kcontrol|CurrentState.STATE_SAVED~q\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \ktransmitter|REG|UFFD2|Q~q\);
+
+-- Location: LCCOMB_X76_Y37_N10
+\ktransmitter|REG|UFFD1|Q~feeder\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \ktransmitter|REG|UFFD1|Q~feeder_combout\ = \kdecode|kscan|Cont|UFFD1|Q~q\
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111111100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datad => \kdecode|kscan|Cont|UFFD1|Q~q\,
+	combout => \ktransmitter|REG|UFFD1|Q~feeder_combout\);
+
+-- Location: FF_X76_Y37_N11
+\ktransmitter|REG|UFFD1|Q\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \MCLK~inputclkctrl_outclk\,
+	d => \ktransmitter|REG|UFFD1|Q~feeder_combout\,
+	clrn => \ALT_INV_Clr~inputclkctrl_outclk\,
+	ena => \kdecode|kcontrol|CurrentState.STATE_SAVED~q\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \ktransmitter|REG|UFFD1|Q~q\);
+
+-- Location: FF_X76_Y37_N25
+\ktransmitter|REG|UFFD0|Q\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \MCLK~inputclkctrl_outclk\,
+	asdata => \kdecode|kscan|Cont|UFFD0|Q~q\,
+	clrn => \ALT_INV_Clr~inputclkctrl_outclk\,
+	sload => VCC,
+	ena => \kdecode|kcontrol|CurrentState.STATE_SAVED~q\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \ktransmitter|REG|UFFD0|Q~q\);
+
+-- Location: LCCOMB_X76_Y37_N18
+\ktransmitter|Cont|UFFD2|Q~0\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \ktransmitter|Cont|UFFD2|Q~0_combout\ = \ktransmitter|Cont|UFFD2|Q~q\ $ (((\ktransmitter|Cont|UFFD0|Q~q\ & \ktransmitter|Cont|UFFD1|Q~q\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011110011110000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \ktransmitter|Cont|UFFD0|Q~q\,
+	datac => \ktransmitter|Cont|UFFD2|Q~q\,
+	datad => \ktransmitter|Cont|UFFD1|Q~q\,
+	combout => \ktransmitter|Cont|UFFD2|Q~0_combout\);
+
+-- Location: FF_X76_Y37_N19
+\ktransmitter|Cont|UFFD2|Q\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \RXclk~inputclkctrl_outclk\,
+	d => \ktransmitter|Cont|UFFD2|Q~0_combout\,
+	clrn => \ALT_INV_Clr~inputclkctrl_outclk\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \ktransmitter|Cont|UFFD2|Q~q\);
+
+-- Location: LCCOMB_X76_Y37_N24
+\ktransmitter|MUX|Mux0~0\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \ktransmitter|MUX|Mux0~0_combout\ = (\ktransmitter|Cont|UFFD0|Q~q\ & ((\ktransmitter|REG|UFFD1|Q~q\) # ((\ktransmitter|Cont|UFFD2|Q~q\)))) # (!\ktransmitter|Cont|UFFD0|Q~q\ & (((\ktransmitter|REG|UFFD0|Q~q\ & !\ktransmitter|Cont|UFFD2|Q~q\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100110010111000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \ktransmitter|REG|UFFD1|Q~q\,
+	datab => \ktransmitter|Cont|UFFD0|Q~q\,
+	datac => \ktransmitter|REG|UFFD0|Q~q\,
+	datad => \ktransmitter|Cont|UFFD2|Q~q\,
+	combout => \ktransmitter|MUX|Mux0~0_combout\);
+
+-- Location: LCCOMB_X75_Y37_N22
+\ktransmitter|MUX|Mux0~1\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \ktransmitter|MUX|Mux0~1_combout\ = (\ktransmitter|MUX|Mux0~0_combout\ & (\ktransmitter|REG|UFFD3|Q~q\)) # (!\ktransmitter|MUX|Mux0~0_combout\ & ((\ktransmitter|REG|UFFD2|Q~q\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100110011110000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \ktransmitter|REG|UFFD3|Q~q\,
+	datac => \ktransmitter|REG|UFFD2|Q~q\,
+	datad => \ktransmitter|MUX|Mux0~0_combout\,
+	combout => \ktransmitter|MUX|Mux0~1_combout\);
+
+-- Location: LCCOMB_X76_Y37_N30
+\ktransmitter|MUX|Mux0~2\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \ktransmitter|MUX|Mux0~2_combout\ = (\ktransmitter|Cont|UFFD1|Q~q\ & (((\ktransmitter|MUX|Mux0~0_combout\)))) # (!\ktransmitter|Cont|UFFD1|Q~q\ & ((\ktransmitter|MUX|Mux0~1_combout\) # ((!\ktransmitter|Cont|UFFD2|Q~q\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1110010011110101",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \ktransmitter|Cont|UFFD1|Q~q\,
+	datab => \ktransmitter|MUX|Mux0~1_combout\,
+	datac => \ktransmitter|MUX|Mux0~0_combout\,
+	datad => \ktransmitter|Cont|UFFD2|Q~q\,
+	combout => \ktransmitter|MUX|Mux0~2_combout\);
 
 -- Location: UNVM_X0_Y40_N40
 \~QUARTUS_CREATED_UNVM~\ : fiftyfivenm_unvm
@@ -540,15 +1004,13 @@ PORT MAP (
 	chsel => \~QUARTUS_CREATED_ADC2~_CHSEL_bus\,
 	eoc => \~QUARTUS_CREATED_ADC2~~eoc\);
 
-ww_DAC <= \DAC~output_o\;
+ww_KEYPAD_COL(0) <= \KEYPAD_COL[0]~output_o\;
 
-ww_EnTXD <= \EnTXD~output_o\;
+ww_KEYPAD_COL(1) <= \KEYPAD_COL[1]~output_o\;
 
-ww_EnReg <= \EnReg~output_o\;
+ww_KEYPAD_COL(2) <= \KEYPAD_COL[2]~output_o\;
 
-ww_EnCounter <= \EnCounter~output_o\;
-
-ww_RstCounter <= \RstCounter~output_o\;
+ww_TXD <= \TXD~output_o\;
 END structure;
 
 

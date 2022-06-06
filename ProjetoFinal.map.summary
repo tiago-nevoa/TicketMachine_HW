@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Mon Jun 06 22:00:22 2022
+Analysis & Synthesis Status : Successful - Mon Jun 06 22:45:01 2022
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : ProjetoFinal
-Top-level Entity Name : KeyTransmitterControl
+Top-level Entity Name : KeyboardReader
 Family : MAX 10
-Total logic elements : 5
-    Total combinational functions : 5
-    Dedicated logic registers : 4
-Total registers : 4
-Total pins : 9
+Total logic elements : 20
+    Total combinational functions : 15
+    Dedicated logic registers : 14
+Total registers : 14
+Total pins : 11
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

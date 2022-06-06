@@ -1,15 +1,279 @@
-|KeyTransmitterControl
-DAV => NextState.STATE_DATA_ACCEPTED.DATAB
-DAV => Selector0.IN2
-DAV => Selector1.IN1
-TCount => NextState.STATE_RESET_COUNTER.DATAB
-TCount => Selector1.IN2
+|KeyboardReader
+RXclk => KeyTransmitter:ktransmitter.TXclk
+MCLK => KeyDecode:kdecode.MCLK
+MCLK => KeyTransmitter:ktransmitter.MCLK
+Clr => KeyDecode:kdecode.Clr
+Clr => KeyTransmitter:ktransmitter.Clr
+KEYPAD_LIN[0] => KeyDecode:kdecode.KEYPAD_LIN[0]
+KEYPAD_LIN[1] => KeyDecode:kdecode.KEYPAD_LIN[1]
+KEYPAD_LIN[2] => KeyDecode:kdecode.KEYPAD_LIN[2]
+KEYPAD_LIN[3] => KeyDecode:kdecode.KEYPAD_LIN[3]
+KEYPAD_COL[0] <= KeyDecode:kdecode.KEYPAD_COL[0]
+KEYPAD_COL[1] <= KeyDecode:kdecode.KEYPAD_COL[1]
+KEYPAD_COL[2] <= KeyDecode:kdecode.KEYPAD_COL[2]
+TXD <= KeyTransmitter:ktransmitter.TXD
+
+
+|KeyboardReader|KeyDecode:kdecode
+MCLK => KeyControl:kcontrol.CLK
+MCLK => KeyScan:kscan.MCLK
+KEYPAD_LIN[0] => KeyScan:kscan.KEYPAD_LIN[0]
+KEYPAD_LIN[1] => KeyScan:kscan.KEYPAD_LIN[1]
+KEYPAD_LIN[2] => KeyScan:kscan.KEYPAD_LIN[2]
+KEYPAD_LIN[3] => KeyScan:kscan.KEYPAD_LIN[3]
+KEYPAD_COL[0] <= KeyScan:kscan.KEYPAD_COL[0]
+KEYPAD_COL[1] <= KeyScan:kscan.KEYPAD_COL[1]
+KEYPAD_COL[2] <= KeyScan:kscan.KEYPAD_COL[2]
+Kack => KeyControl:kcontrol.Kack
+Clr => KeyScan:kscan.Clr
+Clr => KeyControl:kcontrol.Reset
+Kval <= KeyControl:kcontrol.Kval
+K[0] <= KeyScan:kscan.K[0]
+K[1] <= KeyScan:kscan.K[1]
+K[2] <= KeyScan:kscan.K[2]
+K[3] <= KeyScan:kscan.K[3]
+
+
+|KeyboardReader|KeyDecode:kdecode|KeyScan:kscan
+Kscan => Counter2bits:Cont.CE
+Clr => Counter2bits:Cont.Clr
+Clr => REG2bits:REG.Clr
+MCLK => Counter2bits:Cont.CLK
+Ksave => REG2bits:REG.CLK
+KEYPAD_LIN[0] => PENC:PENC0.INPUT[0]
+KEYPAD_LIN[1] => PENC:PENC0.INPUT[1]
+KEYPAD_LIN[2] => PENC:PENC0.INPUT[2]
+KEYPAD_LIN[3] => PENC:PENC0.INPUT[3]
+KEYPAD_COL[0] <= decoder2x4:Dec.decoderOut[0]
+KEYPAD_COL[1] <= decoder2x4:Dec.decoderOut[1]
+KEYPAD_COL[2] <= decoder2x4:Dec.decoderOut[2]
+Kpress <= PENC:PENC0.GS
+K[0] <= Counter2bits:Cont.Fcount[0]
+K[1] <= Counter2bits:Cont.Fcount[1]
+K[2] <= REG2bits:REG.Output[0]
+K[3] <= REG2bits:REG.Output[1]
+
+
+|KeyboardReader|KeyDecode:kdecode|KeyScan:kscan|Counter2bits:Cont
+CE => sD[0].IN1
+CE => sD.IN1
+CE => FFD:UFFD0.EN
+CE => FFD:UFFD1.EN
+CLK => FFD:UFFD0.CLK
+CLK => FFD:UFFD1.CLK
+Clr => FFD:UFFD0.RESET
+Clr => FFD:UFFD1.RESET
+Fcount[0] <= FFD:UFFD0.Q
+Fcount[1] <= FFD:UFFD1.Q
+
+
+|KeyboardReader|KeyDecode:kdecode|KeyScan:kscan|Counter2bits:Cont|FFD:UFFD0
+CLK => Q~reg0.CLK
+RESET => Q~reg0.ACLR
+EN => Q~reg0.ENA
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KeyboardReader|KeyDecode:kdecode|KeyScan:kscan|Counter2bits:Cont|FFD:UFFD1
+CLK => Q~reg0.CLK
+RESET => Q~reg0.ACLR
+EN => Q~reg0.ENA
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KeyboardReader|KeyDecode:kdecode|KeyScan:kscan|decoder2x4:Dec
+S[0] => Mux0.IN5
+S[0] => Mux1.IN5
+S[0] => Mux2.IN5
+S[1] => Mux0.IN4
+S[1] => Mux1.IN4
+S[1] => Mux2.IN4
+decoderOut[0] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+decoderOut[1] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+decoderOut[2] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KeyboardReader|KeyDecode:kdecode|KeyScan:kscan|PENC:PENC0
+INPUT[0] => GS.DATAA
+INPUT[1] => OUTPUT.DATAA
+INPUT[1] => GS.OUTPUTSELECT
+INPUT[2] => OUTPUT.OUTPUTSELECT
+INPUT[2] => OUTPUT.DATAA
+INPUT[2] => GS.OUTPUTSELECT
+INPUT[3] => OUTPUT.OUTPUTSELECT
+INPUT[3] => OUTPUT.OUTPUTSELECT
+INPUT[3] => GS.OUTPUTSELECT
+OUTPUT[0] <= OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[1] <= OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
+GS <= GS.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KeyboardReader|KeyDecode:kdecode|KeyScan:kscan|REG2bits:REG
+Clr => FFD:UFFD0.RESET
+Clr => FFD:UFFD1.RESET
+CLK => FFD:UFFD0.CLK
+CLK => FFD:UFFD1.CLK
+Input[0] => FFD:UFFD0.D
+Input[1] => FFD:UFFD1.D
+Output[0] <= FFD:UFFD0.Q
+Output[1] <= FFD:UFFD1.Q
+
+
+|KeyboardReader|KeyDecode:kdecode|KeyScan:kscan|REG2bits:REG|FFD:UFFD0
+CLK => Q~reg0.CLK
+RESET => Q~reg0.ACLR
+EN => Q~reg0.ENA
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KeyboardReader|KeyDecode:kdecode|KeyScan:kscan|REG2bits:REG|FFD:UFFD1
+CLK => Q~reg0.CLK
+RESET => Q~reg0.ACLR
+EN => Q~reg0.ENA
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KeyboardReader|KeyDecode:kdecode|KeyControl:kcontrol
 CLK => CurrentState~1.DATAIN
+Kack => Selector2.IN3
+Kack => GenerateNextState.IN0
+Kack => Selector1.IN2
+Kpress => NextState.STATE_SAVING.DATAB
+Kpress => Selector0.IN1
+Kpress => GenerateNextState.IN1
 Reset => CurrentState~3.DATAIN
-DAC <= DAC.DB_MAX_OUTPUT_PORT_TYPE
-EnTXD <= EnTXD.DB_MAX_OUTPUT_PORT_TYPE
-EnReg <= EnReg.DB_MAX_OUTPUT_PORT_TYPE
-EnCounter <= EnCounter.DB_MAX_OUTPUT_PORT_TYPE
-RstCounter <= RstCounter.DB_MAX_OUTPUT_PORT_TYPE
+Kval <= Kval.DB_MAX_OUTPUT_PORT_TYPE
+Kscan <= Kscan.DB_MAX_OUTPUT_PORT_TYPE
+Ksave <= Ksave.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KeyboardReader|KeyTransmitter:ktransmitter
+DAV => REG4bits:REG.Enable
+TXclk => Counter3bits:Cont.CLK
+MCLK => REG4bits:REG.CLK
+Clr => REG4bits:REG.Clr
+Clr => Counter3bits:Cont.Clr
+Data_In[0] => REG4bits:REG.Input[0]
+Data_In[1] => REG4bits:REG.Input[1]
+Data_In[2] => REG4bits:REG.Input[2]
+Data_In[3] => REG4bits:REG.Input[3]
+DAC <= comb.DB_MAX_OUTPUT_PORT_TYPE
+TXD <= MUX_8x1:MUX.Data_Out
+
+
+|KeyboardReader|KeyTransmitter:ktransmitter|REG4bits:REG
+Clr => FFD:UFFD0.RESET
+Clr => FFD:UFFD1.RESET
+Clr => FFD:UFFD2.RESET
+Clr => FFD:UFFD3.RESET
+CLK => FFD:UFFD0.CLK
+CLK => FFD:UFFD1.CLK
+CLK => FFD:UFFD2.CLK
+CLK => FFD:UFFD3.CLK
+Enable => FFD:UFFD0.EN
+Enable => FFD:UFFD1.EN
+Enable => FFD:UFFD2.EN
+Enable => FFD:UFFD3.EN
+Input[0] => FFD:UFFD0.D
+Input[1] => FFD:UFFD1.D
+Input[2] => FFD:UFFD2.D
+Input[3] => FFD:UFFD3.D
+Output[0] <= FFD:UFFD0.Q
+Output[1] <= FFD:UFFD1.Q
+Output[2] <= FFD:UFFD2.Q
+Output[3] <= FFD:UFFD3.Q
+
+
+|KeyboardReader|KeyTransmitter:ktransmitter|REG4bits:REG|FFD:UFFD0
+CLK => Q~reg0.CLK
+RESET => Q~reg0.ACLR
+EN => Q~reg0.ENA
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KeyboardReader|KeyTransmitter:ktransmitter|REG4bits:REG|FFD:UFFD1
+CLK => Q~reg0.CLK
+RESET => Q~reg0.ACLR
+EN => Q~reg0.ENA
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KeyboardReader|KeyTransmitter:ktransmitter|REG4bits:REG|FFD:UFFD2
+CLK => Q~reg0.CLK
+RESET => Q~reg0.ACLR
+EN => Q~reg0.ENA
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KeyboardReader|KeyTransmitter:ktransmitter|REG4bits:REG|FFD:UFFD3
+CLK => Q~reg0.CLK
+RESET => Q~reg0.ACLR
+EN => Q~reg0.ENA
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KeyboardReader|KeyTransmitter:ktransmitter|Counter3bits:Cont
+CE => sD[0].IN1
+CE => sD.IN1
+CE => sD.IN1
+CE => FFD:UFFD0.EN
+CE => FFD:UFFD1.EN
+CE => FFD:UFFD2.EN
+CLK => FFD:UFFD0.CLK
+CLK => FFD:UFFD1.CLK
+CLK => FFD:UFFD2.CLK
+Clr => FFD:UFFD0.RESET
+Clr => FFD:UFFD1.RESET
+Clr => FFD:UFFD2.RESET
+Tcount[0] <= FFD:UFFD0.Q
+Tcount[1] <= FFD:UFFD1.Q
+Tcount[2] <= FFD:UFFD2.Q
+
+
+|KeyboardReader|KeyTransmitter:ktransmitter|Counter3bits:Cont|FFD:UFFD0
+CLK => Q~reg0.CLK
+RESET => Q~reg0.ACLR
+EN => Q~reg0.ENA
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KeyboardReader|KeyTransmitter:ktransmitter|Counter3bits:Cont|FFD:UFFD1
+CLK => Q~reg0.CLK
+RESET => Q~reg0.ACLR
+EN => Q~reg0.ENA
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KeyboardReader|KeyTransmitter:ktransmitter|Counter3bits:Cont|FFD:UFFD2
+CLK => Q~reg0.CLK
+RESET => Q~reg0.ACLR
+EN => Q~reg0.ENA
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KeyboardReader|KeyTransmitter:ktransmitter|MUX_8x1:MUX
+Data_In[0] => Mux0.IN7
+Data_In[1] => Mux0.IN6
+Data_In[2] => Mux0.IN5
+Data_In[3] => Mux0.IN4
+Data_In[4] => Mux0.IN3
+Data_In[5] => Mux0.IN2
+Data_In[6] => Mux0.IN1
+Data_In[7] => Mux0.IN0
+S[0] => Mux0.IN10
+S[1] => Mux0.IN9
+S[2] => Mux0.IN8
+Data_Out <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
