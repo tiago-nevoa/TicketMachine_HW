@@ -3,8 +3,9 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
 entity KeyScan is
-    Port (  Kscan, Clr, MCLK : in  STD_LOGIC;
-				KeyLines : in STD_LOGIC_VECTOR (3 downto 0); --- 4 linhas a entrar no PENC
+    Port (  Kscan, Clr, MCLK, Ksave : in  STD_LOGIC;
+				KEYPAD_LIN : in STD_LOGIC_VECTOR (3 downto 0); --- 4 linhas a entrar no PENC
+				KEYPAD_COL : in STD_LOGIC_VECTOR (3 downto 0); --- 4 colunas
 				Kpress : out  STD_LOGIC;
 				K : out STD_LOGIC_VECTOR (3 downto 0)); -- código da tecla premida 
 				-- 3 colunas são saídas
@@ -58,12 +59,12 @@ Dec: decoder2x4 PORT MAP (
 	decoderOut => sdecoderOut);
 	
 PENC0: PENC PORT MAP (
-	INPUT => KeyLines, --- Data keys
+	INPUT => KEYPAD_LIN, --- Data keys
    OUTPUT => sPENCOut);	
 
 REG: REG2bits PORT MAP (
 	Clr => Clr,
-	CLK => not MCLK, -- falling edge
+	CLK => Ksave, -- Ksave que vem do Key Control.
 	INPUT => sPENCOut,
    OUTPUT => sREG);	
 	

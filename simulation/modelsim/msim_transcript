@@ -10,41 +10,49 @@
 # Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vcom -93 -work work {C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/FFD.vhd}
+# vcom -93 -work work {C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyControl.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:22:58 on Jun 05,2022
-# vcom -reportprogress 300 -93 -work work C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/FFD.vhd 
+# Start time: 12:59:45 on Jun 06,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyControl.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity FFD
-# -- Compiling architecture Behavioral of FFD
-# End time: 18:22:58 on Jun 05,2022, Elapsed time: 0:00:00
+# -- Compiling entity KeyControl
+# -- Compiling architecture behaviour of KeyControl
+# End time: 12:59:45 on Jun 06,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/KeyScan.vhd}
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:22:58 on Jun 05,2022
-# vcom -reportprogress 300 -93 -work work C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/KeyScan.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity KeyScan
-# -- Compiling architecture behavioral of KeyScan
-# ** Error: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/KeyScan.vhd(52): (vcom-1436) Actual expression (prefix expression) of formal "CLK" is not globally static.
-# ** Error: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/KeyScan.vhd(66): (vcom-1436) Actual expression (prefix expression) of formal "CLK" is not globally static.
-# ** Note: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/KeyScan.vhd(76): VHDL Compiler exiting
-# End time: 18:22:58 on Jun 05,2022, Elapsed time: 0:00:00
-# Errors: 2, Warnings: 0
-# ** Error: C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vcom failed.
-# Error in macro ./ProjetoFinal_run_msim_rtl_vhdl.do line 9
-# C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vcom failed.
-#     while executing
-# "vcom -93 -work work {C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/KeyScan.vhd}"
-vsim -gui -l msim_transcript work.keyscan
-# vsim -gui -l msim_transcript work.keyscan 
-# Start time: 18:23:31 on Jun 05,2022
+# 
+vsim work.keycontrol
+# vsim work.keycontrol 
+# Start time: 12:59:52 on Jun 06,2022
 # Loading std.standard
-# ** Error: (vsim-3173) Entity 'C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/simulation/modelsim/rtl_work.keyscan' has no architecture.
-# Error loading design
-# End time: 18:23:31 on Jun 05,2022, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.keycontrol(behaviour)
+force -freeze sim:/keycontrol/CLK 1 0, 0 {50 ps} -r 100
+add wave -position insertpoint  \
+sim:/keycontrol/CLK \
+sim:/keycontrol/Kack \
+sim:/keycontrol/Kpress \
+sim:/keycontrol/Reset \
+sim:/keycontrol/Kval \
+sim:/keycontrol/Kscan \
+sim:/keycontrol/Ksave \
+sim:/keycontrol/CurrentState \
+sim:/keycontrol/NextState
+force -freeze sim:/keycontrol/Kack 0 0
+force -freeze sim:/keycontrol/Kpress 0 0
+force -freeze sim:/keycontrol/Reset 1 0
+run
+force -freeze sim:/keycontrol/Reset 0 0
+run
+force -freeze sim:/keycontrol/Kpress 1 0
+run
+force -freeze sim:/keycontrol/Kack 1 0
+run
+force -freeze sim:/keycontrol/Kack 0 0
+run
+force -freeze sim:/keycontrol/Kpress 0 0
+run
+# End time: 13:04:30 on Jun 06,2022, Elapsed time: 0:04:38
+# Errors: 0, Warnings: 0

@@ -1,4 +1,4 @@
-set_global_assignment -name TOP_LEVEL_ENTITY KeyScan
+set_global_assignment -name TOP_LEVEL_ENTITY KeyControl
 set_global_assignment -name DEVICE 10M50DAF484C6GES
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (VHDL)"
 set_global_assignment -name FAMILY "MAX 10"
@@ -51,7 +51,7 @@ set_location_assignment PIN_Y7 -to LCD_DATA[8]
 #set_location_assignment PIN_AA9    -to	KEYPAD_COL[2]
 #set_location_assignment PIN_AA8    -to	KEYPAD_COL[3]
 
-set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
+set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 SP1.02i Lite Edition"
 set_global_assignment -name VHDL_FILE VendingMachine_tb.vhd
 set_global_assignment -name VHDL_FILE VendingMachine.vhd
 set_global_assignment -name VHDL_FILE UsbPort.vhd
@@ -83,6 +83,7 @@ set_global_assignment -name VHDL_FILE KeyTransmitter.vhd
 set_global_assignment -name VHDL_FILE REG4bits.vhd
 set_global_assignment -name VHDL_FILE Counter3bits.vhd
 set_global_assignment -name VHDL_FILE MUX_8x1.vhd
+set_global_assignment -name VHDL_FILE KeyDecode.vhd
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top

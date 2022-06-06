@@ -8,67 +8,45 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/simulation/modelsim
-Effd
-Z1 w1652374738
+Z0 dC:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/simulation/modelsim
+Ekeycontrol
+Z1 w1654452421
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
 !i122 0
 R0
-Z4 8C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/FFD.vhd
-Z5 FC:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/FFD.vhd
+Z4 8C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyControl.vhd
+Z5 FC:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyControl.vhd
 l0
-L5 1
-V[=j<I;3z:oGoOX1QTZnI;0
-!s100 GjMz=l3gSHdNc2Tz`oJNK1
+L4 1
+VP6DF;;m2Z1DFI6QEL7R2d0
+!s100 k_l=ZSnEW@@^N10cD>h^A2
 Z6 OV;C;2020.1;71
 31
-Z7 !s110 1654449778
+Z7 !s110 1654516785
 !i10b 1
-Z8 !s108 1654449778.000000
-Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/FFD.vhd|
-Z10 !s107 C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/FFD.vhd|
+Z8 !s108 1654516785.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyControl.vhd|
+!s107 C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyControl.vhd|
 !i113 1
-Z11 o-93 -work work
-Z12 tExplicit 1 CvgOpt 0
-Abehavioral
+Z10 o-93 -work work
+Z11 tExplicit 1 CvgOpt 0
+Abehaviour
 R2
 R3
-DEx4 work 3 ffd 0 22 [=j<I;3z:oGoOX1QTZnI;0
+DEx4 work 10 keycontrol 0 22 P6DF;;m2Z1DFI6QEL7R2d0
 !i122 0
-l15
-L13 9
-V1?_HAMXJ5>^9[i>A@ecid0
-!s100 Z>E86JjRn0WJ_HhIDYN3f2
+l16
+L11 39
+VQ^7Uj=iQgo5>6A;65dTNO3
+!s100 :2K74GP]BLfCXTodXQ8i;0
 R6
 31
 R7
 !i10b 1
 R8
 R9
+Z12 !s107 C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyControl.vhd|
+!i113 1
 R10
-!i113 1
 R11
-R12
-Ekeyscan
-w1654449073
-R2
-R3
-!i122 1
-R0
-8C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/KeyScan.vhd
-FC:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/KeyScan.vhd
-l0
-L5 1
-V<L=<USRcofKnm=138=J6o1
-!s100 RT]4lF8L1ge0g_oJWP0H^1
-R6
-31
-R7
-!i10b 1
-R8
-!s90 -reportprogress|300|-93|-work|work|C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/KeyScan.vhd|
-!s107 C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/KeyScan.vhd|
-!i113 1
-R11
-R12

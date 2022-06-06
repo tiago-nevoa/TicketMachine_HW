@@ -1,6 +1,6 @@
 Analysis & Synthesis report for ProjetoFinal
-Sun Jun 05 18:22:13 2022
-Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Mon Jun 06 12:58:28 2022
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition
 
 
 ---------------------
@@ -13,14 +13,11 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Port Connectivity Checks: "REG2bits:REG|FFD:UFFD1"
- 10. Port Connectivity Checks: "REG2bits:REG|FFD:UFFD0"
- 11. Port Connectivity Checks: "PENC:PENC0"
- 12. Port Connectivity Checks: "decoder2x4:Dec"
- 13. Post-Synthesis Netlist Statistics for Top Partition
- 14. Elapsed Time Per Partition
- 15. Analysis & Synthesis Messages
+  8. State Machine - |KeyControl|CurrentState
+  9. General Register Statistics
+ 10. Post-Synthesis Netlist Statistics for Top Partition
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -44,26 +41,26 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+----------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                     ;
-+------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Jun 05 18:22:13 2022       ;
-; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
-; Revision Name                      ; ProjetoFinal                                ;
-; Top-level Entity Name              ; KeyScan                                     ;
-; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 4                                           ;
-;     Total combinational functions  ; 4                                           ;
-;     Dedicated logic registers      ; 4                                           ;
-; Total registers                    ; 4                                           ;
-; Total pins                         ; 12                                          ;
-; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0                                           ;
-; Embedded Multiplier 9-bit elements ; 0                                           ;
-; Total PLLs                         ; 0                                           ;
-; UFM blocks                         ; 0                                           ;
-; ADC blocks                         ; 0                                           ;
-+------------------------------------+---------------------------------------------+
++------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                                   ;
++------------------------------------+-----------------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Mon Jun 06 12:58:28 2022                     ;
+; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition ;
+; Revision Name                      ; ProjetoFinal                                              ;
+; Top-level Entity Name              ; KeyControl                                                ;
+; Family                             ; MAX 10                                                    ;
+; Total logic elements               ; 4                                                         ;
+;     Total combinational functions  ; 4                                                         ;
+;     Dedicated logic registers      ; 4                                                         ;
+; Total registers                    ; 4                                                         ;
+; Total pins                         ; 7                                                         ;
+; Total virtual pins                 ; 0                                                         ;
+; Total memory bits                  ; 0                                                         ;
+; Embedded Multiplier 9-bit elements ; 0                                                         ;
+; Total PLLs                         ; 0                                                         ;
+; UFM blocks                         ; 0                                                         ;
+; ADC blocks                         ; 0                                                         ;
++------------------------------------+-----------------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------+
@@ -72,7 +69,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; 10M50DAF484C6GES   ;                    ;
-; Top-level entity name                                            ; KeyScan            ; ProjetoFinal       ;
+; Top-level entity name                                            ; KeyControl         ; ProjetoFinal       ;
 ; Family name                                                      ; MAX 10             ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -157,79 +154,80 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 6           ;
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 16          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 6           ;
+; Maximum used               ; 16          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-6         ;   0.0%      ;
+;     Processors 2-16        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                           ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                    ; Library ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------+---------+
-; FFD.vhd                          ; yes             ; User VHDL File  ; C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/FFD.vhd          ;         ;
-; KeyScan.vhd                      ; yes             ; User VHDL File  ; C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/KeyScan.vhd      ;         ;
-; decoder2x4.vhd                   ; yes             ; User VHDL File  ; C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/decoder2x4.vhd   ;         ;
-; Counter2bits.vhd                 ; yes             ; User VHDL File  ; C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/Counter2bits.vhd ;         ;
-; PENC.vhd                         ; yes             ; User VHDL File  ; C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/PENC.vhd         ;         ;
-; REG2bits.vhd                     ; yes             ; User VHDL File  ; C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/REG2bits.vhd     ;         ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                           ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                    ; Library ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------+---------+
+; KeyControl.vhd                   ; yes             ; User VHDL File  ; C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyControl.vhd ;         ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------+---------+
 
 
-+----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary              ;
-+---------------------------------------------+------------+
-; Resource                                    ; Usage      ;
-+---------------------------------------------+------------+
-; Estimated Total logic elements              ; 4          ;
-;                                             ;            ;
-; Total combinational functions               ; 4          ;
-; Logic element usage by number of LUT inputs ;            ;
-;     -- 4 input functions                    ; 0          ;
-;     -- 3 input functions                    ; 2          ;
-;     -- <=2 input functions                  ; 2          ;
-;                                             ;            ;
-; Logic elements by mode                      ;            ;
-;     -- normal mode                          ; 4          ;
-;     -- arithmetic mode                      ; 0          ;
-;                                             ;            ;
-; Total registers                             ; 4          ;
-;     -- Dedicated logic registers            ; 4          ;
-;     -- I/O registers                        ; 0          ;
-;                                             ;            ;
-; I/O pins                                    ; 12         ;
-;                                             ;            ;
-; Embedded Multiplier 9-bit elements          ; 0          ;
-;                                             ;            ;
-; Maximum fan-out node                        ; MCLK~input ;
-; Maximum fan-out                             ; 4          ;
-; Total fan-out                               ; 38         ;
-; Average fan-out                             ; 1.19       ;
-+---------------------------------------------+------------+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 4         ;
+;                                             ;           ;
+; Total combinational functions               ; 4         ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 2         ;
+;     -- 3 input functions                    ; 1         ;
+;     -- <=2 input functions                  ; 1         ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 4         ;
+;     -- arithmetic mode                      ; 0         ;
+;                                             ;           ;
+; Total registers                             ; 4         ;
+;     -- Dedicated logic registers            ; 4         ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 7         ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; CLK~input ;
+; Maximum fan-out                             ; 4         ;
+; Total fan-out                               ; 35        ;
+; Average fan-out                             ; 1.59      ;
++---------------------------------------------+-----------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                  ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------+--------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                  ; Entity Name  ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------+--------------+--------------+
-; |KeyScan                   ; 4 (0)               ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 12   ; 0            ; 0          ; |KeyScan                             ; KeyScan      ; work         ;
-;    |Counter2bits:Cont|     ; 2 (0)               ; 2 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyScan|Counter2bits:Cont           ; Counter2bits ; work         ;
-;       |FFD:UFFD0|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyScan|Counter2bits:Cont|FFD:UFFD0 ; FFD          ; work         ;
-;       |FFD:UFFD1|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyScan|Counter2bits:Cont|FFD:UFFD1 ; FFD          ; work         ;
-;    |PENC:PENC0|            ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyScan|PENC:PENC0                  ; PENC         ; work         ;
-;    |REG2bits:REG|          ; 0 (0)               ; 2 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyScan|REG2bits:REG                ; REG2bits     ; work         ;
-;       |FFD:UFFD0|          ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyScan|REG2bits:REG|FFD:UFFD0      ; FFD          ; work         ;
-;       |FFD:UFFD1|          ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyScan|REG2bits:REG|FFD:UFFD1      ; FFD          ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------+--------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
+; |KeyControl                ; 4 (4)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 7    ; 0            ; 0          ; |KeyControl         ; KeyControl  ; work         ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |KeyControl|CurrentState                                                                                                           ;
++---------------------------------+---------------------------------+--------------------------+---------------------------+-------------------------+
+; Name                            ; CurrentState.STATE_SAVE_CHECKED ; CurrentState.STATE_SAVED ; CurrentState.STATE_SAVING ; CurrentState.STATE_WAIT ;
++---------------------------------+---------------------------------+--------------------------+---------------------------+-------------------------+
+; CurrentState.STATE_WAIT         ; 0                               ; 0                        ; 0                         ; 0                       ;
+; CurrentState.STATE_SAVING       ; 0                               ; 0                        ; 1                         ; 1                       ;
+; CurrentState.STATE_SAVED        ; 0                               ; 1                        ; 0                         ; 1                       ;
+; CurrentState.STATE_SAVE_CHECKED ; 1                               ; 0                        ; 0                         ; 1                       ;
++---------------------------------+---------------------------------+--------------------------+---------------------------+-------------------------+
 
 
 +------------------------------------------------------+
@@ -247,58 +245,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+----------------------------------------------------+
-; Port Connectivity Checks: "REG2bits:REG|FFD:UFFD1" ;
-+------+-------+----------+--------------------------+
-; Port ; Type  ; Severity ; Details                  ;
-+------+-------+----------+--------------------------+
-; en   ; Input ; Info     ; Stuck at VCC             ;
-+------+-------+----------+--------------------------+
-
-
-+----------------------------------------------------+
-; Port Connectivity Checks: "REG2bits:REG|FFD:UFFD0" ;
-+------+-------+----------+--------------------------+
-; Port ; Type  ; Severity ; Details                  ;
-+------+-------+----------+--------------------------+
-; en   ; Input ; Info     ; Stuck at VCC             ;
-+------+-------+----------+--------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "PENC:PENC0"                                                                         ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; gs   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "decoder2x4:Dec"                                                                           ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port       ; Type   ; Severity ; Details                                                                             ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
-; decoderout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 12                          ;
+; boundary_port         ; 7                           ;
 ; cycloneiii_ff         ; 4                           ;
 ;     CLR               ; 4                           ;
 ; cycloneiii_lcell_comb ; 5                           ;
 ;     normal            ; 5                           ;
-;         0 data inputs ; 1                           ;
-;         2 data inputs ; 2                           ;
-;         3 data inputs ; 2                           ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 1                           ;
+;         3 data inputs ; 1                           ;
+;         4 data inputs ; 2                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 1.00                        ;
-; Average LUT depth     ; 0.67                        ;
+; Average LUT depth     ; 0.85                        ;
 +-----------------------+-----------------------------+
 
 
@@ -316,115 +279,107 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sun Jun 05 18:22:05 2022
+    Info: Version 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition
+    Info: Processing started: Mon Jun 06 12:58:13 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ProjetoFinal -c ProjetoFinal
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file vendingmachine_tb.vhd
-    Info (12022): Found design unit 1: VendingMachine_tb-behavior File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/VendingMachine_tb.vhd Line: 7
-    Info (12023): Found entity 1: VendingMachine_tb File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/VendingMachine_tb.vhd Line: 4
+    Info (12022): Found design unit 1: VendingMachine_tb-behavior File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/VendingMachine_tb.vhd Line: 7
+    Info (12023): Found entity 1: VendingMachine_tb File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/VendingMachine_tb.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file vendingmachine.vhd
-    Info (12022): Found design unit 1: VendingMachine-behavioral File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/VendingMachine.vhd Line: 18
-    Info (12023): Found entity 1: VendingMachine File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/VendingMachine.vhd Line: 5
+    Info (12022): Found design unit 1: VendingMachine-behavioral File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/VendingMachine.vhd Line: 18
+    Info (12023): Found entity 1: VendingMachine File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/VendingMachine.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file usbport.vhd
-    Info (12022): Found design unit 1: UsbPort-bdf_type File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/UsbPort.vhd Line: 33
-    Info (12023): Found entity 1: UsbPort File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/UsbPort.vhd Line: 25
+    Info (12022): Found design unit 1: UsbPort-bdf_type File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/UsbPort.vhd Line: 33
+    Info (12023): Found entity 1: UsbPort File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/UsbPort.vhd Line: 25
 Info (12021): Found 2 design units, including 1 entities, in source file ticketdispenser.vhd
-    Info (12022): Found design unit 1: TicketDispenser-behavioral File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/TicketDispenser.vhd Line: 20
-    Info (12023): Found entity 1: TicketDispenser File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/TicketDispenser.vhd Line: 10
+    Info (12022): Found design unit 1: TicketDispenser-behavioral File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/TicketDispenser.vhd Line: 20
+    Info (12023): Found entity 1: TicketDispenser File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/TicketDispenser.vhd Line: 10
 Info (12021): Found 2 design units, including 1 entities, in source file shiftregister.vhd
-    Info (12022): Found design unit 1: ShiftRegister-ShiftRegister_logic File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/ShiftRegister.vhd Line: 13
-    Info (12023): Found entity 1: ShiftRegister File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/ShiftRegister.vhd Line: 5
+    Info (12022): Found design unit 1: ShiftRegister-ShiftRegister_logic File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/ShiftRegister.vhd Line: 13
+    Info (12023): Found entity 1: ShiftRegister File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/ShiftRegister.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file serialreceiver.vhd
-    Info (12022): Found design unit 1: SerialReceiver-Behavioral File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/SerialReceiver.vhd Line: 16
-    Info (12023): Found entity 1: SerialReceiver File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/SerialReceiver.vhd Line: 5
+    Info (12022): Found design unit 1: SerialReceiver-Behavioral File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/SerialReceiver.vhd Line: 16
+    Info (12023): Found entity 1: SerialReceiver File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/SerialReceiver.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file serialcontrol.vhd
-    Info (12022): Found design unit 1: SerialControl-behavioral File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/SerialControl.vhd Line: 14
-    Info (12023): Found entity 1: SerialControl File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/SerialControl.vhd Line: 5
+    Info (12022): Found design unit 1: SerialControl-behavioral File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/SerialControl.vhd Line: 14
+    Info (12023): Found entity 1: SerialControl File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/SerialControl.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file paritycheck.vhd
-    Info (12022): Found design unit 1: ParityCheck-Behavioral File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/ParityCheck.vhd Line: 12
-    Info (12023): Found entity 1: ParityCheck File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/ParityCheck.vhd Line: 5
+    Info (12022): Found design unit 1: ParityCheck-Behavioral File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/ParityCheck.vhd Line: 12
+    Info (12023): Found entity 1: ParityCheck File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/ParityCheck.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file lcd.vhd
-    Info (12022): Found design unit 1: LCD-behavioral File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/LCD.vhd Line: 14
-    Info (12023): Found entity 1: LCD File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/LCD.vhd Line: 5
+    Info (12022): Found design unit 1: LCD-behavioral File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/LCD.vhd Line: 14
+    Info (12023): Found entity 1: LCD File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/LCD.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file ios.vhd
-    Info (12022): Found design unit 1: IOS-behavioral File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/IOS.vhd Line: 14
-    Info (12023): Found entity 1: IOS File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/IOS.vhd Line: 5
+    Info (12022): Found design unit 1: IOS-behavioral File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/IOS.vhd Line: 14
+    Info (12023): Found entity 1: IOS File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/IOS.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file int7seg.vhd
-    Info (12022): Found design unit 1: int7seg-logicFunction File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/int7seg.vhd Line: 10
-    Info (12023): Found entity 1: int7seg File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/int7seg.vhd Line: 4
+    Info (12022): Found design unit 1: int7seg-logicFunction File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/int7seg.vhd Line: 10
+    Info (12023): Found entity 1: int7seg File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/int7seg.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file ffd.vhd
-    Info (12022): Found design unit 1: FFD-Behavioral File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/FFD.vhd Line: 13
-    Info (12023): Found entity 1: FFD File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/FFD.vhd Line: 5
+    Info (12022): Found design unit 1: FFD-Behavioral File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/FFD.vhd Line: 13
+    Info (12023): Found entity 1: FFD File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/FFD.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file dispatcher.vhd
-    Info (12022): Found design unit 1: Dispatcher-behavioral File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/Dispatcher.vhd Line: 19
-    Info (12023): Found entity 1: Dispatcher File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/Dispatcher.vhd Line: 5
+    Info (12022): Found design unit 1: Dispatcher-behavioral File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Dispatcher.vhd Line: 19
+    Info (12023): Found entity 1: Dispatcher File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Dispatcher.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file decoderhex.vhd
-    Info (12022): Found design unit 1: decoderHex-logicFuntion File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/decoderHex.vhd Line: 10
-    Info (12023): Found entity 1: decoderHex File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/decoderHex.vhd Line: 4
+    Info (12022): Found design unit 1: decoderHex-logicFuntion File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/decoderHex.vhd Line: 10
+    Info (12023): Found entity 1: decoderHex File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/decoderHex.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file counter.vhd
-    Info (12022): Found design unit 1: Counter-Counter_LOGIC File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/Counter.vhd Line: 13
-    Info (12023): Found entity 1: Counter File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/Counter.vhd Line: 5
+    Info (12022): Found design unit 1: Counter-Counter_LOGIC File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Counter.vhd Line: 13
+    Info (12023): Found entity 1: Counter File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Counter.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file control.vhd
-    Info (12022): Found design unit 1: Control-behavioral File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/Control.vhd Line: 12
-    Info (12023): Found entity 1: Control File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/Control.vhd Line: 5
+    Info (12022): Found design unit 1: Control-behavioral File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Control.vhd Line: 12
+    Info (12023): Found entity 1: Control File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Control.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file clkdiv.vhd
-    Info (12022): Found design unit 1: CLKDIV-bhv File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/clkDIV.vhd Line: 11
-    Info (12023): Found entity 1: CLKDIV File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/clkDIV.vhd Line: 5
+    Info (12022): Found design unit 1: CLKDIV-bhv File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/clkDIV.vhd Line: 11
+    Info (12023): Found entity 1: CLKDIV File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/clkDIV.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file keyscan.vhd
-    Info (12022): Found design unit 1: KeyScan-behavioral File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/KeyScan.vhd Line: 13
-    Info (12023): Found entity 1: KeyScan File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/KeyScan.vhd Line: 5
+    Info (12022): Found design unit 1: KeyScan-behavioral File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyScan.vhd Line: 14
+    Info (12023): Found entity 1: KeyScan File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyScan.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file decoder2x4.vhd
-    Info (12022): Found design unit 1: decoder2x4-bhv File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/decoder2x4.vhd Line: 10
-    Info (12023): Found entity 1: decoder2x4 File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/decoder2x4.vhd Line: 4
+    Info (12022): Found design unit 1: decoder2x4-bhv File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/decoder2x4.vhd Line: 10
+    Info (12023): Found entity 1: decoder2x4 File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/decoder2x4.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file keycontrol.vhd
-    Info (12022): Found design unit 1: KeyControl-behaviour File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/KeyControl.vhd Line: 11
-    Info (12023): Found entity 1: KeyControl File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/KeyControl.vhd Line: 4
+    Info (12022): Found design unit 1: KeyControl-behaviour File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyControl.vhd Line: 11
+    Info (12023): Found entity 1: KeyControl File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyControl.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file counter2bits.vhd
-    Info (12022): Found design unit 1: Counter2bits-Counter_LOGIC File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/Counter2bits.vhd Line: 11
-    Info (12023): Found entity 1: Counter2bits File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/Counter2bits.vhd Line: 5
+    Info (12022): Found design unit 1: Counter2bits-Counter_LOGIC File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Counter2bits.vhd Line: 11
+    Info (12023): Found entity 1: Counter2bits File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Counter2bits.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file penc.vhd
-    Info (12022): Found design unit 1: PENC-Behavioral File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/PENC.vhd Line: 12
-    Info (12023): Found entity 1: PENC File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/PENC.vhd Line: 5
+    Info (12022): Found design unit 1: PENC-Behavioral File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/PENC.vhd Line: 12
+    Info (12023): Found entity 1: PENC File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/PENC.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file reg2bits.vhd
-    Info (12022): Found design unit 1: REG2bits-REG2bits_LOGIC File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/REG2bits.vhd Line: 13
-    Info (12023): Found entity 1: REG2bits File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/REG2bits.vhd Line: 5
+    Info (12022): Found design unit 1: REG2bits-REG2bits_LOGIC File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/REG2bits.vhd Line: 13
+    Info (12023): Found entity 1: REG2bits File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/REG2bits.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file keytransmitter.vhd
-    Info (12022): Found design unit 1: KeyTransmitter-behavioral File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/KeyTransmitter.vhd Line: 11
-    Info (12023): Found entity 1: KeyTransmitter File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/KeyTransmitter.vhd Line: 5
+    Info (12022): Found design unit 1: KeyTransmitter-behavioral File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyTransmitter.vhd Line: 11
+    Info (12023): Found entity 1: KeyTransmitter File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyTransmitter.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file reg4bits.vhd
-    Info (12022): Found design unit 1: REG4bits-REG4bits_LOGIC File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/REG4bits.vhd Line: 13
-    Info (12023): Found entity 1: REG4bits File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/REG4bits.vhd Line: 5
+    Info (12022): Found design unit 1: REG4bits-REG4bits_LOGIC File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/REG4bits.vhd Line: 13
+    Info (12023): Found entity 1: REG4bits File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/REG4bits.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file counter3bits.vhd
-    Info (12022): Found design unit 1: Counter3bits-Counter_LOGIC File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/Counter3bits.vhd Line: 11
-    Info (12023): Found entity 1: Counter3bits File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/Counter3bits.vhd Line: 5
+    Info (12022): Found design unit 1: Counter3bits-Counter_LOGIC File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Counter3bits.vhd Line: 11
+    Info (12023): Found entity 1: Counter3bits File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Counter3bits.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file mux_8x1.vhd
-    Info (12022): Found design unit 1: MUX_8x1-arq_mux File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/MUX_8x1.vhd Line: 13
-    Info (12023): Found entity 1: MUX_8x1 File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/MUX_8x1.vhd Line: 4
-Info (12127): Elaborating entity "KeyScan" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at KeyScan.vhd(8): used implicit default value for signal "Kpress" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/KeyScan.vhd Line: 8
-Warning (10036): Verilog HDL or VHDL warning at KeyScan.vhd(44): object "sdecoderOut" assigned a value but never read File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/KeyScan.vhd Line: 44
-Info (12128): Elaborating entity "Counter2bits" for hierarchy "Counter2bits:Cont" File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/KeyScan.vhd Line: 50
-Info (12128): Elaborating entity "FFD" for hierarchy "Counter2bits:Cont|FFD:UFFD0" File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/Counter2bits.vhd Line: 32
-Info (12128): Elaborating entity "decoder2x4" for hierarchy "decoder2x4:Dec" File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/KeyScan.vhd Line: 56
-Info (12128): Elaborating entity "PENC" for hierarchy "PENC:PENC0" File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/KeyScan.vhd Line: 60
-Info (12128): Elaborating entity "REG2bits" for hierarchy "REG2bits:REG" File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/KeyScan.vhd Line: 64
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "Kpress" is stuck at GND File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/KeyScan.vhd Line: 8
+    Info (12022): Found design unit 1: MUX_8x1-arq_mux File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/MUX_8x1.vhd Line: 13
+    Info (12023): Found entity 1: MUX_8x1 File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/MUX_8x1.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file keydecode.vhd
+    Info (12022): Found design unit 1: KeyDecode-behavioral File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyDecode.vhd Line: 16
+    Info (12023): Found entity 1: KeyDecode File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyDecode.vhd Line: 5
+Info (12127): Elaborating entity "KeyControl" for the top level hierarchy
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "KeyLines[0]" File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/KeyScan.vhd Line: 7
-Info (21057): Implemented 16 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 7 input pins
-    Info (21059): Implemented 5 output pins
+Info (21057): Implemented 11 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 4 input pins
+    Info (21059): Implemented 3 output pins
     Info (21061): Implemented 4 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 4798 megabytes
-    Info: Processing ended: Sun Jun 05 18:22:13 2022
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:18
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4855 megabytes
+    Info: Processing ended: Mon Jun 06 12:58:28 2022
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:37
 
 
