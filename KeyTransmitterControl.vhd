@@ -46,6 +46,6 @@ architecture behaviour of KeyTransmitterControl is
 	EnReg <= '1' when CurrentState = STATE_DATA_ACCEPTED else '0';
 	DAC <= '1' when CurrentState = STATE_DATA_ACCEPTED else '0';
 	EnCounter <= '1' when CurrentState = STATE_TRANSMIT_DATA else '0';
-	RstCounter <= '1' when CurrentState = STATE_RESET_COUNTER else '0';
+	RstCounter <= '1' when (CurrentState = STATE_WAIT_DATA or CurrentState = STATE_RESET_COUNTER) else '0';
 	
 end behaviour;

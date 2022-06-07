@@ -8,86 +8,676 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/simulation/modelsim
-Ekeytransmittercontrol
-Z1 w1654549191
-Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-!i122 1
+Z0 dC:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/simulation/modelsim
+Ecounter2bits
+Z1 w1654452421
+Z2 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z3 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z4 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z5 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 4
 R0
-Z4 8C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/KeyTransmitterControl.vhd
-Z5 FC:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/KeyTransmitterControl.vhd
+Z6 8C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Counter2bits.vhd
+Z7 FC:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Counter2bits.vhd
 l0
-L4 1
-VPSYXQMlj`N2fR@DQ>H6M^1
-!s100 bYW:S:O[d2Z77zRR:5n8W0
-Z6 OV;C;2020.1;71
-32
-Z7 !s110 1654549274
+L5 1
+VVlGcCMNQKWA4TX6;`Q6CG0
+!s100 IgcY;GzJ^dzgiQR6CgOgW0
+Z8 OV;C;2020.1;71
+31
+Z9 !s110 1654616706
 !i10b 1
-Z8 !s108 1654549274.000000
-Z9 !s90 -reportprogress|300|-work|work|C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/KeyTransmitterControl.vhd|C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/KeyTransmitterControl_tb.vhd|
-!s107 C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/KeyTransmitterControl_tb.vhd|C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/KeyTransmitterControl.vhd|
+Z10 !s108 1654616706.000000
+Z11 !s90 -reportprogress|300|-93|-work|work|C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Counter2bits.vhd|
+Z12 !s107 C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Counter2bits.vhd|
 !i113 1
-Z10 o-work work
-Z11 tExplicit 1 CvgOpt 0
-Abehaviour
+Z13 o-93 -work work
+Z14 tExplicit 1 CvgOpt 0
+Acounter_logic
 R2
 R3
-DEx4 work 21 keytransmittercontrol 0 22 PSYXQMlj`N2fR@DQ>H6M^1
-!i122 1
-l16
-Z12 L11 41
-V1EY4J=d=K48IB>3lMX2k[2
-Z13 !s100 lYPh1dZQCcoCzmDaeiRMT0
-R6
-32
-R7
-!i10b 1
+R4
+R5
+DEx4 work 12 counter2bits 0 22 VlGcCMNQKWA4TX6;`Q6CG0
+!i122 4
+l26
+L11 40
+V`00PTdAMHUa?fX]>]1S7Q1
+!s100 zJ^F=_Zo?Y5WL`F?_AdaW0
 R8
+31
 R9
-Z14 !s107 C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/KeyTransmitterControl_tb.vhd|C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/KeyTransmitterControl.vhd|
-!i113 1
+!i10b 1
 R10
 R11
-Ekeytransmittercontrol_tb
-Z15 w1654549106
-R2
-R3
-!i122 1
-R0
-Z16 8C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/KeyTransmitterControl_tb.vhd
-Z17 FC:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/KeyTransmitterControl_tb.vhd
-l0
-L4 1
-VcN9iF_Y_T1zK7CdMCi7Ha3
-!s100 XXniSGF3i9X^LEkX98]=42
-R6
-32
-R7
-!i10b 1
-R8
-R9
+R12
+!i113 1
+R13
 R14
+Ecounter3bits
+Z15 w1654614556
+R2
+R3
+R4
+R5
+!i122 9
+R0
+Z16 8C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Counter3bits.vhd
+Z17 FC:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Counter3bits.vhd
+l0
+L5 1
+V@>=bOPg_2Ez?R6FD89Rm?1
+!s100 iI_zd8h[zF4KHiKITBB191
+R8
+31
+Z18 !s110 1654616707
+!i10b 1
+Z19 !s108 1654616707.000000
+Z20 !s90 -reportprogress|300|-93|-work|work|C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Counter3bits.vhd|
+Z21 !s107 C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Counter3bits.vhd|
 !i113 1
+R13
+R14
+Acounter_logic
+R2
+R3
+R4
+R5
+DEx4 work 12 counter3bits 0 22 @>=bOPg_2Ez?R6FD89Rm?1
+!i122 9
+l28
+L12 49
+VY3kMBkn;YOnWmY<<A93E<1
+!s100 >H]fBdTmdJ^Aebj`MC^ai1
+R8
+31
+R18
+!i10b 1
+R19
+R20
+R21
+!i113 1
+R13
+R14
+Edecoder2x4
+Z22 w1654520616
+R4
+R5
+!i122 2
+R0
+Z23 8C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/decoder2x4.vhd
+Z24 FC:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/decoder2x4.vhd
+l0
+L4 1
+VhX42Gl:]S4I_^z0c@o=IG3
+!s100 7`f9g4e2kT:Z6RS8EDNZ40
+R8
+31
+R9
+!i10b 1
 R10
-R11
+Z25 !s90 -reportprogress|300|-93|-work|work|C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/decoder2x4.vhd|
+Z26 !s107 C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/decoder2x4.vhd|
+!i113 1
+R13
+R14
+Abehavioral
+R4
+R5
+DEx4 work 10 decoder2x4 0 22 hX42Gl:]S4I_^z0c@o=IG3
+!i122 2
+l12
+L11 14
+VFnoS755iEM_6QCU7J`bT22
+!s100 K@Pg7Y4XiAnd6_A8=z`M12
+R8
+31
+R9
+!i10b 1
+R10
+R25
+R26
+!i113 1
+R13
+R14
+Effd
+Z27 w1652118852
+R4
+R5
+!i122 0
+R0
+Z28 8C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/FFD.vhd
+Z29 FC:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/FFD.vhd
+l0
+L5 1
+V[=j<I;3z:oGoOX1QTZnI;0
+!s100 GjMz=l3gSHdNc2Tz`oJNK1
+R8
+31
+R9
+!i10b 1
+R10
+Z30 !s90 -reportprogress|300|-93|-work|work|C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/FFD.vhd|
+Z31 !s107 C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/FFD.vhd|
+!i113 1
+R13
+R14
+Abehavioral
+R4
+R5
+DEx4 work 3 ffd 0 22 [=j<I;3z:oGoOX1QTZnI;0
+!i122 0
+l15
+L13 9
+V1?_HAMXJ5>^9[i>A@ecid0
+!s100 Z>E86JjRn0WJ_HhIDYN3f2
+R8
+31
+R9
+!i10b 1
+R10
+R30
+R31
+!i113 1
+R13
+R14
+Ekeyboardreader
+Z32 w1654606550
+R4
+R5
+!i122 13
+R0
+Z33 8C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyboardReader.vhd
+Z34 FC:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyboardReader.vhd
+l0
+L5 1
+V2oPCjGMPc?8I3aBe1PYIi2
+!s100 ahR_AWf<:egPFf0Xi3c=C3
+R8
+31
+R18
+!i10b 1
+R19
+Z35 !s90 -reportprogress|300|-93|-work|work|C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyboardReader.vhd|
+Z36 !s107 C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyboardReader.vhd|
+!i113 1
+R13
+R14
+Abehavioral
+R4
+R5
+DEx4 work 14 keyboardreader 0 22 2oPCjGMPc?8I3aBe1PYIi2
+!i122 13
+l36
+L13 49
+VaGX61z_43AnFG^mA>;dCc0
+!s100 4RZ<gUG4VeRSS=I[XRf:b0
+R8
+31
+R18
+!i10b 1
+R19
+R35
+R36
+!i113 1
+R13
+R14
+Ekeyboardreader_tb
+Z37 w1654617555
+R4
+R5
+!i122 18
+R0
+Z38 8C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Testbench/KeyboardReader_tb.vhd
+Z39 FC:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Testbench/KeyboardReader_tb.vhd
+l0
+L4 1
+VR8Ti6k=z49]:z1LkKRd:b3
+!s100 ahEhC_F6ON]6kQQ:Hl0iT3
+R8
+32
+Z40 !s110 1654617563
+!i10b 1
+Z41 !s108 1654617563.000000
+Z42 !s90 -reportprogress|300|-work|work|C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Testbench/KeyboardReader_tb.vhd|
+Z43 !s107 C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Testbench/KeyboardReader_tb.vhd|
+!i113 1
+Z44 o-work work
+R14
 Abehavior
+R4
+R5
+DEx4 work 17 keyboardreader_tb 0 22 R8Ti6k=z49]:z1LkKRd:b3
+!i122 18
+l30
+L7 55
+VEcnT5zDlY^InLBR[f6>I;1
+!s100 >m;NE=k=ldEFz?GT1A?HV3
+R8
+32
+R40
+!i10b 1
+R41
+R42
+R43
+!i113 1
+R44
+R14
+Ekeycontrol
+R1
+R4
+R5
+!i122 3
+R0
+Z45 8C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyControl.vhd
+Z46 FC:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyControl.vhd
+l0
+L4 1
+VP6DF;;m2Z1DFI6QEL7R2d0
+!s100 k_l=ZSnEW@@^N10cD>h^A2
+R8
+31
+R9
+!i10b 1
+R10
+Z47 !s90 -reportprogress|300|-93|-work|work|C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyControl.vhd|
+Z48 !s107 C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyControl.vhd|
+!i113 1
+R13
+R14
+Abehaviour
+R4
+R5
+DEx4 work 10 keycontrol 0 22 P6DF;;m2Z1DFI6QEL7R2d0
+!i122 3
+l16
+L11 39
+VQ^7Uj=iQgo5>6A;65dTNO3
+!s100 :2K74GP]BLfCXTodXQ8i;0
+R8
+31
+R9
+!i10b 1
+R10
+R47
+R48
+!i113 1
+R13
+R14
+Ekeydecode
+Z49 w1654529161
+R4
+R5
+!i122 11
+R0
+Z50 8C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyDecode.vhd
+Z51 FC:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyDecode.vhd
+l0
+L5 1
+VH27?2EiaN47djP0^2T>lT3
+!s100 5;AkK1fZ?b1DPz4z`jYgf1
+R8
+31
+R18
+!i10b 1
+R19
+Z52 !s90 -reportprogress|300|-93|-work|work|C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyDecode.vhd|
+Z53 !s107 C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyDecode.vhd|
+!i113 1
+R13
+R14
+Abehavioral
+R4
+R5
+DEx4 work 9 keydecode 0 22 H27?2EiaN47djP0^2T>lT3
+!i122 11
+l39
+L16 51
+VTXejQ>g[VgcAbfmGdTDhV3
+!s100 _@HL?X4>ECXeeA=LS4jYH1
+R8
+31
+R18
+!i10b 1
+R19
+R52
+R53
+!i113 1
+R13
+R14
+Ekeyscan
+Z54 w1654525683
+R4
+R5
+!i122 1
+R0
+Z55 8C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyScan.vhd
+Z56 FC:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyScan.vhd
+l0
+L5 1
+V6GiYX_QbNdJECYULVZQjC2
+!s100 8YmWb[@R0iADTfZ;dZ2A80
+R8
+31
+R9
+!i10b 1
+R10
+Z57 !s90 -reportprogress|300|-93|-work|work|C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyScan.vhd|
+Z58 !s107 C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyScan.vhd|
+!i113 1
+R13
+R14
+Abehavioral
+R4
+R5
+DEx4 work 7 keyscan 0 22 6GiYX_QbNdJECYULVZQjC2
+!i122 1
+l48
+L13 65
+VY]eX5FcgCPnU2PV`6<D7R0
+!s100 >0BTXL3>FV`=lkhYYN?QH3
+R8
+31
+R9
+!i10b 1
+R10
+R57
+R58
+!i113 1
+R13
+R14
+Ekeytransmitter
+Z59 w1654614819
+R4
+R5
+!i122 7
+R0
+Z60 8C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyTransmitter.vhd
+Z61 FC:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyTransmitter.vhd
+l0
+L5 1
+VAoSQ6Lfi>e^iLdO44i:U=0
+!s100 _OSO[ZA<]Mb8328ciA9cF2
+R8
+31
+R9
+!i10b 1
+R10
+Z62 !s90 -reportprogress|300|-93|-work|work|C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyTransmitter.vhd|
+Z63 !s107 C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyTransmitter.vhd|
+!i113 1
+R13
+R14
+Abehavioral
+R4
+R5
+DEx4 work 14 keytransmitter 0 22 AoSQ6Lfi>e^iLdO44i:U=0
+!i122 7
+l56
+L11 92
+V`99zzH1o63<<3Q[_ednc:1
+!s100 ACeF01@mXzD56:e<oTi_X3
+R8
+31
+R9
+!i10b 1
+R10
+R62
+R63
+!i113 1
+R13
+R14
+Ekeytransmitter_tb
+Z64 w1654614870
+R4
+R5
+!i122 19
+R0
+Z65 8C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Testbench/KeyTransmitter_tb.vhd
+Z66 FC:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Testbench/KeyTransmitter_tb.vhd
+l0
+L4 1
+V0R]RQ9K[hb;9gjJ?a4zPD3
+!s100 nmc5M[IQY=I?R]STm;8D43
+R8
+32
+Z67 !s110 1654617913
+!i10b 1
+Z68 !s108 1654617913.000000
+Z69 !s90 -reportprogress|300|-work|work|C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Testbench/KeyTransmitter_tb.vhd|
+!s107 C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Testbench/KeyTransmitter_tb.vhd|
+!i113 1
+R44
+R14
+Abehavior
+R4
+R5
+DEx4 work 17 keytransmitter_tb 0 22 0R]RQ9K[hb;9gjJ?a4zPD3
+!i122 19
+l27
+L7 59
+VlzkZam4`gYobF27cWkeWE1
+!s100 0>gD1DoCcFd00kL]@;Im00
+R8
+32
+R67
+!i10b 1
+R68
+R69
+Z70 !s107 C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Testbench/KeyTransmitter_tb.vhd|
+!i113 1
+R44
+R14
+Ekeytransmittercontrol
+Z71 w1654615311
+R4
+R5
+!i122 12
+R0
+Z72 8C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyTransmitterControl.vhd
+Z73 FC:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyTransmitterControl.vhd
+l0
+L4 1
+V<lPQgYUUV=5Y9<H<P2XE32
+!s100 bYW:S:O[d2Z77zRR:5n8W0
+R8
+31
+R18
+!i10b 1
+R19
+Z74 !s90 -reportprogress|300|-93|-work|work|C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyTransmitterControl.vhd|
+Z75 !s107 C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyTransmitterControl.vhd|
+!i113 1
+R13
+R14
+Abehaviour
+R4
+R5
+DEx4 work 21 keytransmittercontrol 0 22 <lPQgYUUV=5Y9<H<P2XE32
+!i122 12
+l16
+L11 41
+V9mhUC6oIeMIE@AdmJNhl^2
+!s100 OH:3b;Hz3Pbn6M2`RDE<70
+R8
+31
+R18
+!i10b 1
+R19
+R74
+R75
+!i113 1
+R13
+R14
+Emux_8x1
+R1
+R4
+R5
+!i122 10
+R0
+Z76 8C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/MUX_8x1.vhd
+Z77 FC:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/MUX_8x1.vhd
+l0
+L4 1
+VFCMOC9LYn5mHm_cDdA>Mf2
+!s100 ]7eg@jM>o7P3KXaz7Wi;G1
+R8
+31
+R18
+!i10b 1
+R19
+Z78 !s90 -reportprogress|300|-93|-work|work|C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/MUX_8x1.vhd|
+Z79 !s107 C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/MUX_8x1.vhd|
+!i113 1
+R13
+R14
+Aarq_mux
+R4
+R5
+DEx4 work 7 mux_8x1 0 22 FCMOC9LYn5mHm_cDdA>Mf2
+!i122 10
+l14
+L13 17
+VP7P?gTAUb_^]=[XJfTLhd2
+!s100 T>ARD6<IRjzB9b<132?>d1
+R8
+31
+R18
+!i10b 1
+R19
+R78
+R79
+!i113 1
+R13
+R14
+Epenc
+Z80 w1654530261
+R4
+R5
+!i122 5
+R0
+Z81 8C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/PENC.vhd
+Z82 FC:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/PENC.vhd
+l0
+L5 1
+V^FKOZBgEmJSaIYTV4l4RD0
+!s100 eBLz<P3YM^BdYT5<Qm0]U0
+R8
+31
+R9
+!i10b 1
+R10
+Z83 !s90 -reportprogress|300|-93|-work|work|C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/PENC.vhd|
+Z84 !s107 C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/PENC.vhd|
+!i113 1
+R13
+R14
+Abehavioral
+R4
+R5
+DEx4 work 4 penc 0 22 ^FKOZBgEmJSaIYTV4l4RD0
+!i122 5
+l14
+L12 24
+VLG=d^K]TbIK0U39gAaUK>1
+!s100 KF9F5fKZA2__AgRk4zV[I3
+R8
+31
+R9
+!i10b 1
+R10
+R83
+R84
+!i113 1
+R13
+R14
+Ereg2bits
+R1
 R2
 R3
-DEx4 work 24 keytransmittercontrol_tb 0 22 cN9iF_Y_T1zK7CdMCi7Ha3
-!i122 1
-l27
-L7 64
-VeX6?KR:Og>AFU7A`KaFO52
-!s100 SW7gaI3KIBZlFglW93WI]1
-R6
-32
-R7
-!i10b 1
+R4
+R5
+!i122 6
+R0
+Z85 8C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/REG2bits.vhd
+Z86 FC:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/REG2bits.vhd
+l0
+L5 1
+VHQLCaWG>VeaVa<Seem>lN1
+!s100 8JIbg]@jk_WM9PODR[`3`0
 R8
+31
 R9
-R14
-!i113 1
+!i10b 1
 R10
-R11
+Z87 !s90 -reportprogress|300|-93|-work|work|C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/REG2bits.vhd|
+Z88 !s107 C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/REG2bits.vhd|
+!i113 1
+R13
+R14
+Areg2bits_logic
+R2
+R3
+R4
+R5
+DEx4 work 8 reg2bits 0 22 HQLCaWG>VeaVa<Seem>lN1
+!i122 6
+l25
+L13 29
+VBd3BbZMhS9BN9OXzV65o_3
+!s100 ]h]=ZfZNHHTn`aaeXzBh`2
+R8
+31
+R9
+!i10b 1
+R10
+R87
+R88
+!i113 1
+R13
+R14
+Ereg4bits
+R1
+R2
+R3
+R4
+R5
+!i122 8
+R0
+Z89 8C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/REG4bits.vhd
+Z90 FC:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/REG4bits.vhd
+l0
+L5 1
+VNaa68ZP=I`RJAZ2ejZeTG2
+!s100 mb[@JGFDilGGgNXk[_9dg3
+R8
+31
+R9
+!i10b 1
+R10
+Z91 !s90 -reportprogress|300|-93|-work|work|C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/REG4bits.vhd|
+Z92 !s107 C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/REG4bits.vhd|
+!i113 1
+R13
+R14
+Areg4bits_logic
+R2
+R3
+R4
+R5
+DEx4 work 8 reg4bits 0 22 Naa68ZP=I`RJAZ2ejZeTG2
+!i122 8
+l25
+L13 44
+Vm=i5M>SOWnUfhYDiP@N8<3
+!s100 CYO2XY3`b]D[<BTdiZKmo3
+R8
+31
+R9
+!i10b 1
+R10
+R91
+R92
+!i113 1
+R13
+R14

@@ -152,17 +152,33 @@ Ksave <= Ksave.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |KeyboardReader|KeyTransmitter:ktransmitter
-DAV => REG4bits:REG.Enable
+DAV => KeyTransmitterControl:keyTransControl.DAV
 TXclk => Counter3bits:Cont.CLK
+MCLK => KeyTransmitterControl:keyTransControl.CLK
 MCLK => REG4bits:REG.CLK
+Clr => KeyTransmitterControl:keyTransControl.Reset
 Clr => REG4bits:REG.Clr
-Clr => Counter3bits:Cont.Clr
 Data_In[0] => REG4bits:REG.Input[0]
 Data_In[1] => REG4bits:REG.Input[1]
 Data_In[2] => REG4bits:REG.Input[2]
 Data_In[3] => REG4bits:REG.Input[3]
-DAC <= comb.DB_MAX_OUTPUT_PORT_TYPE
+DAC <= KeyTransmitterControl:keyTransControl.DAC
 TXD <= MUX_8x1:MUX.Data_Out
+
+
+|KeyboardReader|KeyTransmitter:ktransmitter|KeyTransmitterControl:keyTransControl
+DAV => NextState.STATE_DATA_ACCEPTED.DATAB
+DAV => Selector0.IN2
+DAV => Selector1.IN1
+TCount => NextState.STATE_RESET_COUNTER.DATAB
+TCount => Selector1.IN2
+CLK => CurrentState~1.DATAIN
+Reset => CurrentState~3.DATAIN
+DAC <= DAC.DB_MAX_OUTPUT_PORT_TYPE
+EnTXD <= EnTXD.DB_MAX_OUTPUT_PORT_TYPE
+EnReg <= EnReg.DB_MAX_OUTPUT_PORT_TYPE
+EnCounter <= EnCounter.DB_MAX_OUTPUT_PORT_TYPE
+RstCounter <= RstCounter.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |KeyboardReader|KeyTransmitter:ktransmitter|REG4bits:REG
@@ -233,9 +249,10 @@ CLK => FFD:UFFD2.CLK
 Clr => FFD:UFFD0.RESET
 Clr => FFD:UFFD1.RESET
 Clr => FFD:UFFD2.RESET
-Tcount[0] <= FFD:UFFD0.Q
-Tcount[1] <= FFD:UFFD1.Q
-Tcount[2] <= FFD:UFFD2.Q
+Tcount <= Tcount.DB_MAX_OUTPUT_PORT_TYPE
+Count[0] <= FFD:UFFD0.Q
+Count[1] <= FFD:UFFD1.Q
+Count[2] <= FFD:UFFD2.Q
 
 
 |KeyboardReader|KeyTransmitter:ktransmitter|Counter3bits:Cont|FFD:UFFD0

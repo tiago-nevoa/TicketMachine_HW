@@ -1,6 +1,6 @@
 Analysis & Synthesis report for ProjetoFinal
-Mon Jun 06 22:45:01 2022
-Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Tue Jun 07 16:43:35 2022
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition
 
 
 ---------------------
@@ -13,16 +13,15 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |KeyboardReader|KeyDecode:kdecode|KeyControl:kcontrol|CurrentState
-  9. Registers Removed During Synthesis
+  8. State Machine - |KeyboardReader|KeyTransmitter:ktransmitter|KeyTransmitterControl:keyTransControl|CurrentState
+  9. State Machine - |KeyboardReader|KeyDecode:kdecode|KeyControl:kcontrol|CurrentState
  10. General Register Statistics
  11. Port Connectivity Checks: "KeyTransmitter:ktransmitter|MUX_8x1:MUX"
- 12. Port Connectivity Checks: "KeyTransmitter:ktransmitter|Counter3bits:Cont"
- 13. Port Connectivity Checks: "KeyDecode:kdecode|KeyScan:kscan|REG2bits:REG|FFD:UFFD1"
- 14. Port Connectivity Checks: "KeyDecode:kdecode|KeyScan:kscan|REG2bits:REG|FFD:UFFD0"
- 15. Post-Synthesis Netlist Statistics for Top Partition
- 16. Elapsed Time Per Partition
- 17. Analysis & Synthesis Messages
+ 12. Port Connectivity Checks: "KeyDecode:kdecode|KeyScan:kscan|REG2bits:REG|FFD:UFFD1"
+ 13. Port Connectivity Checks: "KeyDecode:kdecode|KeyScan:kscan|REG2bits:REG|FFD:UFFD0"
+ 14. Post-Synthesis Netlist Statistics for Top Partition
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
 
 
 
@@ -46,26 +45,26 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+----------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                     ;
-+------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Jun 06 22:45:01 2022       ;
-; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
-; Revision Name                      ; ProjetoFinal                                ;
-; Top-level Entity Name              ; KeyboardReader                              ;
-; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 20                                          ;
-;     Total combinational functions  ; 15                                          ;
-;     Dedicated logic registers      ; 14                                          ;
-; Total registers                    ; 14                                          ;
-; Total pins                         ; 11                                          ;
-; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0                                           ;
-; Embedded Multiplier 9-bit elements ; 0                                           ;
-; Total PLLs                         ; 0                                           ;
-; UFM blocks                         ; 0                                           ;
-; ADC blocks                         ; 0                                           ;
-+------------------------------------+---------------------------------------------+
++------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                                   ;
++------------------------------------+-----------------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Tue Jun 07 16:43:35 2022                     ;
+; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition ;
+; Revision Name                      ; ProjetoFinal                                              ;
+; Top-level Entity Name              ; KeyboardReader                                            ;
+; Family                             ; MAX 10                                                    ;
+; Total logic elements               ; 31                                                        ;
+;     Total combinational functions  ; 27                                                        ;
+;     Dedicated logic registers      ; 19                                                        ;
+; Total registers                    ; 19                                                        ;
+; Total pins                         ; 11                                                        ;
+; Total virtual pins                 ; 0                                                         ;
+; Total memory bits                  ; 0                                                         ;
+; Embedded Multiplier 9-bit elements ; 0                                                         ;
+; Total PLLs                         ; 0                                                         ;
+; UFM blocks                         ; 0                                                         ;
+; ADC blocks                         ; 0                                                         ;
++------------------------------------+-----------------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------+
@@ -159,37 +158,39 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 6           ;
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 16          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 6           ;
+; Maximum used               ; 16          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-6         ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-16        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                             ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                      ; Library ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------+---------+
-; FFD.vhd                          ; yes             ; User VHDL File  ; C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/FFD.vhd            ;         ;
-; KeyScan.vhd                      ; yes             ; User VHDL File  ; C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/KeyScan.vhd        ;         ;
-; decoder2x4.vhd                   ; yes             ; User VHDL File  ; C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/decoder2x4.vhd     ;         ;
-; KeyControl.vhd                   ; yes             ; User VHDL File  ; C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/KeyControl.vhd     ;         ;
-; Counter2bits.vhd                 ; yes             ; User VHDL File  ; C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/Counter2bits.vhd   ;         ;
-; PENC.vhd                         ; yes             ; User VHDL File  ; C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/PENC.vhd           ;         ;
-; REG2bits.vhd                     ; yes             ; User VHDL File  ; C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/REG2bits.vhd       ;         ;
-; KeyTransmitter.vhd               ; yes             ; User VHDL File  ; C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/KeyTransmitter.vhd ;         ;
-; REG4bits.vhd                     ; yes             ; User VHDL File  ; C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/REG4bits.vhd       ;         ;
-; Counter3bits.vhd                 ; yes             ; User VHDL File  ; C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/Counter3bits.vhd   ;         ;
-; MUX_8x1.vhd                      ; yes             ; User VHDL File  ; C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/MUX_8x1.vhd        ;         ;
-; KeyDecode.vhd                    ; yes             ; User VHDL File  ; C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/KeyDecode.vhd      ;         ;
-; KeyboardReader.vhd               ; yes             ; User VHDL File  ; C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/KeyboardReader.vhd ;         ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                      ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                               ; Library ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------+---------+
+; FFD.vhd                          ; yes             ; User VHDL File  ; C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/FFD.vhd                   ;         ;
+; KeyScan.vhd                      ; yes             ; User VHDL File  ; C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyScan.vhd               ;         ;
+; decoder2x4.vhd                   ; yes             ; User VHDL File  ; C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/decoder2x4.vhd            ;         ;
+; KeyControl.vhd                   ; yes             ; User VHDL File  ; C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyControl.vhd            ;         ;
+; Counter2bits.vhd                 ; yes             ; User VHDL File  ; C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Counter2bits.vhd          ;         ;
+; PENC.vhd                         ; yes             ; User VHDL File  ; C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/PENC.vhd                  ;         ;
+; REG2bits.vhd                     ; yes             ; User VHDL File  ; C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/REG2bits.vhd              ;         ;
+; KeyTransmitter.vhd               ; yes             ; User VHDL File  ; C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyTransmitter.vhd        ;         ;
+; REG4bits.vhd                     ; yes             ; User VHDL File  ; C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/REG4bits.vhd              ;         ;
+; Counter3bits.vhd                 ; yes             ; User VHDL File  ; C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Counter3bits.vhd          ;         ;
+; MUX_8x1.vhd                      ; yes             ; User VHDL File  ; C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/MUX_8x1.vhd               ;         ;
+; KeyDecode.vhd                    ; yes             ; User VHDL File  ; C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyDecode.vhd             ;         ;
+; KeyTransmitterControl.vhd        ; yes             ; User VHDL File  ; C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyTransmitterControl.vhd ;         ;
+; KeyboardReader.vhd               ; yes             ; User VHDL File  ; C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyboardReader.vhd        ;         ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -197,20 +198,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 20        ;
+; Estimated Total logic elements              ; 31        ;
 ;                                             ;           ;
-; Total combinational functions               ; 15        ;
+; Total combinational functions               ; 27        ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 4         ;
-;     -- 3 input functions                    ; 4         ;
+;     -- 4 input functions                    ; 10        ;
+;     -- 3 input functions                    ; 10        ;
 ;     -- <=2 input functions                  ; 7         ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 15        ;
+;     -- normal mode                          ; 27        ;
 ;     -- arithmetic mode                      ; 0         ;
 ;                                             ;           ;
-; Total registers                             ; 14        ;
-;     -- Dedicated logic registers            ; 14        ;
+; Total registers                             ; 19        ;
+;     -- Dedicated logic registers            ; 19        ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
 ; I/O pins                                    ; 11        ;
@@ -218,42 +219,56 @@ https://fpgasoftware.intel.com/eula.
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; Clr~input ;
-; Maximum fan-out                             ; 14        ;
-; Total fan-out                               ; 102       ;
-; Average fan-out                             ; 2.00      ;
+; Maximum fan-out                             ; 16        ;
+; Total fan-out                               ; 160       ;
+; Average fan-out                             ; 2.35      ;
 +---------------------------------------------+-----------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                 ;
-+----------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------+----------------+--------------+
-; Compilation Hierarchy Node       ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                         ; Entity Name    ; Library Name ;
-+----------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------+----------------+--------------+
-; |KeyboardReader                  ; 15 (0)              ; 14 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 11   ; 0            ; 0          ; |KeyboardReader                                                             ; KeyboardReader ; work         ;
-;    |KeyDecode:kdecode|           ; 9 (0)               ; 7 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyboardReader|KeyDecode:kdecode                                           ; KeyDecode      ; work         ;
-;       |KeyControl:kcontrol|      ; 2 (2)               ; 3 (3)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyboardReader|KeyDecode:kdecode|KeyControl:kcontrol                       ; KeyControl     ; work         ;
-;       |KeyScan:kscan|            ; 7 (0)               ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyboardReader|KeyDecode:kdecode|KeyScan:kscan                             ; KeyScan        ; work         ;
-;          |Counter2bits:Cont|     ; 2 (0)               ; 2 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyboardReader|KeyDecode:kdecode|KeyScan:kscan|Counter2bits:Cont           ; Counter2bits   ; work         ;
-;             |FFD:UFFD0|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyboardReader|KeyDecode:kdecode|KeyScan:kscan|Counter2bits:Cont|FFD:UFFD0 ; FFD            ; work         ;
-;             |FFD:UFFD1|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyboardReader|KeyDecode:kdecode|KeyScan:kscan|Counter2bits:Cont|FFD:UFFD1 ; FFD            ; work         ;
-;          |PENC:PENC0|            ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyboardReader|KeyDecode:kdecode|KeyScan:kscan|PENC:PENC0                  ; PENC           ; work         ;
-;          |REG2bits:REG|          ; 0 (0)               ; 2 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyboardReader|KeyDecode:kdecode|KeyScan:kscan|REG2bits:REG                ; REG2bits       ; work         ;
-;             |FFD:UFFD0|          ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyboardReader|KeyDecode:kdecode|KeyScan:kscan|REG2bits:REG|FFD:UFFD0      ; FFD            ; work         ;
-;             |FFD:UFFD1|          ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyboardReader|KeyDecode:kdecode|KeyScan:kscan|REG2bits:REG|FFD:UFFD1      ; FFD            ; work         ;
-;          |decoder2x4:Dec|        ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyboardReader|KeyDecode:kdecode|KeyScan:kscan|decoder2x4:Dec              ; decoder2x4     ; work         ;
-;    |KeyTransmitter:ktransmitter| ; 6 (0)               ; 7 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyboardReader|KeyTransmitter:ktransmitter                                 ; KeyTransmitter ; work         ;
-;       |Counter3bits:Cont|        ; 3 (0)               ; 3 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyboardReader|KeyTransmitter:ktransmitter|Counter3bits:Cont               ; Counter3bits   ; work         ;
-;          |FFD:UFFD0|             ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyboardReader|KeyTransmitter:ktransmitter|Counter3bits:Cont|FFD:UFFD0     ; FFD            ; work         ;
-;          |FFD:UFFD1|             ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyboardReader|KeyTransmitter:ktransmitter|Counter3bits:Cont|FFD:UFFD1     ; FFD            ; work         ;
-;          |FFD:UFFD2|             ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyboardReader|KeyTransmitter:ktransmitter|Counter3bits:Cont|FFD:UFFD2     ; FFD            ; work         ;
-;       |MUX_8x1:MUX|              ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyboardReader|KeyTransmitter:ktransmitter|MUX_8x1:MUX                     ; MUX_8x1        ; work         ;
-;       |REG4bits:REG|             ; 0 (0)               ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyboardReader|KeyTransmitter:ktransmitter|REG4bits:REG                    ; REG4bits       ; work         ;
-;          |FFD:UFFD0|             ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyboardReader|KeyTransmitter:ktransmitter|REG4bits:REG|FFD:UFFD0          ; FFD            ; work         ;
-;          |FFD:UFFD1|             ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyboardReader|KeyTransmitter:ktransmitter|REG4bits:REG|FFD:UFFD1          ; FFD            ; work         ;
-;          |FFD:UFFD2|             ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyboardReader|KeyTransmitter:ktransmitter|REG4bits:REG|FFD:UFFD2          ; FFD            ; work         ;
-;          |FFD:UFFD3|             ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyboardReader|KeyTransmitter:ktransmitter|REG4bits:REG|FFD:UFFD3          ; FFD            ; work         ;
-+----------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------+----------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                           ;
++-----------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------+-----------------------+--------------+
+; Compilation Hierarchy Node                    ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                               ; Entity Name           ; Library Name ;
++-----------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------+-----------------------+--------------+
+; |KeyboardReader                               ; 27 (0)              ; 19 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 11   ; 0            ; 0          ; |KeyboardReader                                                                   ; KeyboardReader        ; work         ;
+;    |KeyDecode:kdecode|                        ; 12 (0)              ; 8 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyboardReader|KeyDecode:kdecode                                                 ; KeyDecode             ; work         ;
+;       |KeyControl:kcontrol|                   ; 4 (4)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyboardReader|KeyDecode:kdecode|KeyControl:kcontrol                             ; KeyControl            ; work         ;
+;       |KeyScan:kscan|                         ; 8 (0)               ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyboardReader|KeyDecode:kdecode|KeyScan:kscan                                   ; KeyScan               ; work         ;
+;          |Counter2bits:Cont|                  ; 2 (0)               ; 2 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyboardReader|KeyDecode:kdecode|KeyScan:kscan|Counter2bits:Cont                 ; Counter2bits          ; work         ;
+;             |FFD:UFFD0|                       ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyboardReader|KeyDecode:kdecode|KeyScan:kscan|Counter2bits:Cont|FFD:UFFD0       ; FFD                   ; work         ;
+;             |FFD:UFFD1|                       ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyboardReader|KeyDecode:kdecode|KeyScan:kscan|Counter2bits:Cont|FFD:UFFD1       ; FFD                   ; work         ;
+;          |PENC:PENC0|                         ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyboardReader|KeyDecode:kdecode|KeyScan:kscan|PENC:PENC0                        ; PENC                  ; work         ;
+;          |REG2bits:REG|                       ; 0 (0)               ; 2 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyboardReader|KeyDecode:kdecode|KeyScan:kscan|REG2bits:REG                      ; REG2bits              ; work         ;
+;             |FFD:UFFD0|                       ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyboardReader|KeyDecode:kdecode|KeyScan:kscan|REG2bits:REG|FFD:UFFD0            ; FFD                   ; work         ;
+;             |FFD:UFFD1|                       ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyboardReader|KeyDecode:kdecode|KeyScan:kscan|REG2bits:REG|FFD:UFFD1            ; FFD                   ; work         ;
+;          |decoder2x4:Dec|                     ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyboardReader|KeyDecode:kdecode|KeyScan:kscan|decoder2x4:Dec                    ; decoder2x4            ; work         ;
+;    |KeyTransmitter:ktransmitter|              ; 15 (0)              ; 11 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyboardReader|KeyTransmitter:ktransmitter                                       ; KeyTransmitter        ; work         ;
+;       |Counter3bits:Cont|                     ; 3 (0)               ; 3 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyboardReader|KeyTransmitter:ktransmitter|Counter3bits:Cont                     ; Counter3bits          ; work         ;
+;          |FFD:UFFD0|                          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyboardReader|KeyTransmitter:ktransmitter|Counter3bits:Cont|FFD:UFFD0           ; FFD                   ; work         ;
+;          |FFD:UFFD1|                          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyboardReader|KeyTransmitter:ktransmitter|Counter3bits:Cont|FFD:UFFD1           ; FFD                   ; work         ;
+;          |FFD:UFFD2|                          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyboardReader|KeyTransmitter:ktransmitter|Counter3bits:Cont|FFD:UFFD2           ; FFD                   ; work         ;
+;       |KeyTransmitterControl:keyTransControl| ; 6 (6)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyboardReader|KeyTransmitter:ktransmitter|KeyTransmitterControl:keyTransControl ; KeyTransmitterControl ; work         ;
+;       |MUX_8x1:MUX|                           ; 6 (6)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyboardReader|KeyTransmitter:ktransmitter|MUX_8x1:MUX                           ; MUX_8x1               ; work         ;
+;       |REG4bits:REG|                          ; 0 (0)               ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyboardReader|KeyTransmitter:ktransmitter|REG4bits:REG                          ; REG4bits              ; work         ;
+;          |FFD:UFFD0|                          ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyboardReader|KeyTransmitter:ktransmitter|REG4bits:REG|FFD:UFFD0                ; FFD                   ; work         ;
+;          |FFD:UFFD1|                          ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyboardReader|KeyTransmitter:ktransmitter|REG4bits:REG|FFD:UFFD1                ; FFD                   ; work         ;
+;          |FFD:UFFD2|                          ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyboardReader|KeyTransmitter:ktransmitter|REG4bits:REG|FFD:UFFD2                ; FFD                   ; work         ;
+;          |FFD:UFFD3|                          ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyboardReader|KeyTransmitter:ktransmitter|REG4bits:REG|FFD:UFFD3                ; FFD                   ; work         ;
++-----------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------+-----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |KeyboardReader|KeyTransmitter:ktransmitter|KeyTransmitterControl:keyTransControl|CurrentState                                                           ;
++----------------------------------+----------------------------------+----------------------------------+----------------------------------+------------------------------+
+; Name                             ; CurrentState.STATE_RESET_COUNTER ; CurrentState.STATE_TRANSMIT_DATA ; CurrentState.STATE_DATA_ACCEPTED ; CurrentState.STATE_WAIT_DATA ;
++----------------------------------+----------------------------------+----------------------------------+----------------------------------+------------------------------+
+; CurrentState.STATE_WAIT_DATA     ; 0                                ; 0                                ; 0                                ; 0                            ;
+; CurrentState.STATE_DATA_ACCEPTED ; 0                                ; 0                                ; 1                                ; 1                            ;
+; CurrentState.STATE_TRANSMIT_DATA ; 0                                ; 1                                ; 0                                ; 1                            ;
+; CurrentState.STATE_RESET_COUNTER ; 1                                ; 0                                ; 0                                ; 1                            ;
++----------------------------------+----------------------------------+----------------------------------+----------------------------------+------------------------------+
 
 
 Encoding Type:  One-Hot
@@ -269,25 +284,15 @@ Encoding Type:  One-Hot
 +---------------------------------+---------------------------------+--------------------------+---------------------------+-------------------------+
 
 
-+--------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                         ;
-+-----------------------------------------------------------------------+--------------------+
-; Register name                                                         ; Reason for Removal ;
-+-----------------------------------------------------------------------+--------------------+
-; KeyDecode:kdecode|KeyControl:kcontrol|CurrentState.STATE_SAVE_CHECKED ; Lost fanout        ;
-; Total Number of Removed Registers = 1                                 ;                    ;
-+-----------------------------------------------------------------------+--------------------+
-
-
 +------------------------------------------------------+
 ; General Register Statistics                          ;
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 14    ;
+; Total registers                              ; 19    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 14    ;
+; Number of registers using Asynchronous Clear ; 19    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 4     ;
 ; Number of registers using Preset             ; 0     ;
@@ -296,22 +301,13 @@ Encoding Type:  One-Hot
 
 +---------------------------------------------------------------------+
 ; Port Connectivity Checks: "KeyTransmitter:ktransmitter|MUX_8x1:MUX" ;
-+---------------+-------+----------+----------------------------------+
-; Port          ; Type  ; Severity ; Details                          ;
-+---------------+-------+----------+----------------------------------+
-; data_in[1..0] ; Input ; Info     ; Stuck at VCC                     ;
-; data_in[7]    ; Input ; Info     ; Stuck at VCC                     ;
-; data_in[6]    ; Input ; Info     ; Stuck at GND                     ;
-+---------------+-------+----------+----------------------------------+
-
-
-+---------------------------------------------------------------------------+
-; Port Connectivity Checks: "KeyTransmitter:ktransmitter|Counter3bits:Cont" ;
-+------+-------+----------+-------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                         ;
-+------+-------+----------+-------------------------------------------------+
-; ce   ; Input ; Info     ; Stuck at VCC                                    ;
-+------+-------+----------+-------------------------------------------------+
++------------+-------+----------+-------------------------------------+
+; Port       ; Type  ; Severity ; Details                             ;
++------------+-------+----------+-------------------------------------+
+; data_in[7] ; Input ; Info     ; Stuck at VCC                        ;
+; data_in[6] ; Input ; Info     ; Stuck at GND                        ;
+; data_in[1] ; Input ; Info     ; Stuck at VCC                        ;
++------------+-------+----------+-------------------------------------+
 
 
 +------------------------------------------------------------------------------------+
@@ -338,18 +334,17 @@ Encoding Type:  One-Hot
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 11                          ;
-; cycloneiii_ff         ; 14                          ;
-;     CLR               ; 10                          ;
+; cycloneiii_ff         ; 19                          ;
+;     CLR               ; 15                          ;
 ;     ENA CLR           ; 4                           ;
-; cycloneiii_lcell_comb ; 15                          ;
-;     normal            ; 15                          ;
-;         1 data inputs ; 1                           ;
-;         2 data inputs ; 6                           ;
-;         3 data inputs ; 4                           ;
-;         4 data inputs ; 4                           ;
+; cycloneiii_lcell_comb ; 27                          ;
+;     normal            ; 27                          ;
+;         2 data inputs ; 7                           ;
+;         3 data inputs ; 10                          ;
+;         4 data inputs ; 10                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 3.00                        ;
-; Average LUT depth     ; 1.39                        ;
+; Average LUT depth     ; 1.57                        ;
 +-----------------------+-----------------------------+
 
 
@@ -367,128 +362,124 @@ Encoding Type:  One-Hot
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Mon Jun 06 22:44:52 2022
+    Info: Version 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition
+    Info: Processing started: Tue Jun 07 16:43:29 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ProjetoFinal -c ProjetoFinal
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Warning (12019): Can't analyze file -- file VendingMachine_tb.vhd is missing
 Info (12021): Found 2 design units, including 1 entities, in source file vendingmachine.vhd
-    Info (12022): Found design unit 1: VendingMachine-behavioral File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/VendingMachine.vhd Line: 18
-    Info (12023): Found entity 1: VendingMachine File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/VendingMachine.vhd Line: 5
+    Info (12022): Found design unit 1: VendingMachine-behavioral File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/VendingMachine.vhd Line: 18
+    Info (12023): Found entity 1: VendingMachine File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/VendingMachine.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file usbport.vhd
-    Info (12022): Found design unit 1: UsbPort-bdf_type File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/UsbPort.vhd Line: 33
-    Info (12023): Found entity 1: UsbPort File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/UsbPort.vhd Line: 25
+    Info (12022): Found design unit 1: UsbPort-bdf_type File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/UsbPort.vhd Line: 33
+    Info (12023): Found entity 1: UsbPort File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/UsbPort.vhd Line: 25
 Info (12021): Found 2 design units, including 1 entities, in source file ticketdispenser.vhd
-    Info (12022): Found design unit 1: TicketDispenser-behavioral File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/TicketDispenser.vhd Line: 20
-    Info (12023): Found entity 1: TicketDispenser File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/TicketDispenser.vhd Line: 10
+    Info (12022): Found design unit 1: TicketDispenser-behavioral File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/TicketDispenser.vhd Line: 20
+    Info (12023): Found entity 1: TicketDispenser File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/TicketDispenser.vhd Line: 10
 Info (12021): Found 2 design units, including 1 entities, in source file shiftregister.vhd
-    Info (12022): Found design unit 1: ShiftRegister-ShiftRegister_logic File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/ShiftRegister.vhd Line: 13
-    Info (12023): Found entity 1: ShiftRegister File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/ShiftRegister.vhd Line: 5
+    Info (12022): Found design unit 1: ShiftRegister-ShiftRegister_logic File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/ShiftRegister.vhd Line: 13
+    Info (12023): Found entity 1: ShiftRegister File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/ShiftRegister.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file serialreceiver.vhd
-    Info (12022): Found design unit 1: SerialReceiver-Behavioral File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/SerialReceiver.vhd Line: 16
-    Info (12023): Found entity 1: SerialReceiver File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/SerialReceiver.vhd Line: 5
+    Info (12022): Found design unit 1: SerialReceiver-Behavioral File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/SerialReceiver.vhd Line: 16
+    Info (12023): Found entity 1: SerialReceiver File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/SerialReceiver.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file serialcontrol.vhd
-    Info (12022): Found design unit 1: SerialControl-behavioral File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/SerialControl.vhd Line: 14
-    Info (12023): Found entity 1: SerialControl File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/SerialControl.vhd Line: 5
+    Info (12022): Found design unit 1: SerialControl-behavioral File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/SerialControl.vhd Line: 14
+    Info (12023): Found entity 1: SerialControl File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/SerialControl.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file paritycheck.vhd
-    Info (12022): Found design unit 1: ParityCheck-Behavioral File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/ParityCheck.vhd Line: 12
-    Info (12023): Found entity 1: ParityCheck File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/ParityCheck.vhd Line: 5
+    Info (12022): Found design unit 1: ParityCheck-Behavioral File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/ParityCheck.vhd Line: 12
+    Info (12023): Found entity 1: ParityCheck File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/ParityCheck.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file lcd.vhd
-    Info (12022): Found design unit 1: LCD-behavioral File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/LCD.vhd Line: 14
-    Info (12023): Found entity 1: LCD File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/LCD.vhd Line: 5
+    Info (12022): Found design unit 1: LCD-behavioral File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/LCD.vhd Line: 14
+    Info (12023): Found entity 1: LCD File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/LCD.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file ios.vhd
-    Info (12022): Found design unit 1: IOS-behavioral File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/IOS.vhd Line: 14
-    Info (12023): Found entity 1: IOS File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/IOS.vhd Line: 5
+    Info (12022): Found design unit 1: IOS-behavioral File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/IOS.vhd Line: 14
+    Info (12023): Found entity 1: IOS File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/IOS.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file int7seg.vhd
-    Info (12022): Found design unit 1: int7seg-logicFunction File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/int7seg.vhd Line: 10
-    Info (12023): Found entity 1: int7seg File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/int7seg.vhd Line: 4
+    Info (12022): Found design unit 1: int7seg-logicFunction File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/int7seg.vhd Line: 10
+    Info (12023): Found entity 1: int7seg File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/int7seg.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file ffd.vhd
-    Info (12022): Found design unit 1: FFD-Behavioral File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/FFD.vhd Line: 13
-    Info (12023): Found entity 1: FFD File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/FFD.vhd Line: 5
+    Info (12022): Found design unit 1: FFD-Behavioral File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/FFD.vhd Line: 13
+    Info (12023): Found entity 1: FFD File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/FFD.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file dispatcher.vhd
-    Info (12022): Found design unit 1: Dispatcher-behavioral File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/Dispatcher.vhd Line: 19
-    Info (12023): Found entity 1: Dispatcher File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/Dispatcher.vhd Line: 5
+    Info (12022): Found design unit 1: Dispatcher-behavioral File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Dispatcher.vhd Line: 19
+    Info (12023): Found entity 1: Dispatcher File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Dispatcher.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file decoderhex.vhd
-    Info (12022): Found design unit 1: decoderHex-logicFuntion File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/decoderHex.vhd Line: 10
-    Info (12023): Found entity 1: decoderHex File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/decoderHex.vhd Line: 4
+    Info (12022): Found design unit 1: decoderHex-logicFuntion File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/decoderHex.vhd Line: 10
+    Info (12023): Found entity 1: decoderHex File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/decoderHex.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file counter.vhd
-    Info (12022): Found design unit 1: Counter-Counter_LOGIC File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/Counter.vhd Line: 13
-    Info (12023): Found entity 1: Counter File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/Counter.vhd Line: 5
+    Info (12022): Found design unit 1: Counter-Counter_LOGIC File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Counter.vhd Line: 13
+    Info (12023): Found entity 1: Counter File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Counter.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file control.vhd
-    Info (12022): Found design unit 1: Control-behavioral File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/Control.vhd Line: 12
-    Info (12023): Found entity 1: Control File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/Control.vhd Line: 5
+    Info (12022): Found design unit 1: Control-behavioral File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Control.vhd Line: 12
+    Info (12023): Found entity 1: Control File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Control.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file clkdiv.vhd
-    Info (12022): Found design unit 1: CLKDIV-bhv File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/clkDIV.vhd Line: 11
-    Info (12023): Found entity 1: CLKDIV File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/clkDIV.vhd Line: 5
+    Info (12022): Found design unit 1: CLKDIV-bhv File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/clkDIV.vhd Line: 11
+    Info (12023): Found entity 1: CLKDIV File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/clkDIV.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file keyscan.vhd
-    Info (12022): Found design unit 1: KeyScan-behavioral File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/KeyScan.vhd Line: 13
-    Info (12023): Found entity 1: KeyScan File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/KeyScan.vhd Line: 5
+    Info (12022): Found design unit 1: KeyScan-behavioral File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyScan.vhd Line: 13
+    Info (12023): Found entity 1: KeyScan File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyScan.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file decoder2x4.vhd
-    Info (12022): Found design unit 1: decoder2x4-behavioral File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/decoder2x4.vhd Line: 11
-    Info (12023): Found entity 1: decoder2x4 File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/decoder2x4.vhd Line: 4
+    Info (12022): Found design unit 1: decoder2x4-behavioral File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/decoder2x4.vhd Line: 11
+    Info (12023): Found entity 1: decoder2x4 File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/decoder2x4.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file keycontrol.vhd
-    Info (12022): Found design unit 1: KeyControl-behaviour File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/KeyControl.vhd Line: 11
-    Info (12023): Found entity 1: KeyControl File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/KeyControl.vhd Line: 4
+    Info (12022): Found design unit 1: KeyControl-behaviour File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyControl.vhd Line: 11
+    Info (12023): Found entity 1: KeyControl File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyControl.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file counter2bits.vhd
-    Info (12022): Found design unit 1: Counter2bits-Counter_LOGIC File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/Counter2bits.vhd Line: 11
-    Info (12023): Found entity 1: Counter2bits File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/Counter2bits.vhd Line: 5
+    Info (12022): Found design unit 1: Counter2bits-Counter_LOGIC File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Counter2bits.vhd Line: 11
+    Info (12023): Found entity 1: Counter2bits File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Counter2bits.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file penc.vhd
-    Info (12022): Found design unit 1: PENC-Behavioral File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/PENC.vhd Line: 12
-    Info (12023): Found entity 1: PENC File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/PENC.vhd Line: 5
+    Info (12022): Found design unit 1: PENC-Behavioral File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/PENC.vhd Line: 12
+    Info (12023): Found entity 1: PENC File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/PENC.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file reg2bits.vhd
-    Info (12022): Found design unit 1: REG2bits-REG2bits_LOGIC File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/REG2bits.vhd Line: 13
-    Info (12023): Found entity 1: REG2bits File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/REG2bits.vhd Line: 5
+    Info (12022): Found design unit 1: REG2bits-REG2bits_LOGIC File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/REG2bits.vhd Line: 13
+    Info (12023): Found entity 1: REG2bits File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/REG2bits.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file keytransmitter.vhd
-    Info (12022): Found design unit 1: KeyTransmitter-behavioral File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/KeyTransmitter.vhd Line: 11
-    Info (12023): Found entity 1: KeyTransmitter File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/KeyTransmitter.vhd Line: 5
+    Info (12022): Found design unit 1: KeyTransmitter-behavioral File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyTransmitter.vhd Line: 11
+    Info (12023): Found entity 1: KeyTransmitter File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyTransmitter.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file reg4bits.vhd
-    Info (12022): Found design unit 1: REG4bits-REG4bits_LOGIC File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/REG4bits.vhd Line: 13
-    Info (12023): Found entity 1: REG4bits File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/REG4bits.vhd Line: 5
+    Info (12022): Found design unit 1: REG4bits-REG4bits_LOGIC File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/REG4bits.vhd Line: 13
+    Info (12023): Found entity 1: REG4bits File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/REG4bits.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file counter3bits.vhd
-    Info (12022): Found design unit 1: Counter3bits-Counter_LOGIC File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/Counter3bits.vhd Line: 11
-    Info (12023): Found entity 1: Counter3bits File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/Counter3bits.vhd Line: 5
+    Info (12022): Found design unit 1: Counter3bits-Counter_LOGIC File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Counter3bits.vhd Line: 12
+    Info (12023): Found entity 1: Counter3bits File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Counter3bits.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file mux_8x1.vhd
-    Info (12022): Found design unit 1: MUX_8x1-arq_mux File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/MUX_8x1.vhd Line: 13
-    Info (12023): Found entity 1: MUX_8x1 File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/MUX_8x1.vhd Line: 4
+    Info (12022): Found design unit 1: MUX_8x1-arq_mux File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/MUX_8x1.vhd Line: 13
+    Info (12023): Found entity 1: MUX_8x1 File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/MUX_8x1.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file keydecode.vhd
-    Info (12022): Found design unit 1: KeyDecode-behavioral File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/KeyDecode.vhd Line: 16
-    Info (12023): Found entity 1: KeyDecode File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/KeyDecode.vhd Line: 5
+    Info (12022): Found design unit 1: KeyDecode-behavioral File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyDecode.vhd Line: 16
+    Info (12023): Found entity 1: KeyDecode File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyDecode.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file keytransmittercontrol.vhd
-    Info (12022): Found design unit 1: KeyTransmitterControl-behaviour File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/KeyTransmitterControl.vhd Line: 11
-    Info (12023): Found entity 1: KeyTransmitterControl File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/KeyTransmitterControl.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file keytransmittercontrol_tb.vhd
-    Info (12022): Found design unit 1: KeyTransmitterControl_tb-behavior File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/KeyTransmitterControl_tb.vhd Line: 7
-    Info (12023): Found entity 1: KeyTransmitterControl_tb File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/KeyTransmitterControl_tb.vhd Line: 4
+    Info (12022): Found design unit 1: KeyTransmitterControl-behaviour File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyTransmitterControl.vhd Line: 11
+    Info (12023): Found entity 1: KeyTransmitterControl File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyTransmitterControl.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file keyboardreader.vhd
-    Info (12022): Found design unit 1: KeyboardReader-behavioral File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/KeyboardReader.vhd Line: 13
-    Info (12023): Found entity 1: KeyboardReader File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/KeyboardReader.vhd Line: 5
+    Info (12022): Found design unit 1: KeyboardReader-behavioral File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyboardReader.vhd Line: 13
+    Info (12023): Found entity 1: KeyboardReader File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyboardReader.vhd Line: 5
 Info (12127): Elaborating entity "KeyboardReader" for the top level hierarchy
-Info (12128): Elaborating entity "KeyDecode" for hierarchy "KeyDecode:kdecode" File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/KeyboardReader.vhd Line: 40
-Info (12128): Elaborating entity "KeyScan" for hierarchy "KeyDecode:kdecode|KeyScan:kscan" File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/KeyDecode.vhd Line: 44
-Info (12128): Elaborating entity "Counter2bits" for hierarchy "KeyDecode:kdecode|KeyScan:kscan|Counter2bits:Cont" File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/KeyScan.vhd Line: 50
-Info (12128): Elaborating entity "FFD" for hierarchy "KeyDecode:kdecode|KeyScan:kscan|Counter2bits:Cont|FFD:UFFD0" File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/Counter2bits.vhd Line: 32
-Info (12128): Elaborating entity "decoder2x4" for hierarchy "KeyDecode:kdecode|KeyScan:kscan|decoder2x4:Dec" File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/KeyScan.vhd Line: 56
-Info (12128): Elaborating entity "PENC" for hierarchy "KeyDecode:kdecode|KeyScan:kscan|PENC:PENC0" File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/KeyScan.vhd Line: 60
-Info (12128): Elaborating entity "REG2bits" for hierarchy "KeyDecode:kdecode|KeyScan:kscan|REG2bits:REG" File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/KeyScan.vhd Line: 65
-Info (12128): Elaborating entity "KeyControl" for hierarchy "KeyDecode:kdecode|KeyControl:kcontrol" File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/KeyDecode.vhd Line: 55
-Info (12128): Elaborating entity "KeyTransmitter" for hierarchy "KeyTransmitter:ktransmitter" File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/KeyboardReader.vhd Line: 50
-Warning (10541): VHDL Signal Declaration warning at KeyTransmitter.vhd(8): used implicit default value for signal "DAC" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/KeyTransmitter.vhd Line: 8
-Info (12128): Elaborating entity "REG4bits" for hierarchy "KeyTransmitter:ktransmitter|REG4bits:REG" File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/KeyTransmitter.vhd Line: 54
-Info (12128): Elaborating entity "Counter3bits" for hierarchy "KeyTransmitter:ktransmitter|Counter3bits:Cont" File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/KeyTransmitter.vhd Line: 61
-Info (12128): Elaborating entity "MUX_8x1" for hierarchy "KeyTransmitter:ktransmitter|MUX_8x1:MUX" File: C:/Users/marga/OneDrive/Desktop/TicketMachine/TicketMachine_HW/KeyTransmitter.vhd Line: 67
+Info (12128): Elaborating entity "KeyDecode" for hierarchy "KeyDecode:kdecode" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyboardReader.vhd Line: 40
+Info (12128): Elaborating entity "KeyScan" for hierarchy "KeyDecode:kdecode|KeyScan:kscan" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyDecode.vhd Line: 44
+Info (12128): Elaborating entity "Counter2bits" for hierarchy "KeyDecode:kdecode|KeyScan:kscan|Counter2bits:Cont" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyScan.vhd Line: 50
+Info (12128): Elaborating entity "FFD" for hierarchy "KeyDecode:kdecode|KeyScan:kscan|Counter2bits:Cont|FFD:UFFD0" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Counter2bits.vhd Line: 32
+Info (12128): Elaborating entity "decoder2x4" for hierarchy "KeyDecode:kdecode|KeyScan:kscan|decoder2x4:Dec" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyScan.vhd Line: 56
+Info (12128): Elaborating entity "PENC" for hierarchy "KeyDecode:kdecode|KeyScan:kscan|PENC:PENC0" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyScan.vhd Line: 60
+Info (12128): Elaborating entity "REG2bits" for hierarchy "KeyDecode:kdecode|KeyScan:kscan|REG2bits:REG" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyScan.vhd Line: 65
+Info (12128): Elaborating entity "KeyControl" for hierarchy "KeyDecode:kdecode|KeyControl:kcontrol" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyDecode.vhd Line: 55
+Info (12128): Elaborating entity "KeyTransmitter" for hierarchy "KeyTransmitter:ktransmitter" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyboardReader.vhd Line: 50
+Info (12128): Elaborating entity "KeyTransmitterControl" for hierarchy "KeyTransmitter:ktransmitter|KeyTransmitterControl:keyTransControl" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyTransmitter.vhd Line: 70
+Info (12128): Elaborating entity "REG4bits" for hierarchy "KeyTransmitter:ktransmitter|REG4bits:REG" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyTransmitter.vhd Line: 81
+Info (12128): Elaborating entity "Counter3bits" for hierarchy "KeyTransmitter:ktransmitter|Counter3bits:Cont" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyTransmitter.vhd Line: 88
+Info (12128): Elaborating entity "MUX_8x1" for hierarchy "KeyTransmitter:ktransmitter|MUX_8x1:MUX" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyTransmitter.vhd Line: 95
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 1 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 32 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 43 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 7 input pins
     Info (21059): Implemented 4 output pins
-    Info (21061): Implemented 21 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 4797 megabytes
-    Info: Processing ended: Mon Jun 06 22:45:01 2022
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:20
+    Info (21061): Implemented 32 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4858 megabytes
+    Info: Processing ended: Tue Jun 07 16:43:35 2022
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:16
 
 

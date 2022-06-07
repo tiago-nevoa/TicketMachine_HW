@@ -10,13 +10,13 @@ ARCHITECTURE behavior OF KeyTransmitterControl_tb IS
  
     COMPONENT KeyTransmitterControl IS
 	port(
-		DAV, TCount, MCLK : in STD_LOGIC;
+		DAV, TCount, CLK, Reset : in STD_LOGIC;
 		DAC, EnTXD, EnReg, EnCounter, RstCounter : out STD_LOGIC
 	);
 	END COMPONENT;
     
     --Inputs
-    signal DAV, TCount, MCLK : std_logic := '0';
+    signal DAV, TCount, CLK, Reset : std_logic := '0';
 
  	--Outputs
 	signal DAC, EnTXD, EnReg, EnCounter, RstCounter : std_logic;
@@ -28,7 +28,8 @@ BEGIN
  	
 	-- Instantiate the Unit Under Test (UUT)
    vm: KeyTransmitterControl PORT MAP (
-			MCLK => MCLK,
+			CLK => CLK,
+			Reset => Reset,
 			DAV => DAV,
 			TCount => TCount,
 			DAC => DAC,
@@ -60,6 +61,7 @@ BEGIN
 		TCount <= '1';
 		
 		wait for 30 ns;
+		TCount <= '0';
 		
 		wait;
 		

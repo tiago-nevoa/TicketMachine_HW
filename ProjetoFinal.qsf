@@ -51,7 +51,7 @@ set_location_assignment PIN_Y7 -to LCD_DATA[8]
 #set_location_assignment PIN_AA9    -to	KEYPAD_COL[2]
 #set_location_assignment PIN_AA8    -to	KEYPAD_COL[3]
 
-set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
+set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 SP1.02i Lite Edition"
 set_global_assignment -name VHDL_FILE VendingMachine_tb.vhd
 set_global_assignment -name VHDL_FILE VendingMachine.vhd
 set_global_assignment -name VHDL_FILE UsbPort.vhd
@@ -85,7 +85,6 @@ set_global_assignment -name VHDL_FILE Counter3bits.vhd
 set_global_assignment -name VHDL_FILE MUX_8x1.vhd
 set_global_assignment -name VHDL_FILE KeyDecode.vhd
 set_global_assignment -name VHDL_FILE KeyTransmitterControl.vhd
-set_global_assignment -name VHDL_FILE KeyTransmitterControl_tb.vhd
 set_global_assignment -name VHDL_FILE KeyboardReader.vhd
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top

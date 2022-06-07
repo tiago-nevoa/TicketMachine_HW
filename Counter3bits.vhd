@@ -4,7 +4,8 @@ use ieee.std_logic_unsigned.all;
 
 ENTITY Counter3bits IS
 	PORT(	CE, CLK, Clr: IN STD_LOGIC;
-			Tcount: OUT STD_LOGIC_VECTOR(2 downto 0)
+			Tcount: OUT STD_LOGIC;
+			Count : OUT STD_LOGIC_VECTOR(2 downto 0)
 			);
 END Counter3bits;
 
@@ -53,7 +54,7 @@ UFFD2: FFD PORT MAP (
 	Q => Qout(2));
 	
 
-	Tcount <= Qout;
-	
+Tcount <= Qout(0) AND Qout(1) AND Qout(2);
+Count	 <= Qout;
 	
 END Counter_LOGIC;

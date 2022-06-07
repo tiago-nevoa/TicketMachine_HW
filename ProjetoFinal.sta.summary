@@ -3,24 +3,32 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'MCLK'
-Slack : -1.176
-TNS   : -3.494
+Slack : -1.859
+TNS   : -7.532
 
 Type  : Slow 1200mV 85C Model Setup 'RXclk'
-Slack : -0.046
-TNS   : -0.046
+Slack : -0.064
+TNS   : -0.178
+
+Type  : Slow 1200mV 85C Model Hold 'MCLK'
+Slack : 0.324
+TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'RXclk'
 Slack : 0.324
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Hold 'MCLK'
-Slack : 0.325
+Type  : Slow 1200mV 85C Model Recovery 'RXclk'
+Slack : -0.948
+TNS   : -2.844
+
+Type  : Slow 1200mV 85C Model Removal 'RXclk'
+Slack : 1.208
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'MCLK'
 Slack : -3.000
-TNS   : -13.998
+TNS   : -20.108
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'RXclk'
 Slack : -3.000
@@ -31,11 +39,11 @@ Slack : -1.222
 TNS   : -2.444
 
 Type  : Slow 1200mV 0C Model Setup 'MCLK'
-Slack : -0.937
-TNS   : -2.599
+Slack : -1.580
+TNS   : -5.746
 
 Type  : Slow 1200mV 0C Model Setup 'RXclk'
-Slack : 0.046
+Slack : 0.028
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'MCLK'
@@ -43,12 +51,20 @@ Slack : 0.293
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'RXclk'
-Slack : 0.294
+Slack : 0.293
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'RXclk'
+Slack : -0.785
+TNS   : -2.355
+
+Type  : Slow 1200mV 0C Model Removal 'RXclk'
+Slack : 1.108
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'MCLK'
 Slack : -3.000
-TNS   : -13.998
+TNS   : -20.108
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'RXclk'
 Slack : -3.000
@@ -59,11 +75,11 @@ Slack : -1.222
 TNS   : -2.444
 
 Type  : Fast 1200mV 0C Model Setup 'MCLK'
-Slack : -0.468
-TNS   : -0.802
+Slack : -0.430
+TNS   : -1.102
 
 Type  : Fast 1200mV 0C Model Setup 'RXclk'
-Slack : 0.499
+Slack : 0.473
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'MCLK'
@@ -71,16 +87,24 @@ Slack : 0.146
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'RXclk'
-Slack : 0.148
+Slack : 0.147
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'RXclk'
+Slack : 0.045
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'RXclk'
+Slack : 0.552
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'MCLK'
 Slack : -3.000
-TNS   : -12.405
+TNS   : -17.492
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'RXclk'
 Slack : -3.000
-TNS   : -6.108
+TNS   : -6.096
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'KeyDecode:kdecode|KeyControl:kcontrol|CurrentState.STATE_SAVING'
 Slack : -1.000
