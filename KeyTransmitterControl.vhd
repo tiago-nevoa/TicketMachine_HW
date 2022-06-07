@@ -9,7 +9,7 @@ entity KeyTransmitterControl is
 end KeyTransmitterControl;
 
 architecture behaviour of KeyTransmitterControl is
-	type STATE_TYPE is (STATE_WAIT_DATA, STATE_DATA_ACCEPTED, STATE_TRANSMIT_DATA, STATE_RESET_COUNTER);
+	type STATE_TYPE is (STATE_WAIT_DATA, STATE_DATA_ACCEPTED, STATE_TRANSMIT_DATA);
 	
 	signal CurrentState, NextState : STATE_TYPE;
 	
@@ -33,19 +33,18 @@ architecture behaviour of KeyTransmitterControl is
 													end if;
 					
 					when STATE_TRANSMIT_DATA =>  if (TCount = '1') then
-														NextState <= STATE_RESET_COUNTER;
+														NextState <= STATE_WAIT_DATA;
 													else
 														NextState <= STATE_TRANSMIT_DATA;
 													end if;
-					when STATE_RESET_COUNTER =>  NextState <= STATE_WAIT_DATA;
 
 				end case;				
 		end process;
 				
-	EnTXD <= '1' when (CurrentState = STATE_WAIT_DATA or CurrentState = STATE_DATA_ACCEPTED or CurrentState = STATE_RESET_COUNTER) else '0';
+	EnTXD <= '1' when (CurrentState = STATE_WAIT_DATA or CurrentState = STATE_DATA_ACCEPTED) else '0';
 	EnReg <= '1' when CurrentState = STATE_DATA_ACCEPTED else '0';
 	DAC <= '1' when CurrentState = STATE_DATA_ACCEPTED else '0';
 	EnCounter <= '1' when CurrentState = STATE_TRANSMIT_DATA else '0';
-	RstCounter <= '1' when (CurrentState = STATE_WAIT_DATA or CurrentState = STATE_RESET_COUNTER) else '0';
+	RstCounter <= '1' when CurrentState = STATE_WAIT_DATA else '0';
 	
 end behaviour;

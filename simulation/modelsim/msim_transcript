@@ -12,51 +12,51 @@
 # 
 # vcom -93 -work work {C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/FFD.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:45:06 on Jun 07,2022
+# Start time: 21:03:57 on Jun 07,2022
 # vcom -reportprogress 300 -93 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/FFD.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity FFD
 # -- Compiling architecture Behavioral of FFD
-# End time: 16:45:06 on Jun 07,2022, Elapsed time: 0:00:00
+# End time: 21:03:57 on Jun 07,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyScan.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:45:06 on Jun 07,2022
+# Start time: 21:03:57 on Jun 07,2022
 # vcom -reportprogress 300 -93 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyScan.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity KeyScan
 # -- Compiling architecture behavioral of KeyScan
-# End time: 16:45:06 on Jun 07,2022, Elapsed time: 0:00:00
+# End time: 21:03:57 on Jun 07,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/decoder2x4.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:45:06 on Jun 07,2022
+# Start time: 21:03:57 on Jun 07,2022
 # vcom -reportprogress 300 -93 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/decoder2x4.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity decoder2x4
 # -- Compiling architecture behavioral of decoder2x4
-# End time: 16:45:06 on Jun 07,2022, Elapsed time: 0:00:00
+# End time: 21:03:58 on Jun 07,2022, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyControl.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:45:06 on Jun 07,2022
+# Start time: 21:03:58 on Jun 07,2022
 # vcom -reportprogress 300 -93 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyControl.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity KeyControl
 # -- Compiling architecture behaviour of KeyControl
-# End time: 16:45:06 on Jun 07,2022, Elapsed time: 0:00:00
+# End time: 21:03:58 on Jun 07,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Counter2bits.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:45:06 on Jun 07,2022
+# Start time: 21:03:58 on Jun 07,2022
 # vcom -reportprogress 300 -93 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Counter2bits.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -65,22 +65,22 @@
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity Counter2bits
 # -- Compiling architecture Counter_LOGIC of Counter2bits
-# End time: 16:45:06 on Jun 07,2022, Elapsed time: 0:00:00
+# End time: 21:03:58 on Jun 07,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/PENC.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:45:06 on Jun 07,2022
+# Start time: 21:03:58 on Jun 07,2022
 # vcom -reportprogress 300 -93 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/PENC.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity PENC
 # -- Compiling architecture Behavioral of PENC
-# End time: 16:45:06 on Jun 07,2022, Elapsed time: 0:00:00
+# End time: 21:03:58 on Jun 07,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/REG2bits.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:45:06 on Jun 07,2022
+# Start time: 21:03:58 on Jun 07,2022
 # vcom -reportprogress 300 -93 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/REG2bits.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -89,22 +89,22 @@
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity REG2bits
 # -- Compiling architecture REG2bits_LOGIC of REG2bits
-# End time: 16:45:06 on Jun 07,2022, Elapsed time: 0:00:00
+# End time: 21:03:58 on Jun 07,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyTransmitter.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:45:06 on Jun 07,2022
+# Start time: 21:03:58 on Jun 07,2022
 # vcom -reportprogress 300 -93 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyTransmitter.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity KeyTransmitter
 # -- Compiling architecture behavioral of KeyTransmitter
-# End time: 16:45:06 on Jun 07,2022, Elapsed time: 0:00:00
+# End time: 21:03:59 on Jun 07,2022, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/REG4bits.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:45:06 on Jun 07,2022
+# Start time: 21:03:59 on Jun 07,2022
 # vcom -reportprogress 300 -93 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/REG4bits.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -113,11 +113,11 @@
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity REG4bits
 # -- Compiling architecture REG4bits_LOGIC of REG4bits
-# End time: 16:45:06 on Jun 07,2022, Elapsed time: 0:00:00
+# End time: 21:03:59 on Jun 07,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Counter3bits.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:45:07 on Jun 07,2022
+# Start time: 21:03:59 on Jun 07,2022
 # vcom -reportprogress 300 -93 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Counter3bits.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -126,147 +126,67 @@
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity Counter3bits
 # -- Compiling architecture Counter_LOGIC of Counter3bits
-# End time: 16:45:07 on Jun 07,2022, Elapsed time: 0:00:00
+# End time: 21:03:59 on Jun 07,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/MUX_8x1.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:45:07 on Jun 07,2022
+# Start time: 21:03:59 on Jun 07,2022
 # vcom -reportprogress 300 -93 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/MUX_8x1.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity MUX_8x1
 # -- Compiling architecture arq_mux of MUX_8x1
-# End time: 16:45:07 on Jun 07,2022, Elapsed time: 0:00:00
+# End time: 21:03:59 on Jun 07,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyDecode.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:45:07 on Jun 07,2022
+# Start time: 21:03:59 on Jun 07,2022
 # vcom -reportprogress 300 -93 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyDecode.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity KeyDecode
 # -- Compiling architecture behavioral of KeyDecode
-# End time: 16:45:07 on Jun 07,2022, Elapsed time: 0:00:00
+# End time: 21:04:00 on Jun 07,2022, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyTransmitterControl.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:45:07 on Jun 07,2022
+# Start time: 21:04:00 on Jun 07,2022
 # vcom -reportprogress 300 -93 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyTransmitterControl.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity KeyTransmitterControl
 # -- Compiling architecture behaviour of KeyTransmitterControl
-# End time: 16:45:07 on Jun 07,2022, Elapsed time: 0:00:00
+# End time: 21:04:00 on Jun 07,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyboardReader.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:45:07 on Jun 07,2022
+# Start time: 21:04:00 on Jun 07,2022
 # vcom -reportprogress 300 -93 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyboardReader.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity KeyboardReader
 # -- Compiling architecture behavioral of KeyboardReader
-# End time: 16:45:07 on Jun 07,2022, Elapsed time: 0:00:00
+# End time: 21:04:00 on Jun 07,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 vcom -reportprogress 300 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Testbench/KeyboardReader_tb.vhd
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:45:17 on Jun 07,2022
+# Start time: 21:04:48 on Jun 07,2022
 # vcom -reportprogress 300 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Testbench/KeyboardReader_tb.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity KeyboardReader_tb
 # -- Compiling architecture behavior of KeyboardReader_tb
-# ** Error: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Testbench/KeyboardReader_tb.vhd(21): (vcom-1360) Array type of "KEYPAD_LIN" does not have an index constraint.
-# ** Error: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Testbench/KeyboardReader_tb.vhd(25): (vcom-1360) Array type of "KEYPAD_COL" does not have an index constraint.
-# ** Error: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Testbench/KeyboardReader_tb.vhd(38): near "TXD": (vcom-1576) expecting ',' or ')'.
-# ** Note: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Testbench/KeyboardReader_tb.vhd(63): VHDL Compiler exiting
-# End time: 16:45:17 on Jun 07,2022, Elapsed time: 0:00:00
-# Errors: 3, Warnings: 0
-vcom -reportprogress 300 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Testbench/KeyboardReader_tb.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:45:47 on Jun 07,2022
-# vcom -reportprogress 300 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Testbench/KeyboardReader_tb.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity KeyboardReader_tb
-# -- Compiling architecture behavior of KeyboardReader_tb
-# ** Error: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Testbench/KeyboardReader_tb.vhd(38): near "TXD": (vcom-1576) expecting ',' or ')'.
-# ** Note: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Testbench/KeyboardReader_tb.vhd(63): VHDL Compiler exiting
-# End time: 16:45:47 on Jun 07,2022, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-vcom -reportprogress 300 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Testbench/KeyboardReader_tb.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:46:03 on Jun 07,2022
-# vcom -reportprogress 300 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Testbench/KeyboardReader_tb.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity KeyboardReader_tb
-# -- Compiling architecture behavior of KeyboardReader_tb
-# End time: 16:46:04 on Jun 07,2022, Elapsed time: 0:00:01
+# End time: 21:04:49 on Jun 07,2022, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 vsim work.keyboardreader_tb
 # vsim work.keyboardreader_tb 
-# Start time: 16:46:11 on Jun 07,2022
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading work.keyboardreader_tb(behavior)
-# Loading work.keyboardreader(behavioral)
-# Loading work.keydecode(behavioral)
-# Loading work.keyscan(behavioral)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading work.counter2bits(counter_logic)
-# Loading work.ffd(behavioral)
-# Loading work.decoder2x4(behavioral)
-# Loading work.penc(behavioral)
-# Loading work.reg2bits(reg2bits_logic)
-# Loading work.keycontrol(behaviour)
-# Loading work.keytransmitter(behavioral)
-# Loading work.keytransmittercontrol(behaviour)
-# Loading work.reg4bits(reg4bits_logic)
-# Loading work.counter3bits(counter_logic)
-# Loading work.mux_8x1(arq_mux)
-add wave -position insertpoint  \
-sim:/keyboardreader_tb/RXclk \
-sim:/keyboardreader_tb/MCLK \
-sim:/keyboardreader_tb/Clr \
-sim:/keyboardreader_tb/KEYPAD_LIN \
-sim:/keyboardreader_tb/TXD \
-sim:/keyboardreader_tb/KEYPAD_COL \
-sim:/keyboardreader_tb/clk_period
-run
-add wave -position end  sim:/keyboardreader_tb/vm/ktransmitter/Cont/Count
-add wave -position end  sim:/keyboardreader_tb/vm/ktransmitter/MUX/Data_Out
-restart
-run
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-vcom -reportprogress 300 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Testbench/KeyboardReader_tb.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:50:46 on Jun 07,2022
-# vcom -reportprogress 300 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Testbench/KeyboardReader_tb.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity KeyboardReader_tb
-# -- Compiling architecture behavior of KeyboardReader_tb
-# End time: 16:50:46 on Jun 07,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vsim work.keyboardreader_tb
-# End time: 16:50:55 on Jun 07,2022, Elapsed time: 0:04:44
-# Errors: 0, Warnings: 0
-# vsim work.keyboardreader_tb 
-# Start time: 16:50:55 on Jun 07,2022
+# Start time: 21:04:56 on Jun 07,2022
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -296,8 +216,10 @@ sim:/keyboardreader_tb/TXD \
 sim:/keyboardreader_tb/KEYPAD_COL \
 sim:/keyboardreader_tb/clk_period
 add wave -position end  sim:/keyboardreader_tb/vm/ktransmitter/Cont/Count
+add wave -position end  sim:/keyboardreader_tb/vm/ktransmitter/MUX/Data_In
 add wave -position end  sim:/keyboardreader_tb/vm/ktransmitter/MUX/Data_Out
 run
+add wave -position end  sim:/keyboardreader_tb/vm/ktransmitter/keyTransControl/CurrentState
 restart
 run
 # GetModuleFileName: The specified module could not be found.
@@ -311,33 +233,23 @@ run
 # GetModuleFileName: The specified module could not be found.
 # 
 # 
-add wave -position end  sim:/keyboardreader_tb/vm/ktransmitter/MUX/Data_In
-restart
-run
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
-# WARNING: No extended dataflow license exists
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Load canceled
 vcom -reportprogress 300 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Testbench/KeyboardReader_tb.vhd
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:59:23 on Jun 07,2022
+# Start time: 21:12:14 on Jun 07,2022
 # vcom -reportprogress 300 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Testbench/KeyboardReader_tb.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity KeyboardReader_tb
 # -- Compiling architecture behavior of KeyboardReader_tb
-# End time: 16:59:23 on Jun 07,2022, Elapsed time: 0:00:00
+# End time: 21:12:14 on Jun 07,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vsim work.keyboardreader_tb
-# End time: 16:59:31 on Jun 07,2022, Elapsed time: 0:08:36
+# End time: 21:12:20 on Jun 07,2022, Elapsed time: 0:07:24
 # Errors: 0, Warnings: 0
 # vsim work.keyboardreader_tb 
-# Start time: 16:59:31 on Jun 07,2022
+# Start time: 21:12:20 on Jun 07,2022
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -367,25 +279,27 @@ sim:/keyboardreader_tb/TXD \
 sim:/keyboardreader_tb/KEYPAD_COL \
 sim:/keyboardreader_tb/clk_period
 add wave -position end  sim:/keyboardreader_tb/vm/ktransmitter/Cont/Count
-add wave -position end  sim:/keyboardreader_tb/vm/ktransmitter/MUX/Data_In
-add wave -position end  sim:/keyboardreader_tb/vm/ktransmitter/MUX/Data_Out
+add wave -position end  sim:/keyboardreader_tb/vm/ktransmitter/keyTransControl/CurrentState
+add wave -position end  sim:/keyboardreader_tb/vm/ktransmitter/keyTransControl/EnTXD
+add wave -position end  sim:/keyboardreader_tb/vm/ktransmitter/keyTransControl/EnReg
+add wave -position end  sim:/keyboardreader_tb/vm/ktransmitter/keyTransControl/EnCounter
 run
-vcom -reportprogress 300 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Testbench/KeyTransmitter_tb.vhd
+vcom -reportprogress 300 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Testbench/KeyboardReader_tb.vhd
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:05:13 on Jun 07,2022
-# vcom -reportprogress 300 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Testbench/KeyTransmitter_tb.vhd 
+# Start time: 21:13:35 on Jun 07,2022
+# vcom -reportprogress 300 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Testbench/KeyboardReader_tb.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity KeyTransmitter_tb
-# -- Compiling architecture behavior of KeyTransmitter_tb
-# End time: 17:05:13 on Jun 07,2022, Elapsed time: 0:00:00
+# -- Compiling entity KeyboardReader_tb
+# -- Compiling architecture behavior of KeyboardReader_tb
+# End time: 21:13:35 on Jun 07,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vsim work.keyboardreader_tb
-# End time: 17:05:20 on Jun 07,2022, Elapsed time: 0:05:49
+# End time: 21:13:42 on Jun 07,2022, Elapsed time: 0:01:22
 # Errors: 0, Warnings: 0
 # vsim work.keyboardreader_tb 
-# Start time: 17:05:20 on Jun 07,2022
+# Start time: 21:13:42 on Jun 07,2022
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -414,9 +328,670 @@ sim:/keyboardreader_tb/KEYPAD_LIN \
 sim:/keyboardreader_tb/TXD \
 sim:/keyboardreader_tb/KEYPAD_COL \
 sim:/keyboardreader_tb/clk_period
-add wave -position end  sim:/keyboardreader_tb/vm/ktransmitter/MUX/Data_In
-add wave -position end  sim:/keyboardreader_tb/vm/ktransmitter/MUX/Data_Out
 add wave -position end  sim:/keyboardreader_tb/vm/ktransmitter/Cont/Count
+add wave -position end  sim:/keyboardreader_tb/vm/ktransmitter/keyTransControl/EnTXD
+add wave -position end  sim:/keyboardreader_tb/vm/ktransmitter/keyTransControl/EnReg
+add wave -position end  sim:/keyboardreader_tb/vm/ktransmitter/keyTransControl/EnCounter
+add wave -position end  sim:/keyboardreader_tb/vm/ktransmitter/keyTransControl/CurrentState
 run
-# End time: 17:07:39 on Jun 07,2022, Elapsed time: 0:02:19
+vcom -reportprogress 300 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Testbench/KeyboardReader_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:14:33 on Jun 07,2022
+# vcom -reportprogress 300 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Testbench/KeyboardReader_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity KeyboardReader_tb
+# -- Compiling architecture behavior of KeyboardReader_tb
+# End time: 21:14:33 on Jun 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.keyboardreader_tb
+# End time: 21:14:43 on Jun 07,2022, Elapsed time: 0:01:01
+# Errors: 0, Warnings: 0
+# vsim work.keyboardreader_tb 
+# Start time: 21:14:43 on Jun 07,2022
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.keyboardreader_tb(behavior)
+# Loading work.keyboardreader(behavioral)
+# Loading work.keydecode(behavioral)
+# Loading work.keyscan(behavioral)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.counter2bits(counter_logic)
+# Loading work.ffd(behavioral)
+# Loading work.decoder2x4(behavioral)
+# Loading work.penc(behavioral)
+# Loading work.reg2bits(reg2bits_logic)
+# Loading work.keycontrol(behaviour)
+# Loading work.keytransmitter(behavioral)
+# Loading work.keytransmittercontrol(behaviour)
+# Loading work.reg4bits(reg4bits_logic)
+# Loading work.counter3bits(counter_logic)
+# Loading work.mux_8x1(arq_mux)
+add wave -position insertpoint  \
+sim:/keyboardreader_tb/RXclk \
+sim:/keyboardreader_tb/MCLK \
+sim:/keyboardreader_tb/Clr \
+sim:/keyboardreader_tb/KEYPAD_LIN \
+sim:/keyboardreader_tb/TXD \
+sim:/keyboardreader_tb/KEYPAD_COL \
+sim:/keyboardreader_tb/clk_period
+add wave -position end  sim:/keyboardreader_tb/vm/ktransmitter/Cont/Count
+add wave -position end  sim:/keyboardreader_tb/vm/ktransmitter/keyTransControl/EnTXD
+add wave -position end  sim:/keyboardreader_tb/vm/ktransmitter/keyTransControl/EnReg
+add wave -position end  sim:/keyboardreader_tb/vm/ktransmitter/keyTransControl/EnCounter
+add wave -position end  sim:/keyboardreader_tb/vm/ktransmitter/keyTransControl/CurrentState
+run
+add wave -position end  sim:/keyboardreader_tb/vm/ktransmitter/MUX/Data_Out
+restart
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+add wave -position end  sim:/keyboardreader_tb/vm/ktransmitter/MUX/Data_In
+restart
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+vcom -reportprogress 300 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Testbench/KeyboardReader_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:20:42 on Jun 07,2022
+# vcom -reportprogress 300 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Testbench/KeyboardReader_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity KeyboardReader_tb
+# -- Compiling architecture behavior of KeyboardReader_tb
+# End time: 21:20:42 on Jun 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.keyboardreader_tb
+# End time: 21:20:51 on Jun 07,2022, Elapsed time: 0:06:08
+# Errors: 0, Warnings: 0
+# vsim work.keyboardreader_tb 
+# Start time: 21:20:51 on Jun 07,2022
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.keyboardreader_tb(behavior)
+# Loading work.keyboardreader(behavioral)
+# Loading work.keydecode(behavioral)
+# Loading work.keyscan(behavioral)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.counter2bits(counter_logic)
+# Loading work.ffd(behavioral)
+# Loading work.decoder2x4(behavioral)
+# Loading work.penc(behavioral)
+# Loading work.reg2bits(reg2bits_logic)
+# Loading work.keycontrol(behaviour)
+# Loading work.keytransmitter(behavioral)
+# Loading work.keytransmittercontrol(behaviour)
+# Loading work.reg4bits(reg4bits_logic)
+# Loading work.counter3bits(counter_logic)
+# Loading work.mux_8x1(arq_mux)
+add wave -position insertpoint  \
+sim:/keyboardreader_tb/RXclk \
+sim:/keyboardreader_tb/MCLK \
+sim:/keyboardreader_tb/Clr \
+sim:/keyboardreader_tb/KEYPAD_LIN \
+sim:/keyboardreader_tb/TXD \
+sim:/keyboardreader_tb/KEYPAD_COL \
+sim:/keyboardreader_tb/clk_period
+add wave -position end  sim:/keyboardreader_tb/vm/ktransmitter/Cont/Count
+add wave -position end  sim:/keyboardreader_tb/vm/ktransmitter/MUX/Data_In
+add wave -position end  sim:/keyboardreader_tb/vm/kdecode/K
+run
+add wave -position end  sim:/keyboardreader_tb/vm/ktransmitter/keyTransControl/CurrentState
+restart
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+vcom -reportprogress 300 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Testbench/KeyboardReader_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:29:42 on Jun 07,2022
+# vcom -reportprogress 300 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Testbench/KeyboardReader_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity KeyboardReader_tb
+# -- Compiling architecture behavior of KeyboardReader_tb
+# End time: 21:29:42 on Jun 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.keyboardreader_tb
+# End time: 21:29:48 on Jun 07,2022, Elapsed time: 0:08:57
+# Errors: 0, Warnings: 0
+# vsim work.keyboardreader_tb 
+# Start time: 21:29:48 on Jun 07,2022
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.keyboardreader_tb(behavior)
+# Loading work.keyboardreader(behavioral)
+# Loading work.keydecode(behavioral)
+# Loading work.keyscan(behavioral)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.counter2bits(counter_logic)
+# Loading work.ffd(behavioral)
+# Loading work.decoder2x4(behavioral)
+# Loading work.penc(behavioral)
+# Loading work.reg2bits(reg2bits_logic)
+# Loading work.keycontrol(behaviour)
+# Loading work.keytransmitter(behavioral)
+# Loading work.keytransmittercontrol(behaviour)
+# Loading work.reg4bits(reg4bits_logic)
+# Loading work.counter3bits(counter_logic)
+# Loading work.mux_8x1(arq_mux)
+add wave -position insertpoint  \
+sim:/keyboardreader_tb/RXclk \
+sim:/keyboardreader_tb/MCLK \
+sim:/keyboardreader_tb/Clr \
+sim:/keyboardreader_tb/KEYPAD_LIN \
+sim:/keyboardreader_tb/TXD \
+sim:/keyboardreader_tb/KEYPAD_COL \
+sim:/keyboardreader_tb/clk_period
+add wave -position end  sim:/keyboardreader_tb/vm/ktransmitter/Cont/Count
+add wave -position end  sim:/keyboardreader_tb/vm/ktransmitter/keyTransControl/CurrentState
+add wave -position end  sim:/keyboardreader_tb/vm/ktransmitter/MUX/Data_In
+run
+add wave -position end  sim:/keyboardreader_tb/vm/ktransmitter/keyTransControl/DAV
+restart
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+vcom -reportprogress 300 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Testbench/KeyboardReader_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:44:59 on Jun 07,2022
+# vcom -reportprogress 300 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Testbench/KeyboardReader_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity KeyboardReader_tb
+# -- Compiling architecture behavior of KeyboardReader_tb
+# End time: 21:44:59 on Jun 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.keyboardreader_tb
+# End time: 21:45:18 on Jun 07,2022, Elapsed time: 0:15:30
+# Errors: 0, Warnings: 0
+# vsim work.keyboardreader_tb 
+# Start time: 21:45:18 on Jun 07,2022
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.keyboardreader_tb(behavior)
+# Loading work.keyboardreader(behavioral)
+# Loading work.keydecode(behavioral)
+# Loading work.keyscan(behavioral)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.counter2bits(counter_logic)
+# Loading work.ffd(behavioral)
+# Loading work.decoder2x4(behavioral)
+# Loading work.penc(behavioral)
+# Loading work.reg2bits(reg2bits_logic)
+# Loading work.keycontrol(behaviour)
+# Loading work.keytransmitter(behavioral)
+# Loading work.keytransmittercontrol(behaviour)
+# Loading work.reg4bits(reg4bits_logic)
+# Loading work.counter3bits(counter_logic)
+# Loading work.mux_8x1(arq_mux)
+add wave -position insertpoint  \
+sim:/keyboardreader_tb/RXclk \
+sim:/keyboardreader_tb/MCLK \
+sim:/keyboardreader_tb/Clr \
+sim:/keyboardreader_tb/KEYPAD_LIN \
+sim:/keyboardreader_tb/TXD \
+sim:/keyboardreader_tb/KEYPAD_COL \
+sim:/keyboardreader_tb/clk_period
+add wave -position end  sim:/keyboardreader_tb/vm/ktransmitter/Cont/Count
+add wave -position end  sim:/keyboardreader_tb/vm/ktransmitter/keyTransControl/CurrentState
+add wave -position end  sim:/keyboardreader_tb/vm/ktransmitter/MUX/Data_In
+add wave -position end  sim:/keyboardreader_tb/vm/kdecode/kscan/K
+run
+add wave -position end  sim:/keyboardreader_tb/vm/ktransmitter/DAC
+restart
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+add wave -position end  sim:/keyboardreader_tb/vm/ktransmitter/DAV
+restart
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+add wave -position end  sim:/keyboardreader_tb/vm/kdecode/sKPress
+restart
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+add wave -position end  sim:/keyboardreader_tb/vm/kdecode/kcontrol/CurrentState
+restart
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+vcom -reportprogress 300 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Testbench/KeyboardReader_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:00:52 on Jun 07,2022
+# vcom -reportprogress 300 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Testbench/KeyboardReader_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity KeyboardReader_tb
+# -- Compiling architecture behavior of KeyboardReader_tb
+# End time: 22:00:52 on Jun 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.keyboardreader_tb
+# End time: 22:01:06 on Jun 07,2022, Elapsed time: 0:15:48
+# Errors: 0, Warnings: 0
+# vsim work.keyboardreader_tb 
+# Start time: 22:01:06 on Jun 07,2022
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.keyboardreader_tb(behavior)
+# Loading work.keyboardreader(behavioral)
+# Loading work.keydecode(behavioral)
+# Loading work.keyscan(behavioral)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.counter2bits(counter_logic)
+# Loading work.ffd(behavioral)
+# Loading work.decoder2x4(behavioral)
+# Loading work.penc(behavioral)
+# Loading work.reg2bits(reg2bits_logic)
+# Loading work.keycontrol(behaviour)
+# Loading work.keytransmitter(behavioral)
+# Loading work.keytransmittercontrol(behaviour)
+# Loading work.reg4bits(reg4bits_logic)
+# Loading work.counter3bits(counter_logic)
+# Loading work.mux_8x1(arq_mux)
+add wave -position insertpoint  \
+sim:/keyboardreader_tb/RXclk \
+sim:/keyboardreader_tb/MCLK \
+sim:/keyboardreader_tb/Clr \
+sim:/keyboardreader_tb/KEYPAD_LIN \
+sim:/keyboardreader_tb/TXD \
+sim:/keyboardreader_tb/KEYPAD_COL \
+sim:/keyboardreader_tb/clk_period
+add wave -position insertpoint  \
+sim:/keyboardreader_tb/vm/ktransmitter/Cont/Count
+add wave -position end  sim:/keyboardreader_tb/vm/ktransmitter/MUX/Data_In
+run
+add wave -position end  sim:/keyboardreader_tb/vm/kdecode/kscan/K
+restart
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+add wave -position end  sim:/keyboardreader_tb/vm/ktransmitter/REG/Output
+restart
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+vcom -reportprogress 300 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Testbench/KeyboardReader_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:11:00 on Jun 07,2022
+# vcom -reportprogress 300 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Testbench/KeyboardReader_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity KeyboardReader_tb
+# -- Compiling architecture behavior of KeyboardReader_tb
+# End time: 22:11:00 on Jun 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.keyboardreader_tb
+# End time: 22:11:05 on Jun 07,2022, Elapsed time: 0:09:59
+# Errors: 0, Warnings: 0
+# vsim work.keyboardreader_tb 
+# Start time: 22:11:05 on Jun 07,2022
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.keyboardreader_tb(behavior)
+# Loading work.keyboardreader(behavioral)
+# Loading work.keydecode(behavioral)
+# Loading work.keyscan(behavioral)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.counter2bits(counter_logic)
+# Loading work.ffd(behavioral)
+# Loading work.decoder2x4(behavioral)
+# Loading work.penc(behavioral)
+# Loading work.reg2bits(reg2bits_logic)
+# Loading work.keycontrol(behaviour)
+# Loading work.keytransmitter(behavioral)
+# Loading work.keytransmittercontrol(behaviour)
+# Loading work.reg4bits(reg4bits_logic)
+# Loading work.counter3bits(counter_logic)
+# Loading work.mux_8x1(arq_mux)
+add wave -position insertpoint  \
+sim:/keyboardreader_tb/RXclk \
+sim:/keyboardreader_tb/MCLK \
+sim:/keyboardreader_tb/Clr \
+sim:/keyboardreader_tb/KEYPAD_LIN \
+sim:/keyboardreader_tb/TXD \
+sim:/keyboardreader_tb/KEYPAD_COL \
+sim:/keyboardreader_tb/clk_period
+add wave -position end  sim:/keyboardreader_tb/vm/ktransmitter/Cont/Count
+add wave -position end  sim:/keyboardreader_tb/vm/ktransmitter/MUX/Data_In
+add wave -position end  sim:/keyboardreader_tb/vm/ktransmitter/REG/Output
+run
+vcom -reportprogress 300 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Testbench/KeyboardReader_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:14:26 on Jun 07,2022
+# vcom -reportprogress 300 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Testbench/KeyboardReader_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity KeyboardReader_tb
+# -- Compiling architecture behavior of KeyboardReader_tb
+# End time: 22:14:26 on Jun 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.keyboardreader_tb
+# End time: 22:14:33 on Jun 07,2022, Elapsed time: 0:03:28
+# Errors: 0, Warnings: 0
+# vsim work.keyboardreader_tb 
+# Start time: 22:14:33 on Jun 07,2022
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.keyboardreader_tb(behavior)
+# Loading work.keyboardreader(behavioral)
+# Loading work.keydecode(behavioral)
+# Loading work.keyscan(behavioral)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.counter2bits(counter_logic)
+# Loading work.ffd(behavioral)
+# Loading work.decoder2x4(behavioral)
+# Loading work.penc(behavioral)
+# Loading work.reg2bits(reg2bits_logic)
+# Loading work.keycontrol(behaviour)
+# Loading work.keytransmitter(behavioral)
+# Loading work.keytransmittercontrol(behaviour)
+# Loading work.reg4bits(reg4bits_logic)
+# Loading work.counter3bits(counter_logic)
+# Loading work.mux_8x1(arq_mux)
+add wave -position insertpoint  \
+sim:/keyboardreader_tb/RXclk \
+sim:/keyboardreader_tb/MCLK \
+sim:/keyboardreader_tb/Clr \
+sim:/keyboardreader_tb/KEYPAD_LIN \
+sim:/keyboardreader_tb/TXD \
+sim:/keyboardreader_tb/KEYPAD_COL \
+sim:/keyboardreader_tb/clk_period
+add wave -position end  sim:/keyboardreader_tb/vm/ktransmitter/Cont/Count
+add wave -position end  sim:/keyboardreader_tb/vm/ktransmitter/MUX/Data_In
+add wave -position end  sim:/keyboardreader_tb/vm/ktransmitter/REG/Output
+run
+vcom -reportprogress 300 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Testbench/KeyboardReader_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:16:44 on Jun 07,2022
+# vcom -reportprogress 300 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Testbench/KeyboardReader_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity KeyboardReader_tb
+# -- Compiling architecture behavior of KeyboardReader_tb
+# End time: 22:16:45 on Jun 07,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vsim work.keyboardreader_tb
+# End time: 22:16:51 on Jun 07,2022, Elapsed time: 0:02:18
+# Errors: 0, Warnings: 0
+# vsim work.keyboardreader_tb 
+# Start time: 22:16:51 on Jun 07,2022
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.keyboardreader_tb(behavior)
+# Loading work.keyboardreader(behavioral)
+# Loading work.keydecode(behavioral)
+# Loading work.keyscan(behavioral)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.counter2bits(counter_logic)
+# Loading work.ffd(behavioral)
+# Loading work.decoder2x4(behavioral)
+# Loading work.penc(behavioral)
+# Loading work.reg2bits(reg2bits_logic)
+# Loading work.keycontrol(behaviour)
+# Loading work.keytransmitter(behavioral)
+# Loading work.keytransmittercontrol(behaviour)
+# Loading work.reg4bits(reg4bits_logic)
+# Loading work.counter3bits(counter_logic)
+# Loading work.mux_8x1(arq_mux)
+add wave -position insertpoint  \
+sim:/keyboardreader_tb/RXclk \
+sim:/keyboardreader_tb/MCLK \
+sim:/keyboardreader_tb/Clr \
+sim:/keyboardreader_tb/KEYPAD_LIN \
+sim:/keyboardreader_tb/TXD \
+sim:/keyboardreader_tb/KEYPAD_COL \
+sim:/keyboardreader_tb/clk_period
+add wave -position end  sim:/keyboardreader_tb/vm/ktransmitter/Cont/Count
+add wave -position end  sim:/keyboardreader_tb/vm/ktransmitter/MUX/Data_In
+add wave -position end  sim:/keyboardreader_tb/vm/ktransmitter/REG/Output
+run
+vcom -reportprogress 300 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Testbench/KeyboardReader_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:18:42 on Jun 07,2022
+# vcom -reportprogress 300 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Testbench/KeyboardReader_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity KeyboardReader_tb
+# -- Compiling architecture behavior of KeyboardReader_tb
+# End time: 22:18:42 on Jun 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.keyboardreader_tb
+# End time: 22:18:50 on Jun 07,2022, Elapsed time: 0:01:59
+# Errors: 0, Warnings: 0
+# vsim work.keyboardreader_tb 
+# Start time: 22:18:50 on Jun 07,2022
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.keyboardreader_tb(behavior)
+# Loading work.keyboardreader(behavioral)
+# Loading work.keydecode(behavioral)
+# Loading work.keyscan(behavioral)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.counter2bits(counter_logic)
+# Loading work.ffd(behavioral)
+# Loading work.decoder2x4(behavioral)
+# Loading work.penc(behavioral)
+# Loading work.reg2bits(reg2bits_logic)
+# Loading work.keycontrol(behaviour)
+# Loading work.keytransmitter(behavioral)
+# Loading work.keytransmittercontrol(behaviour)
+# Loading work.reg4bits(reg4bits_logic)
+# Loading work.counter3bits(counter_logic)
+# Loading work.mux_8x1(arq_mux)
+add wave -position insertpoint  \
+sim:/keyboardreader_tb/RXclk \
+sim:/keyboardreader_tb/MCLK \
+sim:/keyboardreader_tb/Clr \
+sim:/keyboardreader_tb/KEYPAD_LIN \
+sim:/keyboardreader_tb/TXD \
+sim:/keyboardreader_tb/KEYPAD_COL \
+sim:/keyboardreader_tb/clk_period
+add wave -position end  sim:/keyboardreader_tb/vm/ktransmitter/Cont/Count
+add wave -position end  sim:/keyboardreader_tb/vm/ktransmitter/MUX/Data_In
+add wave -position end  sim:/keyboardreader_tb/vm/ktransmitter/REG/Output
+run
+vcom -reportprogress 300 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Testbench/KeyboardReader_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:20:08 on Jun 07,2022
+# vcom -reportprogress 300 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Testbench/KeyboardReader_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity KeyboardReader_tb
+# -- Compiling architecture behavior of KeyboardReader_tb
+# End time: 22:20:09 on Jun 07,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vsim work.keyboardreader_tb
+# End time: 22:20:15 on Jun 07,2022, Elapsed time: 0:01:25
+# Errors: 0, Warnings: 0
+# vsim work.keyboardreader_tb 
+# Start time: 22:20:16 on Jun 07,2022
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.keyboardreader_tb(behavior)
+# Loading work.keyboardreader(behavioral)
+# Loading work.keydecode(behavioral)
+# Loading work.keyscan(behavioral)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.counter2bits(counter_logic)
+# Loading work.ffd(behavioral)
+# Loading work.decoder2x4(behavioral)
+# Loading work.penc(behavioral)
+# Loading work.reg2bits(reg2bits_logic)
+# Loading work.keycontrol(behaviour)
+# Loading work.keytransmitter(behavioral)
+# Loading work.keytransmittercontrol(behaviour)
+# Loading work.reg4bits(reg4bits_logic)
+# Loading work.counter3bits(counter_logic)
+# Loading work.mux_8x1(arq_mux)
+add wave -position insertpoint  \
+sim:/keyboardreader_tb/RXclk \
+sim:/keyboardreader_tb/MCLK \
+sim:/keyboardreader_tb/Clr \
+sim:/keyboardreader_tb/KEYPAD_LIN \
+sim:/keyboardreader_tb/TXD \
+sim:/keyboardreader_tb/KEYPAD_COL \
+sim:/keyboardreader_tb/clk_period
+add wave -position end  sim:/keyboardreader_tb/vm/ktransmitter/Cont/Count
+add wave -position end  sim:/keyboardreader_tb/vm/ktransmitter/MUX/Data_In
+add wave -position end  sim:/keyboardreader_tb/vm/ktransmitter/REG/Output
+run
+add wave -position end  sim:/keyboardreader_tb/vm/kdecode/kscan/K
+restart
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+add wave -position end  sim:/keyboardreader_tb/vm/kdecode/kscan/REG/Output
+restart
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+vcom -reportprogress 300 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Testbench/KeyboardReader_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:35:27 on Jun 07,2022
+# vcom -reportprogress 300 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Testbench/KeyboardReader_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity KeyboardReader_tb
+# -- Compiling architecture behavior of KeyboardReader_tb
+# End time: 22:35:27 on Jun 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.keyboardreader_tb
+# End time: 22:35:33 on Jun 07,2022, Elapsed time: 0:15:17
+# Errors: 0, Warnings: 0
+# vsim work.keyboardreader_tb 
+# Start time: 22:35:33 on Jun 07,2022
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.keyboardreader_tb(behavior)
+# Loading work.keyboardreader(behavioral)
+# Loading work.keydecode(behavioral)
+# Loading work.keyscan(behavioral)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.counter2bits(counter_logic)
+# Loading work.ffd(behavioral)
+# Loading work.decoder2x4(behavioral)
+# Loading work.penc(behavioral)
+# Loading work.reg2bits(reg2bits_logic)
+# Loading work.keycontrol(behaviour)
+# Loading work.keytransmitter(behavioral)
+# Loading work.keytransmittercontrol(behaviour)
+# Loading work.reg4bits(reg4bits_logic)
+# Loading work.counter3bits(counter_logic)
+# Loading work.mux_8x1(arq_mux)
+add wave -position insertpoint  \
+sim:/keyboardreader_tb/RXclk \
+sim:/keyboardreader_tb/MCLK \
+sim:/keyboardreader_tb/Clr \
+sim:/keyboardreader_tb/KEYPAD_LIN \
+sim:/keyboardreader_tb/TXD \
+sim:/keyboardreader_tb/KEYPAD_COL \
+sim:/keyboardreader_tb/clk_period
+add wave -position end  sim:/keyboardreader_tb/vm/ktransmitter/Cont/Count
+add wave -position end  sim:/keyboardreader_tb/vm/kdecode/kscan/K
+add wave -position end  sim:/keyboardreader_tb/vm/kdecode/kscan/REG/Output
+add wave -position end  sim:/keyboardreader_tb/vm/ktransmitter/REG/Output
+add wave -position end  sim:/keyboardreader_tb/vm/ktransmitter/MUX/Data_In
+run
+add wave -position end  sim:/keyboardreader_tb/vm/kdecode/kscan/sPENCOut
+restart
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+vcom -reportprogress 300 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Testbench/KeyboardReader_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:40:05 on Jun 07,2022
+# vcom -reportprogress 300 -work work C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Testbench/KeyboardReader_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity KeyboardReader_tb
+# -- Compiling architecture behavior of KeyboardReader_tb
+# End time: 22:40:05 on Jun 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.keyboardreader_tb
+# End time: 22:40:11 on Jun 07,2022, Elapsed time: 0:04:38
+# Errors: 0, Warnings: 0
+# vsim work.keyboardreader_tb 
+# Start time: 22:40:11 on Jun 07,2022
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.keyboardreader_tb(behavior)
+# Loading work.keyboardreader(behavioral)
+# Loading work.keydecode(behavioral)
+# Loading work.keyscan(behavioral)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.counter2bits(counter_logic)
+# Loading work.ffd(behavioral)
+# Loading work.decoder2x4(behavioral)
+# Loading work.penc(behavioral)
+# Loading work.reg2bits(reg2bits_logic)
+# Loading work.keycontrol(behaviour)
+# Loading work.keytransmitter(behavioral)
+# Loading work.keytransmittercontrol(behaviour)
+# Loading work.reg4bits(reg4bits_logic)
+# Loading work.counter3bits(counter_logic)
+# Loading work.mux_8x1(arq_mux)
+add wave -position insertpoint  \
+sim:/keyboardreader_tb/RXclk \
+sim:/keyboardreader_tb/MCLK \
+sim:/keyboardreader_tb/Clr \
+sim:/keyboardreader_tb/KEYPAD_LIN \
+sim:/keyboardreader_tb/TXD \
+sim:/keyboardreader_tb/KEYPAD_COL \
+sim:/keyboardreader_tb/clk_period
+add wave -position end  sim:/keyboardreader_tb/vm/ktransmitter/Cont/Count
+add wave -position end  sim:/keyboardreader_tb/vm/kdecode/kscan/K
+add wave -position end  sim:/keyboardreader_tb/vm/kdecode/kscan/sPENCOut
+run
+# End time: 22:50:07 on Jun 07,2022, Elapsed time: 0:09:56
 # Errors: 0, Warnings: 0

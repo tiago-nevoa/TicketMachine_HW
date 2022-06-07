@@ -18,7 +18,7 @@ ARCHITECTURE behavior OF KeyboardReader_tb IS
     
     --Inputs
     signal RXclk, MCLK, Clr : std_logic := '0';
-	signal KEYPAD_LIN : STD_LOGIC_VECTOR (3 downto 0) := "0000";
+	signal KEYPAD_LIN : STD_LOGIC_VECTOR (3 downto 0) := "1111";
 
  	--Outputs
 	signal TXD : std_logic;
@@ -39,27 +39,113 @@ BEGIN
         );
 
 	MCLK <= not MCLK after 10 ns; 
-	RXclk <= not RXclk after 40 ns; 
+	--RXclk <= not RXclk after 40 ns; 
 
    -- Stimulus process
    stim_proc: process
    begin		
+		RXclk <= '0';		
 		
-		wait for 20 ns;		
+		wait for 40 ns;		
 		Clr <= '1';	
 		
-		wait for 20 ns;
+		wait for 40 ns;
 		Clr <= '0';	
-		KEYPAD_LIN <= "1010"; -- simular pressionar 2 teclas ao mesmo tempo. Como temos priority encoder vai selecionar o de maior peso.
 		
-		wait for 200 ns;
-	
-		Clr <= '1';	
+		wait for 120 ns;
+		--KEYPAD_LIN <= "1010"; -- simular pressionar 2 teclas ao mesmo tempo. Como temos priority encoder vai selecionar o de maior peso.
+		KEYPAD_LIN <= "1011";
 		
+		-- 7 transiçoes
 		wait for 20 ns;
+		RXclk <= '1';		
+		wait for 40 ns;
+		RXclk <= '0';	
+		
+		wait for 40 ns;
+		RXclk <= '1';			
+		wait for 40 ns;
+		RXclk <= '0';
+		
+		wait for 40 ns;
+		RXclk <= '1';			
+		wait for 40 ns;
+		RXclk <= '0';
+		
+		wait for 40 ns;
+		RXclk <= '1';			
+		wait for 40 ns;
+		RXclk <= '0';
+		
+		wait for 40 ns;
+		RXclk <= '1';			
+		wait for 40 ns;
+		RXclk <= '0';
+		
+		wait for 40 ns;
+		RXclk <= '1';			
+		wait for 40 ns;
+		RXclk <= '0';
+		
+		wait for 40 ns;
+		RXclk <= '1';			
+		wait for 40 ns;
+		RXclk <= '0';
+		
+		wait for 40 ns;
+		RXclk <= '1';			
+		wait for 40 ns;
+		RXclk <= '0';
+		-- FIM 7 transiçoes
+		
+		wait for 120 ns;
+		KEYPAD_LIN <= "1111";
+	
+		wait for 120 ns;
 		Clr <= '0';	
 		KEYPAD_LIN <= "1011"; -- resultado igual ao anterior mas pressionou-se apenas uma tecla.
 		
+		-- 7 transiçoes
+		wait for 40 ns;
+		RXclk <= '1';		
+		wait for 40 ns;
+		RXclk <= '0';	
+		
+		wait for 40 ns;
+		RXclk <= '1';			
+		wait for 40 ns;
+		RXclk <= '0';
+		
+		wait for 40 ns;
+		RXclk <= '1';			
+		wait for 40 ns;
+		RXclk <= '0';
+		
+		wait for 40 ns;
+		RXclk <= '1';			
+		wait for 40 ns;
+		RXclk <= '0';
+		
+		wait for 40 ns;
+		RXclk <= '1';			
+		wait for 40 ns;
+		RXclk <= '0';
+		
+		wait for 40 ns;
+		RXclk <= '1';			
+		wait for 40 ns;
+		RXclk <= '0';
+		
+		wait for 40 ns;
+		RXclk <= '1';			
+		wait for 40 ns;
+		RXclk <= '0';
+		
+		wait for 40 ns;
+		RXclk <= '1';			
+		wait for 40 ns;
+		RXclk <= '0';
+		-- FIM 7 transiçoes
 		
 		wait;
 		

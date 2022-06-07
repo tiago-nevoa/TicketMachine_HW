@@ -1,10 +1,9 @@
 
 State Machine - |KeyboardReader|KeyTransmitter:ktransmitter|KeyTransmitterControl:keyTransControl|CurrentState
-Name CurrentState.STATE_RESET_COUNTER CurrentState.STATE_TRANSMIT_DATA CurrentState.STATE_DATA_ACCEPTED CurrentState.STATE_WAIT_DATA 
-CurrentState.STATE_WAIT_DATA 0 0 0 0 
-CurrentState.STATE_DATA_ACCEPTED 0 0 1 1 
-CurrentState.STATE_TRANSMIT_DATA 0 1 0 1 
-CurrentState.STATE_RESET_COUNTER 1 0 0 1 
+Name CurrentState.STATE_TRANSMIT_DATA CurrentState.STATE_DATA_ACCEPTED CurrentState.STATE_WAIT_DATA 
+CurrentState.STATE_WAIT_DATA 0 0 0 
+CurrentState.STATE_DATA_ACCEPTED 0 1 1 
+CurrentState.STATE_TRANSMIT_DATA 1 0 1 
 
 State Machine - |KeyboardReader|KeyDecode:kdecode|KeyControl:kcontrol|CurrentState
 Name CurrentState.STATE_SAVE_CHECKED CurrentState.STATE_SAVED CurrentState.STATE_SAVING CurrentState.STATE_WAIT 

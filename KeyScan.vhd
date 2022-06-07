@@ -68,10 +68,9 @@ REG: REG2bits PORT MAP (
 	INPUT => sPENCOut,
    OUTPUT => sREG);	
 	
-K(0) <= sFCount(0);
-K(1) <= sFCount(1);
-K(2) <= sREG(0);
-K(3) <= sREG(1);
-
+K(0) <= sREG(0); -- linhas correspondem aos bits de menor peso
+K(1) <= sREG(1);
+K(2) <= sFCount(0); -- colunas correspondem aos bits de maior peso
+K(3) <= sFCount(1);
 
 end behavioral;

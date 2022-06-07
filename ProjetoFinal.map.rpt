@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ProjetoFinal
-Tue Jun 07 16:43:35 2022
+Tue Jun 07 21:03:06 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition
 
 
@@ -48,15 +48,15 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                                   ;
 +------------------------------------+-----------------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Jun 07 16:43:35 2022                     ;
+; Analysis & Synthesis Status        ; Successful - Tue Jun 07 21:03:06 2022                     ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition ;
 ; Revision Name                      ; ProjetoFinal                                              ;
 ; Top-level Entity Name              ; KeyboardReader                                            ;
 ; Family                             ; MAX 10                                                    ;
-; Total logic elements               ; 31                                                        ;
-;     Total combinational functions  ; 27                                                        ;
-;     Dedicated logic registers      ; 19                                                        ;
-; Total registers                    ; 19                                                        ;
+; Total logic elements               ; 28                                                        ;
+;     Total combinational functions  ; 24                                                        ;
+;     Dedicated logic registers      ; 18                                                        ;
+; Total registers                    ; 18                                                        ;
 ; Total pins                         ; 11                                                        ;
 ; Total virtual pins                 ; 0                                                         ;
 ; Total memory bits                  ; 0                                                         ;
@@ -198,20 +198,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 31        ;
+; Estimated Total logic elements              ; 28        ;
 ;                                             ;           ;
-; Total combinational functions               ; 27        ;
+; Total combinational functions               ; 24        ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 10        ;
-;     -- 3 input functions                    ; 10        ;
+;     -- 4 input functions                    ; 12        ;
+;     -- 3 input functions                    ; 5         ;
 ;     -- <=2 input functions                  ; 7         ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 27        ;
+;     -- normal mode                          ; 24        ;
 ;     -- arithmetic mode                      ; 0         ;
 ;                                             ;           ;
-; Total registers                             ; 19        ;
-;     -- Dedicated logic registers            ; 19        ;
+; Total registers                             ; 18        ;
+;     -- Dedicated logic registers            ; 18        ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
 ; I/O pins                                    ; 11        ;
@@ -219,9 +219,9 @@ https://fpgasoftware.intel.com/eula.
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; Clr~input ;
-; Maximum fan-out                             ; 16        ;
-; Total fan-out                               ; 160       ;
-; Average fan-out                             ; 2.35      ;
+; Maximum fan-out                             ; 15        ;
+; Total fan-out                               ; 150       ;
+; Average fan-out                             ; 2.34      ;
 +---------------------------------------------+-----------+
 
 
@@ -230,7 +230,7 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------+-----------------------+--------------+
 ; Compilation Hierarchy Node                    ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                               ; Entity Name           ; Library Name ;
 +-----------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------------------------------+-----------------------+--------------+
-; |KeyboardReader                               ; 27 (0)              ; 19 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 11   ; 0            ; 0          ; |KeyboardReader                                                                   ; KeyboardReader        ; work         ;
+; |KeyboardReader                               ; 24 (0)              ; 18 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 11   ; 0            ; 0          ; |KeyboardReader                                                                   ; KeyboardReader        ; work         ;
 ;    |KeyDecode:kdecode|                        ; 12 (0)              ; 8 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyboardReader|KeyDecode:kdecode                                                 ; KeyDecode             ; work         ;
 ;       |KeyControl:kcontrol|                   ; 4 (4)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyboardReader|KeyDecode:kdecode|KeyControl:kcontrol                             ; KeyControl            ; work         ;
 ;       |KeyScan:kscan|                         ; 8 (0)               ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyboardReader|KeyDecode:kdecode|KeyScan:kscan                                   ; KeyScan               ; work         ;
@@ -242,13 +242,13 @@ https://fpgasoftware.intel.com/eula.
 ;             |FFD:UFFD0|                       ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyboardReader|KeyDecode:kdecode|KeyScan:kscan|REG2bits:REG|FFD:UFFD0            ; FFD                   ; work         ;
 ;             |FFD:UFFD1|                       ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyboardReader|KeyDecode:kdecode|KeyScan:kscan|REG2bits:REG|FFD:UFFD1            ; FFD                   ; work         ;
 ;          |decoder2x4:Dec|                     ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyboardReader|KeyDecode:kdecode|KeyScan:kscan|decoder2x4:Dec                    ; decoder2x4            ; work         ;
-;    |KeyTransmitter:ktransmitter|              ; 15 (0)              ; 11 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyboardReader|KeyTransmitter:ktransmitter                                       ; KeyTransmitter        ; work         ;
+;    |KeyTransmitter:ktransmitter|              ; 12 (0)              ; 10 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyboardReader|KeyTransmitter:ktransmitter                                       ; KeyTransmitter        ; work         ;
 ;       |Counter3bits:Cont|                     ; 3 (0)               ; 3 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyboardReader|KeyTransmitter:ktransmitter|Counter3bits:Cont                     ; Counter3bits          ; work         ;
 ;          |FFD:UFFD0|                          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyboardReader|KeyTransmitter:ktransmitter|Counter3bits:Cont|FFD:UFFD0           ; FFD                   ; work         ;
 ;          |FFD:UFFD1|                          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyboardReader|KeyTransmitter:ktransmitter|Counter3bits:Cont|FFD:UFFD1           ; FFD                   ; work         ;
 ;          |FFD:UFFD2|                          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyboardReader|KeyTransmitter:ktransmitter|Counter3bits:Cont|FFD:UFFD2           ; FFD                   ; work         ;
-;       |KeyTransmitterControl:keyTransControl| ; 6 (6)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyboardReader|KeyTransmitter:ktransmitter|KeyTransmitterControl:keyTransControl ; KeyTransmitterControl ; work         ;
-;       |MUX_8x1:MUX|                           ; 6 (6)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyboardReader|KeyTransmitter:ktransmitter|MUX_8x1:MUX                           ; MUX_8x1               ; work         ;
+;       |KeyTransmitterControl:keyTransControl| ; 5 (5)               ; 3 (3)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyboardReader|KeyTransmitter:ktransmitter|KeyTransmitterControl:keyTransControl ; KeyTransmitterControl ; work         ;
+;       |MUX_8x1:MUX|                           ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyboardReader|KeyTransmitter:ktransmitter|MUX_8x1:MUX                           ; MUX_8x1               ; work         ;
 ;       |REG4bits:REG|                          ; 0 (0)               ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyboardReader|KeyTransmitter:ktransmitter|REG4bits:REG                          ; REG4bits              ; work         ;
 ;          |FFD:UFFD0|                          ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyboardReader|KeyTransmitter:ktransmitter|REG4bits:REG|FFD:UFFD0                ; FFD                   ; work         ;
 ;          |FFD:UFFD1|                          ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |KeyboardReader|KeyTransmitter:ktransmitter|REG4bits:REG|FFD:UFFD1                ; FFD                   ; work         ;
@@ -259,16 +259,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 Encoding Type:  One-Hot
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |KeyboardReader|KeyTransmitter:ktransmitter|KeyTransmitterControl:keyTransControl|CurrentState                                                           ;
-+----------------------------------+----------------------------------+----------------------------------+----------------------------------+------------------------------+
-; Name                             ; CurrentState.STATE_RESET_COUNTER ; CurrentState.STATE_TRANSMIT_DATA ; CurrentState.STATE_DATA_ACCEPTED ; CurrentState.STATE_WAIT_DATA ;
-+----------------------------------+----------------------------------+----------------------------------+----------------------------------+------------------------------+
-; CurrentState.STATE_WAIT_DATA     ; 0                                ; 0                                ; 0                                ; 0                            ;
-; CurrentState.STATE_DATA_ACCEPTED ; 0                                ; 0                                ; 1                                ; 1                            ;
-; CurrentState.STATE_TRANSMIT_DATA ; 0                                ; 1                                ; 0                                ; 1                            ;
-; CurrentState.STATE_RESET_COUNTER ; 1                                ; 0                                ; 0                                ; 1                            ;
-+----------------------------------+----------------------------------+----------------------------------+----------------------------------+------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |KeyboardReader|KeyTransmitter:ktransmitter|KeyTransmitterControl:keyTransControl|CurrentState                        ;
++----------------------------------+----------------------------------+----------------------------------+------------------------------+
+; Name                             ; CurrentState.STATE_TRANSMIT_DATA ; CurrentState.STATE_DATA_ACCEPTED ; CurrentState.STATE_WAIT_DATA ;
++----------------------------------+----------------------------------+----------------------------------+------------------------------+
+; CurrentState.STATE_WAIT_DATA     ; 0                                ; 0                                ; 0                            ;
+; CurrentState.STATE_DATA_ACCEPTED ; 0                                ; 1                                ; 1                            ;
+; CurrentState.STATE_TRANSMIT_DATA ; 1                                ; 0                                ; 1                            ;
++----------------------------------+----------------------------------+----------------------------------+------------------------------+
 
 
 Encoding Type:  One-Hot
@@ -289,10 +288,10 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 19    ;
+; Total registers                              ; 18    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 19    ;
+; Number of registers using Asynchronous Clear ; 18    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 4     ;
 ; Number of registers using Preset             ; 0     ;
@@ -334,17 +333,17 @@ Encoding Type:  One-Hot
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 11                          ;
-; cycloneiii_ff         ; 19                          ;
-;     CLR               ; 15                          ;
+; cycloneiii_ff         ; 18                          ;
+;     CLR               ; 14                          ;
 ;     ENA CLR           ; 4                           ;
-; cycloneiii_lcell_comb ; 27                          ;
-;     normal            ; 27                          ;
+; cycloneiii_lcell_comb ; 24                          ;
+;     normal            ; 24                          ;
 ;         2 data inputs ; 7                           ;
-;         3 data inputs ; 10                          ;
-;         4 data inputs ; 10                          ;
+;         3 data inputs ; 5                           ;
+;         4 data inputs ; 12                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 3.00                        ;
-; Average LUT depth     ; 1.57                        ;
+; Average LUT depth     ; 1.59                        ;
 +-----------------------+-----------------------------+
 
 
@@ -363,7 +362,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition
-    Info: Processing started: Tue Jun 07 16:43:29 2022
+    Info: Processing started: Tue Jun 07 21:02:52 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ProjetoFinal -c ProjetoFinal
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -472,14 +471,14 @@ Info (12128): Elaborating entity "MUX_8x1" for hierarchy "KeyTransmitter:ktransm
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 43 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 40 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 7 input pins
     Info (21059): Implemented 4 output pins
-    Info (21061): Implemented 32 logic cells
+    Info (21061): Implemented 29 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4858 megabytes
-    Info: Processing ended: Tue Jun 07 16:43:35 2022
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:16
+    Info: Peak virtual memory: 4860 megabytes
+    Info: Processing ended: Tue Jun 07 21:03:06 2022
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:37
 
 

@@ -1,14 +1,14 @@
-Fitter Status : Successful - Tue Jun 07 16:43:44 2022
+Fitter Status : Successful - Tue Jun 07 21:03:25 2022
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition
 Revision Name : ProjetoFinal
 Top-level Entity Name : KeyboardReader
 Family : MAX 10
 Device : 10M50DAF484C6GES
 Timing Models : Preliminary
-Total logic elements : 31 / 49,760 ( < 1 % )
-    Total combinational functions : 28 / 49,760 ( < 1 % )
-    Dedicated logic registers : 19 / 49,760 ( < 1 % )
-Total registers : 19
+Total logic elements : 29 / 49,760 ( < 1 % )
+    Total combinational functions : 25 / 49,760 ( < 1 % )
+    Dedicated logic registers : 18 / 49,760 ( < 1 % )
+Total registers : 18
 Total pins : 11 / 360 ( 3 % )
 Total virtual pins : 0
 Total memory bits : 0 / 1,677,312 ( 0 % )

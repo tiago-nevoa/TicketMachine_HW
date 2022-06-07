@@ -1,5 +1,5 @@
 Fitter report for ProjetoFinal
-Tue Jun 07 16:43:44 2022
+Tue Jun 07 21:03:25 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition
 
 
@@ -69,17 +69,17 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                                 ;
 +------------------------------------+-----------------------------------------------------------+
-; Fitter Status                      ; Successful - Tue Jun 07 16:43:44 2022                     ;
+; Fitter Status                      ; Successful - Tue Jun 07 21:03:25 2022                     ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition ;
 ; Revision Name                      ; ProjetoFinal                                              ;
 ; Top-level Entity Name              ; KeyboardReader                                            ;
 ; Family                             ; MAX 10                                                    ;
 ; Device                             ; 10M50DAF484C6GES                                          ;
 ; Timing Models                      ; Preliminary                                               ;
-; Total logic elements               ; 31 / 49,760 ( < 1 % )                                     ;
-;     Total combinational functions  ; 28 / 49,760 ( < 1 % )                                     ;
-;     Dedicated logic registers      ; 19 / 49,760 ( < 1 % )                                     ;
-; Total registers                    ; 19                                                        ;
+; Total logic elements               ; 29 / 49,760 ( < 1 % )                                     ;
+;     Total combinational functions  ; 25 / 49,760 ( < 1 % )                                     ;
+;     Dedicated logic registers      ; 18 / 49,760 ( < 1 % )                                     ;
+; Total registers                    ; 18                                                        ;
 ; Total pins                         ; 11 / 360 ( 3 % )                                          ;
 ; Total virtual pins                 ; 0                                                         ;
 ; Total memory bits                  ; 0 / 1,677,312 ( 0 % )                                     ;
@@ -155,7 +155,7 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 16          ;
 ; Maximum allowed            ; 16          ;
 ;                            ;             ;
-; Average used               ; 1.06        ;
+; Average used               ; 1.07        ;
 ; Maximum used               ; 16          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
@@ -215,8 +215,8 @@ https://fpgasoftware.intel.com/eula.
 ; Type                ; Total [A + B]     ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+-------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                   ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 92 ) ; 0.00 % ( 0 / 92 )          ; 0.00 % ( 0 / 92 )        ;
-;     -- Achieved     ; 0.00 % ( 0 / 92 ) ; 0.00 % ( 0 / 92 )          ; 0.00 % ( 0 / 92 )        ;
+;     -- Requested    ; 0.00 % ( 0 / 88 ) ; 0.00 % ( 0 / 88 )          ; 0.00 % ( 0 / 88 )        ;
+;     -- Achieved     ; 0.00 % ( 0 / 88 ) ; 0.00 % ( 0 / 88 )          ; 0.00 % ( 0 / 88 )        ;
 ;                     ;                   ;                            ;                          ;
 ; Routing (by net)    ;                   ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )  ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -239,7 +239,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 76 )     ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 72 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 16 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -255,26 +255,26 @@ The pin-out file can be found in C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_H
 +---------------------------------------------+-----------------------+
 ; Resource                                    ; Usage                 ;
 +---------------------------------------------+-----------------------+
-; Total logic elements                        ; 31 / 49,760 ( < 1 % ) ;
-;     -- Combinational with no register       ; 12                    ;
-;     -- Register only                        ; 3                     ;
-;     -- Combinational with a register        ; 16                    ;
+; Total logic elements                        ; 29 / 49,760 ( < 1 % ) ;
+;     -- Combinational with no register       ; 11                    ;
+;     -- Register only                        ; 4                     ;
+;     -- Combinational with a register        ; 14                    ;
 ;                                             ;                       ;
 ; Logic element usage by number of LUT inputs ;                       ;
-;     -- 4 input functions                    ; 10                    ;
-;     -- 3 input functions                    ; 10                    ;
+;     -- 4 input functions                    ; 12                    ;
+;     -- 3 input functions                    ; 5                     ;
 ;     -- <=2 input functions                  ; 8                     ;
-;     -- Register only                        ; 3                     ;
+;     -- Register only                        ; 4                     ;
 ;                                             ;                       ;
 ; Logic elements by mode                      ;                       ;
-;     -- normal mode                          ; 28                    ;
+;     -- normal mode                          ; 25                    ;
 ;     -- arithmetic mode                      ; 0                     ;
 ;                                             ;                       ;
-; Total registers*                            ; 19 / 51,509 ( < 1 % ) ;
-;     -- Dedicated logic registers            ; 19 / 49,760 ( < 1 % ) ;
+; Total registers*                            ; 18 / 51,509 ( < 1 % ) ;
+;     -- Dedicated logic registers            ; 18 / 49,760 ( < 1 % ) ;
 ;     -- I/O registers                        ; 0 / 1,749 ( 0 % )     ;
 ;                                             ;                       ;
-; Total LABs:  partially or completely used   ; 5 / 3,110 ( < 1 % )   ;
+; Total LABs:  partially or completely used   ; 4 / 3,110 ( < 1 % )   ;
 ; Virtual pins                                ; 0                     ;
 ; I/O pins                                    ; 11 / 360 ( 3 % )      ;
 ;     -- Clock pins                           ; 2 / 8 ( 25 % )        ;
@@ -295,11 +295,11 @@ The pin-out file can be found in C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_H
 ; Oscillator blocks                           ; 0 / 1 ( 0 % )         ;
 ; Impedance control blocks                    ; 0 / 1 ( 0 % )         ;
 ; Average interconnect usage (total/H/V)      ; 0.0% / 0.0% / 0.0%    ;
-; Peak interconnect usage (total/H/V)         ; 0.5% / 0.5% / 0.5%    ;
+; Peak interconnect usage (total/H/V)         ; 0.4% / 0.3% / 0.6%    ;
 ; Maximum fan-out                             ; 17                    ;
 ; Highest non-global fan-out                  ; 17                    ;
-; Total fan-out                               ; 178                   ;
-; Average fan-out                             ; 1.87                  ;
+; Total fan-out                               ; 169                   ;
+; Average fan-out                             ; 1.84                  ;
 +---------------------------------------------+-----------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -312,26 +312,26 @@ The pin-out file can be found in C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_H
 +---------------------------------------------+----------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                  ; Low                            ;
 ;                                             ;                      ;                                ;
-; Total logic elements                        ; 31 / 49760 ( < 1 % ) ; 0 / 49760 ( 0 % )              ;
-;     -- Combinational with no register       ; 12                   ; 0                              ;
-;     -- Register only                        ; 3                    ; 0                              ;
-;     -- Combinational with a register        ; 16                   ; 0                              ;
+; Total logic elements                        ; 29 / 49760 ( < 1 % ) ; 0 / 49760 ( 0 % )              ;
+;     -- Combinational with no register       ; 11                   ; 0                              ;
+;     -- Register only                        ; 4                    ; 0                              ;
+;     -- Combinational with a register        ; 14                   ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Logic element usage by number of LUT inputs ;                      ;                                ;
-;     -- 4 input functions                    ; 10                   ; 0                              ;
-;     -- 3 input functions                    ; 10                   ; 0                              ;
+;     -- 4 input functions                    ; 12                   ; 0                              ;
+;     -- 3 input functions                    ; 5                    ; 0                              ;
 ;     -- <=2 input functions                  ; 8                    ; 0                              ;
-;     -- Register only                        ; 3                    ; 0                              ;
+;     -- Register only                        ; 4                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Logic elements by mode                      ;                      ;                                ;
-;     -- normal mode                          ; 28                   ; 0                              ;
+;     -- normal mode                          ; 25                   ; 0                              ;
 ;     -- arithmetic mode                      ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
-; Total registers                             ; 19                   ; 0                              ;
-;     -- Dedicated logic registers            ; 19 / 49760 ( < 1 % ) ; 0 / 49760 ( 0 % )              ;
+; Total registers                             ; 18                   ; 0                              ;
+;     -- Dedicated logic registers            ; 18 / 49760 ( < 1 % ) ; 0 / 49760 ( 0 % )              ;
 ;     -- I/O registers                        ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
-; Total LABs:  partially or completely used   ; 5 / 3110 ( < 1 % )   ; 0 / 3110 ( 0 % )               ;
+; Total LABs:  partially or completely used   ; 4 / 3110 ( < 1 % )   ; 0 / 3110 ( 0 % )               ;
 ;                                             ;                      ;                                ;
 ; Virtual pins                                ; 0                    ; 0                              ;
 ; I/O pins                                    ; 11                   ; 0                              ;
@@ -349,8 +349,8 @@ The pin-out file can be found in C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_H
 ;     -- Registered Output Connections        ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Internal Connections                        ;                      ;                                ;
-;     -- Total Connections                    ; 184                  ; 8                              ;
-;     -- Registered Connections               ; 73                   ; 0                              ;
+;     -- Total Connections                    ; 175                  ; 8                              ;
+;     -- Registered Connections               ; 70                   ; 0                              ;
 ;                                             ;                      ;                                ;
 ; External Connections                        ;                      ;                                ;
 ;     -- Top                                  ; 0                    ; 0                              ;
@@ -382,12 +382,12 @@ The pin-out file can be found in C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_H
 +---------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
 ; Name          ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +---------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
-; Clr           ; V10   ; 3        ; 31           ; 0            ; 21           ; 16                    ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
-; KEYPAD_LIN[0] ; E3    ; 1A       ; 0            ; 37           ; 7            ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
-; KEYPAD_LIN[1] ; F5    ; 1A       ; 0            ; 37           ; 14           ; 3                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
-; KEYPAD_LIN[2] ; E6    ; 8        ; 20           ; 39           ; 0            ; 3                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
-; KEYPAD_LIN[3] ; C3    ; 8        ; 20           ; 39           ; 7            ; 3                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
-; MCLK          ; P11   ; 3        ; 34           ; 0            ; 28           ; 14                    ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; 0         ;
+; Clr           ; V10   ; 3        ; 31           ; 0            ; 21           ; 15                    ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
+; KEYPAD_LIN[0] ; C20   ; 6        ; 78           ; 41           ; 7            ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
+; KEYPAD_LIN[1] ; L18   ; 6        ; 78           ; 37           ; 14           ; 3                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
+; KEYPAD_LIN[2] ; L19   ; 6        ; 78           ; 37           ; 7            ; 3                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
+; KEYPAD_LIN[3] ; M18   ; 6        ; 78           ; 37           ; 21           ; 3                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
+; MCLK          ; P11   ; 3        ; 34           ; 0            ; 28           ; 13                    ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; 0         ;
 ; RXclk         ; R11   ; 3        ; 31           ; 0            ; 0            ; 3                     ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; 0         ;
 +---------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
 
@@ -397,10 +397,10 @@ The pin-out file can be found in C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_H
 +---------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
 ; Name          ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Output Register ; Output Enable Register ; Power Up High ; Slew Rate ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination                       ; Termination Control Block ; Output Buffer Pre-emphasis ; Voltage Output Differential ; Location assigned by ; Output Enable Source ; Output Enable Group ;
 +---------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
-; KEYPAD_COL[0] ; B2    ; 8        ; 22           ; 39           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; KEYPAD_COL[1] ; C2    ; 8        ; 20           ; 39           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; KEYPAD_COL[2] ; B1    ; 8        ; 22           ; 39           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; TXD           ; D6    ; 8        ; 22           ; 39           ; 28           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; KEYPAD_COL[0] ; C21   ; 6        ; 78           ; 36           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; KEYPAD_COL[1] ; L20   ; 6        ; 78           ; 37           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; KEYPAD_COL[2] ; L14   ; 6        ; 78           ; 36           ; 22           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; TXD           ; K14   ; 6        ; 78           ; 41           ; 22           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
 +---------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
 
 
@@ -420,21 +420,21 @@ The pin-out file can be found in C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_H
 +----------+----------------------------------------------------+--------------------------------+---------------------+------------------+
 
 
-+------------------------------------------------------------+
-; I/O Bank Usage                                             ;
-+----------+------------------+---------------+--------------+
-; I/O Bank ; Usage            ; VCCIO Voltage ; VREF Voltage ;
-+----------+------------------+---------------+--------------+
-; 1A       ; 2 / 16 ( 13 % )  ; 2.5V          ; --           ;
-; 1B       ; 4 / 24 ( 17 % )  ; 2.5V          ; --           ;
-; 2        ; 0 / 36 ( 0 % )   ; 2.5V          ; --           ;
-; 3        ; 3 / 48 ( 6 % )   ; 2.5V          ; --           ;
-; 4        ; 0 / 48 ( 0 % )   ; 2.5V          ; --           ;
-; 5        ; 0 / 40 ( 0 % )   ; 2.5V          ; --           ;
-; 6        ; 0 / 60 ( 0 % )   ; 2.5V          ; --           ;
-; 7        ; 0 / 52 ( 0 % )   ; 2.5V          ; --           ;
-; 8        ; 10 / 36 ( 28 % ) ; 2.5V          ; --           ;
-+----------+------------------+---------------+--------------+
++-----------------------------------------------------------+
+; I/O Bank Usage                                            ;
++----------+-----------------+---------------+--------------+
+; I/O Bank ; Usage           ; VCCIO Voltage ; VREF Voltage ;
++----------+-----------------+---------------+--------------+
+; 1A       ; 0 / 16 ( 0 % )  ; 2.5V          ; --           ;
+; 1B       ; 4 / 24 ( 17 % ) ; 2.5V          ; --           ;
+; 2        ; 0 / 36 ( 0 % )  ; 2.5V          ; --           ;
+; 3        ; 3 / 48 ( 6 % )  ; 2.5V          ; --           ;
+; 4        ; 0 / 48 ( 0 % )  ; 2.5V          ; --           ;
+; 5        ; 0 / 40 ( 0 % )  ; 2.5V          ; --           ;
+; 6        ; 8 / 60 ( 13 % ) ; 2.5V          ; --           ;
+; 7        ; 0 / 52 ( 0 % )  ; 2.5V          ; --           ;
+; 8        ; 4 / 36 ( 11 % ) ; 2.5V          ; --           ;
++----------+-----------------+---------------+--------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -508,8 +508,8 @@ The pin-out file can be found in C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_H
 ; AB20     ; 215        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; AB21     ; 225        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; AB22     ;            ;          ; GND                                            ; gnd    ;                       ;         ; --         ;                 ; --       ; --           ;
-; B1       ; 495        ; 8        ; KEYPAD_COL[2]                                  ; output ; 2.5 V                 ;         ; Column I/O ; N               ; no       ; Off          ;
-; B2       ; 493        ; 8        ; KEYPAD_COL[0]                                  ; output ; 2.5 V                 ;         ; Column I/O ; N               ; no       ; Off          ;
+; B1       ; 495        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
+; B2       ; 493        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; B3       ; 484        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; B4       ; 486        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; B5       ; 485        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
@@ -531,8 +531,8 @@ The pin-out file can be found in C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_H
 ; B21      ; 367        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Row I/O    ;                 ; no       ; On           ;
 ; B22      ; 365        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Row I/O    ;                 ; no       ; On           ;
 ; C1       ; 33         ; 1B       ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Row I/O    ;                 ; --       ; --           ;
-; C2       ; 499        ; 8        ; KEYPAD_COL[1]                                  ; output ; 2.5 V                 ;         ; Column I/O ; N               ; no       ; Off          ;
-; C3       ; 497        ; 8        ; KEYPAD_LIN[3]                                  ; input  ; 2.5 V                 ;         ; Column I/O ; N               ; no       ; Off          ;
+; C2       ; 499        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
+; C3       ; 497        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; C4       ; 487        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; C5       ; 489        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; C6       ; 477        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
@@ -549,15 +549,15 @@ The pin-out file can be found in C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_H
 ; C17      ; 391        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; C18      ; 400        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; C19      ; 397        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
-; C20      ; 357        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Row I/O    ;                 ; no       ; On           ;
-; C21      ; 347        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Row I/O    ;                 ; no       ; On           ;
+; C20      ; 357        ; 6        ; KEYPAD_LIN[0]                                  ; input  ; 2.5 V                 ;         ; Row I/O    ; N               ; no       ; Off          ;
+; C21      ; 347        ; 6        ; KEYPAD_COL[0]                                  ; output ; 2.5 V                 ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; C22      ; 343        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Row I/O    ;                 ; no       ; On           ;
 ; D1       ; 35         ; 1B       ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Row I/O    ;                 ; no       ; On           ;
 ; D2       ; 31         ; 1B       ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Row I/O    ;                 ; no       ; On           ;
 ; D3       ; 29         ; 1B       ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Row I/O    ;                 ; no       ; On           ;
 ; D4       ;            ;          ; GND                                            ; gnd    ;                       ;         ; --         ;                 ; --       ; --           ;
 ; D5       ; 491        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
-; D6       ; 496        ; 8        ; TXD                                            ; output ; 2.5 V                 ;         ; Column I/O ; N               ; no       ; Off          ;
+; D6       ; 496        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; D7       ; 479        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; --       ; --           ;
 ; D8       ; 472        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; D9       ; 474        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
@@ -576,10 +576,10 @@ The pin-out file can be found in C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_H
 ; D22      ; 341        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Row I/O    ;                 ; no       ; On           ;
 ; E1       ; 41         ; 1B       ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Row I/O    ;                 ; no       ; On           ;
 ; E2       ;            ;          ; GND                                            ; gnd    ;                       ;         ; --         ;                 ; --       ; --           ;
-; E3       ; 3          ; 1A       ; KEYPAD_LIN[0]                                  ; input  ; 2.5 V                 ;         ; Row I/O    ; N               ; no       ; Off          ;
+; E3       ; 3          ; 1A       ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Row I/O    ;                 ; no       ; On           ;
 ; E4       ; 1          ; 1A       ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Row I/O    ;                 ; no       ; On           ;
 ; E5       ;            ;          ; NC                                             ;        ;                       ;         ; --         ;                 ; --       ; --           ;
-; E6       ; 498        ; 8        ; KEYPAD_LIN[2]                                  ; input  ; 2.5 V                 ;         ; Column I/O ; N               ; no       ; Off          ;
+; E6       ; 498        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; E7       ;            ;          ; GND                                            ; gnd    ;                       ;         ; --         ;                 ; --       ; --           ;
 ; E8       ; 488        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; E9       ; 478        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
@@ -600,7 +600,7 @@ The pin-out file can be found in C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_H
 ; F2       ; 43         ; 1B       ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Row I/O    ;                 ; no       ; On           ;
 ; F3       ; 7          ; 1A       ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Row I/O    ;                 ; no       ; On           ;
 ; F4       ; 2          ; 1A       ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Row I/O    ;                 ; no       ; On           ;
-; F5       ; 0          ; 1A       ; KEYPAD_LIN[1]                                  ; input  ; 2.5 V                 ;         ; Row I/O    ; N               ; no       ; Off          ;
+; F5       ; 0          ; 1A       ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Row I/O    ;                 ; no       ; On           ;
 ; F6       ;            ;          ; NC                                             ;        ;                       ;         ; --         ;                 ; --       ; --           ;
 ; F7       ; 490        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Column I/O ;                 ; no       ; On           ;
 ; F8       ; 494        ; 8        ; ~ALTERA_CONF_DONE~ / RESERVED_INPUT            ; input  ; 2.5 V Schmitt Trigger ;         ; Column I/O ; N               ; no       ; Off          ;
@@ -697,7 +697,7 @@ The pin-out file can be found in C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_H
 ; K11      ;            ; --       ; VCC                                            ; power  ;                       ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; K12      ;            ;          ; GND                                            ; gnd    ;                       ;         ; --         ;                 ; --       ; --           ;
 ; K13      ;            ; --       ; VCC                                            ; power  ;                       ; 1.2V    ; --         ;                 ; --       ; --           ;
-; K14      ; 356        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Row I/O    ;                 ; no       ; On           ;
+; K14      ; 356        ; 6        ; TXD                                            ; output ; 2.5 V                 ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; K15      ; 358        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Row I/O    ;                 ; no       ; On           ;
 ; K16      ;            ; 6        ; VCCIO6                                         ; power  ;                       ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; K17      ;            ; 6        ; VCCIO6                                         ; power  ;                       ; 2.5V    ; --         ;                 ; --       ; --           ;
@@ -719,13 +719,13 @@ The pin-out file can be found in C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_H
 ; L11      ;            ; --       ; VCC                                            ; power  ;                       ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; L12      ;            ; --       ; VCC                                            ; power  ;                       ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; L13      ;            ;          ; GND                                            ; gnd    ;                       ;         ; --         ;                 ; --       ; --           ;
-; L14      ; 344        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Row I/O    ;                 ; no       ; On           ;
+; L14      ; 344        ; 6        ; KEYPAD_COL[2]                                  ; output ; 2.5 V                 ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; L15      ; 346        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Row I/O    ;                 ; no       ; On           ;
 ; L16      ;            ; 6        ; VCCIO6                                         ; power  ;                       ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; L17      ;            ;          ; GND                                            ; gnd    ;                       ;         ; --         ;                 ; --       ; --           ;
-; L18      ; 350        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Row I/O    ;                 ; no       ; On           ;
-; L19      ; 349        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Row I/O    ;                 ; no       ; On           ;
-; L20      ; 351        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Row I/O    ;                 ; no       ; On           ;
+; L18      ; 350        ; 6        ; KEYPAD_LIN[1]                                  ; input  ; 2.5 V                 ;         ; Row I/O    ; N               ; no       ; Off          ;
+; L19      ; 349        ; 6        ; KEYPAD_LIN[2]                                  ; input  ; 2.5 V                 ;         ; Row I/O    ; N               ; no       ; Off          ;
+; L20      ; 351        ; 6        ; KEYPAD_COL[1]                                  ; output ; 2.5 V                 ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; L21      ;            ;          ; GND                                            ; gnd    ;                       ;         ; --         ;                 ; --       ; --           ;
 ; L22      ; 314        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Row I/O    ;                 ; no       ; On           ;
 ; M1       ; 79         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Row I/O    ;                 ; no       ; On           ;
@@ -745,7 +745,7 @@ The pin-out file can be found in C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_H
 ; M15      ; 332        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Row I/O    ;                 ; no       ; On           ;
 ; M16      ;            ;          ; GND                                            ; gnd    ;                       ;         ; --         ;                 ; --       ; --           ;
 ; M17      ;            ; 6        ; VCCIO6                                         ; power  ;                       ; 2.5V    ; --         ;                 ; --       ; --           ;
-; M18      ; 348        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Row I/O    ;                 ; no       ; On           ;
+; M18      ; 348        ; 6        ; KEYPAD_LIN[3]                                  ; input  ; 2.5 V                 ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; M19      ;            ;          ; GND                                            ; gnd    ;                       ;         ; --         ;                 ; --       ; --           ;
 ; M20      ; 337        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Row I/O    ;                 ; no       ; On           ;
 ; M21      ; 312        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                ;        ;                       ;         ; Row I/O    ;                 ; no       ; On           ;
@@ -964,9 +964,9 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +-----------------------------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+-----------------------------------------------------------------------------------+-----------------------+--------------+
 ; Compilation Hierarchy Node                    ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; ADC blocks ; Full Hierarchy Name                                                               ; Entity Name           ; Library Name ;
 +-----------------------------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+-----------------------------------------------------------------------------------+-----------------------+--------------+
-; |KeyboardReader                               ; 31 (1)      ; 19 (0)                    ; 0 (0)         ; 0           ; 0    ; 1          ; 0            ; 0       ; 0         ; 11   ; 0            ; 12 (1)       ; 3 (0)             ; 16 (0)           ; 0          ; |KeyboardReader                                                                   ; KeyboardReader        ; work         ;
-;    |KeyDecode:kdecode|                        ; 13 (0)      ; 8 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (0)        ; 1 (0)             ; 7 (0)            ; 0          ; |KeyboardReader|KeyDecode:kdecode                                                 ; KeyDecode             ; work         ;
-;       |KeyControl:kcontrol|                   ; 5 (5)       ; 4 (4)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 1 (1)             ; 3 (3)            ; 0          ; |KeyboardReader|KeyDecode:kdecode|KeyControl:kcontrol                             ; KeyControl            ; work         ;
+; |KeyboardReader                               ; 29 (1)      ; 18 (0)                    ; 0 (0)         ; 0           ; 0    ; 1          ; 0            ; 0       ; 0         ; 11   ; 0            ; 11 (1)       ; 4 (0)             ; 14 (0)           ; 0          ; |KeyboardReader                                                                   ; KeyboardReader        ; work         ;
+;    |KeyDecode:kdecode|                        ; 13 (0)      ; 8 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 8 (0)            ; 0          ; |KeyboardReader|KeyDecode:kdecode                                                 ; KeyDecode             ; work         ;
+;       |KeyControl:kcontrol|                   ; 5 (5)       ; 4 (4)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 4 (4)            ; 0          ; |KeyboardReader|KeyDecode:kdecode|KeyControl:kcontrol                             ; KeyControl            ; work         ;
 ;       |KeyScan:kscan|                         ; 8 (0)       ; 4 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 4 (0)            ; 0          ; |KeyboardReader|KeyDecode:kdecode|KeyScan:kscan                                   ; KeyScan               ; work         ;
 ;          |Counter2bits:Cont|                  ; 2 (0)       ; 2 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (0)            ; 0          ; |KeyboardReader|KeyDecode:kdecode|KeyScan:kscan|Counter2bits:Cont                 ; Counter2bits          ; work         ;
 ;             |FFD:UFFD0|                       ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0          ; |KeyboardReader|KeyDecode:kdecode|KeyScan:kscan|Counter2bits:Cont|FFD:UFFD0       ; FFD                   ; work         ;
@@ -976,18 +976,18 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ;             |FFD:UFFD0|                       ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0          ; |KeyboardReader|KeyDecode:kdecode|KeyScan:kscan|REG2bits:REG|FFD:UFFD0            ; FFD                   ; work         ;
 ;             |FFD:UFFD1|                       ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0          ; |KeyboardReader|KeyDecode:kdecode|KeyScan:kscan|REG2bits:REG|FFD:UFFD1            ; FFD                   ; work         ;
 ;          |decoder2x4:Dec|                     ; 3 (3)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0          ; |KeyboardReader|KeyDecode:kdecode|KeyScan:kscan|decoder2x4:Dec                    ; decoder2x4            ; work         ;
-;    |KeyTransmitter:ktransmitter|              ; 17 (0)      ; 11 (0)                    ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 6 (0)        ; 2 (0)             ; 9 (0)            ; 0          ; |KeyboardReader|KeyTransmitter:ktransmitter                                       ; KeyTransmitter        ; work         ;
+;    |KeyTransmitter:ktransmitter|              ; 16 (0)      ; 10 (0)                    ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (0)        ; 4 (0)             ; 7 (0)            ; 0          ; |KeyboardReader|KeyTransmitter:ktransmitter                                       ; KeyTransmitter        ; work         ;
 ;       |Counter3bits:Cont|                     ; 3 (0)       ; 3 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 3 (0)            ; 0          ; |KeyboardReader|KeyTransmitter:ktransmitter|Counter3bits:Cont                     ; Counter3bits          ; work         ;
 ;          |FFD:UFFD0|                          ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0          ; |KeyboardReader|KeyTransmitter:ktransmitter|Counter3bits:Cont|FFD:UFFD0           ; FFD                   ; work         ;
 ;          |FFD:UFFD1|                          ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0          ; |KeyboardReader|KeyTransmitter:ktransmitter|Counter3bits:Cont|FFD:UFFD1           ; FFD                   ; work         ;
 ;          |FFD:UFFD2|                          ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0          ; |KeyboardReader|KeyTransmitter:ktransmitter|Counter3bits:Cont|FFD:UFFD2           ; FFD                   ; work         ;
-;       |KeyTransmitterControl:keyTransControl| ; 6 (6)       ; 4 (4)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 4 (4)            ; 0          ; |KeyboardReader|KeyTransmitter:ktransmitter|KeyTransmitterControl:keyTransControl ; KeyTransmitterControl ; work         ;
-;       |MUX_8x1:MUX|                           ; 6 (6)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 2 (2)            ; 0          ; |KeyboardReader|KeyTransmitter:ktransmitter|MUX_8x1:MUX                           ; MUX_8x1               ; work         ;
-;       |REG4bits:REG|                          ; 4 (0)       ; 4 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 2 (0)             ; 2 (0)            ; 0          ; |KeyboardReader|KeyTransmitter:ktransmitter|REG4bits:REG                          ; REG4bits              ; work         ;
-;          |FFD:UFFD0|                          ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0          ; |KeyboardReader|KeyTransmitter:ktransmitter|REG4bits:REG|FFD:UFFD0                ; FFD                   ; work         ;
+;       |KeyTransmitterControl:keyTransControl| ; 6 (6)       ; 3 (3)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 1 (1)             ; 3 (3)            ; 0          ; |KeyboardReader|KeyTransmitter:ktransmitter|KeyTransmitterControl:keyTransControl ; KeyTransmitterControl ; work         ;
+;       |MUX_8x1:MUX|                           ; 4 (4)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 1 (1)            ; 0          ; |KeyboardReader|KeyTransmitter:ktransmitter|MUX_8x1:MUX                           ; MUX_8x1               ; work         ;
+;       |REG4bits:REG|                          ; 4 (0)       ; 4 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 3 (0)             ; 1 (0)            ; 0          ; |KeyboardReader|KeyTransmitter:ktransmitter|REG4bits:REG                          ; REG4bits              ; work         ;
+;          |FFD:UFFD0|                          ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; 0          ; |KeyboardReader|KeyTransmitter:ktransmitter|REG4bits:REG|FFD:UFFD0                ; FFD                   ; work         ;
 ;          |FFD:UFFD1|                          ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; 0          ; |KeyboardReader|KeyTransmitter:ktransmitter|REG4bits:REG|FFD:UFFD1                ; FFD                   ; work         ;
-;          |FFD:UFFD2|                          ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; 0          ; |KeyboardReader|KeyTransmitter:ktransmitter|REG4bits:REG|FFD:UFFD2                ; FFD                   ; work         ;
-;          |FFD:UFFD3|                          ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0          ; |KeyboardReader|KeyTransmitter:ktransmitter|REG4bits:REG|FFD:UFFD3                ; FFD                   ; work         ;
+;          |FFD:UFFD2|                          ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0          ; |KeyboardReader|KeyTransmitter:ktransmitter|REG4bits:REG|FFD:UFFD2                ; FFD                   ; work         ;
+;          |FFD:UFFD3|                          ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; 0          ; |KeyboardReader|KeyTransmitter:ktransmitter|REG4bits:REG|FFD:UFFD3                ; FFD                   ; work         ;
 +-----------------------------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+-----------------------------------------------------------------------------------+-----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1004,9 +1004,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; MCLK          ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
 ; Clr           ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
 ; RXclk         ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
-; KEYPAD_LIN[2] ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
-; KEYPAD_LIN[3] ; Input    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
-; KEYPAD_LIN[0] ; Input    ; --            ; (6) 873 ps    ; --                    ; --  ; --   ;
+; KEYPAD_LIN[2] ; Input    ; --            ; (6) 873 ps    ; --                    ; --  ; --   ;
+; KEYPAD_LIN[3] ; Input    ; --            ; (6) 873 ps    ; --                    ; --  ; --   ;
+; KEYPAD_LIN[0] ; Input    ; (6) 873 ps    ; --            ; --                    ; --  ; --   ;
 ; KEYPAD_LIN[1] ; Input    ; (6) 873 ps    ; --            ; --                    ; --  ; --   ;
 +---------------+----------+---------------+---------------+-----------------------+-----+------+
 
@@ -1020,16 +1020,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Clr                                                                   ;                   ;         ;
 ; RXclk                                                                 ;                   ;         ;
 ; KEYPAD_LIN[2]                                                         ;                   ;         ;
-;      - KeyDecode:kdecode|KeyScan:kscan|PENC:PENC0|GS~0                ; 0                 ; 6       ;
-;      - KeyDecode:kdecode|KeyScan:kscan|PENC:PENC0|OUTPUT[0]~0         ; 0                 ; 6       ;
-;      - KeyDecode:kdecode|KeyScan:kscan|PENC:PENC0|OUTPUT[1]~1         ; 0                 ; 6       ;
+;      - KeyDecode:kdecode|KeyScan:kscan|PENC:PENC0|GS~0                ; 1                 ; 6       ;
+;      - KeyDecode:kdecode|KeyScan:kscan|PENC:PENC0|OUTPUT[0]~0         ; 1                 ; 6       ;
+;      - KeyDecode:kdecode|KeyScan:kscan|PENC:PENC0|OUTPUT[1]~1         ; 1                 ; 6       ;
 ; KEYPAD_LIN[3]                                                         ;                   ;         ;
 ;      - KeyDecode:kdecode|KeyScan:kscan|PENC:PENC0|GS~0                ; 1                 ; 6       ;
 ;      - KeyDecode:kdecode|KeyScan:kscan|PENC:PENC0|OUTPUT[0]~0         ; 1                 ; 6       ;
 ;      - KeyDecode:kdecode|KeyScan:kscan|PENC:PENC0|OUTPUT[1]~1         ; 1                 ; 6       ;
 ; KEYPAD_LIN[0]                                                         ;                   ;         ;
-;      - KeyDecode:kdecode|KeyScan:kscan|PENC:PENC0|GS~0                ; 1                 ; 6       ;
-;      - KeyDecode:kdecode|KeyControl:kcontrol|NextState.STATE_SAVING~0 ; 1                 ; 6       ;
+;      - KeyDecode:kdecode|KeyScan:kscan|PENC:PENC0|GS~0                ; 0                 ; 6       ;
+;      - KeyDecode:kdecode|KeyControl:kcontrol|NextState.STATE_SAVING~0 ; 0                 ; 6       ;
 ; KEYPAD_LIN[1]                                                         ;                   ;         ;
 ;      - KeyDecode:kdecode|KeyScan:kscan|PENC:PENC0|GS~0                ; 0                 ; 6       ;
 ;      - KeyDecode:kdecode|KeyScan:kscan|PENC:PENC0|OUTPUT[0]~0         ; 0                 ; 6       ;
@@ -1037,18 +1037,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------------------------------+-------------------+---------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                                                                                                ;
-+----------------------------------------------------------------------------------------------------+-------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; Name                                                                                               ; Location          ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+----------------------------------------------------------------------------------------------------+-------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; Clr                                                                                                ; PIN_V10           ; 16      ; Async. clear ; yes    ; Global Clock         ; GCLK17           ; --                        ;
-; KeyDecode:kdecode|KeyControl:kcontrol|CurrentState.STATE_SAVING                                    ; FF_X1_Y38_N11     ; 2       ; Clock        ; yes    ; Global Clock         ; GCLK2            ; --                        ;
-; KeyTransmitter:ktransmitter|KeyTransmitterControl:keyTransControl|CurrentState.STATE_DATA_ACCEPTED ; FF_X15_Y38_N15    ; 10      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; KeyTransmitter:ktransmitter|KeyTransmitterControl:keyTransControl|RstCounter~0                     ; LCCOMB_X15_Y38_N6 ; 3       ; Async. clear ; no     ; --                   ; --               ; --                        ;
-; MCLK                                                                                               ; PIN_P11           ; 14      ; Clock        ; yes    ; Global Clock         ; GCLK19           ; --                        ;
-; RXclk                                                                                              ; PIN_R11           ; 3       ; Clock        ; yes    ; Global Clock         ; GCLK18           ; --                        ;
-+----------------------------------------------------------------------------------------------------+-------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                                                                                             ;
++----------------------------------------------------------------------------------------------------+----------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; Name                                                                                               ; Location       ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++----------------------------------------------------------------------------------------------------+----------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; Clr                                                                                                ; PIN_V10        ; 15      ; Async. clear ; yes    ; Global Clock         ; GCLK17           ; --                        ;
+; KeyDecode:kdecode|KeyControl:kcontrol|CurrentState.STATE_SAVING                                    ; FF_X77_Y38_N5  ; 2       ; Clock        ; yes    ; Global Clock         ; GCLK8            ; --                        ;
+; KeyTransmitter:ktransmitter|KeyTransmitterControl:keyTransControl|CurrentState.STATE_DATA_ACCEPTED ; FF_X77_Y38_N21 ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; KeyTransmitter:ktransmitter|KeyTransmitterControl:keyTransControl|CurrentState.STATE_WAIT_DATA     ; FF_X77_Y38_N11 ; 4       ; Async. clear ; no     ; --                   ; --               ; --                        ;
+; MCLK                                                                                               ; PIN_P11        ; 13      ; Clock        ; yes    ; Global Clock         ; GCLK19           ; --                        ;
+; RXclk                                                                                              ; PIN_R11        ; 3       ; Clock        ; yes    ; Global Clock         ; GCLK18           ; --                        ;
++----------------------------------------------------------------------------------------------------+----------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1056,9 +1056,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------------------------+---------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 ; Name                                                            ; Location      ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +-----------------------------------------------------------------+---------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; Clr                                                             ; PIN_V10       ; 16      ; 0                                    ; Global Clock         ; GCLK17           ; --                        ;
-; KeyDecode:kdecode|KeyControl:kcontrol|CurrentState.STATE_SAVING ; FF_X1_Y38_N11 ; 2       ; 0                                    ; Global Clock         ; GCLK2            ; --                        ;
-; MCLK                                                            ; PIN_P11       ; 14      ; 0                                    ; Global Clock         ; GCLK19           ; --                        ;
+; Clr                                                             ; PIN_V10       ; 15      ; 0                                    ; Global Clock         ; GCLK17           ; --                        ;
+; KeyDecode:kdecode|KeyControl:kcontrol|CurrentState.STATE_SAVING ; FF_X77_Y38_N5 ; 2       ; 0                                    ; Global Clock         ; GCLK8            ; --                        ;
+; MCLK                                                            ; PIN_P11       ; 13      ; 2                                    ; Global Clock         ; GCLK19           ; --                        ;
 ; RXclk                                                           ; PIN_R11       ; 3       ; 0                                    ; Global Clock         ; GCLK18           ; --                        ;
 +-----------------------------------------------------------------+---------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
@@ -1068,106 +1068,112 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+------------------------+
 ; Routing Resource Type ; Usage                  ;
 +-----------------------+------------------------+
-; Block interconnects   ; 40 / 148,641 ( < 1 % ) ;
-; C16 interconnects     ; 1 / 5,382 ( < 1 % )    ;
-; C4 interconnects      ; 25 / 106,704 ( < 1 % ) ;
+; Block interconnects   ; 44 / 148,641 ( < 1 % ) ;
+; C16 interconnects     ; 0 / 5,382 ( 0 % )      ;
+; C4 interconnects      ; 29 / 106,704 ( < 1 % ) ;
 ; Direct links          ; 14 / 148,641 ( < 1 % ) ;
 ; Global clocks         ; 4 / 20 ( 20 % )        ;
-; Local interconnects   ; 17 / 49,760 ( < 1 % )  ;
+; Local interconnects   ; 12 / 49,760 ( < 1 % )  ;
 ; NSLEEPs               ; 0 / 500 ( 0 % )        ;
-; R24 interconnects     ; 4 / 5,406 ( < 1 % )    ;
-; R4 interconnects      ; 28 / 147,764 ( < 1 % ) ;
+; R24 interconnects     ; 0 / 5,406 ( 0 % )      ;
+; R4 interconnects      ; 21 / 147,764 ( < 1 % ) ;
 +-----------------------+------------------------+
 
 
 +--------------------------------------------------------------------------+
 ; LAB Logic Elements                                                       ;
 +--------------------------------------------+-----------------------------+
-; Number of Logic Elements  (Average = 6.20) ; Number of LABs  (Total = 5) ;
+; Number of Logic Elements  (Average = 7.25) ; Number of LABs  (Total = 4) ;
 +--------------------------------------------+-----------------------------+
-; 1                                          ; 2                           ;
+; 1                                          ; 1                           ;
 ; 2                                          ; 0                           ;
-; 3                                          ; 1                           ;
-; 4                                          ; 0                           ;
+; 3                                          ; 0                           ;
+; 4                                          ; 1                           ;
 ; 5                                          ; 0                           ;
 ; 6                                          ; 0                           ;
 ; 7                                          ; 0                           ;
-; 8                                          ; 0                           ;
+; 8                                          ; 1                           ;
 ; 9                                          ; 0                           ;
 ; 10                                         ; 0                           ;
 ; 11                                         ; 0                           ;
 ; 12                                         ; 0                           ;
-; 13                                         ; 2                           ;
+; 13                                         ; 0                           ;
 ; 14                                         ; 0                           ;
 ; 15                                         ; 0                           ;
-; 16                                         ; 0                           ;
+; 16                                         ; 1                           ;
 +--------------------------------------------+-----------------------------+
 
 
 +------------------------------------------------------------------+
 ; LAB-wide Signals                                                 ;
 +------------------------------------+-----------------------------+
-; LAB-wide Signals  (Average = 1.80) ; Number of LABs  (Total = 5) ;
+; LAB-wide Signals  (Average = 2.00) ; Number of LABs  (Total = 4) ;
 +------------------------------------+-----------------------------+
-; 1 Async. clear                     ; 3                           ;
-; 1 Clock                            ; 3                           ;
-; 1 Clock enable                     ; 1                           ;
+; 1 Async. clear                     ; 2                           ;
+; 1 Clock                            ; 1                           ;
+; 1 Clock enable                     ; 2                           ;
 ; 2 Async. clears                    ; 1                           ;
-; 2 Clocks                           ; 1                           ;
+; 2 Clocks                           ; 2                           ;
 +------------------------------------+-----------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                        ;
 +----------------------------------------------+-----------------------------+
-; Number of Signals Sourced  (Average = 10.00) ; Number of LABs  (Total = 5) ;
+; Number of Signals Sourced  (Average = 11.75) ; Number of LABs  (Total = 4) ;
 +----------------------------------------------+-----------------------------+
 ; 0                                            ; 0                           ;
 ; 1                                            ; 1                           ;
-; 2                                            ; 1                           ;
+; 2                                            ; 0                           ;
 ; 3                                            ; 0                           ;
 ; 4                                            ; 0                           ;
-; 5                                            ; 1                           ;
+; 5                                            ; 0                           ;
 ; 6                                            ; 0                           ;
 ; 7                                            ; 0                           ;
-; 8                                            ; 0                           ;
+; 8                                            ; 1                           ;
 ; 9                                            ; 0                           ;
 ; 10                                           ; 0                           ;
 ; 11                                           ; 0                           ;
 ; 12                                           ; 0                           ;
-; 13                                           ; 0                           ;
+; 13                                           ; 1                           ;
 ; 14                                           ; 0                           ;
 ; 15                                           ; 0                           ;
 ; 16                                           ; 0                           ;
 ; 17                                           ; 0                           ;
 ; 18                                           ; 0                           ;
 ; 19                                           ; 0                           ;
-; 20                                           ; 1                           ;
+; 20                                           ; 0                           ;
 ; 21                                           ; 0                           ;
-; 22                                           ; 1                           ;
+; 22                                           ; 0                           ;
+; 23                                           ; 0                           ;
+; 24                                           ; 0                           ;
+; 25                                           ; 1                           ;
 +----------------------------------------------+-----------------------------+
 
 
 +-------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                       ;
 +-------------------------------------------------+-----------------------------+
-; Number of Signals Sourced Out  (Average = 4.00) ; Number of LABs  (Total = 5) ;
+; Number of Signals Sourced Out  (Average = 5.00) ; Number of LABs  (Total = 4) ;
 +-------------------------------------------------+-----------------------------+
 ; 0                                               ; 0                           ;
-; 1                                               ; 2                           ;
+; 1                                               ; 1                           ;
 ; 2                                               ; 0                           ;
-; 3                                               ; 0                           ;
-; 4                                               ; 1                           ;
+; 3                                               ; 1                           ;
+; 4                                               ; 0                           ;
 ; 5                                               ; 0                           ;
-; 6                                               ; 0                           ;
-; 7                                               ; 2                           ;
+; 6                                               ; 1                           ;
+; 7                                               ; 0                           ;
+; 8                                               ; 0                           ;
+; 9                                               ; 0                           ;
+; 10                                              ; 1                           ;
 +-------------------------------------------------+-----------------------------+
 
 
 +---------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                       ;
 +---------------------------------------------+-----------------------------+
-; Number of Distinct Inputs  (Average = 6.00) ; Number of LABs  (Total = 5) ;
+; Number of Distinct Inputs  (Average = 7.50) ; Number of LABs  (Total = 4) ;
 +---------------------------------------------+-----------------------------+
 ; 0                                           ; 0                           ;
 ; 1                                           ; 0                           ;
@@ -1175,12 +1181,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 3                                           ; 0                           ;
 ; 4                                           ; 0                           ;
 ; 5                                           ; 0                           ;
-; 6                                           ; 2                           ;
+; 6                                           ; 0                           ;
 ; 7                                           ; 1                           ;
 ; 8                                           ; 0                           ;
 ; 9                                           ; 0                           ;
-; 10                                          ; 0                           ;
-; 11                                          ; 1                           ;
+; 10                                          ; 1                           ;
+; 11                                          ; 0                           ;
+; 12                                          ; 0                           ;
+; 13                                          ; 1                           ;
 +---------------------------------------------+-----------------------------+
 
 
@@ -1301,8 +1309,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------------------------+----------------------+-------------------+
 ; Source Clock(s)                                                 ; Destination Clock(s) ; Delay Added in ns ;
 +-----------------------------------------------------------------+----------------------+-------------------+
-; MCLK                                                            ; MCLK                 ; 3.2               ;
-; KeyDecode:kdecode|KeyControl:kcontrol|CurrentState.STATE_SAVING ; MCLK                 ; 1.9               ;
+; MCLK                                                            ; MCLK                 ; 4.1               ;
+; KeyDecode:kdecode|KeyControl:kcontrol|CurrentState.STATE_SAVING ; MCLK                 ; 2.2               ;
 +-----------------------------------------------------------------+----------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the Timing Analyzer.
@@ -1313,12 +1321,12 @@ This will disable optimization of problematic paths and expose them for further 
 +----------------------------------------------------------------------------------------------------+----------------------------------------------------------------+-------------------+
 ; Source Register                                                                                    ; Destination Register                                           ; Delay Added in ns ;
 +----------------------------------------------------------------------------------------------------+----------------------------------------------------------------+-------------------+
-; KeyDecode:kdecode|KeyControl:kcontrol|CurrentState.STATE_SAVING                                    ; KeyDecode:kdecode|KeyControl:kcontrol|CurrentState.STATE_SAVED ; 3.161             ;
-; KeyDecode:kdecode|KeyControl:kcontrol|CurrentState.STATE_SAVED                                     ; KeyDecode:kdecode|KeyControl:kcontrol|CurrentState.STATE_SAVED ; 1.439             ;
-; KeyTransmitter:ktransmitter|KeyTransmitterControl:keyTransControl|CurrentState.STATE_DATA_ACCEPTED ; KeyDecode:kdecode|KeyControl:kcontrol|CurrentState.STATE_SAVED ; 1.439             ;
-; KeyDecode:kdecode|KeyScan:kscan|REG2bits:REG|FFD:UFFD0|Q                                           ; KeyTransmitter:ktransmitter|REG4bits:REG|FFD:UFFD2|Q           ; 1.074             ;
-; KeyDecode:kdecode|KeyScan:kscan|REG2bits:REG|FFD:UFFD1|Q                                           ; KeyTransmitter:ktransmitter|REG4bits:REG|FFD:UFFD3|Q           ; 0.867             ;
-; KeyTransmitter:ktransmitter|KeyTransmitterControl:keyTransControl|CurrentState.STATE_TRANSMIT_DATA ; KeyTransmitter:ktransmitter|Counter3bits:Cont|FFD:UFFD2|Q      ; 0.079             ;
+; KeyDecode:kdecode|KeyControl:kcontrol|CurrentState.STATE_SAVING                                    ; KeyDecode:kdecode|KeyControl:kcontrol|CurrentState.STATE_SAVED ; 4.110             ;
+; KeyDecode:kdecode|KeyControl:kcontrol|CurrentState.STATE_SAVED                                     ; KeyDecode:kdecode|KeyControl:kcontrol|CurrentState.STATE_SAVED ; 1.461             ;
+; KeyTransmitter:ktransmitter|KeyTransmitterControl:keyTransControl|CurrentState.STATE_DATA_ACCEPTED ; KeyDecode:kdecode|KeyControl:kcontrol|CurrentState.STATE_SAVED ; 1.461             ;
+; KeyDecode:kdecode|KeyScan:kscan|REG2bits:REG|FFD:UFFD1|Q                                           ; KeyTransmitter:ktransmitter|REG4bits:REG|FFD:UFFD1|Q           ; 1.078             ;
+; KeyDecode:kdecode|KeyScan:kscan|REG2bits:REG|FFD:UFFD0|Q                                           ; KeyTransmitter:ktransmitter|REG4bits:REG|FFD:UFFD0|Q           ; 1.078             ;
+; KeyTransmitter:ktransmitter|KeyTransmitterControl:keyTransControl|CurrentState.STATE_TRANSMIT_DATA ; KeyTransmitter:ktransmitter|Counter3bits:Cont|FFD:UFFD0|Q      ; 0.028             ;
 +----------------------------------------------------------------------------------------------------+----------------------------------------------------------------+-------------------+
 Note: This table only shows the top 6 path(s) that have the largest delay added for hold.
 
@@ -1418,20 +1426,20 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "LCD_DATA[8]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "Reset" is assigned to location or region, but does not exist in design
     Warning (15706): Node "WrL" is assigned to location or region, but does not exist in design
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:00
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:03
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:08
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X11_Y33 to location X21_Y43
+    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X67_Y33 to location X78_Y43
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
-Info (11888): Total time spent on timing analysis during the Fitter is 0.12 seconds.
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
+Info (11888): Total time spent on timing analysis during the Fitter is 0.31 seconds.
 Info (334003): Started post-fitting delay annotation
 Warning (334000): Timing characteristics of device 10M50DAF484C6GES are preliminary
 Info (334004): Delay annotation completed successfully
@@ -1442,10 +1450,10 @@ Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Info (144001): Generated suppressed messages file C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/ProjetoFinal.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 45 warnings
-    Info: Peak virtual memory: 6602 megabytes
-    Info: Processing ended: Tue Jun 07 16:43:44 2022
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:13
+    Info: Peak virtual memory: 6600 megabytes
+    Info: Processing ended: Tue Jun 07 21:03:26 2022
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:28
 
 
 +----------------------------+

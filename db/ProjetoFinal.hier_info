@@ -8,10 +8,10 @@ KEYPAD_LIN[0] => KeyDecode:kdecode.KEYPAD_LIN[0]
 KEYPAD_LIN[1] => KeyDecode:kdecode.KEYPAD_LIN[1]
 KEYPAD_LIN[2] => KeyDecode:kdecode.KEYPAD_LIN[2]
 KEYPAD_LIN[3] => KeyDecode:kdecode.KEYPAD_LIN[3]
-KEYPAD_COL[0] <= KeyDecode:kdecode.KEYPAD_COL[0]
-KEYPAD_COL[1] <= KeyDecode:kdecode.KEYPAD_COL[1]
-KEYPAD_COL[2] <= KeyDecode:kdecode.KEYPAD_COL[2]
-TXD <= KeyTransmitter:ktransmitter.TXD
+KEYPAD_COL[0] << KeyDecode:kdecode.KEYPAD_COL[0]
+KEYPAD_COL[1] << KeyDecode:kdecode.KEYPAD_COL[1]
+KEYPAD_COL[2] << KeyDecode:kdecode.KEYPAD_COL[2]
+TXD << KeyTransmitter:ktransmitter.TXD
 
 
 |KeyboardReader|KeyDecode:kdecode
@@ -48,10 +48,10 @@ KEYPAD_COL[0] <= decoder2x4:Dec.decoderOut[0]
 KEYPAD_COL[1] <= decoder2x4:Dec.decoderOut[1]
 KEYPAD_COL[2] <= decoder2x4:Dec.decoderOut[2]
 Kpress <= PENC:PENC0.GS
-K[0] <= Counter2bits:Cont.Fcount[0]
-K[1] <= Counter2bits:Cont.Fcount[1]
-K[2] <= REG2bits:REG.Output[0]
-K[3] <= REG2bits:REG.Output[1]
+K[0] <= REG2bits:REG.Output[0]
+K[1] <= REG2bits:REG.Output[1]
+K[2] <= Counter2bits:Cont.Fcount[0]
+K[3] <= Counter2bits:Cont.Fcount[1]
 
 
 |KeyboardReader|KeyDecode:kdecode|KeyScan:kscan|Counter2bits:Cont
@@ -167,10 +167,10 @@ TXD <= MUX_8x1:MUX.Data_Out
 
 
 |KeyboardReader|KeyTransmitter:ktransmitter|KeyTransmitterControl:keyTransControl
-DAV => NextState.STATE_DATA_ACCEPTED.DATAB
-DAV => Selector0.IN2
+DAV => NextState.STATE_DATA_ACCEPTED.DATAA
+DAV => Selector0.IN1
 DAV => Selector1.IN1
-TCount => NextState.STATE_RESET_COUNTER.DATAB
+TCount => Selector0.IN2
 TCount => Selector1.IN2
 CLK => CurrentState~1.DATAIN
 Reset => CurrentState~3.DATAIN
