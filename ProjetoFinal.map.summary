@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Tue Jun 07 21:03:06 2022
+Analysis & Synthesis Status : Successful - Tue Jun 14 23:06:32 2022
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition
 Revision Name : ProjetoFinal
-Top-level Entity Name : KeyboardReader
+Top-level Entity Name : KeyboardUsbPort
 Family : MAX 10
-Total logic elements : 28
-    Total combinational functions : 24
-    Dedicated logic registers : 18
-Total registers : 18
+Total logic elements : 176
+    Total combinational functions : 148
+    Dedicated logic registers : 104
+Total registers : 104
 Total pins : 11
 Total virtual pins : 0
 Total memory bits : 0

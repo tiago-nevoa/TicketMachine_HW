@@ -1,0 +1,50 @@
+library IEEE;
+
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity KeyboardUsbPort is
+    Port(    RXclk, MCLK, Clr : in STD_LOGIC;
+            KEYPAD_LIN : in STD_LOGIC_VECTOR (3 downto 0);
+            KEYPAD_COL : out STD_LOGIC_VECTOR (2 downto 0);
+            TXD : out STD_LOGIC
+            );
+end KeyboardUsbPort;
+
+architecture behavioral of KeyboardUsbPort is
+
+COMPONENT KeyboardReader
+    Port(    RXclk, MCLK, Clr : in STD_LOGIC;
+            KEYPAD_LIN : in STD_LOGIC_VECTOR (3 downto 0);
+            KEYPAD_COL : out STD_LOGIC_VECTOR (2 downto 0);
+            TXD : out STD_LOGIC
+            );
+END COMPONENT;
+
+COMPONENT UsbPort
+    PORT
+    (
+        inputPort:  IN  STD_LOGIC_VECTOR(7 DOWNTO 0);
+        outputPort :  OUT  STD_LOGIC_VECTOR(7 DOWNTO 0)
+    );
+END COMPONENT;
+
+
+signal sUsbInput, sUsbOutput : STD_LOGIC_VECTOR (7 downto 0);
+
+begin
+
+kbdReader: KeyboardReader PORT MAP (
+        RXclk => sUsbOutput(4), -- posiçao 4 da trama do software
+        MCLK => MCLK,
+        Clr => Clr,
+        KEYPAD_LIN => KEYPAD_LIN,
+        KEYPAD_COL => KEYPAD_COL,
+        TXD => sUsbInput(5)
+);
+
+USBconn: UsbPort PORT MAP (
+    inputPort => sUsbInput,
+    outputport => sUsbOutput
+    );
+
+end behavioral;
