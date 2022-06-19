@@ -4,14 +4,19 @@ use ieee.std_logic_unsigned.all;
 
 entity VendingMachine is
 port(
-		MCLK : in std_logic; --pino especifico da placa
+		MCLK : in std_logic; --pino especifico da placa		
 		FnSwitch : in std_logic;
 		Reset : in std_logic; --Reset é PIN botao da FPGA. vem de fora. e é 1 quando nao pressionado (temos de negar)
 		WrL : out std_logic; --Enable LCD (LCD_EN)
 		HEX0 : out  STD_LOGIC_VECTOR (7 downto 0);
 		HEX1 : out  STD_LOGIC_VECTOR (7 downto 0);
 		HEX2 : out  STD_LOGIC_VECTOR (7 downto 0);
-		LCD_DATA : out STD_LOGIC_VECTOR (8 downto 0) -- + LCD_RS, LCD_DATA[0..7]
+		LCD_DATA : out STD_LOGIC_VECTOR (8 downto 0); -- + LCD_RS, LCD_DATA[0..7]
+		KEYPAD_LIN	: IN STD_LOGIC_VECTOR(3 downto 0);
+		KEYPAD_COL	: OUT STD_LOGIC_VECTOR(2 downto 0);
+		SwitchMaintenance : in std_logic;
+		HasCoin : in std_logic;
+		Coin	: IN STD_LOGIC_VECTOR(2 downto 0)
 		);
 end VendingMachine;
 
@@ -52,6 +57,14 @@ COMPONENT LCD
 				);
 END COMPONENT;
 
+COMPONENT KeyboardReader
+    Port(    RXclk, MCLK, Clr : in STD_LOGIC;
+            KEYPAD_LIN : in STD_LOGIC_VECTOR (3 downto 0);
+            KEYPAD_COL : out STD_LOGIC_VECTOR (2 downto 0);
+            TXD : out STD_LOGIC
+            );
+END COMPONENT;
+
 signal sFn : std_logic;
 signal sReset : std_logic;
 signal sUsbInput, sUsbOutput : STD_LOGIC_VECTOR (7 downto 0);
@@ -60,21 +73,21 @@ signal sDout : STD_LOGIC_VECTOR (8 downto 0);
 
 begin
 
-sReset <= not Reset;
+sReset <= not Reset; -- porque o switch na placa é active low
 
 USBconn: UsbPort PORT MAP (
-	inputPort => sUsbInput,
-	outputport => sUsbOutput
-	);
+    inputPort => sUsbInput,
+    outputport => sUsbOutput
+    );
 
-IOScomp: IOS PORT MAP (
+uIOS: IOS PORT MAP (
 	MCLK => MCLK,
 	SCLK => sUsbOutput(0),
 	Reset => sReset,
 	SDX => sUsbOutput(1),
 	NOT_SS => sUsbOutput(2),
 	Fsh => FnSwitch,
-	busy => sUsbInput(7),
+	busy => sUsbInput(7), --sUsbInput(6)
 	WrT => sWrT,
 	WrL => sWrL,
 	Dout => sDout	
@@ -98,6 +111,26 @@ LCD0: LCD PORT MAP (
 	LCD_DATA => LCD_DATA
 );
 
+uKeyboard:KeyboardReader
+	PORT MAP (
+	MCLK	=> MCLK,
+	Clr	=> sReset,
+	KEYPAD_LIN	=> KEYPAD_LIN,
+	KEYPAD_COL	=> KEYPAD_COL,
+	TXD	=> sUsbInput(5),
+	RXclk	=> sUsbOutput(4) -- posiçao 4 da trama do software
+	);
+	
+
 Wrl <= sWrL; --METER SAIDA NO LCD
 
+-- Maintenence Key
+sUsbInput(6) <= SwitchMaintenance; --sUsbInput(7)
+
+-- Coin Acceptor
+sUsbInput(0) <= Coin(0);
+sUsbInput(1) <= Coin(1);
+sUsbInput(2) <= Coin(2);
+sUsbInput(3) <= HasCoin;	
+		
 end behavioral;

@@ -1,3 +1,5 @@
+-- IGNORAR: ESTE FICHEIRO FOI APENAS UTILIZADO PARA TESTES COM A PLACA E O KEYBOARD
+-- o keyboard agora está colocado na entidade de topo VendingMachine
 library IEEE;
 
 use IEEE.STD_LOGIC_1164.ALL;

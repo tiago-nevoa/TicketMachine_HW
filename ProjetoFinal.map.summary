@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Sun Jun 19 17:46:26 2022
+Analysis & Synthesis Status : Successful - Sun Jun 19 18:24:41 2022
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition
 Revision Name : ProjetoFinal
-Top-level Entity Name : KeyboardReader
+Top-level Entity Name : VendingMachine
 Family : MAX 10
-Total logic elements : 85
-    Total combinational functions : 81
-    Dedicated logic registers : 51
-Total registers : 51
-Total pins : 11
+Total logic elements : 297
+    Total combinational functions : 259
+    Dedicated logic registers : 163
+Total registers : 163
+Total pins : 49
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

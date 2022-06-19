@@ -1,4 +1,4 @@
-set_global_assignment -name TOP_LEVEL_ENTITY KeyboardReader
+set_global_assignment -name TOP_LEVEL_ENTITY VendingMachine
 set_global_assignment -name DEVICE 10M50DAF484C6GES
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (VHDL)"
 set_global_assignment -name FAMILY "MAX 10"
