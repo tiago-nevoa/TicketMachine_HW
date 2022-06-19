@@ -22,6 +22,12 @@ COMPONENT KeyDecode
 				K : out STD_LOGIC_VECTOR (3 downto 0));
 END COMPONENT;
 
+COMPONENT clkDIV
+port ( clk_in: in std_logic;
+		 clk_out: out std_logic	
+);
+END COMPONENT;
+
 COMPONENT KeyTransmitter
 		port(	DAV, TXclk, MCLK, Clr : in  STD_LOGIC;
 				Data_In : in STD_LOGIC_VECTOR (3 downto 0); 
@@ -32,13 +38,19 @@ signal sKval : STD_LOGIC; --- tudo o que é ligações internas são signals
 signal sK : STD_LOGIC_VECTOR(3 downto 0);
 signal sDAC : STD_LOGIC;
 signal sClr : STD_LOGIC;
+signal signalClkDiv, signalMCLK : std_logic;
 
 begin	
-	
+signalMCLK <= MCLK;
+
 sClr <= Clr;
 
+clkDIV0: clkDIV PORT MAP (
+	clk_in => signalMCLK,
+	clk_out => signalClkDiv);
+	
 kdecode: KeyDecode PORT MAP (
-		MCLK => MCLK,
+		MCLK => signalClkDiv,
 		KEYPAD_LIN => KEYPAD_LIN,
 		KEYPAD_COL => KEYPAD_COL,
 		Kack => sDAC,
@@ -50,7 +62,7 @@ kdecode: KeyDecode PORT MAP (
 ktransmitter: KeyTransmitter PORT MAP (
 	DAV => sKval, 
 	TXclk => RXclk, 
-	MCLK => MCLK, 
+	MCLK => signalMCLK, 
 	Clr => sClr,
 	Data_In => sK,
 	DAC => sDAC, 
