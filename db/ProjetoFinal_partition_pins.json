@@ -136,11 +136,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "Reset",
+					"name" : "FnSwitch",
 					"strict" : false
 				},
 				{
-					"name" : "FnSwitch",
+					"name" : "Reset",
 					"strict" : false
 				},
 				{

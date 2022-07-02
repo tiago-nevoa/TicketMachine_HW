@@ -39,6 +39,7 @@ port(
 END COMPONENT;
 
 COMPONENT clkDIV
+GENERIC (div : NATURAL);
 port ( clk_in: in std_logic;
 		 clk_out: out std_logic	
 );
@@ -51,7 +52,9 @@ begin
 signalMCLK <= MCLK;
 signalCLK <= SCLK; -- signal para clock porque clock é partilhado com serial receiver e dispatcher
 
-clkDIV0: clkDIV PORT MAP (
+clkDIV0: clkDIV 
+GENERIC MAP ( div => 20 )
+PORT MAP (
 	clk_in => signalMCLK,
 	clk_out => signalClkDiv);
 

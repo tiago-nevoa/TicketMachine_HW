@@ -47,11 +47,14 @@ KEYPAD_LIN[3] => KeyboardReader:uKeyboard.KEYPAD_LIN[3]
 KEYPAD_COL[0] <= KeyboardReader:uKeyboard.KEYPAD_COL[0]
 KEYPAD_COL[1] <= KeyboardReader:uKeyboard.KEYPAD_COL[1]
 KEYPAD_COL[2] <= KeyboardReader:uKeyboard.KEYPAD_COL[2]
-SwitchMaintenance => UsbPort:USBconn.inputPort[6]
+SwitchMaintenance => UsbPort:USBconn.inputPort[7]
 HasCoin => UsbPort:USBconn.inputPort[3]
 Coin[0] => UsbPort:USBconn.inputPort[0]
 Coin[1] => UsbPort:USBconn.inputPort[1]
 Coin[2] => UsbPort:USBconn.inputPort[2]
+COIN_ACCEPT <= UsbPort:USBconn.outputPort[5]
+COIN_EJECT <= UsbPort:USBconn.outputPort[6]
+COIN_COLLECT <= UsbPort:USBconn.outputPort[7]
 
 
 |VendingMachine|UsbPort:USBconn

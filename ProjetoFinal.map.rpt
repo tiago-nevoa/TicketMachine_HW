@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ProjetoFinal
-Sun Jun 19 18:24:41 2022
+Wed Jun 29 23:15:30 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition
 
 
@@ -18,23 +18,24 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition
  10. State Machine - |VendingMachine|KeyboardReader:uKeyboard|KeyDecode:kdecode|KeyControl:kcontrol|CurrentState
  11. State Machine - |VendingMachine|IOS:uIOS|Dispatcher:Disp|CurrentState
  12. State Machine - |VendingMachine|IOS:uIOS|SerialReceiver:serialR|SerialControl:serialC|CurrentState
- 13. Registers Removed During Synthesis
- 14. General Register Statistics
- 15. Inverted Register Statistics
- 16. Parameter Settings for User Entity Instance: UsbPort:USBconn|sld_virtual_jtag:b2v_inst
- 17. Parameter Settings for User Entity Instance: IOS:uIOS|CLKDIV:clkDIV0
- 18. Parameter Settings for User Entity Instance: KeyboardReader:uKeyboard|CLKDIV:clkDIV0
- 19. Port Connectivity Checks: "KeyboardReader:uKeyboard|KeyTransmitter:ktransmitter|MUX_8x1:MUX"
- 20. Port Connectivity Checks: "KeyboardReader:uKeyboard|KeyDecode:kdecode|KeyScan:kscan|REG2bits:REG|FFD:UFFD1"
- 21. Port Connectivity Checks: "KeyboardReader:uKeyboard|KeyDecode:kdecode|KeyScan:kscan|REG2bits:REG|FFD:UFFD0"
- 22. Port Connectivity Checks: "TicketDispenser:Dispenser|decoderHex:decoder2"
- 23. Port Connectivity Checks: "IOS:uIOS|SerialReceiver:serialR|ParityCheck:ParityCheck0|FFD:UFFD0"
- 24. Port Connectivity Checks: "IOS:uIOS|SerialReceiver:serialR|Counter:Counter0"
- 25. Port Connectivity Checks: "UsbPort:USBconn"
- 26. Virtual JTAG Settings
- 27. Post-Synthesis Netlist Statistics for Top Partition
- 28. Elapsed Time Per Partition
- 29. Analysis & Synthesis Messages
+ 13. Registers Protected by Synthesis
+ 14. Registers Removed During Synthesis
+ 15. General Register Statistics
+ 16. Inverted Register Statistics
+ 17. Parameter Settings for User Entity Instance: UsbPort:USBconn|sld_virtual_jtag:b2v_inst
+ 18. Parameter Settings for User Entity Instance: IOS:uIOS|CLKDIV:clkDIV0
+ 19. Parameter Settings for User Entity Instance: KeyboardReader:uKeyboard|CLKDIV:clkDIV0
+ 20. Port Connectivity Checks: "KeyboardReader:uKeyboard|KeyTransmitter:ktransmitter|MUX_8x1:MUX"
+ 21. Port Connectivity Checks: "KeyboardReader:uKeyboard|KeyDecode:kdecode|KeyScan:kscan|REG2bits:REG|FFD:UFFD1"
+ 22. Port Connectivity Checks: "KeyboardReader:uKeyboard|KeyDecode:kdecode|KeyScan:kscan|REG2bits:REG|FFD:UFFD0"
+ 23. Port Connectivity Checks: "TicketDispenser:Dispenser|decoderHex:decoder2"
+ 24. Port Connectivity Checks: "IOS:uIOS|SerialReceiver:serialR|ParityCheck:ParityCheck0|FFD:UFFD0"
+ 25. Port Connectivity Checks: "IOS:uIOS|SerialReceiver:serialR|Counter:Counter0"
+ 26. Port Connectivity Checks: "UsbPort:USBconn"
+ 27. Virtual JTAG Settings
+ 28. Post-Synthesis Netlist Statistics for Top Partition
+ 29. Elapsed Time Per Partition
+ 30. Analysis & Synthesis Messages
 
 
 
@@ -61,16 +62,16 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                                   ;
 +------------------------------------+-----------------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Jun 19 18:24:41 2022                     ;
+; Analysis & Synthesis Status        ; Successful - Wed Jun 29 23:15:30 2022                     ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition ;
 ; Revision Name                      ; ProjetoFinal                                              ;
 ; Top-level Entity Name              ; VendingMachine                                            ;
 ; Family                             ; MAX 10                                                    ;
-; Total logic elements               ; 297                                                       ;
-;     Total combinational functions  ; 259                                                       ;
-;     Dedicated logic registers      ; 163                                                       ;
-; Total registers                    ; 163                                                       ;
-; Total pins                         ; 49                                                        ;
+; Total logic elements               ; 337                                                       ;
+;     Total combinational functions  ; 299                                                       ;
+;     Dedicated logic registers      ; 187                                                       ;
+; Total registers                    ; 187                                                       ;
+; Total pins                         ; 52                                                        ;
 ; Total virtual pins                 ; 0                                                         ;
 ; Total memory bits                  ; 0                                                         ;
 ; Embedded Multiplier 9-bit elements ; 0                                                         ;
@@ -88,6 +89,8 @@ https://fpgasoftware.intel.com/eula.
 ; Device                                                           ; 10M50DAF484C6GES   ;                    ;
 ; Top-level entity name                                            ; VendingMachine     ; ProjetoFinal       ;
 ; Family name                                                      ; MAX 10             ; Cyclone V          ;
+; State Machine Processing                                         ; Gray               ; Auto               ;
+; Safe State Machine                                               ; On                 ; Off                ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
 ; Enable compact report table                                      ; Off                ; Off                ;
@@ -97,8 +100,6 @@ https://fpgasoftware.intel.com/eula.
 ; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
 ; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
 ; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
-; State Machine Processing                                         ; Auto               ; Auto               ;
-; Safe State Machine                                               ; Off                ; Off                ;
 ; Extract Verilog State Machines                                   ; On                 ; On                 ;
 ; Extract VHDL State Machines                                      ; On                 ; On                 ;
 ; Ignore Verilog initial constructs                                ; Off                ; Off                ;
@@ -238,30 +239,30 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+--------------------------+
 ; Resource                                    ; Usage                    ;
 +---------------------------------------------+--------------------------+
-; Estimated Total logic elements              ; 297                      ;
+; Estimated Total logic elements              ; 337                      ;
 ;                                             ;                          ;
-; Total combinational functions               ; 259                      ;
+; Total combinational functions               ; 299                      ;
 ; Logic element usage by number of LUT inputs ;                          ;
-;     -- 4 input functions                    ; 96                       ;
-;     -- 3 input functions                    ; 51                       ;
-;     -- <=2 input functions                  ; 112                      ;
+;     -- 4 input functions                    ; 109                      ;
+;     -- 3 input functions                    ; 70                       ;
+;     -- <=2 input functions                  ; 120                      ;
 ;                                             ;                          ;
 ; Logic elements by mode                      ;                          ;
-;     -- normal mode                          ; 220                      ;
-;     -- arithmetic mode                      ; 39                       ;
+;     -- normal mode                          ; 230                      ;
+;     -- arithmetic mode                      ; 69                       ;
 ;                                             ;                          ;
-; Total registers                             ; 163                      ;
-;     -- Dedicated logic registers            ; 163                      ;
+; Total registers                             ; 187                      ;
+;     -- Dedicated logic registers            ; 187                      ;
 ;     -- I/O registers                        ; 0                        ;
 ;                                             ;                          ;
-; I/O pins                                    ; 49                       ;
+; I/O pins                                    ; 52                       ;
 ;                                             ;                          ;
 ; Embedded Multiplier 9-bit elements          ; 0                        ;
 ;                                             ;                          ;
 ; Maximum fan-out node                        ; altera_internal_jtag~TDO ;
 ; Maximum fan-out                             ; 107                      ;
-; Total fan-out                               ; 1327                     ;
-; Average fan-out                             ; 2.51                     ;
+; Total fan-out                               ; 1498                     ;
+; Average fan-out                             ; 2.50                     ;
 +---------------------------------------------+--------------------------+
 
 
@@ -270,11 +271,11 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                        ; Entity Name                       ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
-; |VendingMachine                                                                                                                         ; 259 (2)             ; 163 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 49   ; 0            ; 0          ; |VendingMachine                                                                                                                                                                                                                                                                                                                                            ; VendingMachine                    ; work         ;
-;    |IOS:uIOS|                                                                                                                           ; 69 (0)              ; 58 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|IOS:uIOS                                                                                                                                                                                                                                                                                                                                   ; IOS                               ; work         ;
+; |VendingMachine                                                                                                                         ; 299 (2)             ; 187 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 52   ; 0            ; 0          ; |VendingMachine                                                                                                                                                                                                                                                                                                                                            ; VendingMachine                    ; work         ;
+;    |IOS:uIOS|                                                                                                                           ; 72 (0)              ; 54 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|IOS:uIOS                                                                                                                                                                                                                                                                                                                                   ; IOS                               ; work         ;
 ;       |CLKDIV:clkDIV0|                                                                                                                  ; 46 (46)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|IOS:uIOS|CLKDIV:clkDIV0                                                                                                                                                                                                                                                                                                                    ; CLKDIV                            ; work         ;
-;       |Dispatcher:Disp|                                                                                                                 ; 6 (6)               ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|IOS:uIOS|Dispatcher:Disp                                                                                                                                                                                                                                                                                                                   ; Dispatcher                        ; work         ;
-;       |SerialReceiver:serialR|                                                                                                          ; 17 (1)              ; 20 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|IOS:uIOS|SerialReceiver:serialR                                                                                                                                                                                                                                                                                                            ; SerialReceiver                    ; work         ;
+;       |Dispatcher:Disp|                                                                                                                 ; 9 (9)               ; 3 (3)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|IOS:uIOS|Dispatcher:Disp                                                                                                                                                                                                                                                                                                                   ; Dispatcher                        ; work         ;
+;       |SerialReceiver:serialR|                                                                                                          ; 17 (0)              ; 18 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|IOS:uIOS|SerialReceiver:serialR                                                                                                                                                                                                                                                                                                            ; SerialReceiver                    ; work         ;
 ;          |Counter:Counter0|                                                                                                             ; 4 (0)               ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|IOS:uIOS|SerialReceiver:serialR|Counter:Counter0                                                                                                                                                                                                                                                                                           ; Counter                           ; work         ;
 ;             |FFD:UFFD0|                                                                                                                 ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|IOS:uIOS|SerialReceiver:serialR|Counter:Counter0|FFD:UFFD0                                                                                                                                                                                                                                                                                 ; FFD                               ; work         ;
 ;             |FFD:UFFD1|                                                                                                                 ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|IOS:uIOS|SerialReceiver:serialR|Counter:Counter0|FFD:UFFD1                                                                                                                                                                                                                                                                                 ; FFD                               ; work         ;
@@ -282,7 +283,7 @@ https://fpgasoftware.intel.com/eula.
 ;             |FFD:UFFD3|                                                                                                                 ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|IOS:uIOS|SerialReceiver:serialR|Counter:Counter0|FFD:UFFD3                                                                                                                                                                                                                                                                                 ; FFD                               ; work         ;
 ;          |ParityCheck:ParityCheck0|                                                                                                     ; 1 (0)               ; 1 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|IOS:uIOS|SerialReceiver:serialR|ParityCheck:ParityCheck0                                                                                                                                                                                                                                                                                   ; ParityCheck                       ; work         ;
 ;             |FFD:UFFD0|                                                                                                                 ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|IOS:uIOS|SerialReceiver:serialR|ParityCheck:ParityCheck0|FFD:UFFD0                                                                                                                                                                                                                                                                         ; FFD                               ; work         ;
-;          |SerialControl:serialC|                                                                                                        ; 11 (11)             ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|IOS:uIOS|SerialReceiver:serialR|SerialControl:serialC                                                                                                                                                                                                                                                                                      ; SerialControl                     ; work         ;
+;          |SerialControl:serialC|                                                                                                        ; 12 (12)             ; 3 (3)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|IOS:uIOS|SerialReceiver:serialR|SerialControl:serialC                                                                                                                                                                                                                                                                                      ; SerialControl                     ; work         ;
 ;          |ShiftRegister:ShiftRegister0|                                                                                                 ; 0 (0)               ; 10 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|IOS:uIOS|SerialReceiver:serialR|ShiftRegister:ShiftRegister0                                                                                                                                                                                                                                                                               ; ShiftRegister                     ; work         ;
 ;             |FFD:UFFD0|                                                                                                                 ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|IOS:uIOS|SerialReceiver:serialR|ShiftRegister:ShiftRegister0|FFD:UFFD0                                                                                                                                                                                                                                                                     ; FFD                               ; work         ;
 ;             |FFD:UFFD1|                                                                                                                 ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|IOS:uIOS|SerialReceiver:serialR|ShiftRegister:ShiftRegister0|FFD:UFFD1                                                                                                                                                                                                                                                                     ; FFD                               ; work         ;
@@ -294,10 +295,10 @@ https://fpgasoftware.intel.com/eula.
 ;             |FFD:UFFD7|                                                                                                                 ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|IOS:uIOS|SerialReceiver:serialR|ShiftRegister:ShiftRegister0|FFD:UFFD7                                                                                                                                                                                                                                                                     ; FFD                               ; work         ;
 ;             |FFD:UFFD8|                                                                                                                 ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|IOS:uIOS|SerialReceiver:serialR|ShiftRegister:ShiftRegister0|FFD:UFFD8                                                                                                                                                                                                                                                                     ; FFD                               ; work         ;
 ;             |FFD:UFFD9|                                                                                                                 ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|IOS:uIOS|SerialReceiver:serialR|ShiftRegister:ShiftRegister0|FFD:UFFD9                                                                                                                                                                                                                                                                     ; FFD                               ; work         ;
-;    |KeyboardReader:uKeyboard|                                                                                                           ; 37 (0)              ; 19 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|KeyboardReader:uKeyboard                                                                                                                                                                                                                                                                                                                   ; KeyboardReader                    ; work         ;
-;       |CLKDIV:clkDIV0|                                                                                                                  ; 12 (12)             ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|KeyboardReader:uKeyboard|CLKDIV:clkDIV0                                                                                                                                                                                                                                                                                                    ; CLKDIV                            ; work         ;
-;       |KeyDecode:kdecode|                                                                                                               ; 13 (0)              ; 8 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|KeyboardReader:uKeyboard|KeyDecode:kdecode                                                                                                                                                                                                                                                                                                 ; KeyDecode                         ; work         ;
-;          |KeyControl:kcontrol|                                                                                                          ; 6 (6)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|KeyboardReader:uKeyboard|KeyDecode:kdecode|KeyControl:kcontrol                                                                                                                                                                                                                                                                             ; KeyControl                        ; work         ;
+;    |KeyboardReader:uKeyboard|                                                                                                           ; 74 (0)              ; 47 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|KeyboardReader:uKeyboard                                                                                                                                                                                                                                                                                                                   ; KeyboardReader                    ; work         ;
+;       |CLKDIV:clkDIV0|                                                                                                                  ; 48 (48)             ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|KeyboardReader:uKeyboard|CLKDIV:clkDIV0                                                                                                                                                                                                                                                                                                    ; CLKDIV                            ; work         ;
+;       |KeyDecode:kdecode|                                                                                                               ; 14 (0)              ; 6 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|KeyboardReader:uKeyboard|KeyDecode:kdecode                                                                                                                                                                                                                                                                                                 ; KeyDecode                         ; work         ;
+;          |KeyControl:kcontrol|                                                                                                          ; 7 (7)               ; 2 (2)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|KeyboardReader:uKeyboard|KeyDecode:kdecode|KeyControl:kcontrol                                                                                                                                                                                                                                                                             ; KeyControl                        ; work         ;
 ;          |KeyScan:kscan|                                                                                                                ; 7 (0)               ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|KeyboardReader:uKeyboard|KeyDecode:kdecode|KeyScan:kscan                                                                                                                                                                                                                                                                                   ; KeyScan                           ; work         ;
 ;             |Counter2bits:Cont|                                                                                                         ; 2 (0)               ; 2 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|KeyboardReader:uKeyboard|KeyDecode:kdecode|KeyScan:kscan|Counter2bits:Cont                                                                                                                                                                                                                                                                 ; Counter2bits                      ; work         ;
 ;                |FFD:UFFD0|                                                                                                              ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|KeyboardReader:uKeyboard|KeyDecode:kdecode|KeyScan:kscan|Counter2bits:Cont|FFD:UFFD0                                                                                                                                                                                                                                                       ; FFD                               ; work         ;
@@ -307,12 +308,12 @@ https://fpgasoftware.intel.com/eula.
 ;                |FFD:UFFD0|                                                                                                              ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|KeyboardReader:uKeyboard|KeyDecode:kdecode|KeyScan:kscan|REG2bits:REG|FFD:UFFD0                                                                                                                                                                                                                                                            ; FFD                               ; work         ;
 ;                |FFD:UFFD1|                                                                                                              ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|KeyboardReader:uKeyboard|KeyDecode:kdecode|KeyScan:kscan|REG2bits:REG|FFD:UFFD1                                                                                                                                                                                                                                                            ; FFD                               ; work         ;
 ;             |decoder2x4:Dec|                                                                                                            ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|KeyboardReader:uKeyboard|KeyDecode:kdecode|KeyScan:kscan|decoder2x4:Dec                                                                                                                                                                                                                                                                    ; decoder2x4                        ; work         ;
-;       |KeyTransmitter:ktransmitter|                                                                                                     ; 12 (0)              ; 10 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|KeyboardReader:uKeyboard|KeyTransmitter:ktransmitter                                                                                                                                                                                                                                                                                       ; KeyTransmitter                    ; work         ;
+;       |KeyTransmitter:ktransmitter|                                                                                                     ; 12 (0)              ; 9 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|KeyboardReader:uKeyboard|KeyTransmitter:ktransmitter                                                                                                                                                                                                                                                                                       ; KeyTransmitter                    ; work         ;
 ;          |Counter3bits:Cont|                                                                                                            ; 3 (0)               ; 3 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|KeyboardReader:uKeyboard|KeyTransmitter:ktransmitter|Counter3bits:Cont                                                                                                                                                                                                                                                                     ; Counter3bits                      ; work         ;
 ;             |FFD:UFFD0|                                                                                                                 ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|KeyboardReader:uKeyboard|KeyTransmitter:ktransmitter|Counter3bits:Cont|FFD:UFFD0                                                                                                                                                                                                                                                           ; FFD                               ; work         ;
 ;             |FFD:UFFD1|                                                                                                                 ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|KeyboardReader:uKeyboard|KeyTransmitter:ktransmitter|Counter3bits:Cont|FFD:UFFD1                                                                                                                                                                                                                                                           ; FFD                               ; work         ;
 ;             |FFD:UFFD2|                                                                                                                 ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|KeyboardReader:uKeyboard|KeyTransmitter:ktransmitter|Counter3bits:Cont|FFD:UFFD2                                                                                                                                                                                                                                                           ; FFD                               ; work         ;
-;          |KeyTransmitterControl:keyTransControl|                                                                                        ; 5 (5)               ; 3 (3)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|KeyboardReader:uKeyboard|KeyTransmitter:ktransmitter|KeyTransmitterControl:keyTransControl                                                                                                                                                                                                                                                 ; KeyTransmitterControl             ; work         ;
+;          |KeyTransmitterControl:keyTransControl|                                                                                        ; 5 (5)               ; 2 (2)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|KeyboardReader:uKeyboard|KeyTransmitter:ktransmitter|KeyTransmitterControl:keyTransControl                                                                                                                                                                                                                                                 ; KeyTransmitterControl             ; work         ;
 ;          |MUX_8x1:MUX|                                                                                                                  ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|KeyboardReader:uKeyboard|KeyTransmitter:ktransmitter|MUX_8x1:MUX                                                                                                                                                                                                                                                                           ; MUX_8x1                           ; work         ;
 ;          |REG4bits:REG|                                                                                                                 ; 0 (0)               ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|KeyboardReader:uKeyboard|KeyTransmitter:ktransmitter|REG4bits:REG                                                                                                                                                                                                                                                                          ; REG4bits                          ; work         ;
 ;             |FFD:UFFD0|                                                                                                                 ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VendingMachine|KeyboardReader:uKeyboard|KeyTransmitter:ktransmitter|REG4bits:REG|FFD:UFFD0                                                                                                                                                                                                                                                                ; FFD                               ; work         ;
@@ -350,98 +351,86 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
 
 
-Encoding Type:  One-Hot
+Encoding Type: Safe Gray Encoding
 +-----------------------------------------------------------------------------------------------------------------------------------------+
 ; State Machine - |VendingMachine|KeyboardReader:uKeyboard|KeyTransmitter:ktransmitter|KeyTransmitterControl:keyTransControl|CurrentState ;
-+----------------------------------+----------------------------------+----------------------------------+--------------------------------+
-; Name                             ; CurrentState.STATE_TRANSMIT_DATA ; CurrentState.STATE_DATA_ACCEPTED ; CurrentState.STATE_WAIT_DATA   ;
-+----------------------------------+----------------------------------+----------------------------------+--------------------------------+
-; CurrentState.STATE_WAIT_DATA     ; 0                                ; 0                                ; 0                              ;
-; CurrentState.STATE_DATA_ACCEPTED ; 0                                ; 1                                ; 1                              ;
-; CurrentState.STATE_TRANSMIT_DATA ; 1                                ; 0                                ; 1                              ;
-+----------------------------------+----------------------------------+----------------------------------+--------------------------------+
++----------------------------------+--------------------------+---------------------------------------------------------------------------+
+; Name                             ; CurrentState.state_bit_1 ; CurrentState.state_bit_0                                                  ;
++----------------------------------+--------------------------+---------------------------------------------------------------------------+
+; CurrentState.STATE_WAIT_DATA     ; 0                        ; 0                                                                         ;
+; CurrentState.STATE_DATA_ACCEPTED ; 0                        ; 1                                                                         ;
+; CurrentState.STATE_TRANSMIT_DATA ; 1                        ; 1                                                                         ;
++----------------------------------+--------------------------+---------------------------------------------------------------------------+
 
 
-Encoding Type:  One-Hot
-+----------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |VendingMachine|KeyboardReader:uKeyboard|KeyDecode:kdecode|KeyControl:kcontrol|CurrentState                                        ;
-+---------------------------------+---------------------------------+--------------------------+---------------------------+-------------------------+
-; Name                            ; CurrentState.STATE_SAVE_CHECKED ; CurrentState.STATE_SAVED ; CurrentState.STATE_SAVING ; CurrentState.STATE_WAIT ;
-+---------------------------------+---------------------------------+--------------------------+---------------------------+-------------------------+
-; CurrentState.STATE_WAIT         ; 0                               ; 0                        ; 0                         ; 0                       ;
-; CurrentState.STATE_SAVING       ; 0                               ; 0                        ; 1                         ; 1                       ;
-; CurrentState.STATE_SAVED        ; 0                               ; 1                        ; 0                         ; 1                       ;
-; CurrentState.STATE_SAVE_CHECKED ; 1                               ; 0                        ; 0                         ; 1                       ;
-+---------------------------------+---------------------------------+--------------------------+---------------------------+-------------------------+
+Encoding Type: Safe Gray Encoding
++-------------------------------------------------------------------------------------------------------------+
+; State Machine - |VendingMachine|KeyboardReader:uKeyboard|KeyDecode:kdecode|KeyControl:kcontrol|CurrentState ;
++---------------------------------+--------------------------+------------------------------------------------+
+; Name                            ; CurrentState.state_bit_1 ; CurrentState.state_bit_0                       ;
++---------------------------------+--------------------------+------------------------------------------------+
+; CurrentState.STATE_WAIT         ; 0                        ; 0                                              ;
+; CurrentState.STATE_SAVING       ; 0                        ; 1                                              ;
+; CurrentState.STATE_SAVED        ; 1                        ; 1                                              ;
+; CurrentState.STATE_SAVE_CHECKED ; 1                        ; 0                                              ;
++---------------------------------+--------------------------+------------------------------------------------+
 
 
-Encoding Type:  One-Hot
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |VendingMachine|IOS:uIOS|Dispatcher:Disp|CurrentState                                                                                                                                ;
-+----------------------------------+----------------------------------+----------------------------+--------------------------------+-------------------------------+----------------------------------+
-; Name                             ; CurrentState.STATE_finishProcess ; CurrentState.STATE_sendLCD ; CurrentState.STATE_prtProtocol ; CurrentState.STATE_sendTicket ; CurrentState.STATE_waitValidData ;
-+----------------------------------+----------------------------------+----------------------------+--------------------------------+-------------------------------+----------------------------------+
-; CurrentState.STATE_waitValidData ; 0                                ; 0                          ; 0                              ; 0                             ; 0                                ;
-; CurrentState.STATE_sendTicket    ; 0                                ; 0                          ; 0                              ; 1                             ; 1                                ;
-; CurrentState.STATE_prtProtocol   ; 0                                ; 0                          ; 1                              ; 0                             ; 1                                ;
-; CurrentState.STATE_sendLCD       ; 0                                ; 1                          ; 0                              ; 0                             ; 1                                ;
-; CurrentState.STATE_finishProcess ; 1                                ; 0                          ; 0                              ; 0                             ; 1                                ;
-+----------------------------------+----------------------------------+----------------------------+--------------------------------+-------------------------------+----------------------------------+
+Encoding Type: Safe Gray Encoding
++-------------------------------------------------------------------------------------------------------------------+
+; State Machine - |VendingMachine|IOS:uIOS|Dispatcher:Disp|CurrentState                                             ;
++----------------------------------+--------------------------+--------------------------+--------------------------+
+; Name                             ; CurrentState.state_bit_2 ; CurrentState.state_bit_1 ; CurrentState.state_bit_0 ;
++----------------------------------+--------------------------+--------------------------+--------------------------+
+; CurrentState.STATE_waitValidData ; 0                        ; 0                        ; 0                        ;
+; CurrentState.STATE_sendTicket    ; 0                        ; 0                        ; 1                        ;
+; CurrentState.STATE_prtProtocol   ; 0                        ; 1                        ; 1                        ;
+; CurrentState.STATE_sendLCD       ; 0                        ; 1                        ; 0                        ;
+; CurrentState.STATE_finishProcess ; 1                        ; 1                        ; 0                        ;
++----------------------------------+--------------------------+--------------------------+--------------------------+
 
 
-Encoding Type:  One-Hot
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |VendingMachine|IOS:uIOS|SerialReceiver:serialR|SerialControl:serialC|CurrentState                                                                                     ;
-+----------------------------------+-----------------------------+----------------------------------+---------------------------+-----------------------------+--------------------------+
-; Name                             ; CurrentState.STATE_DConfirm ; CurrentState.STATE_DEndReception ; CurrentState.STATE_PCheck ; CurrentState.STATE_DReceive ; CurrentState.STATE_Dwait ;
-+----------------------------------+-----------------------------+----------------------------------+---------------------------+-----------------------------+--------------------------+
-; CurrentState.STATE_Dwait         ; 0                           ; 0                                ; 0                         ; 0                           ; 0                        ;
-; CurrentState.STATE_DReceive      ; 0                           ; 0                                ; 0                         ; 1                           ; 1                        ;
-; CurrentState.STATE_PCheck        ; 0                           ; 0                                ; 1                         ; 0                           ; 1                        ;
-; CurrentState.STATE_DEndReception ; 0                           ; 1                                ; 0                         ; 0                           ; 1                        ;
-; CurrentState.STATE_DConfirm      ; 1                           ; 0                                ; 0                         ; 0                           ; 1                        ;
-+----------------------------------+-----------------------------+----------------------------------+---------------------------+-----------------------------+--------------------------+
+Encoding Type: Safe Gray Encoding
++-------------------------------------------------------------------------------------------------------------------+
+; State Machine - |VendingMachine|IOS:uIOS|SerialReceiver:serialR|SerialControl:serialC|CurrentState                ;
++----------------------------------+--------------------------+--------------------------+--------------------------+
+; Name                             ; CurrentState.state_bit_2 ; CurrentState.state_bit_1 ; CurrentState.state_bit_0 ;
++----------------------------------+--------------------------+--------------------------+--------------------------+
+; CurrentState.STATE_Dwait         ; 0                        ; 0                        ; 0                        ;
+; CurrentState.STATE_DReceive      ; 0                        ; 0                        ; 1                        ;
+; CurrentState.STATE_PCheck        ; 0                        ; 1                        ; 1                        ;
+; CurrentState.STATE_DEndReception ; 0                        ; 1                        ; 0                        ;
+; CurrentState.STATE_DConfirm      ; 1                        ; 1                        ; 0                        ;
++----------------------------------+--------------------------+--------------------------+--------------------------+
 
 
-+---------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                ;
-+---------------------------------------------------+-----------------------------------------------+
-; Register name                                     ; Reason for Removal                            ;
-+---------------------------------------------------+-----------------------------------------------+
-; KeyboardReader:uKeyboard|CLKDIV:clkDIV0|count[31] ; Merged with IOS:uIOS|CLKDIV:clkDIV0|count[31] ;
-; KeyboardReader:uKeyboard|CLKDIV:clkDIV0|count[30] ; Merged with IOS:uIOS|CLKDIV:clkDIV0|count[30] ;
-; KeyboardReader:uKeyboard|CLKDIV:clkDIV0|count[29] ; Merged with IOS:uIOS|CLKDIV:clkDIV0|count[29] ;
-; KeyboardReader:uKeyboard|CLKDIV:clkDIV0|count[28] ; Merged with IOS:uIOS|CLKDIV:clkDIV0|count[28] ;
-; KeyboardReader:uKeyboard|CLKDIV:clkDIV0|count[27] ; Merged with IOS:uIOS|CLKDIV:clkDIV0|count[27] ;
-; KeyboardReader:uKeyboard|CLKDIV:clkDIV0|count[26] ; Merged with IOS:uIOS|CLKDIV:clkDIV0|count[26] ;
-; KeyboardReader:uKeyboard|CLKDIV:clkDIV0|count[25] ; Merged with IOS:uIOS|CLKDIV:clkDIV0|count[25] ;
-; KeyboardReader:uKeyboard|CLKDIV:clkDIV0|count[23] ; Merged with IOS:uIOS|CLKDIV:clkDIV0|count[23] ;
-; KeyboardReader:uKeyboard|CLKDIV:clkDIV0|count[17] ; Merged with IOS:uIOS|CLKDIV:clkDIV0|count[17] ;
-; KeyboardReader:uKeyboard|CLKDIV:clkDIV0|count[15] ; Merged with IOS:uIOS|CLKDIV:clkDIV0|count[15] ;
-; KeyboardReader:uKeyboard|CLKDIV:clkDIV0|count[10] ; Merged with IOS:uIOS|CLKDIV:clkDIV0|count[10] ;
-; KeyboardReader:uKeyboard|CLKDIV:clkDIV0|count[9]  ; Merged with IOS:uIOS|CLKDIV:clkDIV0|count[9]  ;
-; KeyboardReader:uKeyboard|CLKDIV:clkDIV0|count[8]  ; Merged with IOS:uIOS|CLKDIV:clkDIV0|count[8]  ;
-; KeyboardReader:uKeyboard|CLKDIV:clkDIV0|count[7]  ; Merged with IOS:uIOS|CLKDIV:clkDIV0|count[7]  ;
-; KeyboardReader:uKeyboard|CLKDIV:clkDIV0|count[5]  ; Merged with IOS:uIOS|CLKDIV:clkDIV0|count[5]  ;
-; KeyboardReader:uKeyboard|CLKDIV:clkDIV0|count[4]  ; Merged with IOS:uIOS|CLKDIV:clkDIV0|count[4]  ;
-; KeyboardReader:uKeyboard|CLKDIV:clkDIV0|count[3]  ; Merged with IOS:uIOS|CLKDIV:clkDIV0|count[3]  ;
-; KeyboardReader:uKeyboard|CLKDIV:clkDIV0|count[2]  ; Merged with IOS:uIOS|CLKDIV:clkDIV0|count[2]  ;
-; KeyboardReader:uKeyboard|CLKDIV:clkDIV0|count[1]  ; Merged with IOS:uIOS|CLKDIV:clkDIV0|count[1]  ;
-; KeyboardReader:uKeyboard|CLKDIV:clkDIV0|count[0]  ; Merged with IOS:uIOS|CLKDIV:clkDIV0|count[0]  ;
-; KeyboardReader:uKeyboard|CLKDIV:clkDIV0|count[24] ; Merged with IOS:uIOS|CLKDIV:clkDIV0|count[24] ;
-; KeyboardReader:uKeyboard|CLKDIV:clkDIV0|count[22] ; Merged with IOS:uIOS|CLKDIV:clkDIV0|count[22] ;
-; KeyboardReader:uKeyboard|CLKDIV:clkDIV0|count[21] ; Merged with IOS:uIOS|CLKDIV:clkDIV0|count[21] ;
-; KeyboardReader:uKeyboard|CLKDIV:clkDIV0|count[20] ; Merged with IOS:uIOS|CLKDIV:clkDIV0|count[20] ;
-; KeyboardReader:uKeyboard|CLKDIV:clkDIV0|count[19] ; Merged with IOS:uIOS|CLKDIV:clkDIV0|count[19] ;
-; KeyboardReader:uKeyboard|CLKDIV:clkDIV0|count[18] ; Merged with IOS:uIOS|CLKDIV:clkDIV0|count[18] ;
-; KeyboardReader:uKeyboard|CLKDIV:clkDIV0|count[16] ; Merged with IOS:uIOS|CLKDIV:clkDIV0|count[16] ;
-; KeyboardReader:uKeyboard|CLKDIV:clkDIV0|count[14] ; Merged with IOS:uIOS|CLKDIV:clkDIV0|count[14] ;
-; KeyboardReader:uKeyboard|CLKDIV:clkDIV0|count[13] ; Merged with IOS:uIOS|CLKDIV:clkDIV0|count[13] ;
-; KeyboardReader:uKeyboard|CLKDIV:clkDIV0|count[12] ; Merged with IOS:uIOS|CLKDIV:clkDIV0|count[12] ;
-; KeyboardReader:uKeyboard|CLKDIV:clkDIV0|count[11] ; Merged with IOS:uIOS|CLKDIV:clkDIV0|count[11] ;
-; KeyboardReader:uKeyboard|CLKDIV:clkDIV0|count[6]  ; Merged with IOS:uIOS|CLKDIV:clkDIV0|count[6]  ;
-; Total Number of Removed Registers = 32            ;                                               ;
-+---------------------------------------------------+-----------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Protected by Synthesis                                                                                                                                                                                                    ;
++---------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------+--------------------------------------------+
+; Register Name                                                                                                       ; Protected by Synthesis Attribute or Preserve Register Assignment ; Not to be Touched by Netlist Optimizations ;
++---------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------+--------------------------------------------+
+; IOS:uIOS|Dispatcher:Disp|CurrentState.state_bit_0                                                                   ; no                                                               ; yes                                        ;
+; IOS:uIOS|Dispatcher:Disp|CurrentState.state_bit_1                                                                   ; no                                                               ; yes                                        ;
+; IOS:uIOS|Dispatcher:Disp|CurrentState.state_bit_2                                                                   ; no                                                               ; yes                                        ;
+; KeyboardReader:uKeyboard|KeyTransmitter:ktransmitter|KeyTransmitterControl:keyTransControl|CurrentState.state_bit_1 ; no                                                               ; yes                                        ;
+; IOS:uIOS|SerialReceiver:serialR|SerialControl:serialC|CurrentState.state_bit_2                                      ; no                                                               ; yes                                        ;
+; IOS:uIOS|SerialReceiver:serialR|SerialControl:serialC|CurrentState.state_bit_0                                      ; no                                                               ; yes                                        ;
+; IOS:uIOS|SerialReceiver:serialR|SerialControl:serialC|CurrentState.state_bit_1                                      ; no                                                               ; yes                                        ;
+; KeyboardReader:uKeyboard|KeyDecode:kdecode|KeyControl:kcontrol|CurrentState.state_bit_0                             ; no                                                               ; yes                                        ;
+; KeyboardReader:uKeyboard|KeyDecode:kdecode|KeyControl:kcontrol|CurrentState.state_bit_1                             ; no                                                               ; yes                                        ;
+; KeyboardReader:uKeyboard|KeyTransmitter:ktransmitter|KeyTransmitterControl:keyTransControl|CurrentState.state_bit_0 ; no                                                               ; yes                                        ;
+; Total number of protected registers is 10                                                                           ;                                                                  ;                                            ;
++---------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------+--------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                              ;
++--------------------------------------------------+----------------------------------------------+
+; Register name                                    ; Reason for Removal                           ;
++--------------------------------------------------+----------------------------------------------+
+; KeyboardReader:uKeyboard|CLKDIV:clkDIV0|count[0] ; Merged with IOS:uIOS|CLKDIV:clkDIV0|count[0] ;
+; Total Number of Removed Registers = 1            ;                                              ;
++--------------------------------------------------+----------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -449,12 +438,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 163   ;
+; Total registers                              ; 187   ;
 ; Number of registers using Synchronous Clear  ; 12    ;
 ; Number of registers using Synchronous Load   ; 10    ;
-; Number of registers using Asynchronous Clear ; 76    ;
+; Number of registers using Asynchronous Clear ; 69    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 74    ;
+; Number of registers using Clock Enable       ; 72    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -464,7 +453,7 @@ Encoding Type:  One-Hot
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 ; Inverted Register                                                                                                                                                                                                                                                                                                               ; Fan out ;
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; IOS:uIOS|CLKDIV:clkDIV0|count[0]                                                                                                                                                                                                                                                                                                ; 2       ;
+; IOS:uIOS|CLKDIV:clkDIV0|count[0]                                                                                                                                                                                                                                                                                                ; 4       ;
 ; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|jtag_ir_reg[2] ; 2       ;
 ; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|jtag_ir_reg[1] ; 3       ;
 ; Total number of inverted registers = 3                                                                                                                                                                                                                                                                                          ;         ;
@@ -490,21 +479,21 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 +----------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: IOS:uIOS|CLKDIV:clkDIV0 ;
-+----------------+----------+------------------------------------------+
-; Parameter Name ; Value    ; Type                                     ;
-+----------------+----------+------------------------------------------+
-; div            ; 50000000 ; Signed Integer                           ;
-+----------------+----------+------------------------------------------+
++----------------+-------+---------------------------------------------+
+; Parameter Name ; Value ; Type                                        ;
++----------------+-------+---------------------------------------------+
+; div            ; 20    ; Signed Integer                              ;
++----------------+-------+---------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +--------------------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: KeyboardReader:uKeyboard|CLKDIV:clkDIV0 ;
-+----------------+----------+----------------------------------------------------------+
-; Parameter Name ; Value    ; Type                                                     ;
-+----------------+----------+----------------------------------------------------------+
-; div            ; 50000000 ; Signed Integer                                           ;
-+----------------+----------+----------------------------------------------------------+
++----------------+-------+-------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                        ;
++----------------+-------+-------------------------------------------------------------+
+; div            ; 500   ; Signed Integer                                              ;
++----------------+-------+-------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -564,15 +553,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+----------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "UsbPort:USBconn"                                                                                ;
-+------------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port             ; Type   ; Severity ; Details                                                                             ;
-+------------------+--------+----------+-------------------------------------------------------------------------------------+
-; inputport[4]     ; Input  ; Info     ; Stuck at GND                                                                        ;
-; outputport[7..5] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; outputport[3]    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------------------+--------+----------+-------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UsbPort:USBconn"                                                                             ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port          ; Type   ; Severity ; Details                                                                             ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; inputport[4]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; outputport[0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -589,24 +577,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 88                          ;
-; cycloneiii_ff         ; 77                          ;
-;     CLR               ; 29                          ;
-;     ENA               ; 2                           ;
+; boundary_port         ; 91                          ;
+; cycloneiii_ff         ; 101                         ;
+;     CLR               ; 22                          ;
 ;     ENA CLR           ; 14                          ;
-;     plain             ; 32                          ;
-; cycloneiii_lcell_comb ; 138                         ;
-;     arith             ; 31                          ;
-;         2 data inputs ; 31                          ;
-;     normal            ; 107                         ;
+;     plain             ; 65                          ;
+; cycloneiii_lcell_comb ; 178                         ;
+;     arith             ; 61                          ;
+;         2 data inputs ; 60                          ;
+;         3 data inputs ; 1                           ;
+;     normal            ; 117                         ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 6                           ;
-;         2 data inputs ; 36                          ;
-;         3 data inputs ; 19                          ;
-;         4 data inputs ; 44                          ;
+;         1 data inputs ; 5                           ;
+;         2 data inputs ; 16                          ;
+;         3 data inputs ; 37                          ;
+;         4 data inputs ; 57                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.40                        ;
-; Average LUT depth     ; 2.58                        ;
+; Max LUT depth         ; 4.10                        ;
+; Average LUT depth     ; 2.69                        ;
 +-----------------------+-----------------------------+
 
 
@@ -615,7 +603,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -625,7 +613,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 Patches 1.02i SJ Lite Edition
-    Info: Processing started: Sun Jun 19 18:24:25 2022
+    Info: Processing started: Wed Jun 29 23:14:49 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ProjetoFinal -c ProjetoFinal
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -634,7 +622,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file ios_tb.
     Info (12023): Found entity 1: IOS_tb File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/IOS_tb.vhd Line: 6
 Warning (12019): Can't analyze file -- file VendingMachine_tb.vhd is missing
 Info (12021): Found 2 design units, including 1 entities, in source file vendingmachine.vhd
-    Info (12022): Found design unit 1: VendingMachine-behavioral File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/VendingMachine.vhd Line: 23
+    Info (12022): Found design unit 1: VendingMachine-behavioral File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/VendingMachine.vhd Line: 26
     Info (12023): Found entity 1: VendingMachine File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/VendingMachine.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file usbport.vhd
     Info (12022): Found design unit 1: UsbPort-bdf_type File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/UsbPort.vhd Line: 33
@@ -721,8 +709,8 @@ Info (12021): Found 2 design units, including 1 entities, in source file keyboar
     Info (12022): Found design unit 1: KeyboardUsbPort-behavioral File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyboardUsbPort.vhd Line: 15
     Info (12023): Found entity 1: KeyboardUsbPort File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyboardUsbPort.vhd Line: 7
 Info (12127): Elaborating entity "VendingMachine" for the top level hierarchy
-Warning (10873): Using initial value X (don't care) for net "sUsbInput[4]" at VendingMachine.vhd(70) File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/VendingMachine.vhd Line: 70
-Info (12128): Elaborating entity "UsbPort" for hierarchy "UsbPort:USBconn" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/VendingMachine.vhd Line: 78
+Warning (10873): Using initial value X (don't care) for net "sUsbInput[4]" at VendingMachine.vhd(73) File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/VendingMachine.vhd Line: 73
+Info (12128): Elaborating entity "UsbPort" for hierarchy "UsbPort:USBconn" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/VendingMachine.vhd Line: 81
 Info (12128): Elaborating entity "sld_virtual_jtag" for hierarchy "UsbPort:USBconn|sld_virtual_jtag:b2v_inst" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/UsbPort.vhd Line: 80
 Info (12130): Elaborated megafunction instantiation "UsbPort:USBconn|sld_virtual_jtag:b2v_inst" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/UsbPort.vhd Line: 80
 Info (12133): Instantiated megafunction "UsbPort:USBconn|sld_virtual_jtag:b2v_inst" with the following parameter: File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/UsbPort.vhd Line: 80
@@ -739,36 +727,37 @@ Info (12128): Elaborating entity "sld_virtual_jtag_impl" for hierarchy "UsbPort:
 Info (12131): Elaborated megafunction instantiation "UsbPort:USBconn|sld_virtual_jtag:b2v_inst|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst", which is child of megafunction instantiation "UsbPort:USBconn|sld_virtual_jtag:b2v_inst" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_virtual_jtag_basic.v Line: 152
 Info (12128): Elaborating entity "sld_jtag_endpoint_adapter" for hierarchy "UsbPort:USBconn|sld_virtual_jtag:b2v_inst|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst|sld_jtag_endpoint_adapter:jtag_signal_adapter" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_virtual_jtag_basic.v Line: 415
 Info (12128): Elaborating entity "sld_jtag_endpoint_adapter_impl" for hierarchy "UsbPort:USBconn|sld_virtual_jtag:b2v_inst|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst|sld_jtag_endpoint_adapter:jtag_signal_adapter|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd Line: 232
-Info (12128): Elaborating entity "IOS" for hierarchy "IOS:uIOS" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/VendingMachine.vhd Line: 83
-Info (12128): Elaborating entity "CLKDIV" for hierarchy "IOS:uIOS|CLKDIV:clkDIV0" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/IOS.vhd Line: 54
-Info (12128): Elaborating entity "SerialReceiver" for hierarchy "IOS:uIOS|SerialReceiver:serialR" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/IOS.vhd Line: 59
+Info (12128): Elaborating entity "IOS" for hierarchy "IOS:uIOS" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/VendingMachine.vhd Line: 90
+Info (12128): Elaborating entity "CLKDIV" for hierarchy "IOS:uIOS|CLKDIV:clkDIV0" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/IOS.vhd Line: 55
+Info (12128): Elaborating entity "SerialReceiver" for hierarchy "IOS:uIOS|SerialReceiver:serialR" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/IOS.vhd Line: 62
 Info (12128): Elaborating entity "SerialControl" for hierarchy "IOS:uIOS|SerialReceiver:serialR|SerialControl:serialC" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/SerialReceiver.vhd Line: 68
 Info (12128): Elaborating entity "Counter" for hierarchy "IOS:uIOS|SerialReceiver:serialR|Counter:Counter0" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/SerialReceiver.vhd Line: 81
 Info (12128): Elaborating entity "FFD" for hierarchy "IOS:uIOS|SerialReceiver:serialR|Counter:Counter0|FFD:UFFD0" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Counter.vhd Line: 36
 Info (12128): Elaborating entity "ParityCheck" for hierarchy "IOS:uIOS|SerialReceiver:serialR|ParityCheck:ParityCheck0" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/SerialReceiver.vhd Line: 87
 Info (12128): Elaborating entity "ShiftRegister" for hierarchy "IOS:uIOS|SerialReceiver:serialR|ShiftRegister:ShiftRegister0" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/SerialReceiver.vhd Line: 93
-Info (12128): Elaborating entity "Dispatcher" for hierarchy "IOS:uIOS|Dispatcher:Disp" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/IOS.vhd Line: 70
-Info (12128): Elaborating entity "TicketDispenser" for hierarchy "TicketDispenser:Dispenser" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/VendingMachine.vhd Line: 96
+Info (12128): Elaborating entity "Dispatcher" for hierarchy "IOS:uIOS|Dispatcher:Disp" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/IOS.vhd Line: 73
+Info (12128): Elaborating entity "TicketDispenser" for hierarchy "TicketDispenser:Dispenser" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/VendingMachine.vhd Line: 103
 Info (12128): Elaborating entity "decoderHex" for hierarchy "TicketDispenser:Dispenser|decoderHex:decoder0" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/TicketDispenser.vhd Line: 52
 Info (12128): Elaborating entity "int7seg" for hierarchy "TicketDispenser:Dispenser|decoderHex:decoder0|int7seg:U0" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/decoderHex.vhd Line: 26
-Info (12128): Elaborating entity "LCD" for hierarchy "LCD:LCD0" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/VendingMachine.vhd Line: 106
+Info (12128): Elaborating entity "LCD" for hierarchy "LCD:LCD0" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/VendingMachine.vhd Line: 113
 Warning (10036): Verilog HDL or VHDL warning at LCD.vhd(16): object "RS" assigned a value but never read File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/LCD.vhd Line: 16
 Warning (10036): Verilog HDL or VHDL warning at LCD.vhd(17): object "D" assigned a value but never read File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/LCD.vhd Line: 17
-Info (12128): Elaborating entity "KeyboardReader" for hierarchy "KeyboardReader:uKeyboard" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/VendingMachine.vhd Line: 114
-Info (12128): Elaborating entity "KeyDecode" for hierarchy "KeyboardReader:uKeyboard|KeyDecode:kdecode" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyboardReader.vhd Line: 52
+Info (12128): Elaborating entity "KeyboardReader" for hierarchy "KeyboardReader:uKeyboard" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/VendingMachine.vhd Line: 121
+Info (12128): Elaborating entity "CLKDIV" for hierarchy "KeyboardReader:uKeyboard|CLKDIV:clkDIV0" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyboardReader.vhd Line: 49
+Info (12128): Elaborating entity "KeyDecode" for hierarchy "KeyboardReader:uKeyboard|KeyDecode:kdecode" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyboardReader.vhd Line: 55
 Info (12128): Elaborating entity "KeyScan" for hierarchy "KeyboardReader:uKeyboard|KeyDecode:kdecode|KeyScan:kscan" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyDecode.vhd Line: 44
 Info (12128): Elaborating entity "Counter2bits" for hierarchy "KeyboardReader:uKeyboard|KeyDecode:kdecode|KeyScan:kscan|Counter2bits:Cont" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyScan.vhd Line: 50
 Info (12128): Elaborating entity "decoder2x4" for hierarchy "KeyboardReader:uKeyboard|KeyDecode:kdecode|KeyScan:kscan|decoder2x4:Dec" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyScan.vhd Line: 56
 Info (12128): Elaborating entity "PENC" for hierarchy "KeyboardReader:uKeyboard|KeyDecode:kdecode|KeyScan:kscan|PENC:PENC0" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyScan.vhd Line: 60
 Info (12128): Elaborating entity "REG2bits" for hierarchy "KeyboardReader:uKeyboard|KeyDecode:kdecode|KeyScan:kscan|REG2bits:REG" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyScan.vhd Line: 65
 Info (12128): Elaborating entity "KeyControl" for hierarchy "KeyboardReader:uKeyboard|KeyDecode:kdecode|KeyControl:kcontrol" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyDecode.vhd Line: 55
-Info (12128): Elaborating entity "KeyTransmitter" for hierarchy "KeyboardReader:uKeyboard|KeyTransmitter:ktransmitter" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyboardReader.vhd Line: 62
+Info (12128): Elaborating entity "KeyTransmitter" for hierarchy "KeyboardReader:uKeyboard|KeyTransmitter:ktransmitter" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyboardReader.vhd Line: 65
 Info (12128): Elaborating entity "KeyTransmitterControl" for hierarchy "KeyboardReader:uKeyboard|KeyTransmitter:ktransmitter|KeyTransmitterControl:keyTransControl" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyTransmitter.vhd Line: 70
 Info (12128): Elaborating entity "REG4bits" for hierarchy "KeyboardReader:uKeyboard|KeyTransmitter:ktransmitter|REG4bits:REG" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyTransmitter.vhd Line: 81
 Info (12128): Elaborating entity "Counter3bits" for hierarchy "KeyboardReader:uKeyboard|KeyTransmitter:ktransmitter|Counter3bits:Cont" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyTransmitter.vhd Line: 88
 Info (12128): Elaborating entity "MUX_8x1" for hierarchy "KeyboardReader:uKeyboard|KeyTransmitter:ktransmitter|MUX_8x1:MUX" File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyTransmitter.vhd Line: 95
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2022.06.19.18:24:34 Progress: Loading sld632c1620/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2022.06.29.23:15:11 Progress: Loading sld632c1620/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -791,6 +780,10 @@ Info (12021): Found 2 design units, including 1 entities, in source file db/ip/s
     Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_sldfabric File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/db/ip/sld632c1620/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 11
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld632c1620/submodules/alt_sld_fab_alt_sld_fab_splitter.sv
     Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/db/ip/sld632c1620/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
+Info (284007): State machine "|VendingMachine|KeyboardReader:uKeyboard|KeyTransmitter:ktransmitter|KeyTransmitterControl:keyTransControl|CurrentState" will be implemented as a safe state machine. File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyTransmitterControl.vhd Line: 14
+Info (284007): State machine "|VendingMachine|KeyboardReader:uKeyboard|KeyDecode:kdecode|KeyControl:kcontrol|CurrentState" will be implemented as a safe state machine. File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/KeyControl.vhd Line: 14
+Info (284007): State machine "|VendingMachine|IOS:uIOS|Dispatcher:Disp|CurrentState" will be implemented as a safe state machine. File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/Dispatcher.vhd Line: 24
+Info (284007): State machine "|VendingMachine|IOS:uIOS|SerialReceiver:serialR|SerialControl:serialC|CurrentState" will be implemented as a safe state machine. File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/SerialControl.vhd Line: 18
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "HEX0[7]" is stuck at VCC File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/VendingMachine.vhd Line: 11
     Warning (13410): Pin "HEX1[7]" is stuck at VCC File: C:/Users/ruiac/Desktop/ISEL/LIC/TicketMachine_HW/VendingMachine.vhd Line: 12
@@ -799,14 +792,14 @@ Warning (13024): Output pins are stuck at VCC or GND
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 356 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 399 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 15 input pins
-    Info (21059): Implemented 38 output pins
-    Info (21061): Implemented 302 logic cells
+    Info (21059): Implemented 41 output pins
+    Info (21061): Implemented 342 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 10 warnings
-    Info: Peak virtual memory: 4868 megabytes
-    Info: Processing ended: Sun Jun 19 18:24:41 2022
-    Info: Elapsed time: 00:00:16
-    Info: Total CPU time (on all processors): 00:00:35
+    Info: Peak virtual memory: 4877 megabytes
+    Info: Processing ended: Wed Jun 29 23:15:30 2022
+    Info: Elapsed time: 00:00:41
+    Info: Total CPU time (on all processors): 00:01:24
 
 

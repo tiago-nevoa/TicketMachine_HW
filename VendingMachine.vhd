@@ -16,7 +16,10 @@ port(
 		KEYPAD_COL	: OUT STD_LOGIC_VECTOR(2 downto 0);
 		SwitchMaintenance : in std_logic;
 		HasCoin : in std_logic;
-		Coin	: IN STD_LOGIC_VECTOR(2 downto 0)
+		Coin	: IN STD_LOGIC_VECTOR(2 downto 0);
+		COIN_ACCEPT : out std_logic; -- from usbport
+		COIN_EJECT : out std_logic; -- from usbport
+		COIN_COLLECT : out std_logic -- from usbport
 		);
 end VendingMachine;
 
@@ -80,14 +83,18 @@ USBconn: UsbPort PORT MAP (
     outputport => sUsbOutput
     );
 
+COIN_ACCEPT <= sUsbOutput(5);
+COIN_EJECT <= sUsbOutput(6);
+COIN_COLLECT <= sUsbOutput(7);
+	 
 uIOS: IOS PORT MAP (
 	MCLK => MCLK,
-	SCLK => sUsbOutput(0),
+	SCLK => sUsbOutput(2),
 	Reset => sReset,
 	SDX => sUsbOutput(1),
-	NOT_SS => sUsbOutput(2),
+	NOT_SS => sUsbOutput(3),
 	Fsh => FnSwitch,
-	busy => sUsbInput(7), --sUsbInput(6)
+	busy => sUsbInput(6),
 	WrT => sWrT,
 	WrL => sWrL,
 	Dout => sDout	
@@ -125,7 +132,7 @@ uKeyboard:KeyboardReader
 Wrl <= sWrL; --METER SAIDA NO LCD
 
 -- Maintenence Key
-sUsbInput(6) <= SwitchMaintenance; --sUsbInput(7)
+sUsbInput(7) <= SwitchMaintenance;
 
 -- Coin Acceptor
 sUsbInput(0) <= Coin(0);

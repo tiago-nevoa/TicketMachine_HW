@@ -23,6 +23,7 @@ COMPONENT KeyDecode
 END COMPONENT;
 
 COMPONENT clkDIV
+GENERIC (div : NATURAL);
 port ( clk_in: in std_logic;
 		 clk_out: out std_logic	
 );
@@ -45,7 +46,9 @@ signalMCLK <= MCLK;
 
 sClr <= Clr;
 
-clkDIV0: clkDIV PORT MAP (
+clkDIV0: clkDIV 
+GENERIC MAP ( div => 500 )
+PORT MAP (
 	clk_in => signalMCLK,
 	clk_out => signalClkDiv);
 	
